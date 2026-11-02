@@ -888,7 +888,7 @@
 
   // ---------- Practica ----------
   function montaPractica(c, generadores) {
-    h("div", "i-titulo", c).innerHTML = '<span class="nuevo">†</span> Practica';
+    h("div", "i-titulo", c).textContent = "Practica";
     var enun = h("div", "p-enunciado", c);
     var campos = h("div", "p-campos", c);
     var botones = h("div", "p-botones", c);

@@ -2,7 +2,6 @@
 // paso: sale del .qmd sin marcas adicionales. Sin JavaScript se ve todo.
 (function () {
   "use strict";
-  var CLAVE = "apuntes-ver-soluciones";
   var soluciones = [];
 
   function preparar(sol) {
@@ -56,24 +55,18 @@
     });
   }
 
-  function leer() { try { return localStorage.getItem(CLAVE) === "1"; } catch (e) { return false; } }
-  function guardar(v) { try { localStorage.setItem(CLAVE, v ? "1" : "0"); } catch (e) { /* sin almacenamiento */ } }
-
   document.querySelectorAll(".solucion").forEach(function (s) { soluciones.push(preparar(s)); });
-  if (soluciones.length) {
-    var barra = document.createElement("div");
-    barra.className = "barra-soluciones";
-    barra.innerHTML = '<label><input type="checkbox"> Mostrar todas las soluciones</label>' +
-      '<a class="boton" href="complejos.pdf">Descargar en PDF</a>';
-    var casilla = barra.querySelector("input");
-    casilla.checked = leer();
-    if (casilla.checked) soluciones.forEach(function (s) { s.abrir(); });
-    casilla.addEventListener("change", function () {
-      guardar(casilla.checked);
-      soluciones.forEach(function (s) { casilla.checked ? s.abrir() : s.cerrar(); });
-    });
-    var cabecera = document.querySelector("#title-block-header") || document.querySelector("main h1");
-    if (cabecera) cabecera.parentNode.insertBefore(barra, cabecera.nextSibling);
+
+  // El PDF del capítulo, al final del menú lateral. No va en _quarto.yml porque
+  // entonces sería la «página siguiente» de la última sección.
+  var menu = document.querySelector("#quarto-sidebar .sidebar-menu-container > ul");
+  if (menu && window.PDF_CAPITULO) {
+    var item = document.createElement("li");
+    item.className = "sidebar-item";
+    item.style.marginTop = "0.8rem";
+    item.innerHTML = '<div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" download href="' +
+      window.PDF_CAPITULO + '"><span class="menu-text">Descargar capítulo como PDF</span></a></div>';
+    menu.appendChild(item);
   }
   window.addEventListener("hashchange", abrirDestino);
   abrirDestino();
