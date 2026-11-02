@@ -64,7 +64,7 @@
     var barra = document.createElement("div");
     barra.className = "barra-soluciones";
     barra.innerHTML = '<label><input type="checkbox"> Mostrar todas las soluciones</label>' +
-      '<a class="boton" href="complejos.pdf" download>Descargar en PDF</a>';
+      '<a class="boton" href="complejos.pdf" download>Descargar capítulo como PDF</a>';
     var casilla = barra.querySelector("input");
     casilla.checked = leer();
     if (casilla.checked) soluciones.forEach(function (s) { s.abrir(); });
