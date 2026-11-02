@@ -184,7 +184,21 @@
     "href": "index.html",
     "title": "Cálculo",
     "section": "",
-    "text": "Departamento de Matemática Aplicada\nVersión de prueba en web. De momento contiene el capítulo 1 y el capítulo 3.\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento."
+    "text": "Departamento de Matemática Aplicada"
+  },
+  {
+    "objectID": "index.html#capítulos",
+    "href": "index.html#capítulos",
+    "title": "Cálculo",
+    "section": "Capítulos",
+    "text": "Capítulos\n\n\n1. Números complejos\n2. Sucesiones y series En preparación\n3. Funciones reales de variable real"
+  },
+  {
+    "objectID": "index.html#cómo-usar-estos-apuntes",
+    "href": "index.html#cómo-usar-estos-apuntes",
+    "title": "Cálculo",
+    "section": "Cómo usar estos apuntes",
+    "text": "Cómo usar estos apuntes\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento.\nCada capítulo se puede descargar en PDF desde su menú lateral.\n\nVersión de prueba."
   },
   {
     "objectID": "01_complejos/funciones.html",
