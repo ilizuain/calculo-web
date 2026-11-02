@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1.6 Ecuaciones complejas – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../01_complejos/resumen.html" rel="next">
+<link href="../01_complejos/funciones.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ca2ee6c720b956095c018adb1337dcca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_complejos/ecuaciones.html">1.6 Ecuaciones complejas</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Números complejos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/binomica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Forma binómica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/exponencial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Forma exponencial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/operaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 Operaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/transformaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 Transformaciones geométricas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/funciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 Funciones complejas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/ecuaciones.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.6 Ecuaciones complejas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_complejos/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.7 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#ecuaciones-con-soluciones-discretas" id="toc-ecuaciones-con-soluciones-discretas" class="nav-link active" data-scroll-target="#ecuaciones-con-soluciones-discretas">Ecuaciones con soluciones discretas</a></li>
+  <li><a href="#lugares-geométricos" id="toc-lugares-geométricos" class="nav-link" data-scroll-target="#lugares-geométricos">Lugares geométricos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">1.6 Ecuaciones complejas</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Una igualdad entre números complejos son dos igualdades reales: partes real e imaginaria, o módulo y fase. Por eso una ecuación suele dar puntos aislados. Si solo impone una condición real, como <span class="nw"><span class="math inline">|z|=2</span>,</span> da una curva.</p>
+<section id="ecuaciones-con-soluciones-discretas" class="level2">
+<h2 data-anchor-id="ecuaciones-con-soluciones-discretas">Ecuaciones con soluciones discretas</h2>
+<p>El método depende de lo que aparezca en la ecuación:</p>
+<ul>
+<li><em>Potencias:</em> se despeja, a veces con un cambio de variable, y se calculan raíces.</li>
+<li><em>Conjugado o módulo:</em> se escribe <span class="math inline">z=\rho e^{i\theta}</span> y se igualan módulos y fases, con todos los giros en la fase.</li>
+<li><em>Funciones:</em> se pasa a exponenciales, se despeja <span class="math inline">e^{iz}</span> y se toma el logaritmo.</li>
+</ul>
+<div class="recuerda">
+<p><span class="caja-titulo">Recuerda</span></p>
+<p><span class="math display">
+\rho_1e^{i\theta_1}=\rho_2e^{i\theta_2}
+\iff
+\rho_1=\rho_2,
+\quad
+\theta_1=\theta_2+2\pi k;
+\qquad\qquad
+e^{iz}=u
+\iff
+z=-i\ln u.
+</span></p>
+</div>
+<div id="ejemplo-ec-potencias" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.16</span></p>
+<p>Calcular y dibujar las soluciones de <span class="nw"><span class="math inline">z^6+7z^3-8=0</span>.</span> (2018/19 1E)</p>
+<div class="solucion">
+<p>Con <span class="math inline">u=z^3</span> queda <span class="nw"><span class="math inline">u^2+7u-8=0</span>,</span> de soluciones <span class="math inline">u=1</span> y <span class="nw"><span class="math inline">u=-8</span>.</span> Cada una da tres raíces cúbicas (<a href="#figura-ecuacion-potencias">Figura&nbsp;1.11</a>): <span class="math display">
+\begin{aligned}
+z^3=1&amp;:\quad z=e^{i2\pi k/3}=1,\ \ -\tfrac12\pm i\tfrac{\sqrt3}{2},\\
+z^3=-8&amp;:\quad z=2e^{i(\pi+2\pi k)/3}=-2,\ \ 1\pm i\sqrt3.
+\end{aligned}
+</span> <em>Comprobación</em> con <span class="nw"><span class="math inline">z=-2</span>:</span> <span class="nw"><span class="math inline">64-56-8=0</span>.</span></p>
+<div id="figura-ecuacion-potencias" class="figura">
+<p><img src="../figs/ecuacion_potencias.svg" class="img-fluid" alt="Las seis soluciones forman dos triángulos equiláteros." width="212"></p>
+<p><span class="figura-num">Figura&nbsp;1.11.</span> Las seis soluciones forman dos triángulos equiláteros.</p>
+</div>
+</div>
+</div>
+<div id="ejemplo-ec-conjugado" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.17</span></p>
+<p>Calcular las soluciones de <span class="nw"><span class="math inline">z^2=\bar z</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">z=\rho e^{i\theta}</span>,</span> la ecuación es <span class="nw"><span class="math inline">\rho^2e^{i2\theta}=\rho e^{-i\theta}</span>.</span> Igualando módulos y fases: <span class="math display">
+\rho^2=\rho
+\ \Longrightarrow\
+\rho=0\ \ \text{o}\ \ \rho=1,
+\qquad\qquad
+2\theta=-\theta+2\pi k
+\ \Longrightarrow\
+\theta=\frac{2\pi k}{3}.
+</span> Hay cuatro soluciones: <span class="nw"><span class="math inline">z=0</span>,</span> que no hay que perder al simplificar <span class="nw"><span class="math inline">\rho</span>,</span> y <span class="nw"><span class="math inline">z=1</span>,</span> <span class="nw"><span class="math inline">z=-\frac12\pm i\frac{\sqrt3}{2}</span>.</span></p>
+<p><em>Comprobación</em> con <span class="nw"><span class="math inline">z=e^{i2\pi/3}</span>:</span> <span class="nw"><span class="math inline">z^2=e^{i4\pi/3}=e^{-i2\pi/3}=\bar z</span>.</span></p>
+</div>
+</div>
+<div id="ejemplo-ec-coseno" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.18</span></p>
+<p>Resolver <span class="nw"><span class="math inline">\cos z=5</span>.</span> (2016/17 7E)</p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">u=e^{iz}</span>,</span> y como <span class="nw"><span class="math inline">e^{-iz}=1/u</span>,</span> <span class="math display">
+\frac{u+1/u}{2}=5
+\ \Longrightarrow\
+u^2-10u+1=0
+\ \Longrightarrow\
+u=5\pm2\sqrt6.
+</span> Los dos valores son reales y positivos, así que su fase es <span class="nw"><span class="math inline">2\pi k</span>:</span> <span class="math display">
+z=-i\ln u=2\pi k-i\ln\left(5\pm2\sqrt6\right),
+\qquad
+k\in\mathbb{Z}.
+</span> Como <span class="nw"><span class="math inline">(5+2\sqrt6)(5-2\sqrt6)=1</span>,</span> los dos logaritmos son opuestos, y las soluciones forman dos filas simétricas (<a href="#figura-ecuacion-coseno">Figura&nbsp;1.12</a>). En <span class="nw"><span class="math inline">\mathbb{C}</span>,</span> el coseno no está acotado por 1.</p>
+<p><em>Comprobación</em> con <span class="nw"><span class="math inline">k=0</span>:</span> <span class="math inline">\cos(ia)=\cosh a=\frac12\left(u+\frac1u\right)=5</span>, con <span class="nw"><span class="math inline">a=\ln u</span>.</span></p>
+<div id="figura-ecuacion-coseno" class="figura">
+<p><img src="../figs/ecuacion_coseno.svg" class="img-fluid" alt="Soluciones de cos z=5." width="376"></p>
+<p><span class="figura-num">Figura&nbsp;1.12.</span> Soluciones de <span class="nw"><span class="math inline">\cos z=5</span>.</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="lugares-geométricos" class="level2">
+<h2 data-anchor-id="lugares-geométricos">Lugares geométricos</h2>
+<p>Un <em>lugar geométrico</em> es el conjunto de los afijos que cumplen una condición. Se sustituye <span class="nw"><span class="math inline">z=x+iy</span>,</span> se opera y se reconoce la curva. Por ejemplo, <span class="math inline">|z-1|=2</span> da <span class="nw"><span class="math inline">(x-1)^2+y^2=4</span>:</span> la circunferencia de centro 1 y radio 2, como cabe esperar, porque <span class="math inline">|z-1|</span> es la distancia al afijo de 1 (<a href="exponencial.html#figura-modulo-distancia">Figura&nbsp;1.3</a>).</p>
+<p>Con desigualdades, el resultado es una región; con varias condiciones, su intersección.</p>
+<div class="recuerda">
+<p><span class="caja-titulo">Recuerda</span></p>
+<p><span class="math display">
+z=x+iy,
+\qquad
+\operatorname{Re}z=x,
+\qquad
+\operatorname{Im}z=y,
+\qquad
+|z|=\sqrt{x^2+y^2}.
+</span></p>
+</div>
+<div id="ejemplo-lugar-parabola" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.19</span></p>
+<p>Dibujar el lugar geométrico <span class="nw"><span class="math inline">|z-2|&gt;|z-2i|</span>,</span> <span class="nw"><span class="math inline">\ |z|+\operatorname{Im}z&lt;4</span>.</span> (2019/20 4E)</p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">z=x+iy</span>,</span> la primera condición, elevada al cuadrado, da <span class="math display">
+(x-2)^2+y^2&gt;x^2+(y-2)^2
+\quad\Longrightarrow\quad
+y&gt;x.
+</span> Son los puntos más cerca de <span class="math inline">2i</span> que de <span class="nw"><span class="math inline">2</span>:</span> la recta <span class="math inline">y=x</span> es la mediatriz del segmento que los une. La segunda da <span class="math display">
+\sqrt{x^2+y^2}&lt;4-y
+\quad\Longrightarrow\quad
+x^2&lt;16-8y
+\quad\Longrightarrow\quad
+y&lt;2-\frac{x^2}{8}.
+</span> Elevar al cuadrado exige <span class="nw"><span class="math inline">4-y&gt;0</span>,</span> que se cumple porque sale <span class="nw"><span class="math inline">y&lt;2</span>.</span> El lugar es la región entre la recta y la parábola, sin el borde (<a href="#figura-lugar-parabola">Figura&nbsp;1.13</a>).</p>
+<p><em>Comprobación</em> con <span class="nw"><span class="math inline">z=i</span>:</span> <span class="nw"><span class="math inline">|i-2|=\sqrt5&gt;|i-2i|=1</span>,</span> y <span class="nw"><span class="math inline">|i|+1=2&lt;4</span>.</span></p>
+<div id="figura-lugar-parabola" class="figura">
+<p><img src="../figs/lugar_parabola.svg" class="img-fluid" alt="La región entre la recta y la parábola." width="207"></p>
+<p><span class="figura-num">Figura&nbsp;1.13.</span> La región entre la recta y la parábola.</p>
+</div>
+</div>
+</div>
+<div id="ejemplo-lugar-elipse" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.20</span></p>
+<p>Dibujar el lugar geométrico <span class="nw"><span class="math inline">|z-4i|+|z+4i|&lt;10</span>,</span> <span class="nw"><span class="math inline">\ \frac\pi6\le\arg z\le\frac\pi3</span>.</span> (2017/18 4E)</p>
+<div class="solucion">
+<p>Primero se busca el borde de la primera condición. Con <span class="nw"><span class="math inline">z=x+iy</span>,</span> <span class="math display">
+\sqrt{x^2+(y-4)^2}+\sqrt{x^2+(y+4)^2}=10.
+</span> Se aísla una raíz y se eleva al cuadrado. La raíz que queda se aísla y se eleva de nuevo: <span class="math display">
+\begin{aligned}
+\sqrt{x^2+(y-4)^2}=10-\sqrt{x^2+(y+4)^2}
+&amp;\quad\Longrightarrow\quad
+5\sqrt{x^2+(y+4)^2}=25+4y\\
+&amp;\quad\Longrightarrow\quad
+25x^2+9y^2=225
+\quad\Longrightarrow\quad
+\frac{x^2}{9}+\frac{y^2}{25}=1.
+\end{aligned}
+</span> Es una elipse de semiejes 3 y 5. La desigualdad corresponde a su interior, porque <span class="math inline">z=0</span> la cumple: <span class="nw"><span class="math inline">4+4&lt;10</span>.</span></p>
+<p>La segunda condición es un sector con vértice en el origen, que no pertenece al lugar porque no tiene fase. El lugar es la parte del sector dentro de la elipse (<a href="#figura-lugar-elipse">Figura&nbsp;1.14</a>).</p>
+<p><em>Comprobación</em> con <span class="nw"><span class="math inline">z=1+i</span>,</span> de fase <span class="nw"><span class="math inline">\pi/4</span>:</span> <span class="math inline">|1-3i|+|1+5i|=\sqrt{10}+\sqrt{26}\approx8.3&lt;10</span>, y <span class="nw"><span class="math inline">\frac19+\frac1{25}&lt;1</span>.</span></p>
+<div id="figura-lugar-elipse" class="figura">
+<p><img src="../figs/lugar_elipse.svg" class="img-fluid" alt="El sector dentro de la elipse. El borde de la elipse no pertenece al lugar." width="160"></p>
+<p><span class="figura-num">Figura&nbsp;1.14.</span> El sector dentro de la elipse. El borde de la elipse no pertenece al lugar.</p>
+</div>
+</div>
+</div>
+<div id="ejemplo-lugar-discos" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;1.21</span></p>
+<p>Dibujar el lugar geométrico <span class="math inline">\operatorname{Re}\left(\frac{1}{z-1}\right)&gt;\frac12</span>, <span class="math inline">\ \operatorname{Im}\left(\frac{1}{z-1}\right)&gt;\frac12</span>. (2018/19 1E)</p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">z=x+iy</span>,</span> se multiplica por el conjugado del denominador: <span class="math display">
+\frac{1}{z-1}=\frac{(x-1)-iy}{(x-1)^2+y^2}.
+</span> Se quita el denominador, que es positivo, y se completan cuadrados: <span class="math display">
+\begin{aligned}
+\frac{x-1}{(x-1)^2+y^2}&gt;\frac12
+&amp;\quad\Longrightarrow\quad
+(x-2)^2+y^2&lt;1,\\
+\frac{-y}{(x-1)^2+y^2}&gt;\frac12
+&amp;\quad\Longrightarrow\quad
+(x-1)^2+(y+1)^2&lt;1.
+\end{aligned}
+</span> Son dos círculos de radio 1, sin el borde, centrados en <span class="math inline">2</span> y en <span class="nw"><span class="math inline">1-i</span>.</span> El lugar es su intersección (<a href="#figura-lugar-discos">Figura&nbsp;1.15</a>).</p>
+<p><em>Comprobación</em> con <span class="nw"><span class="math inline">z=\frac32-\frac i2</span>,</span> en el centro de la región: <span class="nw"><span class="math inline">\frac{1}{z-1}=\frac{2}{1-i}=1+i</span>,</span> con partes real e imaginaria mayores que <span class="nw"><span class="math inline">\frac12</span>.</span></p>
+<div id="figura-lugar-discos" class="figura">
+<p><img src="../figs/lugar_discos.svg" class="img-fluid" alt="Intersección de los dos círculos." width="212"></p>
+<p><span class="figura-num">Figura&nbsp;1.15.</span> Intersección de los dos círculos.</p>
+</div>
+</div>
+</div>
+<div class="interactivo" data-widget="lugares">
+
+</div>
+<div class="interactivo" data-widget="practica-lugares">
+
+</div>
+<p><span class="aviso-ejercicios">Con los contenidos de esta sección puedes hacer los ejercicios&nbsp;<a href="ejercicios.html#ejercicio-ec-exponencial">1.31</a>–<a href="ejercicios.html#ejercicio-ec-area">1.39</a>.</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../01_complejos/funciones.html" class="pagination-link" aria-label="1.5 Funciones complejas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1.5 Funciones complejas</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../01_complejos/resumen.html" class="pagination-link" aria-label="Resumen">
+        <span class="nav-page-text">Resumen</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../js/apuntes.js"></script>
+<script src="../js/complejos.js"></script>
+
+
+
+
+</body></html>

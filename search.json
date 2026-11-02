@@ -1,0 +1,349 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cálculo",
+    "section": "",
+    "text": "Departamento de Matemática Aplicada\nVersión de prueba en web. De momento contiene solo el capítulo 1.\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento."
+  },
+  {
+    "objectID": "01_complejos/funciones.html",
+    "href": "01_complejos/funciones.html",
+    "title": "1.5 Funciones complejas",
+    "section": "",
+    "text": "La fórmula de Euler y la regla de los exponentes permiten extender a los números complejos la exponencial, el logaritmo y las funciones trigonométricas.",
+    "crumbs": [
+      "1.5 Funciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/funciones.html#exponencial",
+    "href": "01_complejos/funciones.html#exponencial",
+    "title": "1.5 Funciones complejas",
+    "section": "Exponencial",
+    "text": "Exponencial\nPara z=x+iy, la exponencial se separa en dos factores: uno real, que da el módulo, y otro de módulo 1, que da la fase. Como e^{iy} se repite al sumar 2\\pi a y, la exponencial compleja es periódica, de periodo 2\\pi i.\n\nRecuerda\n\ne^z=e^{x+iy}=e^x\\,e^{iy}=e^x(\\cos y+i\\sin y),\n\\qquad\n|e^z|=e^x,\n\\qquad\n\\arg e^z=y.\n\n\n\nEjemplo 1.12\n† Calcular e^{1+i\\pi/2} y e^{1+i\\pi/2+2\\pi i}.\n\ne^{1+i\\pi/2}=e\\cdot e^{i\\pi/2}=ei, con módulo e y fase \\pi/2. Al sumar 2\\pi i al exponente, el resultado no cambia: también da ei.",
+    "crumbs": [
+      "1.5 Funciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/funciones.html#logaritmo",
+    "href": "01_complejos/funciones.html#logaritmo",
+    "title": "1.5 Funciones complejas",
+    "section": "Logaritmo",
+    "text": "Logaritmo\nEl logaritmo de z es el número w tal que e^w=z. Por ejemplo, para z=-1: como -1=e^{i\\pi}=e^{i(\\pi+2\\pi k)}, los números negativos ahora sí tienen logaritmo, y tienen infinitos, \n\\ln(-1)=i(\\pi+2\\pi k),\n\\qquad\nk\\in\\mathbb{Z}.\n\nEn general, con z=\\rho e^{i\\theta} y w=u+iv, la igualdad e^ue^{iv}=\\rho e^{i\\theta} da e^u=\\rho y v=\\theta+2\\pi k. Todos los valores tienen la misma parte real y están alineados en vertical (Figura 1.9).\n\n\nFigura 1.9. Valores de \\ln(1+i)=\\ln\\sqrt2+i\\left(\\frac\\pi4+2\\pi k\\right).\n\nCuando basta con un solo valor, se toma el valor principal, el que tiene la fase en (-\\pi,\\pi]. Por ejemplo, el de \\ln(1+i) es \\ln\\sqrt2+i\\pi/4, y el de \\ln(-1) es i\\pi.\n\nRecuerda\n\n\\ln z=\\ln\\rho+i(\\theta+2\\pi k),\n\\qquad\nk\\in\\mathbb{Z}.\n\n\n\nEjemplo 1.13\nCalcular y representar z=\\dfrac2i\\ln\\left(\\dfrac{1+i}{1-i}\\right). (2015/16 7E)\n\nEl cociente vale i (Ejemplo 1.7), y \\ln i=i\\left(\\frac\\pi2+2\\pi k\\right). Por tanto, \nz=\\frac2i\\cdot i\\left(\\frac\\pi2+2\\pi k\\right)=\\pi+4\\pi k,\n\\qquad\nk\\in\\mathbb{Z}.\n Son infinitos números reales, separados 4\\pi (Figura 1.10).\n\n\nFigura 1.10. Valores de z sobre el eje real.",
+    "crumbs": [
+      "1.5 Funciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/funciones.html#exponencial-general",
+    "href": "01_complejos/funciones.html#exponencial-general",
+    "title": "1.5 Funciones complejas",
+    "section": "Exponencial general",
+    "text": "Exponencial general\nUna potencia con base y exponente complejos se define con el logaritmo, igual que en los reales, donde a^b=e^{b\\ln a}. Como el logaritmo tiene infinitos valores, la potencia puede tenerlos también.\n\nRecuerda\n\nz_1^{z_2}=e^{z_2\\ln z_1}.\n\n\n\nEjemplo 1.14\n† Calcular i^i.\n\nComo \\ln i=i\\left(\\frac\\pi2+2\\pi k\\right), \ni^i=e^{i\\ln i}=e^{i\\cdot i\\left(\\frac\\pi2+2\\pi k\\right)}=e^{-\\frac\\pi2-2\\pi k},\n\\qquad\nk\\in\\mathbb{Z}.\n Todos los valores son reales. Con el valor principal del logaritmo (k=0), i^i=e^{-\\pi/2}\\approx0.208.",
+    "crumbs": [
+      "1.5 Funciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/funciones.html#funciones-trigonométricas-e-hiperbólicas",
+    "href": "01_complejos/funciones.html#funciones-trigonométricas-e-hiperbólicas",
+    "title": "1.5 Funciones complejas",
+    "section": "Funciones trigonométricas e hiperbólicas",
+    "text": "Funciones trigonométricas e hiperbólicas\nSumando y restando e^{i\\theta}=\\cos\\theta+i\\sin\\theta y e^{-i\\theta}=\\cos\\theta-i\\sin\\theta se despejan el coseno y el seno. Con esas expresiones, \\theta puede pasar a ser cualquier número complejo z. El seno y el coseno hiperbólicos son las mismas expresiones sin ninguna i, y aparecen en \\cos(iy)=\\cosh y y \\sin(iy)=i\\sinh y.\n\nRecuerda\n\n\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\n\\qquad\n\\cos z=\\frac{e^{iz}+e^{-iz}}{2},\n\\qquad\n\\sinh z=\\frac{e^{z}-e^{-z}}{2},\n\\qquad\n\\cosh z=\\frac{e^{z}+e^{-z}}{2}.\n\n\n\nEjemplo 1.15\nRazonar si es cierta la igualdad \\cos\\left(\\frac\\pi2+i\\ln2\\right)=-\\frac{3i}{4}. (2013/14 3E)\n\nCon z=\\frac\\pi2+i\\ln2, \ne^{iz}=e^{i\\pi/2}e^{-\\ln2}=\\frac i2,\n\\qquad\ne^{-iz}=e^{-i\\pi/2}e^{\\ln2}=-2i.\n Por tanto, \\cos z=\\frac12\\left(\\frac i2-2i\\right)=-\\frac{3i}{4}, y la igualdad es cierta. El coseno de un número complejo no tiene por qué ser real.\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.26–1.30.",
+    "crumbs": [
+      "1.5 Funciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/exponencial.html",
+    "href": "01_complejos/exponencial.html",
+    "title": "1.2 Forma exponencial de un número complejo",
+    "section": "",
+    "text": "La forma binómica da las coordenadas cartesianas del afijo. También se puede localizar con una distancia y un ángulo, y eso lleva a la forma exponencial.",
+    "crumbs": [
+      "1.2 Forma exponencial"
+    ]
+  },
+  {
+    "objectID": "01_complejos/exponencial.html#módulo-y-fase",
+    "href": "01_complejos/exponencial.html#módulo-y-fase",
+    "title": "1.2 Forma exponencial de un número complejo",
+    "section": "Módulo y fase",
+    "text": "Módulo y fase\nPara z=a+bi, el módulo \\rho=|z| es la distancia del afijo al origen, y el argumento o fase \\theta=\\arg z es el ángulo que forma con el semieje real positivo (Figura 1.2).\n\n\nFigura 1.2. Módulo \\rho y fase \\theta de z=a+bi.\n\n\n\n\nHay que tener en cuenta dos cosas:\n\nLa fase no es única: \\theta y \\theta+2\\pi k, con k\\in\\mathbb{Z}, dan el mismo punto.\n\\tan\\theta=b/a no basta para hallar \\theta, porque \\arctan solo da ángulos entre -\\pi/2 y \\pi/2. El cuadrante se mira en el afijo.\n\n\nRecuerda\n\n\\rho=|z|=\\sqrt{a^2+b^2},\n\\qquad\n\\tan\\theta=\\frac ba\\ \\ \\text{(según el cuadrante)},\n\\qquad\na=\\rho\\cos\\theta,\n\\qquad\nb=\\rho\\sin\\theta.\n\n\n\nEjemplo 1.3\n† Hallar el módulo y la fase de 1+i\\sqrt3 y de -1-i.\n\n\n1+i\\sqrt3: \\rho=\\sqrt{1+3}=2. Está en el primer cuadrante y \\tan\\theta=\\sqrt3, así que \\theta=\\pi/3.\n-1-i: \\rho=\\sqrt2. Aquí \\tan\\theta=1, pero \\arctan1=\\pi/4 está en el primer cuadrante y el afijo está en el tercero, así que \\theta=\\pi/4+\\pi=5\\pi/4.\n\nComprobación: \\sqrt2\\cos\\frac{5\\pi}{4}=-1 y \\sqrt2\\sin\\frac{5\\pi}{4}=-1.",
+    "crumbs": [
+      "1.2 Forma exponencial"
+    ]
+  },
+  {
+    "objectID": "01_complejos/exponencial.html#fórmula-de-euler",
+    "href": "01_complejos/exponencial.html#fórmula-de-euler",
+    "title": "1.2 Forma exponencial de un número complejo",
+    "section": "Fórmula de Euler",
+    "text": "Fórmula de Euler\nCon módulo y fase, z=\\rho(\\cos\\theta+i\\sin\\theta). El paréntesis tiene una propiedad clave: al multiplicar dos de ellos, los ángulos se suman. \n(\\cos\\alpha+i\\sin\\alpha)(\\cos\\beta+i\\sin\\beta)\n=(\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta)+i(\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta)\n=\\cos(\\alpha+\\beta)+i\\sin(\\alpha+\\beta).\n Es la misma regla que la de los exponentes, e^{\\alpha}e^{\\beta}=e^{\\alpha+\\beta}. Por eso se escribe \\cos\\theta+i\\sin\\theta=e^{i\\theta}, la fórmula de Euler, y z=\\rho e^{i\\theta} es la forma exponencial de z.\nAlgunos valores: \ne^{i\\pi/2}=i,\n\\qquad\ne^{i\\pi}=-1,\n\\qquad\ne^{2\\pi i}=1,\n\\qquad\n1+i\\sqrt3=2e^{i\\pi/3},\n\\qquad\n-1-i=\\sqrt2\\,e^{i5\\pi/4}.\n\n\nRecuerda\n\ne^{\\pm i\\theta}=\\cos\\theta\\pm i\\sin\\theta,\n\\qquad\nz=a+bi=\\rho e^{i\\theta},\n\\qquad\ne^{i(\\theta+2\\pi k)}=e^{i\\theta}\\ \\ (k\\in\\mathbb{Z}).\n\n\n\nEjemplo 1.4\nEscribir en forma binómica \\dfrac{1-e^{i\\pi/2}}{1+e^{i\\pi/2}}.\n\nComo e^{i\\pi/2}=i, \n\\frac{1-i}{1+i}=\\frac{(1-i)(1-i)}{(1+i)(1-i)}=\\frac{-2i}{2}=-i.\n Comprobación: -i(1+i)=1-i.",
+    "crumbs": [
+      "1.2 Forma exponencial"
+    ]
+  },
+  {
+    "objectID": "01_complejos/exponencial.html#propiedades-del-módulo",
+    "href": "01_complejos/exponencial.html#propiedades-del-módulo",
+    "title": "1.2 Forma exponencial de un número complejo",
+    "section": "Propiedades del módulo",
+    "text": "Propiedades del módulo\nEl módulo mide distancias: |z| es la distancia del afijo de z al origen, y |z_1-z_2|, la distancia entre dos afijos. La desigualdad triangular dice que un lado de un triángulo no supera la suma de los otros dos (Figura 1.3).\n\n\nFigura 1.3. Desigualdad triangular (izquierda) y distancia entre dos afijos (derecha).\n\nEl módulo del producto sale de la fórmula de Euler: \\rho_1e^{i\\theta_1}\\,\\rho_2e^{i\\theta_2}=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)}, cuyo módulo es \\rho_1\\rho_2. Con el cociente se dividen los módulos.\n\nRecuerda\n\n|z|=\\sqrt{z\\bar z}\\geq0,\n\\qquad\n|z_1z_2|=|z_1||z_2|,\n\\qquad\n\\left|\\frac{z_1}{z_2}\\right|=\\frac{|z_1|}{|z_2|}\\ \\ (z_2\\neq0),\n \n|z_1+z_2|\\leq|z_1|+|z_2|,\n\\qquad\nd(z_1,z_2)=|z_1-z_2|.\n\n\n\nEjemplo 1.5\nHallar k\\in\\mathbb{R} para que z=3-ki tenga el mismo módulo que 2\\sqrt5+i\\sqrt5. (2014/15 1E)\n\nComo |2\\sqrt5+i\\sqrt5|=\\sqrt{20+5}=5, hay que resolver 9+k^2=25, es decir, k=\\pm4. Son los números 3\\mp4i, ambos a distancia 5 del origen.\n\n\n\nEjemplo 1.6\nSea z=\\dfrac{2+i}{a-i}, con a\\in\\mathbb{R}. Hallar a para que el afijo de z esté en la circunferencia x^2+y^2=1. (2015/16 1E)\n\nLa condición es |z|=1, y el módulo del cociente evita calcular z: \n|z|=\\frac{|2+i|}{|a-i|}=\\frac{\\sqrt5}{\\sqrt{a^2+1}}=1\n\\quad\\Longrightarrow\\quad\na^2+1=5\n\\quad\\Longrightarrow\\quad\na=\\pm2.\n Comprobación con a=2: z=\\dfrac{(2+i)^2}{5}=\\dfrac35+\\dfrac45i, y \\frac{9}{25}+\\frac{16}{25}=1.",
+    "crumbs": [
+      "1.2 Forma exponencial"
+    ]
+  },
+  {
+    "objectID": "01_complejos/exponencial.html#conjugado-en-forma-exponencial",
+    "href": "01_complejos/exponencial.html#conjugado-en-forma-exponencial",
+    "title": "1.2 Forma exponencial de un número complejo",
+    "section": "Conjugado en forma exponencial",
+    "text": "Conjugado en forma exponencial\nCambiar b por -b es reflejar el afijo respecto al eje real: el módulo no cambia y la fase cambia de signo (Figura 1.4). Con esto, z\\bar z=\\rho e^{i\\theta}\\rho e^{-i\\theta}=\\rho^2.\n\n\nFigura 1.4. Un número complejo y su conjugado.\n\n\nRecuerda\n\nz=a+bi=\\rho e^{i\\theta},\n\\qquad\n\\bar z=a-bi=\\rho e^{-i\\theta}.\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.7–1.11.",
+    "crumbs": [
+      "1.2 Forma exponencial"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ecuaciones.html",
+    "href": "01_complejos/ecuaciones.html",
+    "title": "1.6 Ecuaciones complejas",
+    "section": "",
+    "text": "Una igualdad entre números complejos son dos igualdades reales: partes real e imaginaria, o módulo y fase. Por eso una ecuación suele dar puntos aislados. Si solo impone una condición real, como |z|=2, da una curva.",
+    "crumbs": [
+      "1.6 Ecuaciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ecuaciones.html#ecuaciones-con-soluciones-discretas",
+    "href": "01_complejos/ecuaciones.html#ecuaciones-con-soluciones-discretas",
+    "title": "1.6 Ecuaciones complejas",
+    "section": "Ecuaciones con soluciones discretas",
+    "text": "Ecuaciones con soluciones discretas\nEl método depende de lo que aparezca en la ecuación:\n\nPotencias: se despeja, a veces con un cambio de variable, y se calculan raíces.\nConjugado o módulo: se escribe z=\\rho e^{i\\theta} y se igualan módulos y fases, con todos los giros en la fase.\nFunciones: se pasa a exponenciales, se despeja e^{iz} y se toma el logaritmo.\n\n\nRecuerda\n\n\\rho_1e^{i\\theta_1}=\\rho_2e^{i\\theta_2}\n\\iff\n\\rho_1=\\rho_2,\n\\quad\n\\theta_1=\\theta_2+2\\pi k;\n\\qquad\\qquad\ne^{iz}=u\n\\iff\nz=-i\\ln u.\n\n\n\nEjemplo 1.16\nCalcular y dibujar las soluciones de z^6+7z^3-8=0. (2018/19 1E)\n\nCon u=z^3 queda u^2+7u-8=0, de soluciones u=1 y u=-8. Cada una da tres raíces cúbicas (Figura 1.11): \n\\begin{aligned}\nz^3=1&:\\quad z=e^{i2\\pi k/3}=1,\\ \\ -\\tfrac12\\pm i\\tfrac{\\sqrt3}{2},\\\\\nz^3=-8&:\\quad z=2e^{i(\\pi+2\\pi k)/3}=-2,\\ \\ 1\\pm i\\sqrt3.\n\\end{aligned}\n Comprobación con z=-2: 64-56-8=0.\n\n\nFigura 1.11. Las seis soluciones forman dos triángulos equiláteros.\n\n\n\n\nEjemplo 1.17\nCalcular las soluciones de z^2=\\bar z.\n\nCon z=\\rho e^{i\\theta}, la ecuación es \\rho^2e^{i2\\theta}=\\rho e^{-i\\theta}. Igualando módulos y fases: \n\\rho^2=\\rho\n\\ \\Longrightarrow\\\n\\rho=0\\ \\ \\text{o}\\ \\ \\rho=1,\n\\qquad\\qquad\n2\\theta=-\\theta+2\\pi k\n\\ \\Longrightarrow\\\n\\theta=\\frac{2\\pi k}{3}.\n Hay cuatro soluciones: z=0, que no hay que perder al simplificar \\rho, y z=1, z=-\\frac12\\pm i\\frac{\\sqrt3}{2}.\nComprobación con z=e^{i2\\pi/3}: z^2=e^{i4\\pi/3}=e^{-i2\\pi/3}=\\bar z.\n\n\n\nEjemplo 1.18\nResolver \\cos z=5. (2016/17 7E)\n\nCon u=e^{iz}, y como e^{-iz}=1/u, \n\\frac{u+1/u}{2}=5\n\\ \\Longrightarrow\\\nu^2-10u+1=0\n\\ \\Longrightarrow\\\nu=5\\pm2\\sqrt6.\n Los dos valores son reales y positivos, así que su fase es 2\\pi k: \nz=-i\\ln u=2\\pi k-i\\ln\\left(5\\pm2\\sqrt6\\right),\n\\qquad\nk\\in\\mathbb{Z}.\n Como (5+2\\sqrt6)(5-2\\sqrt6)=1, los dos logaritmos son opuestos, y las soluciones forman dos filas simétricas (Figura 1.12). En \\mathbb{C}, el coseno no está acotado por 1.\nComprobación con k=0: \\cos(ia)=\\cosh a=\\frac12\\left(u+\\frac1u\\right)=5, con a=\\ln u.\n\n\nFigura 1.12. Soluciones de \\cos z=5.",
+    "crumbs": [
+      "1.6 Ecuaciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ecuaciones.html#lugares-geométricos",
+    "href": "01_complejos/ecuaciones.html#lugares-geométricos",
+    "title": "1.6 Ecuaciones complejas",
+    "section": "Lugares geométricos",
+    "text": "Lugares geométricos\nUn lugar geométrico es el conjunto de los afijos que cumplen una condición. Se sustituye z=x+iy, se opera y se reconoce la curva. Por ejemplo, |z-1|=2 da (x-1)^2+y^2=4: la circunferencia de centro 1 y radio 2, como cabe esperar, porque |z-1| es la distancia al afijo de 1 (Figura 1.3).\nCon desigualdades, el resultado es una región; con varias condiciones, su intersección.\n\nRecuerda\n\nz=x+iy,\n\\qquad\n\\operatorname{Re}z=x,\n\\qquad\n\\operatorname{Im}z=y,\n\\qquad\n|z|=\\sqrt{x^2+y^2}.\n\n\n\nEjemplo 1.19\nDibujar el lugar geométrico |z-2|&gt;|z-2i|, \\ |z|+\\operatorname{Im}z&lt;4. (2019/20 4E)\n\nCon z=x+iy, la primera condición, elevada al cuadrado, da \n(x-2)^2+y^2&gt;x^2+(y-2)^2\n\\quad\\Longrightarrow\\quad\ny&gt;x.\n Son los puntos más cerca de 2i que de 2: la recta y=x es la mediatriz del segmento que los une. La segunda da \n\\sqrt{x^2+y^2}&lt;4-y\n\\quad\\Longrightarrow\\quad\nx^2&lt;16-8y\n\\quad\\Longrightarrow\\quad\ny&lt;2-\\frac{x^2}{8}.\n Elevar al cuadrado exige 4-y&gt;0, que se cumple porque sale y&lt;2. El lugar es la región entre la recta y la parábola, sin el borde (Figura 1.13).\nComprobación con z=i: |i-2|=\\sqrt5&gt;|i-2i|=1, y |i|+1=2&lt;4.\n\n\nFigura 1.13. La región entre la recta y la parábola.\n\n\n\n\nEjemplo 1.20\nDibujar el lugar geométrico |z-4i|+|z+4i|&lt;10, \\ \\frac\\pi6\\le\\arg z\\le\\frac\\pi3. (2017/18 4E)\n\nPrimero se busca el borde de la primera condición. Con z=x+iy, \n\\sqrt{x^2+(y-4)^2}+\\sqrt{x^2+(y+4)^2}=10.\n Se aísla una raíz y se eleva al cuadrado. La raíz que queda se aísla y se eleva de nuevo: \n\\begin{aligned}\n\\sqrt{x^2+(y-4)^2}=10-\\sqrt{x^2+(y+4)^2}\n&\\quad\\Longrightarrow\\quad\n5\\sqrt{x^2+(y+4)^2}=25+4y\\\\\n&\\quad\\Longrightarrow\\quad\n25x^2+9y^2=225\n\\quad\\Longrightarrow\\quad\n\\frac{x^2}{9}+\\frac{y^2}{25}=1.\n\\end{aligned}\n Es una elipse de semiejes 3 y 5. La desigualdad corresponde a su interior, porque z=0 la cumple: 4+4&lt;10.\nLa segunda condición es un sector con vértice en el origen, que no pertenece al lugar porque no tiene fase. El lugar es la parte del sector dentro de la elipse (Figura 1.14).\nComprobación con z=1+i, de fase \\pi/4: |1-3i|+|1+5i|=\\sqrt{10}+\\sqrt{26}\\approx8.3&lt;10, y \\frac19+\\frac1{25}&lt;1.\n\n\nFigura 1.14. El sector dentro de la elipse. El borde de la elipse no pertenece al lugar.\n\n\n\n\nEjemplo 1.21\nDibujar el lugar geométrico \\operatorname{Re}\\left(\\frac{1}{z-1}\\right)&gt;\\frac12, \\ \\operatorname{Im}\\left(\\frac{1}{z-1}\\right)&gt;\\frac12. (2018/19 1E)\n\nCon z=x+iy, se multiplica por el conjugado del denominador: \n\\frac{1}{z-1}=\\frac{(x-1)-iy}{(x-1)^2+y^2}.\n Se quita el denominador, que es positivo, y se completan cuadrados: \n\\begin{aligned}\n\\frac{x-1}{(x-1)^2+y^2}&gt;\\frac12\n&\\quad\\Longrightarrow\\quad\n(x-2)^2+y^2&lt;1,\\\\\n\\frac{-y}{(x-1)^2+y^2}&gt;\\frac12\n&\\quad\\Longrightarrow\\quad\n(x-1)^2+(y+1)^2&lt;1.\n\\end{aligned}\n Son dos círculos de radio 1, sin el borde, centrados en 2 y en 1-i. El lugar es su intersección (Figura 1.15).\nComprobación con z=\\frac32-\\frac i2, en el centro de la región: \\frac{1}{z-1}=\\frac{2}{1-i}=1+i, con partes real e imaginaria mayores que \\frac12.\n\n\nFigura 1.15. Intersección de los dos círculos.\n\n\n\n\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.31–1.39.",
+    "crumbs": [
+      "1.6 Ecuaciones complejas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/operaciones.html",
+    "href": "01_complejos/operaciones.html",
+    "title": "1.3 Operaciones en \\mathbb{C}",
+    "section": "",
+    "text": "La suma y la resta se hacen en forma binómica. El producto, el cociente, las potencias y las raíces son más sencillos en forma exponencial.",
+    "crumbs": [
+      "1.3 Operaciones"
+    ]
+  },
+  {
+    "objectID": "01_complejos/operaciones.html#producto-y-cociente",
+    "href": "01_complejos/operaciones.html#producto-y-cociente",
+    "title": "1.3 Operaciones en \\mathbb{C}",
+    "section": "Producto y cociente",
+    "text": "Producto y cociente\nPor la regla de los exponentes, los módulos se multiplican o se dividen y las fases se suman o se restan.\n\nRecuerda\n\nz_1z_2=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)},\n\\qquad\n\\frac{z_1}{z_2}=\\frac{\\rho_1}{\\rho_2}\\,e^{i(\\theta_1-\\theta_2)}.\n\n\n\nEjemplo 1.7\n† Calcular \\dfrac{1+i}{1-i} en forma exponencial.\n\nComo 1+i=\\sqrt2\\,e^{i\\pi/4} y 1-i=\\sqrt2\\,e^{-i\\pi/4}, \n\\frac{1+i}{1-i}=\\frac{\\sqrt2}{\\sqrt2}\\,e^{i(\\pi/4+\\pi/4)}=e^{i\\pi/2}=i.\n Comprobación en forma binómica: \\dfrac{(1+i)(1+i)}{(1-i)(1+i)}=\\dfrac{2i}{2}=i.",
+    "crumbs": [
+      "1.3 Operaciones"
+    ]
+  },
+  {
+    "objectID": "01_complejos/operaciones.html#potencias-y-fórmula-de-moivre",
+    "href": "01_complejos/operaciones.html#potencias-y-fórmula-de-moivre",
+    "title": "1.3 Operaciones en \\mathbb{C}",
+    "section": "Potencias y fórmula de Moivre",
+    "text": "Potencias y fórmula de Moivre\nUna potencia es un producto repetido: el módulo se eleva a n y la fase se multiplica por n. Escrito con seno y coseno para \\rho=1, es la fórmula de Moivre.\n\nRecuerda\n\nz^n=\\rho^ne^{in\\theta}=\\rho^n(\\cos n\\theta+i\\sin n\\theta),\n\\qquad\n(\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta.\n\n\n\nEjemplo 1.8\nSea z=-\\frac{\\sqrt3}{2}-\\frac i2. Calcular z^9 en forma binómica. (2014/15 7E)\n\nEl módulo es 1. El afijo está en el tercer cuadrante, con \\tan\\theta=1/\\sqrt3, así que \\theta=\\pi/6+\\pi=7\\pi/6. Entonces \nz^9=e^{i\\,9\\cdot7\\pi/6}=e^{i\\,21\\pi/2}=e^{i(10\\pi+\\pi/2)}=e^{i\\pi/2}=i.\n Comprobación en forma binómica: z^2=\\frac12+\\frac{\\sqrt3}{2}i, z^3=z^2z=-i, y z^9=(-i)^3=i.\n\n\n\nEjemplo 1.9\n† Obtener \\cos2\\theta y \\sin2\\theta con la fórmula de Moivre.\n\nCon n=2, \n\\cos2\\theta+i\\sin2\\theta=(\\cos\\theta+i\\sin\\theta)^2=(\\cos^2\\theta-\\sin^2\\theta)+i\\,2\\sin\\theta\\cos\\theta.\n Igualando partes reales e imaginarias, \\cos2\\theta=\\cos^2\\theta-\\sin^2\\theta y \\sin2\\theta=2\\sin\\theta\\cos\\theta.",
+    "crumbs": [
+      "1.3 Operaciones"
+    ]
+  },
+  {
+    "objectID": "01_complejos/operaciones.html#raíces",
+    "href": "01_complejos/operaciones.html#raíces",
+    "title": "1.3 Operaciones en \\mathbb{C}",
+    "section": "Raíces",
+    "text": "Raíces\nLas raíces n-ésimas de w son las soluciones de z^n=w. La clave es escribir la fase de w con todos los giros. Por ejemplo, para z^3=8, con z=\\rho e^{i\\theta}, \n\\rho^3e^{i3\\theta}=8\\,e^{i\\,2\\pi k}\n\\quad\\Longrightarrow\\quad\n\\rho=2,\n\\qquad\n\\theta=\\frac{2\\pi k}{3}.\n Con k=0,1,2 salen tres raíces: 2, 2e^{i2\\pi/3} y 2e^{i4\\pi/3}. Con k=3 se repite la primera. Las tres tienen el mismo módulo y sus fases están igualmente repartidas, así que forman un polígono regular.\n\nRecuerda\n\n\\sqrt[n]{z}=\\rho^{1/n}\\,e^{i(\\theta+2\\pi k)/n},\n\\qquad\nk=0,\\dots,n-1.\n\n\n\n\n\n\nEjemplo 1.10\nCalcular y representar las raíces cuartas de -16, en forma binómica. (2018/19 1E AT)\n\nComo -16=16e^{i\\pi}, el módulo de las raíces es 16^{1/4}=2 y sus fases son (\\pi+2\\pi k)/4, con k=0,1,2,3: \n2e^{i\\pi/4},\\quad 2e^{i3\\pi/4},\\quad 2e^{i5\\pi/4},\\quad 2e^{i7\\pi/4},\n\\qquad\\text{es decir,}\\qquad\n\\sqrt2\\,(\\pm1\\pm i).\n Forman un cuadrado (Figura 1.5).\n\n\nFigura 1.5. Raíces cuartas de -16.\n\nComprobación: \\left(\\sqrt2(1+i)\\right)^2=2\\cdot2i=4i, y (4i)^2=-16.\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.12–1.18.",
+    "crumbs": [
+      "1.3 Operaciones"
+    ]
+  },
+  {
+    "objectID": "01_complejos/binomica.html",
+    "href": "01_complejos/binomica.html",
+    "title": "1.1 Concepto de número complejo. Forma binómica",
+    "section": "",
+    "text": "Cuando una ecuación no tiene solución en un conjunto de números, se amplía el conjunto:\n\n3+x=2 no tiene solución en \\mathbb{N}: se pasa a \\mathbb{Z}, con x=-1.\n3x=2 no tiene solución en \\mathbb{Z}: se pasa a \\mathbb{Q}, con x=\\frac23.\nx^2=2 no tiene solución en \\mathbb{Q}: se pasa a \\mathbb{R}, con x=\\pm\\sqrt2.\nx^2+1=0 no tiene solución en \\mathbb{R}: se pasa a \\mathbb{C}.\n\nEl último paso consiste en admitir un número nuevo, i, cuyo cuadrado es -1, de modo que x=\\pm i. Con él también tienen solución las ecuaciones de segundo grado con discriminante negativo. Como (4i)^2=16\\,i^2=-16, \nz^2-2z+5=0\n\\quad\\Longrightarrow\\quad\nz=\\frac{2\\pm\\sqrt{-16}}{2}=\\frac{2\\pm4i}{2}=1\\pm2i.\n\nA i se le llama unidad imaginaria. Un número complejo es una suma z=a+bi de un número real y un múltiplo real de i. Escrito así, está en forma binómica.\n\nRecuerda\n\ni^2=-1,\n\\qquad\n\\mathbb{C}=\\{z=a+bi:\\ a,b\\in\\mathbb{R}\\},\n\\qquad\n\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}\\subset\\mathbb{C}.",
+    "crumbs": [
+      "1.1 Forma binómica"
+    ]
+  },
+  {
+    "objectID": "01_complejos/binomica.html#ecuaciones-sin-solución-y-nuevos-conjuntos-de-números",
+    "href": "01_complejos/binomica.html#ecuaciones-sin-solución-y-nuevos-conjuntos-de-números",
+    "title": "1.1 Concepto de número complejo. Forma binómica",
+    "section": "",
+    "text": "Cuando una ecuación no tiene solución en un conjunto de números, se amplía el conjunto:\n\n3+x=2 no tiene solución en \\mathbb{N}: se pasa a \\mathbb{Z}, con x=-1.\n3x=2 no tiene solución en \\mathbb{Z}: se pasa a \\mathbb{Q}, con x=\\frac23.\nx^2=2 no tiene solución en \\mathbb{Q}: se pasa a \\mathbb{R}, con x=\\pm\\sqrt2.\nx^2+1=0 no tiene solución en \\mathbb{R}: se pasa a \\mathbb{C}.\n\nEl último paso consiste en admitir un número nuevo, i, cuyo cuadrado es -1, de modo que x=\\pm i. Con él también tienen solución las ecuaciones de segundo grado con discriminante negativo. Como (4i)^2=16\\,i^2=-16, \nz^2-2z+5=0\n\\quad\\Longrightarrow\\quad\nz=\\frac{2\\pm\\sqrt{-16}}{2}=\\frac{2\\pm4i}{2}=1\\pm2i.\n\nA i se le llama unidad imaginaria. Un número complejo es una suma z=a+bi de un número real y un múltiplo real de i. Escrito así, está en forma binómica.\n\nRecuerda\n\ni^2=-1,\n\\qquad\n\\mathbb{C}=\\{z=a+bi:\\ a,b\\in\\mathbb{R}\\},\n\\qquad\n\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}\\subset\\mathbb{C}.",
+    "crumbs": [
+      "1.1 Forma binómica"
+    ]
+  },
+  {
+    "objectID": "01_complejos/binomica.html#parte-real-parte-imaginaria-y-afijo",
+    "href": "01_complejos/binomica.html#parte-real-parte-imaginaria-y-afijo",
+    "title": "1.1 Concepto de número complejo. Forma binómica",
+    "section": "Parte real, parte imaginaria y afijo",
+    "text": "Parte real, parte imaginaria y afijo\nUn número complejo queda fijado por dos números reales, así que se puede dibujar como un punto del plano.\nPara z=a+bi:\n\na es la parte real y b la parte imaginaria, sin la i: \\mathrm{Im}(1+2i)=2.\nSi b=0, z es real. Si a=0, z es imaginario puro.\nEl punto (a,b) es el afijo de z. En el plano complejo, el eje horizontal es el real y el vertical, el imaginario (Figura 1.1).\n\n\n\nFigura 1.1. Afijos de varios números complejos. Las soluciones 1\\pm2i de z^2-2z+5=0 son simétricas respecto al eje real.\n\n\nRecuerda\n\n\\mathrm{Re}(a+bi)=a,\n\\qquad\n\\mathrm{Im}(a+bi)=b,\n\\qquad\na+bi=c+di\\iff a=c\\ \\text{ y }\\ b=d.",
+    "crumbs": [
+      "1.1 Forma binómica"
+    ]
+  },
+  {
+    "objectID": "01_complejos/binomica.html#suma-y-producto",
+    "href": "01_complejos/binomica.html#suma-y-producto",
+    "title": "1.1 Concepto de número complejo. Forma binómica",
+    "section": "Suma y producto",
+    "text": "Suma y producto\nSe opera como con polinomios y se sustituye i^2=-1: \n(3+2i)+(1-4i)=4-2i,\n\\qquad\n(3+2i)(1-4i)=3-12i+2i-8i^2=11-10i.\n Las potencias de i se repiten cada cuatro: i^2=-1, i^3=-i, i^4=1, i^5=i.\n\nRecuerda\n\n(a_1+ib_1)+(a_2+ib_2)=(a_1+a_2)+i(b_1+b_2),\n \n(a_1+ib_1)(a_2+ib_2)=(a_1a_2-b_1b_2)+i(a_1b_2+a_2b_1).\n\n\n\nEjemplo 1.1\n† Comprobar que z=1\\pm2i son soluciones de z^2-2z+5=0.\n\nPara z=1+2i, el cuadrado es (1+2i)^2=1+4i+4i^2=-3+4i, y \nz^2-2z+5=(-3+4i)-(2+4i)+5=0.\n Para z=1-2i, solo cambia el signo de los términos con i: \nz^2-2z+5=(-3-4i)-(2-4i)+5=0.",
+    "crumbs": [
+      "1.1 Forma binómica"
+    ]
+  },
+  {
+    "objectID": "01_complejos/binomica.html#conjugado-y-cociente",
+    "href": "01_complejos/binomica.html#conjugado-y-cociente",
+    "title": "1.1 Concepto de número complejo. Forma binómica",
+    "section": "Conjugado y cociente",
+    "text": "Conjugado y cociente\nPara dividir hay que quitar la i del denominador, y para eso sirve el conjugado. El conjugado de z=a+bi es \\bar z=a-bi. Su producto por z es real: \n(3+4i)(3-4i)=9-12i+12i-16i^2=25.\n Por eso, un cociente se multiplica arriba y abajo por el conjugado del denominador: \n\\frac{1+3i}{1+i}=\\frac{(1+3i)(1-i)}{(1+i)(1-i)}=\\frac{4+2i}{2}=2+i.\n Se comprueba multiplicando: (2+i)(1+i)=1+3i.\n\nRecuerda\n\n\\bar z=a-bi,\n\\qquad\nz\\bar z=a^2+b^2,\n\\qquad\n\\mathrm{Re}(z)=\\frac{z+\\bar z}{2},\n\\qquad\n\\mathrm{Im}(z)=\\frac{z-\\bar z}{2i},\n \n\\frac{a_1+ib_1}{a_2+ib_2}=\\frac{a_1a_2+b_1b_2}{a_2^2+b_2^2}+i\\,\\frac{a_2b_1-a_1b_2}{a_2^2+b_2^2}.\n\n\n\nEjemplo 1.2\nSea z=\\dfrac{2+i}{a-i}, con a\\in\\mathbb{R}. Hallar a para que: (a) z sea real; (b) z sea imaginario puro; (c) el afijo de z esté en la bisectriz del primer cuadrante. (2015/16 1E)\n\nMultiplicando arriba y abajo por a+i, \nz=\\frac{(2+i)(a+i)}{(a-i)(a+i)}=\\frac{2a-1}{a^2+1}+i\\,\\frac{a+2}{a^2+1}.\n\n\n\\mathrm{Im}(z)=0 da a=-2, y entonces z=\\dfrac{2+i}{-2-i}=-1.\n\\mathrm{Re}(z)=0 da a=\\frac12, y entonces z=2i. Comprobación: 2i\\left(\\frac12-i\\right)=2+i.\n\\mathrm{Re}(z)=\\mathrm{Im}(z) da 2a-1=a+2, es decir, a=3, y entonces z=\\frac12+\\frac12i.\n\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.1–1.6.",
+    "crumbs": [
+      "1.1 Forma binómica"
+    ]
+  },
+  {
+    "objectID": "01_complejos/index.html",
+    "href": "01_complejos/index.html",
+    "title": "1 Números complejos",
+    "section": "",
+    "text": "Los números complejos amplían los reales para que ecuaciones como x^2+1=0 tengan solución. Cada uno es un punto del plano, y eso permite verlos de dos formas: por sus coordenadas, en forma binómica, o por su distancia al origen y su ángulo, en forma exponencial.\nLa forma exponencial es la herramienta central del capítulo. Con ella, productos, potencias y raíces se reducen a operar con módulos y fases, y las operaciones se leen como traslaciones, escalados y rotaciones. La fórmula de Euler extiende además la exponencial, el logaritmo y las funciones trigonométricas a los números complejos, y aparecen resultados que no existen en los reales: el logaritmo de un número negativo, o un coseno igual a 5.",
+    "crumbs": [
+      "1. Números complejos"
+    ]
+  },
+  {
+    "objectID": "01_complejos/transformaciones.html",
+    "href": "01_complejos/transformaciones.html",
+    "title": "1.4 Transformaciones geométricas",
+    "section": "",
+    "text": "Cada operación tiene una lectura geométrica en el plano complejo, si se ve cada número como un vector que va del origen a su afijo.",
+    "crumbs": [
+      "1.4 Transformaciones geométricas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/transformaciones.html#interpretación-geométrica-de-la-suma-y-la-resta",
+    "href": "01_complejos/transformaciones.html#interpretación-geométrica-de-la-suma-y-la-resta",
+    "title": "1.4 Transformaciones geométricas",
+    "section": "Interpretación geométrica de la suma y la resta",
+    "text": "Interpretación geométrica de la suma y la resta\nCon z_1=3+i y z_2=1+2i (Figura 1.6):\n\nLa suma, z_1+z_2=4+3i, es la diagonal del paralelogramo que forman los dos vectores.\nLa resta, z_1-z_2=2-i, es el vector que va del afijo de z_2 al de z_1, trasladado al origen.\n\n\n\nFigura 1.6. (a) Suma de dos números complejos. (b) Resta: z_1-z_2 es el vector de z_2 a z_1.\n\n\n\n\n\nRecuerda\n\nz_1+z_2\\ \\ \\text{diagonal del paralelogramo},\n\\qquad\nz_1-z_2\\ \\ \\text{vector de $z_2$ a $z_1$}.",
+    "crumbs": [
+      "1.4 Transformaciones geométricas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/transformaciones.html#interpretación-geométrica-del-producto",
+    "href": "01_complejos/transformaciones.html#interpretación-geométrica-del-producto",
+    "title": "1.4 Transformaciones geométricas",
+    "section": "Interpretación geométrica del producto",
+    "text": "Interpretación geométrica del producto\nAl multiplicar, los módulos se multiplican y las fases se suman. Por tanto, multiplicar z=\\rho e^{i\\theta} por ke^{i\\alpha}, con k&gt;0, hace dos cosas (Figura 1.7):\n\nun escalado: el módulo pasa de \\rho a k\\rho;\nuna rotación: la fase pasa de \\theta a \\theta+\\alpha.\n\nPor ejemplo, como i=e^{i\\pi/2}, multiplicar por i gira 90^\\circ: (1+i)\\,i=-1+i. Multiplicar por 2i gira 90^\\circ y duplica el módulo.\n\n\nFigura 1.7. Multiplicar por ke^{i\\alpha} escala por k y gira un ángulo \\alpha.\n\n\n\n\nPara girar alrededor de otro punto w, se aplica lo mismo al vector z-w, que sale de w.\n\nRecuerda\n\n\\rho e^{i\\theta}\\cdot ke^{i\\alpha}=k\\rho\\,e^{i(\\theta+\\alpha)},\n\\qquad\nz'-w=(z-w)\\,k\\,e^{i\\alpha}.\n\n\n\n\n\n\nEjemplo 1.11\nLos afijos de z_1=3+i y z_2=1+3i son vértices de un triángulo equilátero. Hallar el otro vértice, sabiendo que es el de mayor parte imaginaria.\n\nEl lado de z_1 a z_2 es el vector z_2-z_1=-2+2i. En un triángulo equilátero, el otro lado que sale de z_1 tiene la misma longitud y forma con él un ángulo de \\pi/3. Hay dos giros posibles: \nz_3-z_1=(z_2-z_1)\\,e^{\\mp i\\pi/3}=(-2+2i)\\left(\\frac12\\mp i\\frac{\\sqrt3}{2}\\right).\n Con e^{-i\\pi/3} sale z_3=(2+\\sqrt3)(1+i), y con e^{i\\pi/3} sale (2-\\sqrt3)(1+i). El de mayor parte imaginaria es el primero (Figura 1.8): \nz_3=(2+\\sqrt3)+i(2+\\sqrt3).\n Comprobación: z_3-z_1=(\\sqrt3-1)+i(\\sqrt3+1) tiene módulo \\sqrt8, igual que |z_2-z_1|.\n\n\nFigura 1.8. El triángulo del ejemplo. En gris, la otra solución.\n\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 1.19–1.25.",
+    "crumbs": [
+      "1.4 Transformaciones geométricas"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html",
+    "href": "01_complejos/ejercicios.html",
+    "title": "1.7 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 1.1\n† Escribir en forma binómica:\n\n(2-3i)(1+2i)\n(1+i)^2\n\\dfrac{3-i}{1+2i}\ni^9\n\n\n(a) 8+i; (b) 2i; (c) \\frac15-\\frac75i; (d) i.\n\n\n\nEjercicio 1.2\n† Resolver z^2+4z+13=0, comprobar las soluciones y dibujar sus afijos.\n\nz=-2\\pm3i.\n\n\n\nEjercicio 1.3\nSean u=2-ai y v=3-bi, con a,b\\in\\mathbb{R}. Hallar a y b para que uv=8+4i. (2013/14 1E)\n\na=-2,\\ b=1, o bien a=\\frac23,\\ b=-3.\n\n\n\nEjercicio 1.4\nSea z=\\dfrac{3-2ai}{4-3i}, con a\\in\\mathbb{R}. Hallar a para que z esté en la bisectriz del primer cuadrante. (2014/15 1E)\n\nz=\\frac{12+6a+i(9-8a)}{25}. Igualando las partes real e imaginaria, a=-\\frac{3}{14}, y entonces z=\\frac37(1+i).\n\n\n\nEjercicio 1.5\nHallar z_1 y z_2 tales que z_1+z_2=1+2i, \\mathrm{Re}(z_1)=2 y z_1/z_2 sea real. (2017/18 2E)\n\nz_1=2+4i, z_2=-1-2i.\n\n\n\nEjercicio 1.6\n† Demostrar que \\overline{z_1z_2}=\\bar z_1\\,\\bar z_2, y que z es real si y solo si z=\\bar z.",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#concepto-de-número-complejo.-forma-binómica",
+    "href": "01_complejos/ejercicios.html#concepto-de-número-complejo.-forma-binómica",
+    "title": "1.7 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 1.1\n† Escribir en forma binómica:\n\n(2-3i)(1+2i)\n(1+i)^2\n\\dfrac{3-i}{1+2i}\ni^9\n\n\n(a) 8+i; (b) 2i; (c) \\frac15-\\frac75i; (d) i.\n\n\n\nEjercicio 1.2\n† Resolver z^2+4z+13=0, comprobar las soluciones y dibujar sus afijos.\n\nz=-2\\pm3i.\n\n\n\nEjercicio 1.3\nSean u=2-ai y v=3-bi, con a,b\\in\\mathbb{R}. Hallar a y b para que uv=8+4i. (2013/14 1E)\n\na=-2,\\ b=1, o bien a=\\frac23,\\ b=-3.\n\n\n\nEjercicio 1.4\nSea z=\\dfrac{3-2ai}{4-3i}, con a\\in\\mathbb{R}. Hallar a para que z esté en la bisectriz del primer cuadrante. (2014/15 1E)\n\nz=\\frac{12+6a+i(9-8a)}{25}. Igualando las partes real e imaginaria, a=-\\frac{3}{14}, y entonces z=\\frac37(1+i).\n\n\n\nEjercicio 1.5\nHallar z_1 y z_2 tales que z_1+z_2=1+2i, \\mathrm{Re}(z_1)=2 y z_1/z_2 sea real. (2017/18 2E)\n\nz_1=2+4i, z_2=-1-2i.\n\n\n\nEjercicio 1.6\n† Demostrar que \\overline{z_1z_2}=\\bar z_1\\,\\bar z_2, y que z es real si y solo si z=\\bar z.",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#forma-exponencial-de-un-número-complejo",
+    "href": "01_complejos/ejercicios.html#forma-exponencial-de-un-número-complejo",
+    "title": "1.7 Ejercicios",
+    "section": "Forma exponencial de un número complejo",
+    "text": "Forma exponencial de un número complejo\n\nEjercicio 1.7\n† Hallar el módulo y la fase, y escribir en forma exponencial:\n\n\\sqrt3-i\n-3\n-2i\n\n\n(a) 2e^{-i\\pi/6}; (b) 3e^{i\\pi}; (c) 2e^{-i\\pi/2}.\n\n\n\nEjercicio 1.8\n† Escribir en forma binómica:\n\n2e^{i3\\pi/4}\n4e^{-i\\pi/3}\ne^{i7\\pi/6}\n\n\n(a) -\\sqrt2+i\\sqrt2; (b) 2-2i\\sqrt3; (c) -\\frac{\\sqrt3}{2}-\\frac i2.\n\n\n\nEjercicio 1.9\nSea z=\\dfrac{k+i}{2+i}, con k\\in\\mathbb{R}. Hallar k para que |z|=\\sqrt2. (2013/14 5E)\n\nk=\\pm3.\n\n\n\nEjercicio 1.10\nSean z_1,z_2\\neq0 tales que |z_1+z_2|=|z_1-z_2|. Demostrar que z_1/z_2 es imaginario puro. ¿Qué figura forman 0, z_1, z_2 y z_1+z_2? (2014/15 5E)\n\nElevando al cuadrado, \\mathrm{Re}(z_1\\bar z_2)=0. Forman un rectángulo.\n\n\n\nEjercicio 1.11\nSean z_1,z_2 tales que \\dfrac{(z_1+z_2)\\,i}{z_1-z_2} es real. Demostrar que |z_1|=|z_2|. (2014/15 2E)",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#operaciones-en-mathbbc",
+    "href": "01_complejos/ejercicios.html#operaciones-en-mathbbc",
+    "title": "1.7 Ejercicios",
+    "section": "Operaciones en \\mathbb{C}",
+    "text": "Operaciones en \\mathbb{C}\n\nEjercicio 1.12\nCalcular \\left(\\dfrac{1+i}{\\sqrt2}\\right)^{10}+\\left(\\dfrac{1-i}{\\sqrt2}\\right)^{10} y representar el resultado. (2017/18 6E)\n\n0.\n\n\n\nEjercicio 1.13\n† Calcular y representar las raíces sextas de 1.\n\ne^{ik\\pi/3}, con k=0,\\dots,5: un hexágono regular.\n\n\n\nEjercicio 1.14\nCalcular \\sqrt[3]{\\dfrac{-2+2i}{1+i\\sqrt3}}. (2011/12 2E)\n\n2^{1/6}e^{i25^\\circ}, 2^{1/6}e^{i145^\\circ}, 2^{1/6}e^{i265^\\circ}.\n\n\n\nEjercicio 1.15\nCalcular y representar las soluciones de z^3=\\dfrac{-1+i}{\\sqrt3+i}. (2019/20 3E AT)\n\nz=2^{-1/6}e^{i(7\\pi/36+2\\pi k/3)}, con k=0,1,2: fases \\frac{7\\pi}{36}, \\frac{31\\pi}{36} y \\frac{55\\pi}{36}.\n\n\n\nEjercicio 1.16\nCalcular \\left(\\dfrac{(1+i\\sqrt3)\\left(\\frac{-1+i}{\\sqrt2}\\right)}{2i\\left(\\frac{1-i}{\\sqrt2}\\right)^{1/3}}\\right)^{12}. (2019/20 4E AT)\n\n1.\n\n\n\nEjercicio 1.17\nUsar la fórmula de Moivre para expresar \\cos4x en función de \\sin x y \\cos x. (2016/17 4E)\n\n\\cos4x=\\cos^4x+\\sin^4x-6\\sin^2x\\cos^2x.\n\n\n\nEjercicio 1.18\nRazonar si son ciertas estas afirmaciones: (a) z^2=1\\Rightarrow z=1 o z=-1; (b) z^2=1\\Rightarrow z^k=1 para todo natural k\\geq2. (2012/13 3E)\n\n(a) Cierta. (b) Falsa: z=-1, k=3.",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#transformaciones-geométricas",
+    "href": "01_complejos/ejercicios.html#transformaciones-geométricas",
+    "title": "1.7 Ejercicios",
+    "section": "Transformaciones geométricas",
+    "text": "Transformaciones geométricas\n\nEjercicio 1.19\nUn triángulo equilátero centrado en el origen se gira \\pi/12 radianes alrededor del origen, y uno de los vértices que se obtienen es 3e^{i3\\pi/4}. Hallar los vértices del triángulo original. (2023/24 1E)\n\n3e^{i2\\pi/3}, 3e^{i4\\pi/3}, 3.\n\n\n\nEjercicio 1.20\nSe quiere cercar un recinto cuadrado que contiene el afijo de 2+2i. Dos vértices contiguos son z_1=2i y z_2=2+i. Hallar los otros dos y dibujar el recinto. (2014/15 6E)\n\nz_3=3+3i, z_4=1+4i.\n\n\n\nEjercicio 1.21\nUn recinto cuadrado contiene el afijo de -2+2i. Dos vértices contiguos son z_1=-3+3i y z_2=-2+i. Hallar los otros dos y dibujar el recinto. (2020/21 7E)\n\nz_3=2i, z_4=-1+4i.\n\n\n\nEjercicio 1.22\nLos vértices opuestos de un rombo son z_1=2-i y z_2=6+2i. La otra diagonal mide el doble que la que forman estos vértices. Hallar los otros vértices y el área. (2012/13 7E)\n\nz_3=1+\\frac92i, z_4=7-\\frac72i; área 25.\n\n\n\nEjercicio 1.23\nHallar z_3, el de mayor parte imaginaria, tal que z_1=\\frac{\\sqrt3}{2}-\\frac i2, z_2=i y z_3 formen un triángulo rectángulo isósceles con hipotenusa de extremos z_1 y z_2. (2016/17 1E)\n\nz_3=\\frac{3+\\sqrt3}{4}+i\\,\\frac{1+\\sqrt3}{4}.\n\n\n\nEjercicio 1.24\nSean z_1=5-2i y z_2=3+i dos vértices de un lado de un hexágono regular. Hallar el vértice z_3 contiguo a z_2, el de mayor parte imaginaria. (2020/21 2E)\n\nz_3=\\left(2+\\frac{3\\sqrt3}{2}\\right)+i\\left(\\frac52+\\sqrt3\\right).\n\n\n\nEjercicio 1.25\nRazonar la afirmación: «multiplicar un número complejo por otro equivale a aplicarle un giro y un cambio de escala». ¿Depende el resultado del orden en que se hagan? (2011/12 1E)\n\nEs cierta: z\\cdot k e^{i\\alpha}. No depende del orden, porque el producto es conmutativo.",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#funciones-complejas",
+    "href": "01_complejos/ejercicios.html#funciones-complejas",
+    "title": "1.7 Ejercicios",
+    "section": "Funciones complejas",
+    "text": "Funciones complejas\n\nEjercicio 1.26\n† Calcular:\n\ne^{2+i\\pi}\n\\ln(-e)\n\\ln(2i)\n(1+i)^i\n\n\n(a) -e^2; (b) 1+i(\\pi+2\\pi k); (c) \\ln2+i\\left(\\frac\\pi2+2\\pi k\\right); (d) e^{-\\pi/4-2\\pi k}\\,e^{i\\ln\\sqrt2}.\n\n\n\nEjercicio 1.27\nHallar los valores de a\\in\\mathbb{R} para que z=\\left(2e^{2i}\\right)^a sea un número real negativo con 1&lt;|z|&lt;2^6. (2018/19 2E)\n\na=\\pi/2 y a=3\\pi/2.\n\n\n\nEjercicio 1.28\nEscribir \\sin(\\pi+i\\ln2) en forma binómica. (2022/23 7E)\n\n-\\frac34i.\n\n\n\nEjercicio 1.29\nDemostrar que \\sin^2z=\\dfrac{1-\\cos2z}{2} para todo z\\in\\mathbb{C}. (2015/16 4E)\n\n\nEjercicio 1.30\nDemostrar que \\sin(z_1+z_2)=\\sin z_1\\cos z_2+\\cos z_1\\sin z_2 para todo z_1,z_2\\in\\mathbb{C}. (2019/20 1E)",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/ejercicios.html#ecuaciones-complejas",
+    "href": "01_complejos/ejercicios.html#ecuaciones-complejas",
+    "title": "1.7 Ejercicios",
+    "section": "Ecuaciones complejas",
+    "text": "Ecuaciones complejas\n\nEjercicio 1.31\nResolver e^{iz}=1+i y representar las soluciones. (2015/16 2E)\n\nz=\\frac\\pi4+2\\pi k-i\\ln\\sqrt2, con k\\in\\mathbb{Z}.\n\n\n\nEjercicio 1.32\nResolver z^3=-|z| y dibujar las soluciones. (2017/18 3E)\n\nz=0, e^{i\\pi/3}, -1, e^{i5\\pi/3}.\n\n\n\nEjercicio 1.33\nResolver z^4\\bar z\\,i+1=0 y representar las soluciones. (2018/19 3E)\n\nz=e^{i\\pi/6}, e^{i5\\pi/6}, e^{i3\\pi/2}.\n\n\n\nEjercicio 1.34\nResolver \\sin z=3 y representar las soluciones. (2012/13 2E, 2013/14 1E, 2014/15 3E)\n\nCon u=e^{iz}, u^2-6iu-1=0, y u=i(3\\pm2\\sqrt2). Entonces z=\\frac\\pi2+2\\pi k-i\\ln(3\\pm2\\sqrt2), con k\\in\\mathbb{Z}.\n\n\n\nEjercicio 1.35\nCalcular y dibujar las soluciones de \\sin z=\\sin2z. (2018/19 4E)\n\n\\sin2z=2\\sin z\\cos z, así que \\sin z=0 o \\cos z=\\frac12. Las soluciones son z=k\\pi y z=\\pm\\frac\\pi3+2k\\pi, con k\\in\\mathbb{Z}, todas reales.\n\n\n\nEjercicio 1.36\n† Dibujar los lugares geométricos:\n\n|z-1-i|=2\n|z+1|=|z-i|\n\\arg(z-i)=\\pi/4\n|z|\\le2, \\ \\operatorname{Re}z&gt;1\n\n\n(a) Circunferencia de centro 1+i y radio 2; (b) recta y=-x; (c) semirrecta y=x+1, con x&gt;0; (d) la parte del círculo de radio 2 a la derecha de x=1.\n\n\n\nEjercicio 1.37\nDibujar el lugar geométrico \\left|\\dfrac{z-(2+i)}{z-(1+i)}\\right|&lt;\\sqrt3. (2013/14 5E)\n\nExterior de la circunferencia de centro \\frac12+i y radio \\frac{\\sqrt3}{2}.\n\n\n\nEjercicio 1.38\nDibujar el lugar geométrico \\arg\\left(\\dfrac{z-2}{z-1}\\right)=\\dfrac\\pi2. (2017/18 1E)\n\n\\left(x-\\frac32\\right)^2+y^2=\\frac14 con y&gt;0: la semicircunferencia superior de diámetro el segmento de 1 a 2, sin sus extremos.\n\n\n\nEjercicio 1.39\nSea w un número imaginario puro con parte imaginaria positiva. Hallar w para que el lugar geométrico \\left|\\dfrac{z-1}{z-w}\\right|=\\sqrt2 encierre un área 4\\pi, y dibujarlo. (2021/22 1E)\n\nw=i; circunferencia (x+1)^2+(y-2)^2=4.",
+    "crumbs": [
+      "1.7 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "01_complejos/resumen.html",
+    "href": "01_complejos/resumen.html",
+    "title": "Resumen",
+    "section": "",
+    "text": "Resumen del capítulo 1\nForma binómica. z=a+bi, con i^2=-1. El afijo de z es el punto (a,b). \n\\bar z=a-bi,\n\\qquad\nz\\bar z=a^2+b^2,\n\\qquad\n\\frac{z_1}{z_2}=\\frac{z_1\\bar z_2}{z_2\\bar z_2},\n\\qquad\n\\mathrm{Re}(z)=\\frac{z+\\bar z}{2},\n\\qquad\n\\mathrm{Im}(z)=\\frac{z-\\bar z}{2i}.\n\nForma exponencial. z=\\rho e^{i\\theta}, con módulo \\rho y fase \\theta; la fase se elige según el cuadrante. \n\\rho=\\sqrt{a^2+b^2},\n\\qquad\n\\tan\\theta=\\frac ba,\n\\qquad\ne^{\\pm i\\theta}=\\cos\\theta\\pm i\\sin\\theta,\n\\qquad\n\\bar z=\\rho e^{-i\\theta},\n\\qquad\ne^{i(\\theta+2\\pi k)}=e^{i\\theta}.\n \n|z_1z_2|=|z_1||z_2|,\n\\qquad\n|z_1+z_2|\\le|z_1|+|z_2|,\n\\qquad\n|z_1-z_2|\\ \\text{ es la distancia entre afijos}.\n\nOperaciones. \nz_1z_2=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)},\n\\qquad\n\\frac{z_1}{z_2}=\\frac{\\rho_1}{\\rho_2}\\,e^{i(\\theta_1-\\theta_2)},\n\\qquad\nz^n=\\rho^ne^{in\\theta},\n\\qquad\n\\sqrt[n]{z}=\\rho^{1/n}e^{i(\\theta+2\\pi k)/n},\\ \\ k=0,\\dots,n-1.\n Fórmula de Moivre: (\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta.\nLectura geométrica. La suma es la diagonal del paralelogramo, y z_1-z_2 es el vector de z_2 a z_1. Multiplicar por ke^{i\\alpha} escala por k y gira un ángulo \\alpha. Alrededor de un punto w: \nz'-w=(z-w)\\,k\\,e^{i\\alpha}.\n\nFunciones complejas. Con z=x+iy y k\\in\\mathbb{Z}: \ne^z=e^x(\\cos y+i\\sin y),\n\\qquad\n\\ln z=\\ln\\rho+i(\\theta+2\\pi k),\n\\qquad\nz_1^{z_2}=e^{z_2\\ln z_1}.\n \n\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\n\\qquad\n\\cos z=\\frac{e^{iz}+e^{-iz}}{2},\n\\qquad\n\\sinh z=\\frac{e^{z}-e^{-z}}{2},\n\\qquad\n\\cosh z=\\frac{e^{z}+e^{-z}}{2}.\n El valor principal de \\ln z es el que tiene la fase en (-\\pi,\\pi].\nEcuaciones. Con potencias, se despeja y se calculan raíces. Con conjugado o módulo, se escribe z=\\rho e^{i\\theta} y se igualan módulos y fases. Con funciones, se pasa a exponenciales y se usa el logaritmo: \n\\rho_1e^{i\\theta_1}=\\rho_2e^{i\\theta_2}\n\\iff\n\\rho_1=\\rho_2,\\ \\ \\theta_1=\\theta_2+2\\pi k;\n\\qquad\ne^{iz}=u\n\\iff\nz=-i\\ln u.\n\nLugares geométricos. Se sustituye z=x+iy, con |z|=\\sqrt{x^2+y^2}, se opera y se reconoce la curva. Con desigualdades, el resultado es una región; con varias condiciones, su intersección.",
+    "crumbs": [
+      "Resumen"
+    ]
+  }
+]
