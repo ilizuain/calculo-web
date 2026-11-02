@@ -3,7 +3,6 @@
 (function () {
   "use strict";
   var CLAVE = "apuntes-ver-soluciones";
-  var CLAVE_CLASE = "apuntes-modo-clase";
   var soluciones = [];
 
   function preparar(sol) {
@@ -65,27 +64,13 @@
     var barra = document.createElement("div");
     barra.className = "barra-soluciones";
     barra.innerHTML = '<label><input type="checkbox"> Mostrar todas las soluciones</label>' +
-      '<span class="barra-acciones"><button type="button" class="boton boton-clase"></button>' +
-      '<a class="boton" href="complejos.pdf" download>Descargar en PDF</a></span>';
+      '<a class="boton" href="complejos.pdf" download>Descargar en PDF</a>';
     var casilla = barra.querySelector("input");
     casilla.checked = leer();
     if (casilla.checked) soluciones.forEach(function (s) { s.abrir(); });
     casilla.addEventListener("change", function () {
       guardar(casilla.checked);
       soluciones.forEach(function (s) { casilla.checked ? s.abrir() : s.cerrar(); });
-    });
-    // Modo clase: la misma página, con letra grande y sin menús ni texto corrido.
-    var botonClase = barra.querySelector(".boton-clase");
-    function ponClase(activo) {
-      document.documentElement.classList.toggle("modo-clase", activo);
-      botonClase.textContent = activo ? "Salir del modo clase" : "Modo clase";
-      try { localStorage.setItem(CLAVE_CLASE, activo ? "1" : "0"); } catch (e) { /* sin almacenamiento */ }
-    }
-    var claseGuardada = false;
-    try { claseGuardada = localStorage.getItem(CLAVE_CLASE) === "1"; } catch (e) { /* sin almacenamiento */ }
-    ponClase(claseGuardada);
-    botonClase.addEventListener("click", function () {
-      ponClase(!document.documentElement.classList.contains("modo-clase"));
     });
     var cabecera = document.querySelector("#title-block-header") || document.querySelector("main h1");
     if (cabecera) cabecera.parentNode.insertBefore(barra, cabecera.nextSibling);
