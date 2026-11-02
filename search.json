@@ -1,10 +1,190 @@
 [
   {
+    "objectID": "03_funciones/inversa.html",
+    "href": "03_funciones/inversa.html",
+    "title": "3.2 Función inversa",
+    "section": "",
+    "text": "No todas las funciones se pueden deshacer: para volver de y a x, cada y tiene que venir de un solo x.",
+    "crumbs": [
+      "3.2 Función inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/inversa.html#función-inyectiva-e-inversa",
+    "href": "03_funciones/inversa.html#función-inyectiva-e-inversa",
+    "title": "3.2 Función inversa",
+    "section": "Función inyectiva e inversa",
+    "text": "Función inyectiva e inversa\n\nDefinición 3.3\nUna función f es inyectiva en D si, para x_1,x_2\\in D, f(x_1)=f(x_2) implica x_1=x_2.\n\nPor ejemplo, f(x)=x^2 no es inyectiva en \\mathbb{R}, porque f(-1)=f(1), pero sí lo es en [0,\\infty).\n\nDefinición 3.4\nSea f inyectiva, con dominio D y rango R. Su función inversa f^{-1}, con dominio R y rango D, cumple \nf\\left(f^{-1}(x)\\right)=x\\ \\ (x\\in R),\n\\qquad\nf^{-1}\\left(f(x)\\right)=x\\ \\ (x\\in D).\n\n\nPara calcularla se despeja x en y=f(x) y se cambian los nombres de las variables. Ese cambio de nombres intercambia los ejes: si (a,b) está en la gráfica de f, (b,a) está en la de f^{-1}.\n\nRecuerda\n\ny=f(x)\\iff x=f^{-1}(y).\n Las gráficas de f y f^{-1} son simétricas respecto de la recta y=x.\n\n\nEjemplo 3.6\nHallar la inversa de f(x)=e^x.\n\nCon D=\\mathbb{R} y R=(0,\\infty), de y=e^x se despeja x=\\ln y. Cambiando los nombres, f^{-1}(x)=\\ln x, con dominio (0,\\infty) y rango \\mathbb{R} (Figura 3.3).\n\n\nFigura 3.3. e^x y \\ln x, simétricas respecto de y=x.\n\n\n\n\nEjemplo 3.7\nDibujar f(x)=5+(x-1)(x-3), con D=(-\\infty,2], y hallar su inversa. (2013/14 5E)\n\nCompletando el cuadrado, y=(x-2)^2+4, una rama de parábola con R=[4,\\infty) (Figura 3.4). Al despejar, x-2=\\pm\\sqrt{y-4}. Como x\\le2, se toma el signo negativo: \nx=2-\\sqrt{y-4}\n\\quad\\Longrightarrow\\quad\nf^{-1}(x)=2-\\sqrt{x-4},\n\\qquad x\\ge4.\n\n\n\nFigura 3.4. La rama de parábola y su inversa.\n\nComprobación. f(1)=5 y f^{-1}(5)=2-1=1.\n\n\n\nEjemplo 3.8\nDibujar f(x)=\\cosh x=\\dfrac{e^x+e^{-x}}{2}, hallar un dominio en el que tenga inversa, calcularla y dibujarla. (2015/16 5E)\n\nComo f(-x)=f(x), no es inyectiva en \\mathbb{R}. Se toma D=[0,\\infty), con R=[1,\\infty) (Figura 3.5). Con u=e^x, \ny=\\frac{u+1/u}{2}\n\\quad\\Longrightarrow\\quad\nu^2-2yu+1=0\n\\quad\\Longrightarrow\\quad\nu=y\\pm\\sqrt{y^2-1}.\n Como x\\ge0 exige u\\ge1, se toma el signo positivo. Entonces x=\\ln u y \nf^{-1}(x)=\\ln\\left(x+\\sqrt{x^2-1}\\right),\n\\qquad x\\ge1.\n\n\n\nFigura 3.5. \\cosh x en [0,\\infty) y su inversa. En punteado, la rama descartada.\n\nComprobación. f(0)=1 y f^{-1}(1)=\\ln1=0.",
+    "crumbs": [
+      "3.2 Función inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/inversa.html#funciones-trigonométricas-inversas",
+    "href": "03_funciones/inversa.html#funciones-trigonométricas-inversas",
+    "title": "3.2 Función inversa",
+    "section": "Funciones trigonométricas inversas",
+    "text": "Funciones trigonométricas inversas\nEl seno, el coseno y la tangente son periódicos, así que no son inyectivos en \\mathbb{R}. Sus inversas se definen en un intervalo donde sí lo son, que recorre todos sus valores (Figura 3.6).\n\n\nFigura 3.6. Seno y coseno en sus intervalos restringidos, con sus inversas. En discontinuo, y=x.\n\n\nRecuerda\n\n\\arcsin:[-1,1]\\to\\left[-\\frac\\pi2,\\frac\\pi2\\right],\n\\qquad\n\\arccos:[-1,1]\\to[0,\\pi],\n\\qquad\n\\arctan:\\mathbb{R}\\to\\left(-\\frac\\pi2,\\frac\\pi2\\right).\n\n\n\nEjemplo 3.9\nHallar el dominio y el rango de f(x)=\\dfrac{3\\pi}{2}+3\\arcsin(2x).\n\nEl arcoseno exige -1\\le2x\\le1, así que D=\\left[-\\frac12,\\frac12\\right]. Como \\arcsin(2x) toma todos los valores de \\left[-\\frac\\pi2,\\frac\\pi2\\right], al multiplicar por 3 y sumar \\frac{3\\pi}2 queda R=[0,3\\pi].\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.4–3.7.",
+    "crumbs": [
+      "3.2 Función inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/resumen.html",
+    "href": "03_funciones/resumen.html",
+    "title": "Resumen",
+    "section": "",
+    "text": "Resumen del capítulo 3\nDominio, rango y composición. f:D\\to R, con R=\\{f(x):x\\in D\\}. Si R_f\\subseteq D_g, (g\\circ f)(x)=g(f(x)); en general, g\\circ f\\neq f\\circ g.\nInversa. Si f es inyectiva en D, y=f(x)\\iff x=f^{-1}(y). Dominio y rango se intercambian, y las gráficas son simétricas respecto de y=x. \n\\arcsin:[-1,1]\\to\\left[-\\frac\\pi2,\\frac\\pi2\\right],\n\\qquad\n\\arccos:[-1,1]\\to[0,\\pi],\n\\qquad\n\\arctan:\\mathbb{R}\\to\\left(-\\frac\\pi2,\\frac\\pi2\\right).\n\nLímite. \\lim\\limits_{x\\to a}f(x)=l si f(x_n)\\to l para toda sucesión x_n\\to a de puntos de D con x_n\\neq a. Si dos sucesiones dan valores distintos, o si los límites laterales difieren, el límite no existe.\nContinuidad. f es continua en x=a si \\lim\\limits_{x\\to a}f(x)=f(a). Sumas, productos, cocientes con g(a)\\neq0 y compuestas de continuas son continuas. Si f es continua en [a,b]:\n\nWeierstrass: alcanza un máximo M y un mínimo m.\nBolzano: si f(a) y f(b) tienen signos distintos, existe z\\in(a,b) con f(z)=0.\nDarboux: para todo H\\in[m,M], existe z\\in[a,b] con f(z)=H.\n\nDerivada. \nf'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h},\n\\qquad\ny=f(a)+f'(a)(x-a),\n\\qquad\nf(a+h)\\approx f(a)+f'(a)\\,h.\n \n(fg)'=f'g+fg',\n\\qquad\n\\left(\\frac fg\\right)'=\\frac{f'g-fg'}{g^2}.\n En un punto de unión, derivable si es continua y f'(a^-)=f'(a^+) son finitas. Si esos límites son infinitos o no existen, se usa la definición.\nRegla de la cadena e inversa. \n(g\\circ f)'(x)=g'(f(x))\\,f'(x),\n\\qquad\ng=f^{-1}:\\ \\ g'(x)=\\frac{1}{f'(g(x))},\n\\qquad\n\\frac{dx}{dy}=\\frac{1}{dy/dx}.\n \nh=f(g):\\ \\ h''=f''(g)\\,(g')^2+f'(g)\\,g'',\n\\qquad\ng=f^{-1}:\\ \\ g''=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\nImplícita y paramétrica. En una curva F(x,y)=c, se deriva respecto de x con y=y(x) y se despeja y'. En una curva x(t), y(t): \n\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}.\n\nRazones de cambio. Se escribe la relación entre las variables, válida en todo instante, se deriva respecto de t y solo entonces se sustituyen los datos.",
+    "crumbs": [
+      "Resumen"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html",
+    "href": "03_funciones/ejercicios.html",
+    "title": "3.9 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 3.1\nHallar el dominio y el rango de las siguientes funciones:\n\n\nf(x)=1+2\\sin x\nf(x)=2+|x+1|\nf(x)=\\sqrt{9-x^2}\nf(x)=\\dfrac{1}{1+x^2}\n\n\n\n(a) D=\\mathbb{R}, R=[-1,3]; (b) D=\\mathbb{R}, R=[2,\\infty); (c) D=[-3,3], R=[0,3]; (d) D=\\mathbb{R}, R=(0,1].\n\n\n\nEjercicio 3.2\nHallar g\\circ f y f\\circ g con sus dominios:\n\nf(x)=x+1, g(x)=\\sqrt x\nf(x)=x-4, g(x)=\\ln x\n\n\n(a) (g\\circ f)(x)=\\sqrt{x+1}, D=[-1,\\infty); (f\\circ g)(x)=\\sqrt x+1, D=[0,\\infty). (b) (g\\circ f)(x)=\\ln(x-4), D=(4,\\infty); (f\\circ g)(x)=\\ln x-4, D=(0,\\infty).\n\n\n\nEjercicio 3.3\nSean f(x)=\\ln x y g(x)=e^x. Hallar g\\circ f y f\\circ g con sus dominios. ¿Son la misma función?\n\nLas dos fórmulas se reducen a x, pero g\\circ f tiene dominio (0,\\infty) y f\\circ g tiene dominio \\mathbb{R}. No son la misma función.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#dominio-rango-y-función-compuesta",
+    "href": "03_funciones/ejercicios.html#dominio-rango-y-función-compuesta",
+    "title": "3.9 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 3.1\nHallar el dominio y el rango de las siguientes funciones:\n\n\nf(x)=1+2\\sin x\nf(x)=2+|x+1|\nf(x)=\\sqrt{9-x^2}\nf(x)=\\dfrac{1}{1+x^2}\n\n\n\n(a) D=\\mathbb{R}, R=[-1,3]; (b) D=\\mathbb{R}, R=[2,\\infty); (c) D=[-3,3], R=[0,3]; (d) D=\\mathbb{R}, R=(0,1].\n\n\n\nEjercicio 3.2\nHallar g\\circ f y f\\circ g con sus dominios:\n\nf(x)=x+1, g(x)=\\sqrt x\nf(x)=x-4, g(x)=\\ln x\n\n\n(a) (g\\circ f)(x)=\\sqrt{x+1}, D=[-1,\\infty); (f\\circ g)(x)=\\sqrt x+1, D=[0,\\infty). (b) (g\\circ f)(x)=\\ln(x-4), D=(4,\\infty); (f\\circ g)(x)=\\ln x-4, D=(0,\\infty).\n\n\n\nEjercicio 3.3\nSean f(x)=\\ln x y g(x)=e^x. Hallar g\\circ f y f\\circ g con sus dominios. ¿Son la misma función?\n\nLas dos fórmulas se reducen a x, pero g\\circ f tiene dominio (0,\\infty) y f\\circ g tiene dominio \\mathbb{R}. No son la misma función.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#función-inversa",
+    "href": "03_funciones/ejercicios.html#función-inversa",
+    "title": "3.9 Ejercicios",
+    "section": "Función inversa",
+    "text": "Función inversa\n\nEjercicio 3.4\nHallar el dominio y el rango de:\n\n\nf(x)=-\\pi+\\arccos x\nf(x)=\\arcsin(x-1)\n\n\n\n(a) D=[-1,1], R=[-\\pi,0]; (b) D=[0,2], R=\\left[-\\frac\\pi2,\\frac\\pi2\\right].\n\n\n\nEjercicio 3.5\nHallar la inversa de cada función en el dominio indicado, y el dominio de la inversa:\n\n\nf(x)=1+e^{2x}, D=\\mathbb{R}\nf(x)=x^2-1, D=(-\\infty,0]\nf(x)=\\ln(x+3), D=(-3,\\infty)\nf(x)=\\cos(x-1), D=[1,\\pi+1]\nf(x)=\\sinh x, D=\\mathbb{R}\n\n\n\n(a) f^{-1}(x)=\\frac12\\ln(x-1), D=(1,\\infty); (b) f^{-1}(x)=-\\sqrt{1+x}, D=[-1,\\infty); (c) f^{-1}(x)=e^x-3, D=\\mathbb{R}; (d) f^{-1}(x)=1+\\arccos x, D=[-1,1]; (e) f^{-1}(x)=\\ln\\left(x+\\sqrt{x^2+1}\\right), D=\\mathbb{R}.\n\n\n\nEjercicio 3.6\nHallar la inversa de y(x)=\\dfrac{e^{2x}+e^{-2x}}{2}, definida en D=[0,\\infty), y su dominio. (2015/16 3E)\n\nx(y)=\\frac12\\ln\\left(y+\\sqrt{y^2-1}\\right), con dominio [1,\\infty) y rango [0,\\infty).\n\n\n\nEjercicio 3.7\nRazonar si cada función es inyectiva en el dominio indicado:\n\nf(x)=x^3 en \\mathbb{R}\nf(x)=\\sin x en [0,\\pi]\n\n\n(a) Sí: x_1^3=x_2^3 implica x_1=x_2. (b) No: \\sin\\frac\\pi4=\\sin\\frac{3\\pi}4.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#límite-de-una-función",
+    "href": "03_funciones/ejercicios.html#límite-de-una-función",
+    "title": "3.9 Ejercicios",
+    "section": "Límite de una función",
+    "text": "Límite de una función\n\nEjercicio 3.8\nCalcular \\lim\\limits_{x\\to1}\\dfrac{x^2-1}{x-1} usando la definición.\n\nSi x_n\\to1 con x_n\\neq1, f(x_n)=x_n+1\\to2. El límite es 2.\n\n\n\nEjercicio 3.9\nProbar con dos sucesiones que \\lim\\limits_{x\\to0}\\sin\\dfrac1x no existe.\n\nCon x_n=\\frac{1}{n\\pi}, f(x_n)=0\\to0. Con y_n=\\frac{1}{\\pi/2+2n\\pi}, f(y_n)=1\\to1. Los límites son distintos.\n\n\n\nEjercicio 3.10\nEstudiar el límite en x=1 de f(x)=\\begin{cases}x^2,&x&lt;1\\\\3-x,&x\\geq1.\\end{cases}\n\n\\lim\\limits_{x\\to1^-}f(x)=1 y \\lim\\limits_{x\\to1^+}f(x)=2: el límite no existe.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#continuidad",
+    "href": "03_funciones/ejercicios.html#continuidad",
+    "title": "3.9 Ejercicios",
+    "section": "Continuidad",
+    "text": "Continuidad\n\nEjercicio 3.11\nHallar k\\in\\mathbb{R} para que sea continua f(x)=\\begin{cases}x^2,&x&lt;1\\\\kx-3,&x\\geq1.\\end{cases}\n\nk=4.\n\n\n\nEjercicio 3.12\n¿En qué puntos son continuas estas funciones?\n\n\nf(x)=\\dfrac{1}{x^2-1}\nf(x)=\\dfrac{\\ln x}{x-2}\n\n\n\n(a) En \\mathbb{R}\\setminus\\{-1,1\\}; (b) en (0,2)\\cup(2,\\infty).\n\n\n\nEjercicio 3.13\nSi f es continua en x=a y g no lo es, ¿puede ser continua f+g en x=a? Razonar la respuesta.\n\nNo: si lo fuera, g=(f+g)-f sería continua, por ser resta de continuas.\n\n\n\nEjercicio 3.14\nDemostrar que la ecuación \\cos x=x tiene una solución en (0,1).\n\ng(x)=\\cos x-x es continua, con g(0)=1&gt;0 y g(1)=\\cos1-1&lt;0. Se aplica Bolzano.\n\n\n\nEjercicio 3.15\nDemostrar que f(x)=x^3-3x+1 tiene tres raíces reales, y localizarlas entre enteros consecutivos.\n\nf(-2)=-1, f(-1)=3, f(0)=1, f(1)=-1 y f(2)=3. Por Bolzano, hay raíces en (-2,-1), (0,1) y (1,2). Un polinomio de grado 3 no tiene más.\n\n\n\nEjercicio 3.16\nEl porcentaje p de residuos que recicla cada año una ciudad y su coste C, en millones, cumplen p(C)=\\dfrac{100C}{C+500}. (2012/13 5E)\n\nDibujar p(C) y C(p).\nEstudiar el comportamiento de C cuando p se acerca a 100.\n¿Se puede reciclar cualquier porcentaje?\nLa Administración quiere reciclar cada año entre el 20,% y el 30,%. Demostrar que es posible.\n\n\n(a) C(p)=\\frac{500p}{100-p}. (b) C\\to\\infty. (c) No: solo 0\\leq p&lt;100. (d) C(20)=125 y C(30)\\approx214.3. Como p(C) es continua, por el teorema de Darboux toma en [125,\\,214.3] todos los valores de [20,30].\n\n\n\nEjercicio 3.17\nLa función f(x)=1/x cumple f(-1)&lt;0 y f(1)&gt;0, pero no se anula en [-1,1]. ¿Contradice esto el teorema de Bolzano?\n\nNo: f no es continua en [-1,1], porque no está definida en x=0.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#derivada",
+    "href": "03_funciones/ejercicios.html#derivada",
+    "title": "3.9 Ejercicios",
+    "section": "Derivada",
+    "text": "Derivada\n\nEjercicio 3.18\nDemostrar con la definición que la derivada de f(x)=x es 1. (2016/17 3E)\n\nf'(x)=\\lim\\limits_{h\\to0}\\dfrac{x+h-x}{h}=1.\n\n\n\nEjercicio 3.19\nHallar con la definición la derivada de f(x)=1/x en x=a\\neq0.\n\nf'(a)=\\lim\\limits_{h\\to0}\\dfrac{1}{h}\\left(\\dfrac{1}{a+h}-\\dfrac1a\\right)=\\lim\\limits_{h\\to0}\\dfrac{-1}{a(a+h)}=-\\dfrac{1}{a^2}.\n\n\n\nEjercicio 3.20\nHallar las rectas tangentes a y=x^2 que pasan por el punto (1,-3).\n\nEn x=a, la tangente es y=a^2+2a(x-a). Al imponer el punto, a^2-2a-3=0, con a=3 o a=-1. Las tangentes son y=6x-9 e y=-2x-1.\n\n\n\nEjercicio 3.21\nSea f(x)=\\begin{cases}0,&x\\leq-1\\\\ax^3+bx,&-1&lt;x&lt;2\\\\11x-16,&x\\geq2.\\end{cases}\n\nHallar a y b para que f sea continua.\nEstudiar la derivabilidad de f.\n\n\n(a) a=1, b=-1. (b) No es derivable en x=-1: f'(-1^-)=0 y f'(-1^+)=2. Es derivable en x=2: las dos derivadas laterales valen 11.\n\n\n\nEjercicio 3.22\nHallar a, b, c y d para que sea continua y derivable en \\mathbb{R} la función \nf(x)=\\begin{cases}\\dfrac{x^2-4}{x-2},&x&lt;2\\\\[2mm]ax^2-bx+c,&2\\leq x&lt;3\\\\dx-a+b,&x\\geq3.\\end{cases}\n (2020/21 1E AT)\n\na=\\frac38, b=\\frac12, c=\\frac72, d=\\frac74.\n\n\n\nEjercicio 3.23\nPara construir una autopista hay que salvar un valle, cuyas laderas son tramos rectos con pendientes del 6,% y del 4,% (ver la figura). Hallar la ecuación del tramo central, entre A y B, si es un polinomio de grado 3. (2013/14 2E)\n\n\n\n\nCon el origen en A: y(0)=0, y'(0)=-0.06, y(2)=0.03 e y'(2)=0.04. Resulta y=-0.0125x^3+0.0625x^2-0.06x.\n\n\n\nEjercicio 3.24\nAproximar con la aproximación lineal:\n\n\ne^{0.2}\n\\ln0.9\n\\sin58^\\circ\n\n\n\n(a) 1.2; (b) -0.1; (c) \\frac{\\sqrt3}{2}-\\frac{\\pi}{180}\\approx0.8486, con a=60^\\circ y h=-\\frac{\\pi}{90} radianes.\n\n\n\nEjercicio 3.25\nDemostrar que si f es derivable en x=a, es continua en x=a. Indicación: escribir f(a+h)-f(a)=\\dfrac{f(a+h)-f(a)}{h}\\,h.\n\nAl tomar el límite con h\\to0, el segundo miembro tiende a f'(a)\\cdot0=0. Por tanto, \\lim\\limits_{h\\to0}f(a+h)=f(a).",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#regla-de-la-cadena-y-derivada-de-la-inversa",
+    "href": "03_funciones/ejercicios.html#regla-de-la-cadena-y-derivada-de-la-inversa",
+    "title": "3.9 Ejercicios",
+    "section": "Regla de la cadena y derivada de la inversa",
+    "text": "Regla de la cadena y derivada de la inversa\n\nEjercicio 3.26\nDerivar:\n\n\n\\sqrt{1+x^2}\ne^{-x^2}\n\\ln(\\sin x)\n\\sin^3x\n\n\n\n(a) \\dfrac{x}{\\sqrt{1+x^2}}; (b) -2xe^{-x^2}; (c) \\dfrac{\\cos x}{\\sin x}; (d) 3\\sin^2x\\cos x.\n\n\n\nEjercicio 3.27\nSea f(x)=\\begin{cases}g(x),&x&lt;0\\\\e^{\\sin x},&0\\leq x\\leq2\\pi\\\\g(x),&x&gt;2\\pi,\\end{cases} donde g es un polinomio de grado 2 o 3. (2022/23 2E)\n\n¿Qué grado tiene que tener g para que f sea continua y derivable en \\mathbb{R}? Razonar la respuesta.\nHallar los coeficientes de g.\n\n\n(a) Hay cuatro condiciones, g(0)=1, g'(0)=1, g(2\\pi)=1 y g'(2\\pi)=1, así que hacen falta cuatro coeficientes: grado 3. (b) g(x)=\\dfrac{x^3}{2\\pi^2}-\\dfrac{3x^2}{2\\pi}+x+1.\n\n\n\nEjercicio 3.28\nPara cada función del Ejercicio 3.5 y para \\cosh x (Ejemplo 3.8), hallar \\dfrac{dx}{dy} en función de x y en función de y.\n\n(a) \\frac12e^{-2x}=\\frac{1}{2(y-1)}; (b) \\frac{1}{2x}=-\\frac{1}{2\\sqrt{1+y}}; (c) x+3=e^y; (d) \\frac{1}{\\sin(1-x)}=-\\frac{1}{\\sqrt{1-y^2}}; (e) \\frac{1}{\\cosh x}=\\frac{1}{\\sqrt{y^2+1}}; \\cosh x: \\frac{1}{\\sinh x}=\\frac{1}{\\sqrt{y^2-1}}.\n\n\n\nEjercicio 3.29\nPara la función del Ejercicio 3.6, hallar \\dfrac{dx}{dy} en función de x y en función de y. (2015/16 3E)\n\n\\dfrac{dx}{dy}=\\dfrac{1}{e^{2x}-e^{-2x}}=\\dfrac{1}{2\\sqrt{y^2-1}}.\n\n\n\nEjercicio 3.30\nObtener las derivadas de \\arccos x y \\arctan x con la derivada de la inversa.\n\nSi x=\\cos y, con y\\in[0,\\pi], \\frac{dy}{dx}=-\\frac{1}{\\sin y}=-\\frac{1}{\\sqrt{1-x^2}}. Si x=\\tan y, \\frac{dy}{dx}=\\frac{1}{1+\\tan^2y}=\\frac{1}{1+x^2}.\n\n\n\nEjercicio 3.31\nUsar las fórmulas de las segundas derivadas para calcular:\n\n\n\\left(e^{x^2}\\right)''\n\\left(\\arcsin x\\right)''\n\n\n\n(a) (4x^2+2)e^{x^2}; (b) \\dfrac{x}{(1-x^2)^{3/2}}.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#derivación-implícita-y-paramétrica",
+    "href": "03_funciones/ejercicios.html#derivación-implícita-y-paramétrica",
+    "title": "3.9 Ejercicios",
+    "section": "Derivación implícita y paramétrica",
+    "text": "Derivación implícita y paramétrica\n\nEjercicio 3.32\nHallar y', suponiendo que y es función de x:\n\n\ny=e^{xy} (2019/20 3E AT)\n10x^4-18xy^2+10y^3=48\nx^3+y^3=4\ny=\\sin(3x+4y)\nx=3-\\sqrt{x^2+y^2}\n\n\n\n(a) y'=\\frac{y^2}{1-xy}; (b) y'=\\frac{9y^2-20x^3}{3(5y^2-6xy)}; (c) y'=-\\frac{x^2}{y^2}; (d) y'=\\frac{3\\cos(3x+4y)}{1-4\\cos(3x+4y)}; (e) y'=-\\frac{\\sqrt{x^2+y^2}+x}{y}.\n\n\n\nEjercicio 3.33\nHallar la recta tangente a la curva y^3+x^3-3xy=0 en el punto \\left(\\frac32,\\frac32\\right). (2020/21 5.1E)\n\ny'=\\frac{3y-3x^2}{3y^2-3x}=-1 en el punto. La tangente es y=-x+3.\n\n\n\nEjercicio 3.34\nHallar la recta tangente a la curva (x^2+y^2)^3=8x^2y^2 en el punto (-1,1).\n\nDerivando y sustituyendo el punto, y'=1. La tangente es y=x+2.\n\n\n\nEjercicio 3.35\nHallar \\dfrac{dy}{dx} en función de t:\n\n\nx=t^3-t, y=4-t^2\nx=2t^3+1, y=t^2\\cos t\nx=3\\cos t, y=2\\sin t\n\n\n\n(a) \\frac{-2t}{3t^2-1}; (b) \\frac{2\\cos t-t\\sin t}{6t}; (c) -\\frac{2\\cos t}{3\\sin t}.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/ejercicios.html#razones-de-cambio",
+    "href": "03_funciones/ejercicios.html#razones-de-cambio",
+    "title": "3.9 Ejercicios",
+    "section": "Razones de cambio",
+    "text": "Razones de cambio\n\nEjercicio 3.36\nUn avión vuela a velocidad constante y a 6 km de altura hacia una estación de radar situada en el suelo. En un momento dado, el radar lo ve con un ángulo de 30^\\circ, que crece a 0.5^\\circ por segundo (ver la figura). Calcular la velocidad del avión.\n\n\n\n\nx=\\dfrac{6}{\\tan\\alpha}, así que x'=-\\dfrac{6}{\\sin^2\\alpha}\\,\\alpha'=-24\\alpha'. Con \\alpha'=0.5^\\circ/\\text{s}=\\frac{\\pi}{360} rad/s, resulta x'=-\\frac{\\pi}{15} km/s. El signo indica que x disminuye: v=\\frac{\\pi}{15}\\approx0.21 km/s.\n\n\n\nEjercicio 3.37\nUn campo de béisbol tiene un cuadrado interior de 90 pies de lado, con home H en un vértice y las bases 1, 2 y 3 en los siguientes. Un jugador corre de la segunda base a la tercera, a 30 pies/s cuando está a 20 pies de la tercera (ver la figura). ¿A qué velocidad cambia en ese instante su distancia a home? (2025/26 2E)\n\n\n\n\nh^2=y^2+90^2, con y=20 e y'=-30. Entonces h'=\\dfrac{y\\,y'}{h}=-\\dfrac{60}{\\sqrt{85}}\\approx-6.51 pies/s: la distancia disminuye.",
+    "crumbs": [
+      "3.9 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "03_funciones/razones.html",
+    "href": "03_funciones/razones.html",
+    "title": "3.8 Razones de cambio",
+    "section": "",
+    "text": "Si dos magnitudes que cambian con el tiempo están relacionadas, sus velocidades de cambio también lo están. Basta con derivar la relación respecto de t, y solo después sustituir los datos del instante que interesa.\n\nRecuerda\n\nRelación entre las variables, válida en todo instante.\nDerivada respecto de t, con la regla de la cadena.\nSustitución de los datos del instante pedido.\n\n\n\nEjemplo 3.33\nUn coche circula a 5 km/h, constante, por una carretera recta. Un edificio está a 3 km del cruce con otra carretera perpendicular (Figura 3.21). ¿A qué velocidad se aleja el coche del edificio cuando está a 4 km del cruce? (2022/23 2E)\n\n\nFigura 3.21. El coche y el edificio.\n\n\nSea x(t) la distancia del coche al cruce y h(t) su distancia al edificio. Se pide h' cuando x=4, y entonces h=5. Se puede hacer de dos formas.\nDerivando la relación x^2+3^2=h^2 respecto de t, \n2x\\,x'=2h\\,h'\n\\quad\\Longrightarrow\\quad\nh'=\\frac{x\\,x'}{h}=\\frac{4\\cdot5}{5}=4\\ \\text{km/h}.\n\nCon la regla de la cadena, despejando antes h=\\sqrt{x^2+9}, \n\\frac{dh}{dt}=\\frac{dh}{dx}\\,\\frac{dx}{dt}=\\frac{x}{\\sqrt{x^2+9}}\\,\\frac{dx}{dt}=\\frac45\\cdot5=4\\ \\text{km/h}.\n\n\n\n\nEjemplo 3.34\nUn cohete sube en vertical con velocidad no constante. A 5000 m del punto de lanzamiento, una cámara gira para seguirlo (Figura 3.22). Hallar la velocidad angular de la cámara cuando el cohete está a 1000 m de altura y su velocidad es de 600 m/s. (2022/23 6E)\n\n\nFigura 3.22. La cámara sigue al cohete.\n\n\nLa distancia horizontal es constante, así que la relación más sencilla es \\tan\\theta=\\dfrac{h}{5000}. Derivando respecto de t, \n\\left(1+\\tan^2\\theta\\right)\\theta'=\\frac{h'}{5000}\n\\quad\\Longrightarrow\\quad\n\\theta'=\\frac{600}{5000}\\cdot\\frac{1}{1+\\left(\\frac{1000}{5000}\\right)^2}=\\frac{3}{26}\\ \\text{rad/s}.\n\nComprobación. Con \\theta=\\arctan\\dfrac{h}{5000}, la tabla de derivadas da la misma expresión.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.36–3.37.",
+    "crumbs": [
+      "3.8 Razones de cambio"
+    ]
+  },
+  {
+    "objectID": "03_funciones/derivada.html",
+    "href": "03_funciones/derivada.html",
+    "title": "3.5 Derivada",
+    "section": "",
+    "text": "La derivada mide la pendiente de una función en un punto y, también, la velocidad de cambio de una variable respecto a la otra.",
+    "crumbs": [
+      "3.5 Derivada"
+    ]
+  },
+  {
+    "objectID": "03_funciones/derivada.html#definición-y-recta-tangente",
+    "href": "03_funciones/derivada.html#definición-y-recta-tangente",
+    "title": "3.5 Derivada",
+    "section": "Definición y recta tangente",
+    "text": "Definición y recta tangente\n\nDefinición 3.8\nUna función f es derivable en x=a si existe el límite \nf'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h},\n que se llama derivada de f en x=a.\n\nEl cociente es la pendiente de la recta secante que pasa por (a,f(a)) y (a+h,f(a+h)). Cuando h\\to0, la secante se acerca a la recta tangente, así que f'(a) es la pendiente de la tangente (Figura 3.12).\n\n\nFigura 3.12. Recta secante y recta tangente en x=a.\n\n\nRecuerda: recta tangente en x=a\n\ny=f(a)+f'(a)(x-a).\n\n\n\nEjemplo 3.17\nDemostrar que la derivada de f(x)=x^3 es f'(x)=3x^2.\n\nCon la definición, \nf'(x)=\\lim_{h\\to0}\\frac{(x+h)^3-x^3}{h}=\\lim_{h\\to0}\\frac{3x^2h+3xh^2+h^3}{h}=\\lim_{h\\to0}\\left(3x^2+3xh+h^2\\right)=3x^2.\n\nComprobación. En x=1, con h=0.01, el cociente vale 3.0301, cerca de f'(1)=3.\n\n\nA partir de la definición se obtienen las reglas y las derivadas elementales, que son lo que se usa en la práctica.\n\nRecuerda: reglas de derivación\n\n(f\\pm g)'=f'\\pm g',\n\\qquad\n(kf)'=kf',\n\\qquad\n(fg)'=f'g+fg',\n\\qquad\n\\left(\\frac fg\\right)'=\\frac{f'g-fg'}{g^2}.\n\n\n\nRecuerda: derivadas elementales\n\n\\def\\arraystretch{1.7}\n\\begin{array}{c|ccc|c}\nf(x) & f'(x) & \\qquad\\qquad & f(x) & f'(x)\\\\\n\\hline\nx^n & nx^{n-1} & & \\sin x & \\cos x\\\\\ne^x & e^x & & \\cos x & -\\sin x\\\\\na^x & a^x\\ln a & & \\tan x & 1+\\tan^2x=\\dfrac{1}{\\cos^2x}\\\\[2mm]\n\\ln x & \\dfrac1x & & \\arcsin x & \\dfrac{1}{\\sqrt{1-x^2}}\\\\[2mm]\n\\sinh x & \\cosh x & & \\arccos x & -\\dfrac{1}{\\sqrt{1-x^2}}\\\\[2mm]\n\\cosh x & \\sinh x & & \\arctan x & \\dfrac{1}{1+x^2}\n\\end{array}\n\n\n\nEjemplo 3.18\nUn satélite sigue la órbita \\left(\\frac x3\\right)^2+\\frac y9=1. En un momento dado abandona la órbita en la dirección de la recta tangente, para dirigirse a una estación situada en P=(3,1). Hallar los puntos de la órbita desde los que tiene que salir. (2025/26 3E)\n\nLa órbita es la parábola y=9-x^2, con y'=-2x. La tangente en x=a es \ny=(9-a^2)-2a(x-a).\n Tiene que pasar por P, así que \n1=(9-a^2)-2a(3-a)\n\\quad\\Longrightarrow\\quad\na^2-6a+8=0\n\\quad\\Longrightarrow\\quad\na=2\\ \\text{ o }\\ a=4.\n Los puntos son (2,5) y (4,-7) (Figura 3.13).\n\n\nFigura 3.13. Las dos tangentes a la órbita que pasan por P.\n\nComprobación. Las tangentes son y=13-4x e y=25-8x. En x=3, las dos valen 1.",
+    "crumbs": [
+      "3.5 Derivada"
+    ]
+  },
+  {
+    "objectID": "03_funciones/derivada.html#funciones-a-trozos",
+    "href": "03_funciones/derivada.html#funciones-a-trozos",
+    "title": "3.5 Derivada",
+    "section": "Funciones a trozos",
+    "text": "Funciones a trozos\nUna función derivable en un punto también es continua en él. Lo contrario no es cierto: la derivada puede no existir aunque la función sea continua, si los límites del cociente por los dos lados no coinciden. Esos límites son las derivadas laterales, f'(a^+) y f'(a^-).\n\nEjemplo 3.19\nEstudiar la derivabilidad de f(x)=|x| en x=0.\n\nEs continua en x=0. Con h&gt;0, el cociente vale |h|/h=1, y con h&lt;0, vale -1. Por tanto, f'(0^+)=1 y f'(0^-)=-1: no es derivable en x=0.\n\n\nEn una función a trozos, cada trozo se deriva por separado y solo hay que estudiar los puntos de unión.\n\nRecuerda: en un punto de unión x=a\n\n\\text{continua:}\\quad f(a^-)=f(a^+),\n\\qquad\\qquad\n\\text{derivable:}\\quad \\text{además,}\\ f'(a^-)=f'(a^+)\\ \\text{finitas}.\n\n\nEn la práctica, se deriva cada trozo y se calculan los límites de f'(x) cuando x\\to a^- y x\\to a^+. Si f es continua y esos límites son finitos, coinciden con las derivadas laterales. Si alguno es infinito o no existe, ese cálculo no sirve y hay que usar directamente la definición de derivada.\n\nEjemplo 3.20\nEstudiar la derivabilidad en x=0 de: \n\\text{(a)}\\ \\ f(x)=\\begin{cases}x^2\\sin\\dfrac1x,&x\\neq0\\\\[2mm]0,&x=0\\end{cases}\n\\qquad\\qquad\n\\text{(b)}\\ \\ g(x)=\\sqrt[3]{x}.\n\n\n(a) Si x\\neq0, f'(x)=2x\\sin\\frac1x-\\cos\\frac1x, que no tiene límite en x=0. Pero con la definición, como el seno está acotado, \nf'(0)=\\lim_{h\\to0}\\frac{h^2\\sin(1/h)}{h}=\\lim_{h\\to0}h\\sin\\frac1h=0.\n Es derivable, aunque f'(x) no tenga límite en x=0.\n(b) Si x\\neq0, g'(x)=\\frac13x^{-2/3}, que tiende a +\\infty por los dos lados. Con la definición, \n\\lim_{h\\to0}\\frac{\\sqrt[3]{h}}{h}=\\lim_{h\\to0}h^{-2/3}=+\\infty.\n No es derivable: en x=0, la recta tangente es vertical.\n\n\n\nEjemplo 3.21\nSe van a construir tres tramos de carretera: dos rectos, con pendientes del 6,% y del 4,%, y uno central parabólico (Figura 3.14). Hallar las ecuaciones de los tres tramos. (2014/15 5E)\n\n\nFigura 3.14. Los tres tramos de la carretera, con la escala vertical exagerada.\n\n\nCon el origen en A, el tramo central va de x=0 a x=2, y \ny(x)=\\begin{cases}0.06x,&x&lt;0\\\\cx^2+dx+e,&0\\leq x\\leq2\\\\-0.04x+g,&x&gt;2.\\end{cases}\n La carretera no puede tener saltos ni esquinas, así que y tiene que ser continua y derivable en x=0 y x=2: \n\\begin{aligned}\ny(0^-)=y(0^+)&:\\ e=0, & y'(0^-)=y'(0^+)&:\\ d=0.06,\\\\\ny'(2^-)=y'(2^+)&:\\ 4c+d=-0.04, & y(2^-)=y(2^+)&:\\ 4c+2d+e=-0.08+g.\n\\end{aligned}\n De aquí, c=-0.025 y g=0.1. El tramo central es y=-0.025x^2+0.06x, y el último, y=-0.04x+0.1.\nComprobación. En x=2, los dos tramos valen 0.02.",
+    "crumbs": [
+      "3.5 Derivada"
+    ]
+  },
+  {
+    "objectID": "03_funciones/derivada.html#aproximación-lineal",
+    "href": "03_funciones/derivada.html#aproximación-lineal",
+    "title": "3.5 Derivada",
+    "section": "Aproximación lineal",
+    "text": "Aproximación lineal\nCerca de x=a, en lugar de la curva se puede usar su recta tangente (Figura 3.15). Es la aproximación lineal, y sale de quitar el límite en la definición de derivada: si h es pequeño, \nf'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}\n\\quad\\Longrightarrow\\quad\nf'(a)\\approx\\frac{f(a+h)-f(a)}{h}.\n Despejando f(a+h) se obtiene la fórmula de la aproximación.\n\n\nFigura 3.15. Aproximación de f(a+h) con la recta tangente.\n\n\nRecuerda\n\nf(a+h)\\approx f(a)+f'(a)\\,h.\n\n\n\nEjemplo 3.22\nAproximar \\sqrt{27} con la aproximación lineal.\n\nCon f(x)=\\sqrt x, se toma a=25, cuya raíz se conoce, y h=2. Como f'(x)=\\dfrac{1}{2\\sqrt x}, f'(25)=\\frac1{10} y \n\\sqrt{27}\\approx5+\\frac{1}{10}\\cdot2=5.2.\n\nComprobación. El valor exacto es 5.196\\ldots\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.18–3.25.",
+    "crumbs": [
+      "3.5 Derivada"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Cálculo",
     "section": "",
-    "text": "Departamento de Matemática Aplicada\nVersión de prueba en web. De momento contiene solo el capítulo 1.\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento."
+    "text": "Departamento de Matemática Aplicada\nVersión de prueba en web. De momento contiene el capítulo 1 y el capítulo 3.\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento."
   },
   {
     "objectID": "01_complejos/funciones.html",
@@ -344,6 +524,176 @@
     "text": "Resumen del capítulo 1\nForma binómica. z=a+bi, con i^2=-1. El afijo de z es el punto (a,b). \n\\bar z=a-bi,\n\\qquad\nz\\bar z=a^2+b^2,\n\\qquad\n\\frac{z_1}{z_2}=\\frac{z_1\\bar z_2}{z_2\\bar z_2},\n\\qquad\n\\mathrm{Re}(z)=\\frac{z+\\bar z}{2},\n\\qquad\n\\mathrm{Im}(z)=\\frac{z-\\bar z}{2i}.\n\nForma exponencial. z=\\rho e^{i\\theta}, con módulo \\rho y fase \\theta; la fase se elige según el cuadrante. \n\\rho=\\sqrt{a^2+b^2},\n\\qquad\n\\tan\\theta=\\frac ba,\n\\qquad\ne^{\\pm i\\theta}=\\cos\\theta\\pm i\\sin\\theta,\n\\qquad\n\\bar z=\\rho e^{-i\\theta},\n\\qquad\ne^{i(\\theta+2\\pi k)}=e^{i\\theta}.\n \n|z_1z_2|=|z_1||z_2|,\n\\qquad\n|z_1+z_2|\\le|z_1|+|z_2|,\n\\qquad\n|z_1-z_2|\\ \\text{ es la distancia entre afijos}.\n\nOperaciones. \nz_1z_2=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)},\n\\qquad\n\\frac{z_1}{z_2}=\\frac{\\rho_1}{\\rho_2}\\,e^{i(\\theta_1-\\theta_2)},\n\\qquad\nz^n=\\rho^ne^{in\\theta},\n \n\\sqrt[n]{z}=\\rho^{1/n}e^{i(\\theta+2\\pi k)/n},\\ \\ k=0,\\dots,n-1.\n Fórmula de Moivre: (\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta.\nLectura geométrica. La suma es la diagonal del paralelogramo, y z_1-z_2 es el vector de z_2 a z_1. Multiplicar por ke^{i\\alpha} escala por k y gira un ángulo \\alpha. Alrededor de un punto w: \nz'-w=(z-w)\\,k\\,e^{i\\alpha}.\n\nFunciones complejas. Con z=x+iy y k\\in\\mathbb{Z}: \ne^z=e^x(\\cos y+i\\sin y),\n\\qquad\n\\ln z=\\ln\\rho+i(\\theta+2\\pi k),\n\\qquad\nz_1^{z_2}=e^{z_2\\ln z_1}.\n \n\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\n\\qquad\n\\cos z=\\frac{e^{iz}+e^{-iz}}{2},\n\\qquad\n\\sinh z=\\frac{e^{z}-e^{-z}}{2},\n\\qquad\n\\cosh z=\\frac{e^{z}+e^{-z}}{2}.\n El valor principal de \\ln z es el que tiene la fase en (-\\pi,\\pi].\nEcuaciones. Con potencias, se despeja y se calculan raíces. Con conjugado o módulo, se escribe z=\\rho e^{i\\theta} y se igualan módulos y fases. Con funciones, se pasa a exponenciales y se usa el logaritmo: \n\\rho_1e^{i\\theta_1}=\\rho_2e^{i\\theta_2}\n\\iff\n\\rho_1=\\rho_2,\\ \\ \\theta_1=\\theta_2+2\\pi k;\n\\qquad\ne^{iz}=u\n\\iff\nz=-i\\ln u.\n\nLugares geométricos. Se sustituye z=x+iy, con |z|=\\sqrt{x^2+y^2}, se opera y se reconoce la curva. Con desigualdades, el resultado es una región; con varias condiciones, su intersección.",
     "crumbs": [
       "Resumen"
+    ]
+  },
+  {
+    "objectID": "03_funciones/index.html",
+    "href": "03_funciones/index.html",
+    "title": "3 Funciones reales de variable real",
+    "section": "",
+    "text": "Una función real asigna a cada número de su dominio otro número. Este capítulo empieza por lo básico: qué valores admite una función, cómo se encadena con otra y cuándo se puede invertir. Después llegan el límite y la continuidad, con teoremas que aseguran, por ejemplo, que una ecuación tiene solución sin necesidad de resolverla.\nLa derivada es la herramienta central del capítulo. Mide la pendiente de una curva y la velocidad de cambio de una variable respecto a otra, y da la recta tangente y la aproximación lineal de una función. Con la regla de la cadena se derivan funciones compuestas e inversas, curvas en las que y no se puede despejar y magnitudes relacionadas que cambian con el tiempo.",
+    "crumbs": [
+      "3. Funciones reales"
+    ]
+  },
+  {
+    "objectID": "03_funciones/dominio.html",
+    "href": "03_funciones/dominio.html",
+    "title": "3.1 Dominio, rango y función compuesta",
+    "section": "",
+    "text": "Una función asigna a cada número x un único número y=f(x). Para trabajar con ella hay que saber qué valores puede tomar x, qué valores alcanza y y qué ocurre al encadenarla con otra función.",
+    "crumbs": [
+      "3.1 Dominio, rango y compuesta"
+    ]
+  },
+  {
+    "objectID": "03_funciones/dominio.html#dominio-y-rango",
+    "href": "03_funciones/dominio.html#dominio-y-rango",
+    "title": "3.1 Dominio, rango y función compuesta",
+    "section": "Dominio y rango",
+    "text": "Dominio y rango\n\nDefinición 3.1\nSea f una función que asigna a cada x de un conjunto D\\subseteq\\mathbb{R} un único valor real y=f(x). El conjunto D es el dominio de f, y el conjunto de valores que toma y, \nR=\\{f(x):x\\in D\\},\n es su rango. Se escribe f:D\\to R.\n\nSi no se indica otra cosa, el dominio es el mayor conjunto de valores de x para los que la fórmula tiene sentido.\n\nEjemplo 3.1\nHallar el dominio y el rango de f(x)=\\sqrt{x-1}-2.\n\nLa raíz exige x\\ge1, así que D=[1,\\infty). Como la raíz toma todos los valores desde 0 en adelante, y toma todos los valores desde -2 en adelante, y R=[-2,\\infty). En la gráfica, son sus proyecciones sobre los ejes (Figura 3.1).\n\n\nFigura 3.1. Dominio y rango de f(x)=\\sqrt{x-1}-2, sobre los ejes.\n\n\n\n\nEjemplo 3.2\nHallar el dominio y el rango de f(x)=x^2-3x+2.\n\nUn polinomio se puede evaluar en cualquier x, así que D=\\mathbb{R}. Para el rango, se completa el cuadrado: \nf(x)=\\left(x-\\frac32\\right)^2-\\frac14.\n El cuadrado toma todos los valores desde 0 en adelante, luego R=[-\\frac14,\\infty).\nComprobación. El valor mínimo se alcanza en x=\\frac32: f\\left(\\frac32\\right)=\\frac94-\\frac92+2=-\\frac14.\n\n\n\nEjemplo 3.3\nHallar el dominio y el rango de f(x)=\\ln(4-x^2).\n\nEl logaritmo exige 4-x^2&gt;0, es decir, D=(-2,2). En ese intervalo, 4-x^2 toma todos los valores de (0,4]. Su logaritmo toma todos los valores desde -\\infty hasta \\ln4, luego R=(-\\infty,\\ln4].",
+    "crumbs": [
+      "3.1 Dominio, rango y compuesta"
+    ]
+  },
+  {
+    "objectID": "03_funciones/dominio.html#función-compuesta",
+    "href": "03_funciones/dominio.html#función-compuesta",
+    "title": "3.1 Dominio, rango y función compuesta",
+    "section": "Función compuesta",
+    "text": "Función compuesta\n\nDefinición 3.2\nSean f:D_f\\to R_f y g:D_g\\to R_g con R_f\\subseteq D_g. La función compuesta de f y g es \n(g\\circ f)(x)=g(f(x)).\n\n\nSe aplica primero f y luego g (Figura 3.2). La condición R_f\\subseteq D_g dice que todo lo que sale de f tiene que poder entrar en g.\n\n\nFigura 3.2. Función compuesta g\\circ f: primero se aplica f y luego g.\n\n\nEjemplo 3.4\nPara f(x)=x^2+1 y g(x)=\\sqrt x, hallar g\\circ f y f\\circ g con sus dominios.\n\nEn g\\circ f, R_f=[1,\\infty) queda dentro de D_g=[0,\\infty), y \n(g\\circ f)(x)=\\sqrt{x^2+1},\\qquad D=\\mathbb{R}.\n En f\\circ g, R_g=[0,\\infty) queda dentro de D_f=\\mathbb{R}, y \n(f\\circ g)(x)=\\left(\\sqrt x\\right)^2+1=x+1,\\qquad D=[0,\\infty).\n El orden importa. En x=2, g\\circ f pasa por f(2)=5 y vale g(5)=\\sqrt5, mientras que f\\circ g vale 3. Además, el dominio de f\\circ g sale de la cadena, no de la fórmula final: x+1 tiene sentido para todo x, pero g solo admite x\\ge0.\n\n\n\nEjemplo 3.5\nPara f(x)=x^2-1 y g(x)=\\ln x, hallar g\\circ f y su dominio.\n\nAquí R_f=[-1,\\infty) no queda dentro de D_g=(0,\\infty), así que hay que restringir el dominio de f a los valores de x con x^2-1&gt;0: \n(g\\circ f)(x)=\\ln(x^2-1),\\qquad D=(-\\infty,-1)\\cup(1,\\infty).\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.1–3.3.",
+    "crumbs": [
+      "3.1 Dominio, rango y compuesta"
+    ]
+  },
+  {
+    "objectID": "03_funciones/implicita.html",
+    "href": "03_funciones/implicita.html",
+    "title": "3.7 Derivación implícita y paramétrica",
+    "section": "",
+    "text": "A veces y no se puede despejar, o la curva viene dada con un parámetro. Aun así se puede calcular la pendiente de la curva en cada punto.",
+    "crumbs": [
+      "3.7 Derivación implícita y paramétrica"
+    ]
+  },
+  {
+    "objectID": "03_funciones/implicita.html#derivación-implícita",
+    "href": "03_funciones/implicita.html#derivación-implícita",
+    "title": "3.7 Derivación implícita y paramétrica",
+    "section": "Derivación implícita",
+    "text": "Derivación implícita\nSi la curva viene dada por una ecuación entre x e y, se derivan los dos miembros respecto de x, tratando y como función de x, y se despeja y'. Cada término con y se deriva con la regla de la cadena.\n\nRecuerda\n\n\\frac{d}{dx}\\left(y^n\\right)=n\\,y^{n-1}\\,y',\n\\qquad\n\\frac{d}{dx}(xy)=y+x\\,y'.\n\n\n\nEjemplo 3.29\nHallar y' en x^2+y^2=1.\n\nDerivando respecto de x, 2x+2y\\,y'=0, así que y'=-\\dfrac xy.\nComprobación. En la rama superior, y=\\sqrt{1-x^2}, e y'=-\\dfrac{x}{\\sqrt{1-x^2}}=-\\dfrac xy.\n\n\n\nEjemplo 3.30\nHallar los puntos de la curva x^2-xy+y^2=3 en los que la recta tangente tiene pendiente -1. (2021/22 2E)\n\nDerivando, \n2x-y-x\\,y'+2y\\,y'=0\n\\quad\\Longrightarrow\\quad\ny'=\\frac{y-2x}{2y-x}.\n Con y'=-1, resulta y=x. Sustituyendo en la curva, x^2=3. Los puntos son (\\sqrt3,\\sqrt3) y (-\\sqrt3,-\\sqrt3) (Figura 3.18).\n\n\nFigura 3.18. Tangentes de pendiente -1 a x^2-xy+y^2=3.\n\n\n\n\nEjemplo 3.31\nHallar las rectas tangentes a la curva 4x^2+y^2=72 que son perpendiculares a la recta x+2y+3=0. (2022/23 3E)\n\nLa recta tiene pendiente -\\frac12, así que las tangentes tienen pendiente 2. Derivando, \n8x+2y\\,y'=0\n\\quad\\Longrightarrow\\quad\ny'=-\\frac{4x}{y}=2\n\\quad\\Longrightarrow\\quad\ny=-2x.\n Sustituyendo en la curva, 8x^2=72, es decir, x=\\pm3. Los puntos son (3,-6) y (-3,6), y las tangentes, \ny=2x-12,\n\\qquad\ny=2x+12.\n\n\n\nFigura 3.19. Las dos tangentes a la elipse, perpendiculares a la recta x+2y+3=0.",
+    "crumbs": [
+      "3.7 Derivación implícita y paramétrica"
+    ]
+  },
+  {
+    "objectID": "03_funciones/implicita.html#curvas-paramétricas",
+    "href": "03_funciones/implicita.html#curvas-paramétricas",
+    "title": "3.7 Derivación implícita y paramétrica",
+    "section": "Curvas paramétricas",
+    "text": "Curvas paramétricas\nSi x e y dependen de un parámetro t, la regla de la cadena da \\frac{dy}{dt}=\\frac{dy}{dx}\\frac{dx}{dt}, y de ahí la pendiente de la curva.\n\nRecuerda\n\n\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}.\n\n\n\nEjemplo 3.32\nHallar las rectas tangentes a la curva x=t^5-4t^3, y=t^2 en el punto (0,4).\n\nLa curva pasa por el punto dos veces: y=4 da t=\\pm2, y en los dos casos x=0. La pendiente es \n\\frac{dy}{dx}=\\frac{2t}{5t^4-12t^2},\n que vale \\frac18 en t=2 y -\\frac18 en t=-2. Hay dos tangentes, y=4+\\frac x8 e y=4-\\frac x8 (Figura 3.20).\n\n\nFigura 3.20. La curva se corta a sí misma en (0,4), con una tangente en cada paso.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.32–3.35.",
+    "crumbs": [
+      "3.7 Derivación implícita y paramétrica"
+    ]
+  },
+  {
+    "objectID": "03_funciones/continuidad.html",
+    "href": "03_funciones/continuidad.html",
+    "title": "3.4 Continuidad",
+    "section": "",
+    "text": "Definición 3.6\nSea f una función definida en un entorno de x=a. Se dice que f es continua en x=a si \n\\lim_{x\\to a}f(x)=f(a).\n\n\nLa definición pide tres cosas: que f(a) exista, que el límite exista y que los dos valores coincidan (Figura 3.9).\n\n\nFigura 3.9. En x=a: (a) el límite no existe; (b) el límite existe, pero no vale f(a); (c) la función es continua. El valor f(a) es el punto rojo.\n\n\nEjemplo 3.13\nHallar k para que sea continua en x=2 la función \nf(x)=\\begin{cases}\\dfrac{x^2-4}{x-2},&x\\neq2\\\\[2mm]k,&x=2.\\end{cases}\n\n\nSegún el Ejemplo 3.10, el límite en x=2 vale 4. Como f(2)=k, hace falta k=4.\n\n\nLa continuidad se conserva al operar y al componer. Los polinomios, las raíces, las exponenciales, los logaritmos, el seno y el coseno son continuos en todo su dominio, así que las funciones construidas con ellos solo hay que estudiarlas en los puntos que den problemas.\n\nRecuerda\nSi f y g son continuas en x=a, también lo son \nf\\pm g,\n\\qquad\n\\alpha f\\ \\ (\\alpha\\in\\mathbb{R}),\n\\qquad\nfg,\n\\qquad\n\\frac fg\\ \\ (g(a)\\neq0).\n Si g es continua en x=a y f es continua en g(a), f\\circ g es continua en x=a.\n\n\nEjemplo 3.14\nHallar k\\in\\mathbb{R} para que sea continua la función \ng(x)=\\begin{cases}k^2x^2,&x\\leq2\\\\(1-k)x,&x&gt;2.\\end{cases}\n\n\nCada trozo es un polinomio, así que solo hay que estudiar x=2. Allí, g(2) y el límite por la izquierda valen 4k^2, y el límite por la derecha vale 2(1-k). Igualando, \n4k^2=2-2k\n\\quad\\Longrightarrow\\quad\n2k^2+k-1=0\n\\quad\\Longrightarrow\\quad\nk=\\frac12\\ \\text{ o }\\ k=-1.\n\nComprobación. Con k=\\frac12, los dos trozos valen 1 en x=2. Con k=-1, los dos valen 4.",
+    "crumbs": [
+      "3.4 Continuidad"
+    ]
+  },
+  {
+    "objectID": "03_funciones/continuidad.html#definición-y-propiedades",
+    "href": "03_funciones/continuidad.html#definición-y-propiedades",
+    "title": "3.4 Continuidad",
+    "section": "",
+    "text": "Definición 3.6\nSea f una función definida en un entorno de x=a. Se dice que f es continua en x=a si \n\\lim_{x\\to a}f(x)=f(a).\n\n\nLa definición pide tres cosas: que f(a) exista, que el límite exista y que los dos valores coincidan (Figura 3.9).\n\n\nFigura 3.9. En x=a: (a) el límite no existe; (b) el límite existe, pero no vale f(a); (c) la función es continua. El valor f(a) es el punto rojo.\n\n\nEjemplo 3.13\nHallar k para que sea continua en x=2 la función \nf(x)=\\begin{cases}\\dfrac{x^2-4}{x-2},&x\\neq2\\\\[2mm]k,&x=2.\\end{cases}\n\n\nSegún el Ejemplo 3.10, el límite en x=2 vale 4. Como f(2)=k, hace falta k=4.\n\n\nLa continuidad se conserva al operar y al componer. Los polinomios, las raíces, las exponenciales, los logaritmos, el seno y el coseno son continuos en todo su dominio, así que las funciones construidas con ellos solo hay que estudiarlas en los puntos que den problemas.\n\nRecuerda\nSi f y g son continuas en x=a, también lo son \nf\\pm g,\n\\qquad\n\\alpha f\\ \\ (\\alpha\\in\\mathbb{R}),\n\\qquad\nfg,\n\\qquad\n\\frac fg\\ \\ (g(a)\\neq0).\n Si g es continua en x=a y f es continua en g(a), f\\circ g es continua en x=a.\n\n\nEjemplo 3.14\nHallar k\\in\\mathbb{R} para que sea continua la función \ng(x)=\\begin{cases}k^2x^2,&x\\leq2\\\\(1-k)x,&x&gt;2.\\end{cases}\n\n\nCada trozo es un polinomio, así que solo hay que estudiar x=2. Allí, g(2) y el límite por la izquierda valen 4k^2, y el límite por la derecha vale 2(1-k). Igualando, \n4k^2=2-2k\n\\quad\\Longrightarrow\\quad\n2k^2+k-1=0\n\\quad\\Longrightarrow\\quad\nk=\\frac12\\ \\text{ o }\\ k=-1.\n\nComprobación. Con k=\\frac12, los dos trozos valen 1 en x=2. Con k=-1, los dos valen 4.",
+    "crumbs": [
+      "3.4 Continuidad"
+    ]
+  },
+  {
+    "objectID": "03_funciones/continuidad.html#teoremas-en-intervalos-cerrados",
+    "href": "03_funciones/continuidad.html#teoremas-en-intervalos-cerrados",
+    "title": "3.4 Continuidad",
+    "section": "Teoremas en intervalos cerrados",
+    "text": "Teoremas en intervalos cerrados\n\nDefinición 3.7\nUna función f es continua en [a,b] si es continua en (a,b) y, además, \\lim\\limits_{x\\to a^+}f(x)=f(a) y \\lim\\limits_{x\\to b^-}f(x)=f(b).\n\nEn un intervalo cerrado, la continuidad garantiza tres resultados (Figura 3.10).\n\n\nFigura 3.10. Teoremas de (a) Weierstrass, (b) Bolzano y (c) Darboux.\n\n\nTeorema 3.1 (Weierstrass)\nSi f es continua en [a,b], alcanza en [a,b] un valor máximo M y un valor mínimo m.\n\nEl intervalo tiene que ser cerrado. Por ejemplo, f(x)=1/x es continua en (0,1], pero no tiene máximo en ese intervalo.\n\nTeorema 3.2 (Bolzano)\nSi f es continua en [a,b], y f(a) y f(b) tienen signos distintos, existe z\\in(a,b) tal que f(z)=0.\n\n\nEjemplo 3.15\nDemostrar que f(x)=xe^x-1 tiene al menos una raíz real positiva. ¿Tiene alguna raíz más? (2016/17 5E)\n\nLa función es continua, con f(0)=-1&lt;0 y f(1)=e-1&gt;0. Por el teorema de Bolzano, tiene una raíz en (0,1).\nPara ver si hay más, la ecuación xe^x=1 se escribe como e^x=1/x (Figura 3.11). Si x&lt;0, 1/x es negativo y e^x positivo: no hay solución. Si x&gt;0, e^x crece y 1/x decrece, así que se cortan una sola vez. No tiene más raíces.\n\n\nFigura 3.11. e^x y 1/x se cortan en un solo punto, z\\approx0.567.\n\nComprobación. 0.567\\,e^{0.567}\\approx1.00.\n\n\n\nTeorema 3.3 (Darboux, o de los valores intermedios)\nSea f continua en [a,b], con mínimo m y máximo M. Para todo H\\in[m,M], existe z\\in[a,b] tal que f(z)=H.\n\n\nDemostración\nPor el teorema de Weierstrass, existen x_m,x_M\\in[a,b] con f(x_m)=m y f(x_M)=M. Si H=m o H=M, ya está. Si m&lt;H&lt;M, la función g(x)=f(x)-H es continua, con g(x_m)&lt;0 y g(x_M)&gt;0. Aplicando Bolzano a g entre x_m y x_M, existe z con g(z)=0, es decir, f(z)=H.\n\n\nEjemplo 3.16\nDemostrar que f(x)=x^3+x toma el valor 5 en [0,2].\n\nEs continua y creciente en [0,2], así que m=f(0)=0 y M=f(2)=10. Como 5\\in[0,10], el teorema de Darboux asegura que existe z\\in[0,2] con f(z)=5.\nComprobación. f(1.5)=4.875 y f(1.6)=5.696: el valor se alcanza entre 1.5 y 1.6.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.11–3.17.",
+    "crumbs": [
+      "3.4 Continuidad"
+    ]
+  },
+  {
+    "objectID": "03_funciones/limite.html",
+    "href": "03_funciones/limite.html",
+    "title": "3.3 Límite de una función",
+    "section": "",
+    "text": "El límite describe a qué valor se acerca f(x) cuando x se acerca a a. No importa lo que ocurra en el propio a, donde f puede incluso no estar definida.",
+    "crumbs": [
+      "3.3 Límite"
+    ]
+  },
+  {
+    "objectID": "03_funciones/limite.html#definición-y-propiedades",
+    "href": "03_funciones/limite.html#definición-y-propiedades",
+    "title": "3.3 Límite de una función",
+    "section": "Definición y propiedades",
+    "text": "Definición y propiedades\n\nDefinición 3.5\nSea f una función con dominio D, y sea a un número real, de D o no. Se dice que \\lim\\limits_{x\\to a}f(x)=l si, para toda sucesión \\{x_n\\} de puntos de D con x_n\\neq a y x_n\\to a, se cumple f(x_n)\\to l.\n\n\nEjemplo 3.10\nCalcular \\lim\\limits_{x\\to2}\\dfrac{x^2-4}{x-2}.\n\nLa función no está definida en x=2. Pero si x_n\\to2 con x_n\\neq2, se puede simplificar: \nf(x_n)=\\frac{(x_n-2)(x_n+2)}{x_n-2}=x_n+2\\to4.\n Como esto vale para toda sucesión, el límite es 4 (Figura 3.7).\n\n\nFigura 3.7. Sucesiones que se acercan a x=2 por los dos lados. Sus imágenes se acercan a 4.\n\n\n\nLa definición exige que el resultado sea el mismo para toda sucesión. Por eso, dos sucesiones con límites distintos bastan para probar que el límite no existe.\n\nEjemplo 3.11\nUsando las sucesiones \\{a_n\\}=\\left\\{\\frac{1}{2n}\\right\\} y \\{b_n\\}=\\left\\{\\frac{2}{2n+1}\\right\\}, estudiar el límite de f(x)=\\cos\\left(\\frac\\pi x\\right) en x=0. (2018/19 3E)\n\nLas dos sucesiones tienden a 0, pero sus imágenes no tienden al mismo valor: \nf(a_n)=\\cos(2n\\pi)=1\\to1,\n\\qquad\nf(b_n)=\\cos\\left(\\frac{(2n+1)\\pi}{2}\\right)=0\\to0.\n Por tanto, el límite no existe: la función oscila cada vez más deprisa cerca de 0 (Figura 3.8).\n\n\nFigura 3.8. \\cos(\\pi/x). Con a_n (puntos llenos) la imagen vale 1, y con b_n (puntos huecos), 0.\n\n\n\nEl límite, si existe, es único. Además, se puede operar con límites:\n\nRecuerda\nSi \\lim\\limits_{x\\to a}f(x)=l_1 y \\lim\\limits_{x\\to a}g(x)=l_2: \n\\lim_{x\\to a}\\,[kf(x)]=kl_1,\n\\qquad\n\\lim_{x\\to a}\\,[f(x)\\pm g(x)]=l_1\\pm l_2,\n \n\\lim_{x\\to a}\\,[f(x)g(x)]=l_1l_2,\n\\qquad\n\\lim_{x\\to a}\\frac{f(x)}{g(x)}=\\frac{l_1}{l_2}\\ \\ (l_2\\neq0).",
+    "crumbs": [
+      "3.3 Límite"
+    ]
+  },
+  {
+    "objectID": "03_funciones/limite.html#límites-laterales",
+    "href": "03_funciones/limite.html#límites-laterales",
+    "title": "3.3 Límite de una función",
+    "section": "Límites laterales",
+    "text": "Límites laterales\nSi solo se usan sucesiones con x_n&gt;a, se obtiene el límite por la derecha, \\lim\\limits_{x\\to a^+}f(x); con x_n&lt;a, el límite por la izquierda, \\lim\\limits_{x\\to a^-}f(x). El límite existe si y solo si existen los dos y coinciden.\n\nEjemplo 3.12\nEstudiar el límite de f(x)=\\dfrac{|x|}{x} en x=0.\n\nSi x&gt;0, f(x)=1, y si x&lt;0, f(x)=-1. Por tanto, \\lim\\limits_{x\\to0^+}f(x)=1 y \\lim\\limits_{x\\to0^-}f(x)=-1. Como no coinciden, el límite no existe.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.8–3.10.",
+    "crumbs": [
+      "3.3 Límite"
+    ]
+  },
+  {
+    "objectID": "03_funciones/cadena.html",
+    "href": "03_funciones/cadena.html",
+    "title": "3.6 Regla de la cadena y derivada de la inversa",
+    "section": "",
+    "text": "La derivada de una función compuesta es el producto de las derivadas de las dos funciones que la forman, cada una evaluada donde corresponde.\n\nRecuerda\n\n(g\\circ f)'(x)=g'(f(x))\\,f'(x),\n\\qquad\n\\frac{dg}{dx}=\\frac{dg}{df}\\,\\frac{df}{dx}.\n\n\n\nEjemplo 3.23\nDerivar h(x)=\\sin(x^2) y k(x)=e^{\\sin x}.\n\nCon g(u)=\\sin u y u=f(x)=x^2, la regla da h'(x)=\\cos(x^2)\\cdot2x. Del mismo modo, k'(x)=e^{\\sin x}\\cos x.\n\n\n\nEjemplo 3.24\nUn avión inicia el aterrizaje a 1 km de altura y a 4 km al oeste de la pista (Figura 3.16). Su trayectoria puede ser parabólica, y=ax^2+bx+c, o cúbica, y=ax^3+bx^2+cx+d.\n\nElegir la más adecuada y hallar sus coeficientes.\nExplicar qué significan \\dfrac{dy}{dx}, \\dfrac{dy}{dt} y \\dfrac{dx}{dt}.\nCuando x=2 km, la velocidad horizontal es de 650 km/h. Hallar la velocidad de descenso en ese instante.\n\n\n\nFigura 3.16. Trayectoria de aterrizaje.\n\n\n(a) Con el origen bajo el avión, la trayectoria tiene que empezar en horizontal y llegar a la pista en horizontal: \ny(0)=1,\\qquad y'(0)=0,\\qquad y(4)=0,\\qquad y'(4)=0.\n Son cuatro condiciones, así que hace falta la cúbica. La parábola, con tres coeficientes, no puede cumplirlas: con las tres primeras, y=1-\\frac{x^2}{16} llega a la pista con pendiente y'(4)=-\\frac12.\nLas condiciones en x=0 dan d=1 y c=0. Las de x=4 dan \n64a+16b+1=0,\\quad 48a+8b=0\n\\quad\\Longrightarrow\\quad\na=\\frac{1}{32},\\quad b=-\\frac{3}{16},\n es decir, \ny=\\frac{x^3}{32}-\\frac{3x^2}{16}+1.\n\n(b) \\frac{dy}{dx} es la pendiente de la trayectoria, \\frac{dy}{dt} es la velocidad vertical y \\frac{dx}{dt}, la velocidad horizontal.\n(c) La altura depende de t a través de x, así que, por la regla de la cadena, \n\\frac{dy}{dt}=\\frac{dy}{dx}\\,\\frac{dx}{dt}=\\left(\\frac{3x^2}{32}-\\frac{3x}{8}\\right)\\frac{dx}{dt}.\n En x=2, \\frac{dy}{dx}=-\\frac38, y con \\frac{dx}{dt}=650 km/h, \n\\frac{dy}{dt}=-\\frac38\\cdot650=-243.75\\ \\text{km/h}.\n El avión desciende a 243.75 km/h.\nComprobación. y(4)=2-3+1=0 e y'(4)=\\frac32-\\frac32=0.",
+    "crumbs": [
+      "3.6 Regla de la cadena e inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/cadena.html#regla-de-la-cadena",
+    "href": "03_funciones/cadena.html#regla-de-la-cadena",
+    "title": "3.6 Regla de la cadena y derivada de la inversa",
+    "section": "",
+    "text": "La derivada de una función compuesta es el producto de las derivadas de las dos funciones que la forman, cada una evaluada donde corresponde.\n\nRecuerda\n\n(g\\circ f)'(x)=g'(f(x))\\,f'(x),\n\\qquad\n\\frac{dg}{dx}=\\frac{dg}{df}\\,\\frac{df}{dx}.\n\n\n\nEjemplo 3.23\nDerivar h(x)=\\sin(x^2) y k(x)=e^{\\sin x}.\n\nCon g(u)=\\sin u y u=f(x)=x^2, la regla da h'(x)=\\cos(x^2)\\cdot2x. Del mismo modo, k'(x)=e^{\\sin x}\\cos x.\n\n\n\nEjemplo 3.24\nUn avión inicia el aterrizaje a 1 km de altura y a 4 km al oeste de la pista (Figura 3.16). Su trayectoria puede ser parabólica, y=ax^2+bx+c, o cúbica, y=ax^3+bx^2+cx+d.\n\nElegir la más adecuada y hallar sus coeficientes.\nExplicar qué significan \\dfrac{dy}{dx}, \\dfrac{dy}{dt} y \\dfrac{dx}{dt}.\nCuando x=2 km, la velocidad horizontal es de 650 km/h. Hallar la velocidad de descenso en ese instante.\n\n\n\nFigura 3.16. Trayectoria de aterrizaje.\n\n\n(a) Con el origen bajo el avión, la trayectoria tiene que empezar en horizontal y llegar a la pista en horizontal: \ny(0)=1,\\qquad y'(0)=0,\\qquad y(4)=0,\\qquad y'(4)=0.\n Son cuatro condiciones, así que hace falta la cúbica. La parábola, con tres coeficientes, no puede cumplirlas: con las tres primeras, y=1-\\frac{x^2}{16} llega a la pista con pendiente y'(4)=-\\frac12.\nLas condiciones en x=0 dan d=1 y c=0. Las de x=4 dan \n64a+16b+1=0,\\quad 48a+8b=0\n\\quad\\Longrightarrow\\quad\na=\\frac{1}{32},\\quad b=-\\frac{3}{16},\n es decir, \ny=\\frac{x^3}{32}-\\frac{3x^2}{16}+1.\n\n(b) \\frac{dy}{dx} es la pendiente de la trayectoria, \\frac{dy}{dt} es la velocidad vertical y \\frac{dx}{dt}, la velocidad horizontal.\n(c) La altura depende de t a través de x, así que, por la regla de la cadena, \n\\frac{dy}{dt}=\\frac{dy}{dx}\\,\\frac{dx}{dt}=\\left(\\frac{3x^2}{32}-\\frac{3x}{8}\\right)\\frac{dx}{dt}.\n En x=2, \\frac{dy}{dx}=-\\frac38, y con \\frac{dx}{dt}=650 km/h, \n\\frac{dy}{dt}=-\\frac38\\cdot650=-243.75\\ \\text{km/h}.\n El avión desciende a 243.75 km/h.\nComprobación. y(4)=2-3+1=0 e y'(4)=\\frac32-\\frac32=0.",
+    "crumbs": [
+      "3.6 Regla de la cadena e inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/cadena.html#derivada-de-la-función-inversa",
+    "href": "03_funciones/cadena.html#derivada-de-la-función-inversa",
+    "title": "3.6 Regla de la cadena y derivada de la inversa",
+    "section": "Derivada de la función inversa",
+    "text": "Derivada de la función inversa\nSea g=f^{-1}. Derivando f(g(x))=x con la regla de la cadena, f'(g(x))\\,g'(x)=1. Por tanto, si la pendiente de f en (a,b) es m, la de su inversa en (b,a) es 1/m (Figura 3.17).\n\n\nFigura 3.17. f(x)=x^2 y su inversa \\sqrt x, con sus tangentes en (a,b)=\\left(\\frac32,\\frac94\\right) y (b,a). Aquí m=3.\n\n\nRecuerda\n\ng'(x)=\\frac{1}{f'(g(x))},\n\\qquad\n\\frac{dx}{dy}=\\frac{1}{dy/dx}.\n\n\n\nEjemplo 3.25\nPara la función del Ejemplo 3.7, hallar \\dfrac{dx}{dy} en función de x y en función de y. (2013/14 5E)\n\nSe puede hacer de dos formas. Derivando directamente x=2-\\sqrt{y-4}, \n\\frac{dx}{dy}=-\\frac{1}{2\\sqrt{y-4}}.\n Con la derivada de la inversa, como y=x^2-4x+8, \n\\frac{dx}{dy}=\\frac{1}{dy/dx}=\\frac{1}{2x-4}.\n\nComprobación. Como x-2=-\\sqrt{y-4}, resulta 2x-4=-2\\sqrt{y-4}, y las dos expresiones coinciden.\n\n\n\nEjemplo 3.26\nObtener la derivada de \\arcsin x.\n\nSi y=\\arcsin x, entonces x=\\sin y, con y\\in\\left[-\\frac\\pi2,\\frac\\pi2\\right]. En ese intervalo, \\cos y\\ge0, así que \n\\frac{dy}{dx}=\\frac{1}{dx/dy}=\\frac{1}{\\cos y}=\\frac{1}{\\sqrt{1-\\sin^2y}}=\\frac{1}{\\sqrt{1-x^2}}.",
+    "crumbs": [
+      "3.6 Regla de la cadena e inversa"
+    ]
+  },
+  {
+    "objectID": "03_funciones/cadena.html#segundas-derivadas",
+    "href": "03_funciones/cadena.html#segundas-derivadas",
+    "title": "3.6 Regla de la cadena y derivada de la inversa",
+    "section": "Segundas derivadas",
+    "text": "Segundas derivadas\nLas dos reglas anteriores se pueden volver a derivar para obtener la derivada segunda.\n\nRecuerda\n\nh(x)=f(g(x)):\\quad h''=f''(g)\\,(g')^2+f'(g)\\,g'',\n\\qquad\\qquad\ng=f^{-1}:\\quad g''=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\n\n\nEjemplo 3.27\nSea la función compuesta h(x)=f(g(x)). Calcular h''(x). (2018/19 3E)\n\nLa primera derivada es h'=f'(g)\\,g'. Aplicando la regla del producto y otra vez la de la cadena, \nh''=\\left[f'(g)\\right]'g'+f'(g)\\,g''=f''(g)\\,(g')^2+f'(g)\\,g''.\n\nComprobación. Con h(x)=\\sin(x^2), la fórmula da h''=-\\sin(x^2)\\,4x^2+\\cos(x^2)\\cdot2, igual que al derivar dos veces.\n\n\n\nEjemplo 3.28\nSea f^{-1} la función inversa de f. Calcular \\left[f^{-1}(x)\\right]''. (2016/17 2E)\n\nCon g=f^{-1}, la primera derivada es g'=\\left[f'(g)\\right]^{-1}. Derivando otra vez, \ng''=-\\left[f'(g)\\right]^{-2}f''(g)\\,g'=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\nComprobación. Con f(x)=e^x y g(x)=\\ln x, la fórmula da g''=-\\dfrac{x}{x^3}=-\\dfrac{1}{x^2}, igual que al derivar \\ln x dos veces.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.26–3.31.",
+    "crumbs": [
+      "3.6 Regla de la cadena e inversa"
     ]
   }
 ]
