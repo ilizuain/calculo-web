@@ -32,101 +32,101 @@
   {
     "objectID": "03_funciones/resumen.html",
     "href": "03_funciones/resumen.html",
-    "title": "Resumen",
+    "title": "3.9 Resumen",
     "section": "",
     "text": "Resumen del capítulo 3\nDominio, rango y composición. f:D\\to R, con R=\\{f(x):x\\in D\\}. Si R_f\\subseteq D_g, (g\\circ f)(x)=g(f(x)); en general, g\\circ f\\neq f\\circ g.\nInversa. Si f es inyectiva en D, y=f(x)\\iff x=f^{-1}(y). Dominio y rango se intercambian, y las gráficas son simétricas respecto de y=x. \n\\arcsin:[-1,1]\\to\\left[-\\frac\\pi2,\\frac\\pi2\\right],\n\\qquad\n\\arccos:[-1,1]\\to[0,\\pi],\n\\qquad\n\\arctan:\\mathbb{R}\\to\\left(-\\frac\\pi2,\\frac\\pi2\\right).\n\nLímite. \\lim\\limits_{x\\to a}f(x)=l si f(x_n)\\to l para toda sucesión x_n\\to a de puntos de D con x_n\\neq a. Si dos sucesiones dan valores distintos, o si los límites laterales difieren, el límite no existe.\nContinuidad. f es continua en x=a si \\lim\\limits_{x\\to a}f(x)=f(a). Sumas, productos, cocientes con g(a)\\neq0 y compuestas de continuas son continuas. Si f es continua en [a,b]:\n\nWeierstrass: alcanza un máximo M y un mínimo m.\nBolzano: si f(a) y f(b) tienen signos distintos, existe z\\in(a,b) con f(z)=0.\nDarboux: para todo H\\in[m,M], existe z\\in[a,b] con f(z)=H.\n\nDerivada. \nf'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h},\n\\qquad\ny=f(a)+f'(a)(x-a),\n\\qquad\nf(a+h)\\approx f(a)+f'(a)\\,h.\n \n(fg)'=f'g+fg',\n\\qquad\n\\left(\\frac fg\\right)'=\\frac{f'g-fg'}{g^2}.\n En un punto de unión, derivable si es continua y f'(a^-)=f'(a^+) son finitas. Si esos límites son infinitos o no existen, se usa la definición.\nRegla de la cadena e inversa. \n(g\\circ f)'(x)=g'(f(x))\\,f'(x),\n\\qquad\ng=f^{-1}:\\ \\ g'(x)=\\frac{1}{f'(g(x))},\n\\qquad\n\\frac{dx}{dy}=\\frac{1}{dy/dx}.\n \nh=f(g):\\ \\ h''=f''(g)\\,(g')^2+f'(g)\\,g'',\n\\qquad\ng=f^{-1}:\\ \\ g''=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\nImplícita y paramétrica. En una curva F(x,y)=c, se deriva respecto de x con y=y(x) y se despeja y'. En una curva x(t), y(t): \n\\frac{dy}{dx}=\\frac{y'(t)}{x'(t)}.\n\nRazones de cambio. Se escribe la relación entre las variables, válida en todo instante, se deriva respecto de t y solo entonces se sustituyen los datos.",
     "crumbs": [
-      "Resumen"
+      "3.9 Resumen"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html",
     "href": "03_funciones/ejercicios.html",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "",
     "text": "Ejercicio 3.1\nHallar el dominio y el rango de las siguientes funciones:\n\n\nf(x)=1+2\\sin x\nf(x)=2+|x+1|\nf(x)=\\sqrt{9-x^2}\nf(x)=\\dfrac{1}{1+x^2}\n\n\n\n(a) D=\\mathbb{R}, R=[-1,3]; (b) D=\\mathbb{R}, R=[2,\\infty); (c) D=[-3,3], R=[0,3]; (d) D=\\mathbb{R}, R=(0,1].\n\n\n\nEjercicio 3.2\nHallar g\\circ f y f\\circ g con sus dominios:\n\nf(x)=x+1, g(x)=\\sqrt x\nf(x)=x-4, g(x)=\\ln x\n\n\n(a) (g\\circ f)(x)=\\sqrt{x+1}, D=[-1,\\infty); (f\\circ g)(x)=\\sqrt x+1, D=[0,\\infty). (b) (g\\circ f)(x)=\\ln(x-4), D=(4,\\infty); (f\\circ g)(x)=\\ln x-4, D=(0,\\infty).\n\n\n\nEjercicio 3.3\nSean f(x)=\\ln x y g(x)=e^x. Hallar g\\circ f y f\\circ g con sus dominios. ¿Son la misma función?\n\nLas dos fórmulas se reducen a x, pero g\\circ f tiene dominio (0,\\infty) y f\\circ g tiene dominio \\mathbb{R}. No son la misma función.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#dominio-rango-y-función-compuesta",
     "href": "03_funciones/ejercicios.html#dominio-rango-y-función-compuesta",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "",
     "text": "Ejercicio 3.1\nHallar el dominio y el rango de las siguientes funciones:\n\n\nf(x)=1+2\\sin x\nf(x)=2+|x+1|\nf(x)=\\sqrt{9-x^2}\nf(x)=\\dfrac{1}{1+x^2}\n\n\n\n(a) D=\\mathbb{R}, R=[-1,3]; (b) D=\\mathbb{R}, R=[2,\\infty); (c) D=[-3,3], R=[0,3]; (d) D=\\mathbb{R}, R=(0,1].\n\n\n\nEjercicio 3.2\nHallar g\\circ f y f\\circ g con sus dominios:\n\nf(x)=x+1, g(x)=\\sqrt x\nf(x)=x-4, g(x)=\\ln x\n\n\n(a) (g\\circ f)(x)=\\sqrt{x+1}, D=[-1,\\infty); (f\\circ g)(x)=\\sqrt x+1, D=[0,\\infty). (b) (g\\circ f)(x)=\\ln(x-4), D=(4,\\infty); (f\\circ g)(x)=\\ln x-4, D=(0,\\infty).\n\n\n\nEjercicio 3.3\nSean f(x)=\\ln x y g(x)=e^x. Hallar g\\circ f y f\\circ g con sus dominios. ¿Son la misma función?\n\nLas dos fórmulas se reducen a x, pero g\\circ f tiene dominio (0,\\infty) y f\\circ g tiene dominio \\mathbb{R}. No son la misma función.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#función-inversa",
     "href": "03_funciones/ejercicios.html#función-inversa",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Función inversa",
     "text": "Función inversa\n\nEjercicio 3.4\nHallar el dominio y el rango de:\n\n\nf(x)=-\\pi+\\arccos x\nf(x)=\\arcsin(x-1)\n\n\n\n(a) D=[-1,1], R=[-\\pi,0]; (b) D=[0,2], R=\\left[-\\frac\\pi2,\\frac\\pi2\\right].\n\n\n\nEjercicio 3.5\nHallar la inversa de cada función en el dominio indicado, y el dominio de la inversa:\n\n\nf(x)=1+e^{2x}, D=\\mathbb{R}\nf(x)=x^2-1, D=(-\\infty,0]\nf(x)=\\ln(x+3), D=(-3,\\infty)\nf(x)=\\cos(x-1), D=[1,\\pi+1]\nf(x)=\\sinh x, D=\\mathbb{R}\n\n\n\n(a) f^{-1}(x)=\\frac12\\ln(x-1), D=(1,\\infty); (b) f^{-1}(x)=-\\sqrt{1+x}, D=[-1,\\infty); (c) f^{-1}(x)=e^x-3, D=\\mathbb{R}; (d) f^{-1}(x)=1+\\arccos x, D=[-1,1]; (e) f^{-1}(x)=\\ln\\left(x+\\sqrt{x^2+1}\\right), D=\\mathbb{R}.\n\n\n\nEjercicio 3.6\nHallar la inversa de y(x)=\\dfrac{e^{2x}+e^{-2x}}{2}, definida en D=[0,\\infty), y su dominio. (2015/16 3E)\n\nx(y)=\\frac12\\ln\\left(y+\\sqrt{y^2-1}\\right), con dominio [1,\\infty) y rango [0,\\infty).\n\n\n\nEjercicio 3.7\nRazonar si cada función es inyectiva en el dominio indicado:\n\nf(x)=x^3 en \\mathbb{R}\nf(x)=\\sin x en [0,\\pi]\n\n\n(a) Sí: x_1^3=x_2^3 implica x_1=x_2. (b) No: \\sin\\frac\\pi4=\\sin\\frac{3\\pi}4.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#límite-de-una-función",
     "href": "03_funciones/ejercicios.html#límite-de-una-función",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Límite de una función",
     "text": "Límite de una función\n\nEjercicio 3.8\nCalcular \\lim\\limits_{x\\to1}\\dfrac{x^2-1}{x-1} usando la definición.\n\nSi x_n\\to1 con x_n\\neq1, f(x_n)=x_n+1\\to2. El límite es 2.\n\n\n\nEjercicio 3.9\nProbar con dos sucesiones que \\lim\\limits_{x\\to0}\\sin\\dfrac1x no existe.\n\nCon x_n=\\frac{1}{n\\pi}, f(x_n)=0\\to0. Con y_n=\\frac{1}{\\pi/2+2n\\pi}, f(y_n)=1\\to1. Los límites son distintos.\n\n\n\nEjercicio 3.10\nEstudiar el límite en x=1 de f(x)=\\begin{cases}x^2,&x&lt;1\\\\3-x,&x\\geq1.\\end{cases}\n\n\\lim\\limits_{x\\to1^-}f(x)=1 y \\lim\\limits_{x\\to1^+}f(x)=2: el límite no existe.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#continuidad",
     "href": "03_funciones/ejercicios.html#continuidad",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Continuidad",
     "text": "Continuidad\n\nEjercicio 3.11\nHallar k\\in\\mathbb{R} para que sea continua f(x)=\\begin{cases}x^2,&x&lt;1\\\\kx-3,&x\\geq1.\\end{cases}\n\nk=4.\n\n\n\nEjercicio 3.12\n¿En qué puntos son continuas estas funciones?\n\n\nf(x)=\\dfrac{1}{x^2-1}\nf(x)=\\dfrac{\\ln x}{x-2}\n\n\n\n(a) En \\mathbb{R}\\setminus\\{-1,1\\}; (b) en (0,2)\\cup(2,\\infty).\n\n\n\nEjercicio 3.13\nSi f es continua en x=a y g no lo es, ¿puede ser continua f+g en x=a? Razonar la respuesta.\n\nNo: si lo fuera, g=(f+g)-f sería continua, por ser resta de continuas.\n\n\n\nEjercicio 3.14\nDemostrar que la ecuación \\cos x=x tiene una solución en (0,1).\n\ng(x)=\\cos x-x es continua, con g(0)=1&gt;0 y g(1)=\\cos1-1&lt;0. Se aplica Bolzano.\n\n\n\nEjercicio 3.15\nDemostrar que f(x)=x^3-3x+1 tiene tres raíces reales, y localizarlas entre enteros consecutivos.\n\nf(-2)=-1, f(-1)=3, f(0)=1, f(1)=-1 y f(2)=3. Por Bolzano, hay raíces en (-2,-1), (0,1) y (1,2). Un polinomio de grado 3 no tiene más.\n\n\n\nEjercicio 3.16\nEl porcentaje p de residuos que recicla cada año una ciudad y su coste C, en millones, cumplen p(C)=\\dfrac{100C}{C+500}. (2012/13 5E)\n\nDibujar p(C) y C(p).\nEstudiar el comportamiento de C cuando p se acerca a 100.\n¿Se puede reciclar cualquier porcentaje?\nLa Administración quiere reciclar cada año entre el 20,% y el 30,%. Demostrar que es posible.\n\n\n(a) C(p)=\\frac{500p}{100-p}. (b) C\\to\\infty. (c) No: solo 0\\leq p&lt;100. (d) C(20)=125 y C(30)\\approx214.3. Como p(C) es continua, por el teorema de Darboux toma en [125,\\,214.3] todos los valores de [20,30].\n\n\n\nEjercicio 3.17\nLa función f(x)=1/x cumple f(-1)&lt;0 y f(1)&gt;0, pero no se anula en [-1,1]. ¿Contradice esto el teorema de Bolzano?\n\nNo: f no es continua en [-1,1], porque no está definida en x=0.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#derivada",
     "href": "03_funciones/ejercicios.html#derivada",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Derivada",
     "text": "Derivada\n\nEjercicio 3.18\nDemostrar con la definición que la derivada de f(x)=x es 1. (2016/17 3E)\n\nf'(x)=\\lim\\limits_{h\\to0}\\dfrac{x+h-x}{h}=1.\n\n\n\nEjercicio 3.19\nHallar con la definición la derivada de f(x)=1/x en x=a\\neq0.\n\nf'(a)=\\lim\\limits_{h\\to0}\\dfrac{1}{h}\\left(\\dfrac{1}{a+h}-\\dfrac1a\\right)=\\lim\\limits_{h\\to0}\\dfrac{-1}{a(a+h)}=-\\dfrac{1}{a^2}.\n\n\n\nEjercicio 3.20\nHallar las rectas tangentes a y=x^2 que pasan por el punto (1,-3).\n\nEn x=a, la tangente es y=a^2+2a(x-a). Al imponer el punto, a^2-2a-3=0, con a=3 o a=-1. Las tangentes son y=6x-9 e y=-2x-1.\n\n\n\nEjercicio 3.21\nSea f(x)=\\begin{cases}0,&x\\leq-1\\\\ax^3+bx,&-1&lt;x&lt;2\\\\11x-16,&x\\geq2.\\end{cases}\n\nHallar a y b para que f sea continua.\nEstudiar la derivabilidad de f.\n\n\n(a) a=1, b=-1. (b) No es derivable en x=-1: f'(-1^-)=0 y f'(-1^+)=2. Es derivable en x=2: las dos derivadas laterales valen 11.\n\n\n\nEjercicio 3.22\nHallar a, b, c y d para que sea continua y derivable en \\mathbb{R} la función \nf(x)=\\begin{cases}\\dfrac{x^2-4}{x-2},&x&lt;2\\\\[2mm]ax^2-bx+c,&2\\leq x&lt;3\\\\dx-a+b,&x\\geq3.\\end{cases}\n (2020/21 1E AT)\n\na=\\frac38, b=\\frac12, c=\\frac72, d=\\frac74.\n\n\n\nEjercicio 3.23\nPara construir una autopista hay que salvar un valle, cuyas laderas son tramos rectos con pendientes del 6,% y del 4,% (ver la figura). Hallar la ecuación del tramo central, entre A y B, si es un polinomio de grado 3. (2013/14 2E)\n\n\n\n\nCon el origen en A: y(0)=0, y'(0)=-0.06, y(2)=0.03 e y'(2)=0.04. Resulta y=-0.0125x^3+0.0625x^2-0.06x.\n\n\n\nEjercicio 3.24\nAproximar con la aproximación lineal:\n\n\ne^{0.2}\n\\ln0.9\n\\sin58^\\circ\n\n\n\n(a) 1.2; (b) -0.1; (c) \\frac{\\sqrt3}{2}-\\frac{\\pi}{180}\\approx0.8486, con a=60^\\circ y h=-\\frac{\\pi}{90} radianes.\n\n\n\nEjercicio 3.25\nDemostrar que si f es derivable en x=a, es continua en x=a. Indicación: escribir f(a+h)-f(a)=\\dfrac{f(a+h)-f(a)}{h}\\,h.\n\nAl tomar el límite con h\\to0, el segundo miembro tiende a f'(a)\\cdot0=0. Por tanto, \\lim\\limits_{h\\to0}f(a+h)=f(a).",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#regla-de-la-cadena-y-derivada-de-la-inversa",
     "href": "03_funciones/ejercicios.html#regla-de-la-cadena-y-derivada-de-la-inversa",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Regla de la cadena y derivada de la inversa",
     "text": "Regla de la cadena y derivada de la inversa\n\nEjercicio 3.26\nDerivar:\n\n\n\\sqrt{1+x^2}\ne^{-x^2}\n\\ln(\\sin x)\n\\sin^3x\n\n\n\n(a) \\dfrac{x}{\\sqrt{1+x^2}}; (b) -2xe^{-x^2}; (c) \\dfrac{\\cos x}{\\sin x}; (d) 3\\sin^2x\\cos x.\n\n\n\nEjercicio 3.27\nSea f(x)=\\begin{cases}g(x),&x&lt;0\\\\e^{\\sin x},&0\\leq x\\leq2\\pi\\\\g(x),&x&gt;2\\pi,\\end{cases} donde g es un polinomio de grado 2 o 3. (2022/23 2E)\n\n¿Qué grado tiene que tener g para que f sea continua y derivable en \\mathbb{R}? Razonar la respuesta.\nHallar los coeficientes de g.\n\n\n(a) Hay cuatro condiciones, g(0)=1, g'(0)=1, g(2\\pi)=1 y g'(2\\pi)=1, así que hacen falta cuatro coeficientes: grado 3. (b) g(x)=\\dfrac{x^3}{2\\pi^2}-\\dfrac{3x^2}{2\\pi}+x+1.\n\n\n\nEjercicio 3.28\nPara cada función del Ejercicio 3.5 y para \\cosh x (Ejemplo 3.8), hallar \\dfrac{dx}{dy} en función de x y en función de y.\n\n(a) \\frac12e^{-2x}=\\frac{1}{2(y-1)}; (b) \\frac{1}{2x}=-\\frac{1}{2\\sqrt{1+y}}; (c) x+3=e^y; (d) \\frac{1}{\\sin(1-x)}=-\\frac{1}{\\sqrt{1-y^2}}; (e) \\frac{1}{\\cosh x}=\\frac{1}{\\sqrt{y^2+1}}; \\cosh x: \\frac{1}{\\sinh x}=\\frac{1}{\\sqrt{y^2-1}}.\n\n\n\nEjercicio 3.29\nPara la función del Ejercicio 3.6, hallar \\dfrac{dx}{dy} en función de x y en función de y. (2015/16 3E)\n\n\\dfrac{dx}{dy}=\\dfrac{1}{e^{2x}-e^{-2x}}=\\dfrac{1}{2\\sqrt{y^2-1}}.\n\n\n\nEjercicio 3.30\nObtener las derivadas de \\arccos x y \\arctan x con la derivada de la inversa.\n\nSi x=\\cos y, con y\\in[0,\\pi], \\frac{dy}{dx}=-\\frac{1}{\\sin y}=-\\frac{1}{\\sqrt{1-x^2}}. Si x=\\tan y, \\frac{dy}{dx}=\\frac{1}{1+\\tan^2y}=\\frac{1}{1+x^2}.\n\n\n\nEjercicio 3.31\nUsar las fórmulas de las segundas derivadas para calcular:\n\n\n\\left(e^{x^2}\\right)''\n\\left(\\arcsin x\\right)''\n\n\n\n(a) (4x^2+2)e^{x^2}; (b) \\dfrac{x}{(1-x^2)^{3/2}}.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#derivación-implícita-y-paramétrica",
     "href": "03_funciones/ejercicios.html#derivación-implícita-y-paramétrica",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Derivación implícita y paramétrica",
     "text": "Derivación implícita y paramétrica\n\nEjercicio 3.32\nHallar y', suponiendo que y es función de x:\n\n\ny=e^{xy} (2019/20 3E AT)\n10x^4-18xy^2+10y^3=48\nx^3+y^3=4\ny=\\sin(3x+4y)\nx=3-\\sqrt{x^2+y^2}\n\n\n\n(a) y'=\\frac{y^2}{1-xy}; (b) y'=\\frac{9y^2-20x^3}{3(5y^2-6xy)}; (c) y'=-\\frac{x^2}{y^2}; (d) y'=\\frac{3\\cos(3x+4y)}{1-4\\cos(3x+4y)}; (e) y'=-\\frac{\\sqrt{x^2+y^2}+x}{y}.\n\n\n\nEjercicio 3.33\nHallar la recta tangente a la curva y^3+x^3-3xy=0 en el punto \\left(\\frac32,\\frac32\\right). (2020/21 5.1E)\n\ny'=\\frac{3y-3x^2}{3y^2-3x}=-1 en el punto. La tangente es y=-x+3.\n\n\n\nEjercicio 3.34\nHallar la recta tangente a la curva (x^2+y^2)^3=8x^2y^2 en el punto (-1,1).\n\nDerivando y sustituyendo el punto, y'=1. La tangente es y=x+2.\n\n\n\nEjercicio 3.35\nHallar \\dfrac{dy}{dx} en función de t:\n\n\nx=t^3-t, y=4-t^2\nx=2t^3+1, y=t^2\\cos t\nx=3\\cos t, y=2\\sin t\n\n\n\n(a) \\frac{-2t}{3t^2-1}; (b) \\frac{2\\cos t-t\\sin t}{6t}; (c) -\\frac{2\\cos t}{3\\sin t}.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
     "objectID": "03_funciones/ejercicios.html#razones-de-cambio",
     "href": "03_funciones/ejercicios.html#razones-de-cambio",
-    "title": "3.9 Ejercicios",
+    "title": "3.10 Ejercicios",
     "section": "Razones de cambio",
     "text": "Razones de cambio\n\nEjercicio 3.36\nUn avión vuela a velocidad constante y a 6 km de altura hacia una estación de radar situada en el suelo. En un momento dado, el radar lo ve con un ángulo de 30^\\circ, que crece a 0.5^\\circ por segundo (ver la figura). Calcular la velocidad del avión.\n\n\n\n\nx=\\dfrac{6}{\\tan\\alpha}, así que x'=-\\dfrac{6}{\\sin^2\\alpha}\\,\\alpha'=-24\\alpha'. Con \\alpha'=0.5^\\circ/\\text{s}=\\frac{\\pi}{360} rad/s, resulta x'=-\\frac{\\pi}{15} km/s. El signo indica que x disminuye: v=\\frac{\\pi}{15}\\approx0.21 km/s.\n\n\n\nEjercicio 3.37\nUn campo de béisbol tiene un cuadrado interior de 90 pies de lado, con home H en un vértice y las bases 1, 2 y 3 en los siguientes. Un jugador corre de la segunda base a la tercera, a 30 pies/s cuando está a 20 pies de la tercera (ver la figura). ¿A qué velocidad cambia en ese instante su distancia a home? (2025/26 2E)\n\n\n\n\nh^2=y^2+90^2, con y=20 e y'=-30. Entonces h'=\\dfrac{y\\,y'}{h}=-\\dfrac{60}{\\sqrt{85}}\\approx-6.51 pies/s: la distancia disminuye.",
     "crumbs": [
-      "3.9 Ejercicios"
+      "3.10 Ejercicios"
     ]
   },
   {
@@ -449,81 +449,81 @@
   {
     "objectID": "01_complejos/ejercicios.html",
     "href": "01_complejos/ejercicios.html",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "",
     "text": "Ejercicio 1.1\nEscribir en forma binómica:\n\n(2-3i)(1+2i)\n(1+i)^2\n\\dfrac{3-i}{1+2i}\ni^9\n\n\n(a) 8+i; (b) 2i; (c) \\frac15-\\frac75i; (d) i.\n\n\n\nEjercicio 1.2\nResolver z^2+4z+13=0, comprobar las soluciones y dibujar sus afijos.\n\nz=-2\\pm3i.\n\n\n\nEjercicio 1.3\nSean u=2-ai y v=3-bi, con a,b\\in\\mathbb{R}. Hallar a y b para que uv=8+4i. (2013/14 1E)\n\na=-2,\\ b=1, o bien a=\\frac23,\\ b=-3.\n\n\n\nEjercicio 1.4\nSea z=\\dfrac{3-2ai}{4-3i}, con a\\in\\mathbb{R}. Hallar a para que z esté en la bisectriz del primer cuadrante. (2014/15 1E)\n\nz=\\frac{12+6a+i(9-8a)}{25}. Igualando las partes real e imaginaria, a=-\\frac{3}{14}, y entonces z=\\frac37(1+i).\n\n\n\nEjercicio 1.5\nHallar z_1 y z_2 tales que z_1+z_2=1+2i, \\mathrm{Re}(z_1)=2 y z_1/z_2 sea real. (2017/18 2E)\n\nz_1=2+4i, z_2=-1-2i.\n\n\n\nEjercicio 1.6\nDemostrar que \\overline{z_1z_2}=\\bar z_1\\,\\bar z_2, y que z es real si y solo si z=\\bar z.",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#concepto-de-número-complejo.-forma-binómica",
     "href": "01_complejos/ejercicios.html#concepto-de-número-complejo.-forma-binómica",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "",
     "text": "Ejercicio 1.1\nEscribir en forma binómica:\n\n(2-3i)(1+2i)\n(1+i)^2\n\\dfrac{3-i}{1+2i}\ni^9\n\n\n(a) 8+i; (b) 2i; (c) \\frac15-\\frac75i; (d) i.\n\n\n\nEjercicio 1.2\nResolver z^2+4z+13=0, comprobar las soluciones y dibujar sus afijos.\n\nz=-2\\pm3i.\n\n\n\nEjercicio 1.3\nSean u=2-ai y v=3-bi, con a,b\\in\\mathbb{R}. Hallar a y b para que uv=8+4i. (2013/14 1E)\n\na=-2,\\ b=1, o bien a=\\frac23,\\ b=-3.\n\n\n\nEjercicio 1.4\nSea z=\\dfrac{3-2ai}{4-3i}, con a\\in\\mathbb{R}. Hallar a para que z esté en la bisectriz del primer cuadrante. (2014/15 1E)\n\nz=\\frac{12+6a+i(9-8a)}{25}. Igualando las partes real e imaginaria, a=-\\frac{3}{14}, y entonces z=\\frac37(1+i).\n\n\n\nEjercicio 1.5\nHallar z_1 y z_2 tales que z_1+z_2=1+2i, \\mathrm{Re}(z_1)=2 y z_1/z_2 sea real. (2017/18 2E)\n\nz_1=2+4i, z_2=-1-2i.\n\n\n\nEjercicio 1.6\nDemostrar que \\overline{z_1z_2}=\\bar z_1\\,\\bar z_2, y que z es real si y solo si z=\\bar z.",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#forma-exponencial-de-un-número-complejo",
     "href": "01_complejos/ejercicios.html#forma-exponencial-de-un-número-complejo",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "Forma exponencial de un número complejo",
     "text": "Forma exponencial de un número complejo\n\nEjercicio 1.7\nHallar el módulo y la fase, y escribir en forma exponencial:\n\n\\sqrt3-i\n-3\n-2i\n\n\n(a) 2e^{-i\\pi/6}; (b) 3e^{i\\pi}; (c) 2e^{-i\\pi/2}.\n\n\n\nEjercicio 1.8\nEscribir en forma binómica:\n\n2e^{i3\\pi/4}\n4e^{-i\\pi/3}\ne^{i7\\pi/6}\n\n\n(a) -\\sqrt2+i\\sqrt2; (b) 2-2i\\sqrt3; (c) -\\frac{\\sqrt3}{2}-\\frac i2.\n\n\n\nEjercicio 1.9\nSea z=\\dfrac{k+i}{2+i}, con k\\in\\mathbb{R}. Hallar k para que |z|=\\sqrt2. (2013/14 5E)\n\nk=\\pm3.\n\n\n\nEjercicio 1.10\nSean z_1,z_2\\neq0 tales que |z_1+z_2|=|z_1-z_2|. Demostrar que z_1/z_2 es imaginario puro. ¿Qué figura forman 0, z_1, z_2 y z_1+z_2? (2014/15 5E)\n\nElevando al cuadrado, \\mathrm{Re}(z_1\\bar z_2)=0. Forman un rectángulo.\n\n\n\nEjercicio 1.11\nSean z_1,z_2 tales que \\dfrac{(z_1+z_2)\\,i}{z_1-z_2} es real. Demostrar que |z_1|=|z_2|. (2014/15 2E)",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#operaciones-en-mathbbc",
     "href": "01_complejos/ejercicios.html#operaciones-en-mathbbc",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "Operaciones en \\mathbb{C}",
     "text": "Operaciones en \\mathbb{C}\n\nEjercicio 1.12\nCalcular \\left(\\dfrac{1+i}{\\sqrt2}\\right)^{10}+\\left(\\dfrac{1-i}{\\sqrt2}\\right)^{10} y representar el resultado. (2017/18 6E)\n\n0.\n\n\n\nEjercicio 1.13\nCalcular y representar las raíces sextas de 1.\n\ne^{ik\\pi/3}, con k=0,\\dots,5: un hexágono regular.\n\n\n\nEjercicio 1.14\nCalcular \\sqrt[3]{\\dfrac{-2+2i}{1+i\\sqrt3}}. (2011/12 2E)\n\n2^{1/6}e^{i25^\\circ}, 2^{1/6}e^{i145^\\circ}, 2^{1/6}e^{i265^\\circ}.\n\n\n\nEjercicio 1.15\nCalcular y representar las soluciones de z^3=\\dfrac{-1+i}{\\sqrt3+i}. (2019/20 3E AT)\n\nz=2^{-1/6}e^{i(7\\pi/36+2\\pi k/3)}, con k=0,1,2: fases \\frac{7\\pi}{36}, \\frac{31\\pi}{36} y \\frac{55\\pi}{36}.\n\n\n\nEjercicio 1.16\nCalcular \\left(\\dfrac{(1+i\\sqrt3)\\left(\\frac{-1+i}{\\sqrt2}\\right)}{2i\\left(\\frac{1-i}{\\sqrt2}\\right)^{1/3}}\\right)^{12}. (2019/20 4E AT)\n\n1.\n\n\n\nEjercicio 1.17\nUsar la fórmula de Moivre para expresar \\cos4x en función de \\sin x y \\cos x. (2016/17 4E)\n\n\\cos4x=\\cos^4x+\\sin^4x-6\\sin^2x\\cos^2x.\n\n\n\nEjercicio 1.18\nRazonar si son ciertas estas afirmaciones: (a) z^2=1\\Rightarrow z=1 o z=-1; (b) z^2=1\\Rightarrow z^k=1 para todo natural k\\geq2. (2012/13 3E)\n\n(a) Cierta. (b) Falsa: z=-1, k=3.",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#transformaciones-geométricas",
     "href": "01_complejos/ejercicios.html#transformaciones-geométricas",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "Transformaciones geométricas",
     "text": "Transformaciones geométricas\n\nEjercicio 1.19\nUn triángulo equilátero centrado en el origen se gira \\pi/12 radianes alrededor del origen, y uno de los vértices que se obtienen es 3e^{i3\\pi/4}. Hallar los vértices del triángulo original. (2023/24 1E)\n\n3e^{i2\\pi/3}, 3e^{i4\\pi/3}, 3.\n\n\n\nEjercicio 1.20\nSe quiere cercar un recinto cuadrado que contiene el afijo de 2+2i. Dos vértices contiguos son z_1=2i y z_2=2+i. Hallar los otros dos y dibujar el recinto. (2014/15 6E)\n\nz_3=3+3i, z_4=1+4i.\n\n\n\nEjercicio 1.21\nUn recinto cuadrado contiene el afijo de -2+2i. Dos vértices contiguos son z_1=-3+3i y z_2=-2+i. Hallar los otros dos y dibujar el recinto. (2020/21 7E)\n\nz_3=2i, z_4=-1+4i.\n\n\n\nEjercicio 1.22\nLos vértices opuestos de un rombo son z_1=2-i y z_2=6+2i. La otra diagonal mide el doble que la que forman estos vértices. Hallar los otros vértices y el área. (2012/13 7E)\n\nz_3=1+\\frac92i, z_4=7-\\frac72i; área 25.\n\n\n\nEjercicio 1.23\nHallar z_3, el de mayor parte imaginaria, tal que z_1=\\frac{\\sqrt3}{2}-\\frac i2, z_2=i y z_3 formen un triángulo rectángulo isósceles con hipotenusa de extremos z_1 y z_2. (2016/17 1E)\n\nz_3=\\frac{3+\\sqrt3}{4}+i\\,\\frac{1+\\sqrt3}{4}.\n\n\n\nEjercicio 1.24\nSean z_1=5-2i y z_2=3+i dos vértices de un lado de un hexágono regular. Hallar el vértice z_3 contiguo a z_2, el de mayor parte imaginaria. (2020/21 2E)\n\nz_3=\\left(2+\\frac{3\\sqrt3}{2}\\right)+i\\left(\\frac52+\\sqrt3\\right).\n\n\n\nEjercicio 1.25\nRazonar la afirmación: «multiplicar un número complejo por otro equivale a aplicarle un giro y un cambio de escala». ¿Depende el resultado del orden en que se hagan? (2011/12 1E)\n\nEs cierta: z\\cdot k e^{i\\alpha}. No depende del orden, porque el producto es conmutativo.",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#funciones-complejas",
     "href": "01_complejos/ejercicios.html#funciones-complejas",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "Funciones complejas",
     "text": "Funciones complejas\n\nEjercicio 1.26\nCalcular:\n\ne^{2+i\\pi}\n\\ln(-e)\n\\ln(2i)\n(1+i)^i\n\n\n(a) -e^2; (b) 1+i(\\pi+2\\pi k); (c) \\ln2+i\\left(\\frac\\pi2+2\\pi k\\right); (d) e^{-\\pi/4-2\\pi k}\\,e^{i\\ln\\sqrt2}.\n\n\n\nEjercicio 1.27\nHallar los valores de a\\in\\mathbb{R} para que z=\\left(2e^{2i}\\right)^a sea un número real negativo con 1&lt;|z|&lt;2^6. (2018/19 2E)\n\na=\\pi/2 y a=3\\pi/2.\n\n\n\nEjercicio 1.28\nEscribir \\sin(\\pi+i\\ln2) en forma binómica. (2022/23 7E)\n\n-\\frac34i.\n\n\n\nEjercicio 1.29\nDemostrar que \\sin^2z=\\dfrac{1-\\cos2z}{2} para todo z\\in\\mathbb{C}. (2015/16 4E)\n\n\nEjercicio 1.30\nDemostrar que \\sin(z_1+z_2)=\\sin z_1\\cos z_2+\\cos z_1\\sin z_2 para todo z_1,z_2\\in\\mathbb{C}. (2019/20 1E)",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/ejercicios.html#ecuaciones-complejas",
     "href": "01_complejos/ejercicios.html#ecuaciones-complejas",
-    "title": "1.7 Ejercicios",
+    "title": "1.8 Ejercicios",
     "section": "Ecuaciones complejas",
     "text": "Ecuaciones complejas\n\nEjercicio 1.31\nResolver e^{iz}=1+i y representar las soluciones. (2015/16 2E)\n\nz=\\frac\\pi4+2\\pi k-i\\ln\\sqrt2, con k\\in\\mathbb{Z}.\n\n\n\nEjercicio 1.32\nResolver z^3=-|z| y dibujar las soluciones. (2017/18 3E)\n\nz=0, e^{i\\pi/3}, -1, e^{i5\\pi/3}.\n\n\n\nEjercicio 1.33\nResolver z^4\\bar z\\,i+1=0 y representar las soluciones. (2018/19 3E)\n\nz=e^{i\\pi/6}, e^{i5\\pi/6}, e^{i3\\pi/2}.\n\n\n\nEjercicio 1.34\nResolver \\sin z=3 y representar las soluciones. (2012/13 2E, 2013/14 1E, 2014/15 3E)\n\nCon u=e^{iz}, u^2-6iu-1=0, y u=i(3\\pm2\\sqrt2). Entonces z=\\frac\\pi2+2\\pi k-i\\ln(3\\pm2\\sqrt2), con k\\in\\mathbb{Z}.\n\n\n\nEjercicio 1.35\nCalcular y dibujar las soluciones de \\sin z=\\sin2z. (2018/19 4E)\n\n\\sin2z=2\\sin z\\cos z, así que \\sin z=0 o \\cos z=\\frac12. Las soluciones son z=k\\pi y z=\\pm\\frac\\pi3+2k\\pi, con k\\in\\mathbb{Z}, todas reales.\n\n\n\nEjercicio 1.36\nDibujar los lugares geométricos:\n\n|z-1-i|=2\n|z+1|=|z-i|\n\\arg(z-i)=\\pi/4\n|z|\\le2, \\ \\operatorname{Re}z&gt;1\n\n\n(a) Circunferencia de centro 1+i y radio 2; (b) recta y=-x; (c) semirrecta y=x+1, con x&gt;0; (d) la parte del círculo de radio 2 a la derecha de x=1.\n\n\n\nEjercicio 1.37\nDibujar el lugar geométrico \\left|\\dfrac{z-(2+i)}{z-(1+i)}\\right|&lt;\\sqrt3. (2013/14 5E)\n\nExterior de la circunferencia de centro \\frac12+i y radio \\frac{\\sqrt3}{2}.\n\n\n\nEjercicio 1.38\nDibujar el lugar geométrico \\arg\\left(\\dfrac{z-2}{z-1}\\right)=\\dfrac\\pi2. (2017/18 1E)\n\n\\left(x-\\frac32\\right)^2+y^2=\\frac14 con y&gt;0: la semicircunferencia superior de diámetro el segmento de 1 a 2, sin sus extremos.\n\n\n\nEjercicio 1.39\nSea w un número imaginario puro con parte imaginaria positiva. Hallar w para que el lugar geométrico \\left|\\dfrac{z-1}{z-w}\\right|=\\sqrt2 encierre un área 4\\pi, y dibujarlo. (2021/22 1E)\n\nw=i; circunferencia (x+1)^2+(y-2)^2=4.",
     "crumbs": [
-      "1.7 Ejercicios"
+      "1.8 Ejercicios"
     ]
   },
   {
     "objectID": "01_complejos/resumen.html",
     "href": "01_complejos/resumen.html",
-    "title": "Resumen",
+    "title": "1.7 Resumen",
     "section": "",
     "text": "Resumen del capítulo 1\nForma binómica. z=a+bi, con i^2=-1. El afijo de z es el punto (a,b). \n\\bar z=a-bi,\n\\qquad\nz\\bar z=a^2+b^2,\n\\qquad\n\\frac{z_1}{z_2}=\\frac{z_1\\bar z_2}{z_2\\bar z_2},\n\\qquad\n\\mathrm{Re}(z)=\\frac{z+\\bar z}{2},\n\\qquad\n\\mathrm{Im}(z)=\\frac{z-\\bar z}{2i}.\n\nForma exponencial. z=\\rho e^{i\\theta}, con módulo \\rho y fase \\theta; la fase se elige según el cuadrante. \n\\rho=\\sqrt{a^2+b^2},\n\\qquad\n\\tan\\theta=\\frac ba,\n\\qquad\ne^{\\pm i\\theta}=\\cos\\theta\\pm i\\sin\\theta,\n\\qquad\n\\bar z=\\rho e^{-i\\theta},\n\\qquad\ne^{i(\\theta+2\\pi k)}=e^{i\\theta}.\n \n|z_1z_2|=|z_1||z_2|,\n\\qquad\n|z_1+z_2|\\le|z_1|+|z_2|,\n\\qquad\n|z_1-z_2|\\ \\text{ es la distancia entre afijos}.\n\nOperaciones. \nz_1z_2=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)},\n\\qquad\n\\frac{z_1}{z_2}=\\frac{\\rho_1}{\\rho_2}\\,e^{i(\\theta_1-\\theta_2)},\n\\qquad\nz^n=\\rho^ne^{in\\theta},\n \n\\sqrt[n]{z}=\\rho^{1/n}e^{i(\\theta+2\\pi k)/n},\\ \\ k=0,\\dots,n-1.\n Fórmula de Moivre: (\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta.\nLectura geométrica. La suma es la diagonal del paralelogramo, y z_1-z_2 es el vector de z_2 a z_1. Multiplicar por ke^{i\\alpha} escala por k y gira un ángulo \\alpha. Alrededor de un punto w: \nz'-w=(z-w)\\,k\\,e^{i\\alpha}.\n\nFunciones complejas. Con z=x+iy y k\\in\\mathbb{Z}: \ne^z=e^x(\\cos y+i\\sin y),\n\\qquad\n\\ln z=\\ln\\rho+i(\\theta+2\\pi k),\n\\qquad\nz_1^{z_2}=e^{z_2\\ln z_1}.\n \n\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\n\\qquad\n\\cos z=\\frac{e^{iz}+e^{-iz}}{2},\n\\qquad\n\\sinh z=\\frac{e^{z}-e^{-z}}{2},\n\\qquad\n\\cosh z=\\frac{e^{z}+e^{-z}}{2}.\n El valor principal de \\ln z es el que tiene la fase en (-\\pi,\\pi].\nEcuaciones. Con potencias, se despeja y se calculan raíces. Con conjugado o módulo, se escribe z=\\rho e^{i\\theta} y se igualan módulos y fases. Con funciones, se pasa a exponenciales y se usa el logaritmo: \n\\rho_1e^{i\\theta_1}=\\rho_2e^{i\\theta_2}\n\\iff\n\\rho_1=\\rho_2,\\ \\ \\theta_1=\\theta_2+2\\pi k;\n\\qquad\ne^{iz}=u\n\\iff\nz=-i\\ln u.\n\nLugares geométricos. Se sustituye z=x+iy, con |z|=\\sqrt{x^2+y^2}, se opera y se reconoce la curva. Con desigualdades, el resultado es una región; con varias condiciones, su intersección.",
     "crumbs": [
-      "Resumen"
+      "1.7 Resumen"
     ]
   },
   {
