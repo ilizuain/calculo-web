@@ -3,18 +3,12 @@
 (function (raiz) {
   "use strict";
   var PI = Math.PI;
+  var P = raiz.Practica;
+  var azar = P.azar, elige = P.elige, noCero = P.noCero, mcd = P.mcd, norm = P.norm, mismoAngulo = P.mismoAngulo;
+  var fr = P.fr, leeReal = P.leeReal, corrige = P.corrige, h = P.h, tex = P.tex, mezcla = P.mezcla;
   var AZUL = "#1f3f77", ACENTO = "#c8553d", GRIS = "#737373", VERDE = "#2e7d4f";
 
   // ---------- Aritmética y formato ----------
-  function azar(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
-  function elige(lista) { return lista[azar(0, lista.length - 1)]; }
-  function noCero(a, b) { var x; do { x = azar(a, b); } while (x === 0); return x; }
-  function mcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) { var t = a % b; a = b; b = t; } return a || 1; }
-  function norm(t) { var v = t % (2 * PI); return v < 0 ? v + 2 * PI : v; }
-  function mismoAngulo(a, b, tol) {
-    var d = norm(a - b);
-    return Math.min(d, 2 * PI - d) < tol;
-  }
   function mult(a, b) { return { re: a.re * b.re - a.im * b.im, im: a.re * b.im + a.im * b.re }; }
 
   // Número con dos decimales como máximo, para las lecturas de las figuras.
@@ -32,13 +26,6 @@
   function grados(t) { return n(t * 180 / PI) + "^\\circ"; }
 
   // Fracción exacta p/q en LaTeX.
-  function fr(p, q) {
-    if (q < 0) { p = -p; q = -q; }
-    var g = mcd(p, q);
-    p /= g; q /= g;
-    if (q === 1) return String(p);
-    return (p < 0 ? "-" : "") + "\\frac{" + Math.abs(p) + "}{" + q + "}";
-  }
   // Entero a+bi en LaTeX.
   function zt(a, b) {
     if (b === 0) return String(a);
@@ -124,89 +111,10 @@
     return re + (imt.charAt(0) === "-" ? "" : "+") + imt;
   }
 
-  // ---------- Lectura de lo que escribe el alumno ----------
-  // Expresión real: 3pi/4, sqrt(2)/2, √3, 2^(1/3), ln(2), 45°, 0,5...
-  function leeReal(texto) {
-    var s = String(texto).toLowerCase()
-      .replace(/\s+/g, "").replace(/,/g, ".")
-      .replace(/π/g, "pi").replace(/√/g, "sqrt")
-      .replace(/[·×]/g, "*").replace(/[−–]/g, "-");
-    var i = 0;
-    var FUNCIONES = {
-      sqrt: Math.sqrt, raiz: Math.sqrt, ln: Math.log, log: Math.log,
-      sin: Math.sin, sen: Math.sin, cos: Math.cos, tan: Math.tan,
-      arctan: Math.atan, atan: Math.atan, exp: Math.exp
-    };
-    var NOMBRES = Object.keys(FUNCIONES).sort(function (a, b) { return b.length - a.length; });
-    function falla() { throw new Error("sintaxis"); }
-    function suma() {
-      var v = producto();
-      while (s[i] === "+" || s[i] === "-") {
-        var op = s[i++];
-        var w = producto();
-        v = op === "+" ? v + w : v - w;
-      }
-      return v;
-    }
-    function empiezaFactor() {
-      var c = s[i];
-      return c !== undefined && /[0-9.(a-z]/.test(c);
-    }
-    function producto() {
-      var v = unario();
-      for (;;) {
-        if (s[i] === "*") { i++; v *= unario(); }
-        else if (s[i] === "/") { i++; v /= unario(); }
-        else if (empiezaFactor()) { v *= potencia(); }
-        else return v;
-      }
-    }
-    function unario() {
-      if (s[i] === "-") { i++; return -unario(); }
-      if (s[i] === "+") { i++; return unario(); }
-      return potencia();
-    }
-    function potencia() {
-      var b = atomo();
-      if (s[i] === "°") { i++; b *= PI / 180; }
-      if (s[i] === "^") { i++; return Math.pow(b, unario()); }
-      return b;
-    }
-    function atomo() {
-      if (s[i] === "(") {
-        i++;
-        var v = suma();
-        if (s[i] !== ")") falla();
-        i++;
-        return v;
-      }
-      var m = /^(\d+\.?\d*|\.\d+)/.exec(s.slice(i));
-      if (m) { i += m[0].length; return parseFloat(m[0]); }
-      for (var k = 0; k < NOMBRES.length; k++) {
-        if (s.startsWith(NOMBRES[k], i)) {
-          var f = FUNCIONES[NOMBRES[k]];
-          i += NOMBRES[k].length;
-          return f(atomo());
-        }
-      }
-      if (s.startsWith("pi", i)) { i += 2; return PI; }
-      if (s[i] === "e") { i++; return Math.E; }
-      return falla();
-    }
-    if (!s) return NaN;
-    try {
-      var valor = suma();
-      return i === s.length && isFinite(valor) ? valor : NaN;
-    } catch (e) {
-      return NaN;
-    }
-  }
 
   // ---------- Generadores de ejercicios ----------
   // Cada uno devuelve el enunciado ($...$ es LaTeX), los campos, la solución y los
   // datos en d, que usa la prueba automática.
-  var TOL = 0.006;
-
   function campoReal(et, v) { return { et: et, v: v, modo: "real" }; }
   function campoFase(et, v) { return { et: et, v: v, modo: "fase" }; }
 
@@ -480,14 +388,6 @@
     "practica-lugares": [genCircunferencia, genMediatriz]
   };
 
-  // Compara lo escrito con la solución, campo a campo.
-  function corrige(ej, vals) {
-    if (ej.comprobar) return ej.comprobar(vals);
-    return ej.campos.map(function (c, i) {
-      if (isNaN(vals[i])) return false;
-      return c.modo === "fase" ? mismoAngulo(vals[i], c.v, TOL) : Math.abs(vals[i] - c.v) < TOL;
-    });
-  }
 
   raiz.ComplejosLogica = {
     leeReal: leeReal, corrige: corrige, GENERADORES: GENERADORES, mult: mult, norm: norm, mismoAngulo: mismoAngulo
@@ -501,21 +401,6 @@
     for (var k in attrs) e.setAttribute(k, attrs[k]);
     if (padre) padre.appendChild(e);
     return e;
-  }
-  function h(nombre, clase, padre, texto) {
-    var e = document.createElement(nombre);
-    if (clase) e.className = clase;
-    if (texto) e.textContent = texto;
-    if (padre) padre.appendChild(e);
-    return e;
-  }
-  function tex(s, display) {
-    return window.katex.renderToString(s, { throwOnError: false, displayMode: !!display });
-  }
-  // Texto con $...$ y $$...$$ a HTML.
-  function mezcla(s) {
-    return s.replace(/\$\$([^$]+)\$\$/g, function (_, m) { return tex(m, true); })
-      .replace(/\$([^$]+)\$/g, function (_, m) { return tex(m); });
   }
 
   function Plano(padre, o) {
@@ -886,81 +771,8 @@
     monta();
   };
 
-  // ---------- Practica ----------
-  function montaPractica(c, generadores) {
-    h("div", "i-titulo", c).textContent = "Practica";
-    var enun = h("div", "p-enunciado", c);
-    var campos = h("div", "p-campos", c);
-    var botones = h("div", "p-botones", c);
-    var msg = h("div", "p-mensaje", c);
-    msg.setAttribute("aria-live", "polite");
-    var sol = h("div", "p-solucion", c);
-    h("div", "p-formato", c).innerHTML = "Se admiten expresiones como " + tex("3\\pi/4") + " (<code>3pi/4</code>), " + tex("\\sqrt2/2") + " (<code>sqrt(2)/2</code>), <code>ln(2)</code>, <code>e^2</code> o decimales.";
-    var ej, inputs, ultimo = -1;
 
-    function nuevo() {
-      var i;
-      do { i = azar(0, generadores.length - 1); } while (generadores.length > 1 && i === ultimo);
-      ultimo = i;
-      ej = generadores[i]();
-      enun.innerHTML = mezcla(ej.enun);
-      campos.textContent = "";
-      inputs = ej.campos.map(function (cp) {
-        var l = h("label", "p-campo", campos);
-        h("span", "", l).innerHTML = tex(cp.et + "=");
-        var inp = h("input", "", l);
-        inp.type = "text"; inp.autocomplete = "off"; inp.spellcheck = false;
-        inp.setAttribute("autocapitalize", "off");
-        inp.addEventListener("keydown", function (e) { if (e.key === "Enter") comprobar(); });
-        return inp;
-      });
-      msg.textContent = "";
-      sol.hidden = true;
-      sol.innerHTML = mezcla(ej.sol);
-    }
-    function comprobar() {
-      var vals = inputs.map(function (x) { return leeReal(x.value); });
-      var res = corrige(ej, vals);
-      inputs.forEach(function (x, i) {
-        x.classList.toggle("bien", res[i]);
-        x.classList.toggle("mal", !res[i]);
-      });
-      if (res.every(Boolean)) {
-        msg.innerHTML = '<span class="ok">Correcto.</span>';
-        sol.hidden = false;
-        return;
-      }
-      if (vals.some(isNaN)) {
-        msg.innerHTML = '<span class="no">Hay alguna casilla vacía o que no se entiende.</span>';
-        return;
-      }
-      var pista = ej.pista ? ej.pista(vals) : null;
-      msg.innerHTML = '<span class="no">' + (pista ? mezcla(pista) : "Aún no. Revisa las casillas en rojo.") + "</span>";
-    }
-    function boton(t, principal, f) {
-      var b = h("button", "boton" + (principal ? " principal" : ""), botones, t);
-      b.type = "button";
-      b.addEventListener("click", f);
-    }
-    boton("Comprobar", true, comprobar);
-    boton("Ver solución", false, function () { sol.hidden = false; });
-    boton("Otro con otros datos", false, nuevo);
-    nuevo();
-  }
-
-  function arranca() {
-    if (!window.katex) {
-      document.querySelectorAll("[data-widget]").forEach(function (c) {
-        c.textContent = "Esta pieza necesita conexión a internet para mostrar las fórmulas.";
-      });
-      return;
-    }
-    document.querySelectorAll("[data-widget]").forEach(function (c) {
-      var nombre = c.getAttribute("data-widget");
-      if (GENERADORES[nombre]) montaPractica(c, GENERADORES[nombre]);
-      else WIDGETS[nombre](c);
-    });
-  }
-  if (document.readyState === "complete") arranca();
-  else window.addEventListener("load", arranca);
+  P.arranca(GENERADORES, WIDGETS, function () {
+    return "Se admiten expresiones como " + tex("3\\pi/4") + " (<code>3pi/4</code>), " + tex("\\sqrt2/2") + " (<code>sqrt(2)/2</code>), <code>ln(2)</code>, <code>e^2</code> o decimales.";
+  });
 })(typeof globalThis !== "undefined" ? globalThis : this);
