@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../04_estudio_local/extremos.html" rel="next">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -69,6 +70,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex">
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -175,6 +219,78 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">4. Estudio local de una función</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/extremos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Extremos y derivada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/rolle_lagrange.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 Rolle y Lagrange</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/punto_fijo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Punto fijo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/crecimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.4 Crecimiento y puntos críticos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/concavidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.5 Concavidad e inflexión</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/graficas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.6 Estudio a partir de gráficas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/optimizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.7 Optimización</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.8 Polinomio de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/error_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.9 Error de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/serie_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.10 Serie de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.11 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.12 Ejercicios</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -205,6 +321,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>La derivada de una función dice mucho sobre cómo es esa función. Con el signo de <span class="math inline">f'</span> y de <span class="math inline">f''</span> se sabe dónde crece, dónde tiene sus máximos y mínimos y hacia qué lado se curva, tanto a partir de su fórmula como solo de su gráfica. Los teoremas de Rolle y de Lagrange aseguran que existen puntos con cierta derivada, y con todo ello se resuelven problemas de optimización, como elegir el trazado más barato para un oleoducto.</p>
+<p>Después, la función se sustituye por un polinomio de Taylor. Este polinomio da valores como <span class="math inline">\sqrt2</span> con un error que se puede acotar, y muestra cómo la energía cinética de la relatividad se reduce a <span class="math inline">\frac12mv^2</span> a velocidades pequeñas. Si el error tiende a cero al subir el grado, el polinomio se convierte en una serie, y números como <span class="math inline">\ln2</span> quedan escritos como una suma infinita.</p>
 
 
 
@@ -602,7 +720,17 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../04_estudio_local/extremos.html" class="pagination-link" aria-label="4.1 Extremos y derivada">
+        <span class="nav-page-text">4.1 Extremos y derivada</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<script>window.PDF_CAPITULO = "estudio_local.pdf";</script>
 <script src="../js/apuntes.js"></script>
 
 

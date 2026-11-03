@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4.4 Crecimiento y puntos críticos – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../04_estudio_local/concavidad.html" rel="next">
+<link href="../04_estudio_local/punto_fijo.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2c9897760a6acc1c19756737572cfcb0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../02_sucesiones/index.html">
+ <span class="dropdown-text">2. Sucesiones y series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../03_funciones/index.html">
+ <span class="dropdown-text">3. Funciones reales de variable real</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../04_estudio_local/index.html">
+ <span class="dropdown-text">4. Estudio local de una función</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../05_integracion/index.html">
+ <span class="dropdown-text">5. Integración</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../06_varias_variables/index.html">
+ <span class="dropdown-text">6. Funciones de varias variables reales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../07_integral_multiple/index.html">
+ <span class="dropdown-text">7. Integral múltiple</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../08_integral_curvilinea/index.html">
+ <span class="dropdown-text">8. Integral curvilínea</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../09_ecuaciones_diferenciales/index.html">
+ <span class="dropdown-text">9. Ecuaciones diferenciales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../10_laplace/index.html">
+ <span class="dropdown-text">10. Transformada de Laplace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../11_fourier/index.html">
+ <span class="dropdown-text">11. Análisis de Fourier</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../04_estudio_local/crecimiento.html">4.4 Crecimiento y puntos críticos</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Estudio local de una función</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/extremos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Extremos y derivada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/rolle_lagrange.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 Rolle y Lagrange</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/punto_fijo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Punto fijo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/crecimiento.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4.4 Crecimiento y puntos críticos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/concavidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.5 Concavidad e inflexión</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/graficas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.6 Estudio a partir de gráficas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/optimizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.7 Optimización</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.8 Polinomio de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/error_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.9 Error de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/serie_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.10 Serie de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.11 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.12 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#crecimiento-y-decrecimiento" id="toc-crecimiento-y-decrecimiento" class="nav-link active" data-scroll-target="#crecimiento-y-decrecimiento">Crecimiento y decrecimiento</a></li>
+  <li><a href="#puntos-críticos" id="toc-puntos-críticos" class="nav-link" data-scroll-target="#puntos-críticos">Puntos críticos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">4.4 Crecimiento y puntos críticos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>El signo de la derivada dice dónde crece y dónde decrece una función. Sus cambios de signo localizan y clasifican los extremos locales.</p>
+<section id="crecimiento-y-decrecimiento" class="level2">
+<h2 data-anchor-id="crecimiento-y-decrecimiento">Crecimiento y decrecimiento</h2>
+<div id="definicion-creciente-funcion" class="definicion">
+<p><span class="caja-titulo">Definición&nbsp;4.3</span></p>
+<p>Una función <span class="math inline">f</span> es <em>creciente</em> en <span class="math inline">(a,b)</span> si, para todo <span class="math inline">x_1,x_2\in(a,b)</span> con <span class="nw"><span class="math inline">x_1&lt;x_2</span>,</span> se cumple <span class="nw"><span class="math inline">f(x_1)&lt;f(x_2)</span>.</span> Es <em>decreciente</em> si se cumple <span class="nw"><span class="math inline">f(x_1)&gt;f(x_2)</span>.</span></p>
+</div>
+<div id="teorema-signo-derivada" class="teorema">
+<p><span class="caja-titulo">Teorema&nbsp;4.6</span></p>
+<p>Si <span class="math inline">f</span> es derivable en <span class="nw"><span class="math inline">(a,b)</span>:</span></p>
+<ol type="i">
+<li>Si <span class="math inline">f'(x)&gt;0</span> para todo <span class="nw"><span class="math inline">x\in(a,b)</span>,</span> <span class="math inline">f</span> es creciente en <span class="nw"><span class="math inline">(a,b)</span>.</span></li>
+<li>Si <span class="math inline">f'(x)&lt;0</span> para todo <span class="nw"><span class="math inline">x\in(a,b)</span>,</span> <span class="math inline">f</span> es decreciente en <span class="nw"><span class="math inline">(a,b)</span>.</span></li>
+<li><span class="math inline">f'(x)=0</span> para todo <span class="math inline">x\in(a,b)</span> si y solo si <span class="math inline">f</span> es constante en <span class="nw"><span class="math inline">(a,b)</span>.</span></li>
+</ol>
+</div>
+<div class="demostracion">
+<p><span class="caja-titulo">Demostración</span></p>
+<p>Sean <span class="math inline">x_1&lt;x_2</span> en <span class="nw"><span class="math inline">(a,b)</span>.</span> Por el teorema de Lagrange en <span class="nw"><span class="math inline">[x_1,x_2]</span>,</span> existe <span class="math inline">z\in(x_1,x_2)</span> tal que <span class="math display">
+f(x_2)-f(x_1)=f'(z)\,(x_2-x_1).
+</span> Como <span class="nw"><span class="math inline">x_2-x_1&gt;0</span>,</span> <span class="math inline">f(x_2)-f(x_1)</span> tiene el signo de <span class="nw"><span class="math inline">f'(z)</span>,</span> y eso da (i) y (ii). Si <span class="math inline">f'=0</span> en <span class="nw"><span class="math inline">(a,b)</span>,</span> <span class="nw"><span class="math inline">f(x_2)=f(x_1)</span>,</span> así que <span class="math inline">f</span> es constante. El recíproco de (iii) es inmediato.</p>
+</div>
+<p>Dos precauciones:</p>
+<ul>
+<li>El teorema vale en un intervalo. Por ejemplo, <span class="math inline">f(x)=\frac1x</span> tiene <span class="math inline">f'(x)&lt;0</span> en todo su dominio, pero <span class="nw"><span class="math inline">f(-1)&lt;f(1)</span>:</span> es decreciente en <span class="math inline">(-\infty,0)</span> y en <span class="nw"><span class="math inline">(0,\infty)</span>,</span> no en su dominio entero.</li>
+<li>El recíproco de (i) es falso: <span class="math inline">f(x)=x^3</span> es creciente, pero <span class="nw"><span class="math inline">f'(0)=0</span>.</span></li>
+</ul>
+<div id="teorema-misma-derivada" class="teorema">
+<p><span class="caja-titulo">Teorema&nbsp;4.7</span></p>
+<p>Si <span class="math inline">f'(x)=g'(x)</span> para todo <span class="nw"><span class="math inline">x\in(a,b)</span>,</span> existe <span class="math inline">C\in\mathbb{R}</span> tal que <span class="math inline">f(x)=g(x)+C</span> en <span class="nw"><span class="math inline">(a,b)</span>.</span></p>
+</div>
+<div class="demostracion">
+<p><span class="caja-titulo">Demostración</span></p>
+<p><span class="math inline">(f-g)'=0</span> en <span class="nw"><span class="math inline">(a,b)</span>,</span> así que <span class="math inline">f-g</span> es constante, por el Teorema <a href="#teorema-signo-derivada">4.6</a>.</p>
+</div>
+<div id="figura-misma-derivada" class="figura">
+<p><img src="../figs/misma_derivada.svg" class="img-fluid" alt="Dos curvas iguales, una desplazada verticalmente respecto a la otra una distancia C. En el mismo valor de x, sus tangentes son paralelas." width="330"></p>
+<p><span class="figura-num">Figura&nbsp;4.8.</span> Dos funciones con la misma derivada se diferencian en una constante <span class="nw"><span class="math inline">C</span>.</span></p>
+</div>
+</section>
+<section id="puntos-críticos" class="level2">
+<h2 data-anchor-id="puntos-críticos">Puntos críticos</h2>
+<div id="definicion-punto-critico" class="definicion">
+<p><span class="caja-titulo">Definición&nbsp;4.4</span></p>
+<p>Un punto <span class="math inline">z\in(a,b)</span> es un <em>punto crítico</em> de <span class="math inline">f</span> si <span class="math inline">f'(z)=0</span> o si <span class="math inline">f'(z)</span> no existe.</p>
+</div>
+<p>Por el Teorema <a href="extremos.html#teorema-extremo-derivada">4.1</a>, los extremos locales de <span class="math inline">f</span> están en sus puntos críticos. No todo punto crítico es un extremo: para clasificarlos se usan estos dos tests.</p>
+<div id="teorema-test-primera" class="teorema" data-nombre="Test de la primera derivada">
+<p><span class="caja-titulo">Teorema&nbsp;4.8 (Test de la primera derivada)</span></p>
+<p>Sea <span class="math inline">z</span> un punto crítico de <span class="nw"><span class="math inline">f</span>,</span> con <span class="math inline">f</span> continua en <span class="nw"><span class="math inline">z</span>:</span></p>
+<ol type="i">
+<li>Si <span class="math inline">f'</span> pasa de positiva a negativa en <span class="nw"><span class="math inline">z</span>,</span> <span class="math inline">f</span> tiene un máximo local en <span class="nw"><span class="math inline">z</span>.</span></li>
+<li>Si <span class="math inline">f'</span> pasa de negativa a positiva en <span class="nw"><span class="math inline">z</span>,</span> <span class="math inline">f</span> tiene un mínimo local en <span class="nw"><span class="math inline">z</span>.</span></li>
+<li>Si <span class="math inline">f'</span> no cambia de signo en <span class="nw"><span class="math inline">z</span>,</span> <span class="math inline">f</span> no tiene un extremo en <span class="nw"><span class="math inline">z</span>.</span></li>
+</ol>
+</div>
+<p>La razón está en el Teorema <a href="#teorema-signo-derivada">4.6</a>: en (i), por ejemplo, <span class="math inline">f</span> crece hasta <span class="math inline">z</span> y decrece a partir de <span class="math inline">z</span> (<a href="#figura-test-primera">Figura&nbsp;4.9</a>).</p>
+<div id="figura-test-primera" class="figura">
+<p><img src="../figs/test_primera.svg" class="img-fluid" alt="Cinco gráficas: máximo local con tangente horizontal, máximo local con pico, mínimo local con tangente horizontal, mínimo local con pico y una curva creciente con tangente horizontal sin extremo. En cada una se indica el signo de la derivada a cada lado de z." width="640"></p>
+<p><span class="figura-num">Figura&nbsp;4.9.</span> Test de la primera derivada: (a) y (b) máximo local; (c) y (d) mínimo local; (e) sin cambio de signo, no hay extremo. En (b) y (d), <span class="math inline">f'(z)</span> no existe.</p>
+</div>
+<div id="teorema-test-segunda" class="teorema" data-nombre="Test de la segunda derivada">
+<p><span class="caja-titulo">Teorema&nbsp;4.9 (Test de la segunda derivada)</span></p>
+<p>Sea <span class="nw"><span class="math inline">f'(z)=0</span>:</span></p>
+<ol type="i">
+<li>Si <span class="nw"><span class="math inline">f''(z)&gt;0</span>,</span> <span class="math inline">f</span> tiene un mínimo local en <span class="nw"><span class="math inline">z</span>.</span></li>
+<li>Si <span class="nw"><span class="math inline">f''(z)&lt;0</span>,</span> <span class="math inline">f</span> tiene un máximo local en <span class="nw"><span class="math inline">z</span>.</span></li>
+</ol>
+</div>
+<p>Este test se justificará más adelante, en la sección del error de Taylor. Si <span class="nw"><span class="math inline">f''(z)=0</span>,</span> no decide, y hay que recurrir al de la primera derivada.</p>
+<div class="recuerda" data-titulo="hallar y clasificar los extremos locales">
+<p><span class="caja-titulo">Recuerda: hallar y clasificar los extremos locales</span></p>
+<ol type="1">
+<li>Hallar los puntos críticos: <span class="math inline">f'(z)=0</span> o <span class="math inline">f'(z)</span> no existe.</li>
+<li>Estudiar el signo de <span class="math inline">f'</span> a cada lado de cada punto crítico.</li>
+<li>Si <span class="nw"><span class="math inline">f'(z)=0</span>,</span> también se puede usar el signo de <span class="nw"><span class="math inline">f''(z)</span>.</span></li>
+</ol>
+</div>
+<div id="ejemplo-extremos-polinomio" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;4.9</span></p>
+<p>Hallar los intervalos de crecimiento y los extremos locales de <span class="nw"><span class="math inline">f(x)=x^4-2x^3</span>.</span></p>
+<div class="solucion">
+<p><span class="math inline">f'(x)=4x^3-6x^2=2x^2(2x-3)</span> se anula en <span class="math inline">x=0</span> y en <span class="nw"><span class="math inline">x=\frac32</span>.</span> Como <span class="nw"><span class="math inline">2x^2\ge0</span>,</span> el signo de <span class="math inline">f'</span> es el de <span class="nw"><span class="math inline">2x-3</span>:</span></p>
+<p><span class="math display">
+\begin{array}{c|ccc}
+&amp; x&lt;0 &amp; 0&lt;x&lt;\frac32 &amp; x&gt;\frac32\\ \hline
+f' &amp; - &amp; - &amp; +\\
+f &amp; \text{decrece} &amp; \text{decrece} &amp; \text{crece}
+\end{array}
+</span></p>
+<p>En <span class="nw"><span class="math inline">x=\frac32</span>,</span> <span class="math inline">f'</span> pasa de negativa a positiva: hay un mínimo local, con <span class="nw"><span class="math inline">f\left(\frac32\right)=-\frac{27}{16}</span>.</span> En <span class="nw"><span class="math inline">x=0</span>,</span> <span class="math inline">f'</span> no cambia de signo: no hay extremo (<a href="#figura-extremos-ejemplos">Figura&nbsp;4.10</a>).</p>
+<p><em>Comprobación con <span class="nw"><span class="math inline">f''</span>.</span></em> <span class="math inline">f''(x)=12x^2-12x</span> da <span class="nw"><span class="math inline">f''\left(\frac32\right)=9&gt;0</span>,</span> un mínimo. En cambio, <span class="math inline">f''(0)=0</span> no decide.</p>
+</div>
+</div>
+<div id="ejemplo-extremos-potencias" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;4.10</span></p>
+<p>Hallar los intervalos de crecimiento y los extremos locales de <span class="nw"><span class="math inline">f(x)=2x^{5/3}+5x^{2/3}</span>.</span></p>
+<div class="solucion">
+<p><span class="math display">
+f'(x)=\frac{10}{3}x^{2/3}+\frac{10}{3}x^{-1/3}=\frac{10}{3}\cdot\frac{x+1}{\sqrt[3]{x}},\qquad x\ne0.
+</span> Los puntos críticos son <span class="nw"><span class="math inline">x=-1</span>,</span> donde <span class="nw"><span class="math inline">f'(-1)=0</span>,</span> y <span class="nw"><span class="math inline">x=0</span>,</span> donde <span class="math inline">f'(0)</span> no existe. La función es continua en los dos.</p>
+<p><span class="math display">
+\begin{array}{c|ccc}
+&amp; x&lt;-1 &amp; -1&lt;x&lt;0 &amp; x&gt;0\\ \hline
+f' &amp; + &amp; - &amp; +\\
+f &amp; \text{crece} &amp; \text{decrece} &amp; \text{crece}
+\end{array}
+</span></p>
+<p>Hay un máximo local en <span class="nw"><span class="math inline">x=-1</span>,</span> con <span class="nw"><span class="math inline">f(-1)=3</span>,</span> y un mínimo local en <span class="nw"><span class="math inline">x=0</span>,</span> con <span class="math inline">f(0)=0</span> (<a href="#figura-extremos-ejemplos">Figura&nbsp;4.10</a>). El test de la segunda derivada no serviría en <span class="nw"><span class="math inline">x=0</span>,</span> porque <span class="math inline">f'(0)</span> no existe.</p>
+</div>
+</div>
+<div id="figura-extremos-ejemplos" class="figura">
+<p><img src="../figs/extremos_ejemplos.svg" class="img-fluid" alt="Dos gráficas: x a la cuarta menos 2 x al cubo, con tangente horizontal sin extremo en 0 y un mínimo en 3 medios; y 2 x a la 5 tercios más 5 x a la 2 tercios, con un máximo en menos 1 y un mínimo con pico en 0." width="560"></p>
+<p><span class="figura-num">Figura&nbsp;4.10.</span> Funciones de los dos ejemplos: (a) <span class="nw"><span class="math inline">x^4-2x^3</span>;</span> (b) <span class="nw"><span class="math inline">2x^{5/3}+5x^{2/3}</span>.</span></p>
+</div>
+<div id="ejemplo-movimiento" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;4.11</span></p>
+<p>Un objeto se mueve sobre una recta, con posición <span class="math inline">x(t)=(4t-1)(t-1)^2</span> para <span class="nw"><span class="math inline">t\ge0</span>.</span> (2020/21 7E)</p>
+<ol type="a">
+<li>¿Cuándo se mueve hacia la derecha y cuándo hacia la izquierda? ¿Cuándo cambia de sentido?</li>
+<li>¿Cuál es su mayor rapidez mientras se mueve hacia la izquierda?</li>
+</ol>
+<div class="solucion">
+<p>(a) Se mueve hacia la derecha si <span class="math inline">x</span> crece, y hacia la izquierda si <span class="math inline">x</span> decrece. La derivada es <span class="math display">
+x'(t)=12t^2-18t+6=6(2t-1)(t-1),
+</span> que se anula en <span class="math inline">t=\frac12</span> y en <span class="nw"><span class="math inline">t=1</span>.</span> Es positiva en <span class="math inline">\left(0,\frac12\right)</span> y en <span class="nw"><span class="math inline">(1,\infty)</span>,</span> y negativa en <span class="nw"><span class="math inline">\left(\frac12,1\right)</span>.</span> El objeto va hacia la izquierda en <span class="math inline">\left(\frac12,1\right)</span> y hacia la derecha en el resto, y cambia de sentido en <span class="math inline">t=\frac12</span> y en <span class="math inline">t=1</span> (<a href="#figura-movimiento">Figura&nbsp;4.11</a>).</p>
+<p>(b) La velocidad es <span class="nw"><span class="math inline">v=x'</span>,</span> negativa en <span class="nw"><span class="math inline">\left(\frac12,1\right)</span>.</span> La mayor rapidez corresponde al mínimo de <span class="nw"><span class="math inline">v</span>:</span> <span class="math inline">v'(t)=24t-18=0</span> da <span class="nw"><span class="math inline">t=\frac34</span>,</span> y <span class="math inline">v''=24&gt;0</span> confirma el mínimo. Como <span class="nw"><span class="math inline">v\left(\frac34\right)=-\frac34</span>,</span> la mayor rapidez hacia la izquierda es <span class="nw"><span class="math inline">\frac34</span>.</span></p>
+<div id="figura-movimiento" class="figura">
+<p><img src="../figs/movimiento.svg" class="img-fluid" alt="Gráfica de la posición x de t: sube hasta t igual a un medio, baja hasta t igual a 1 y vuelve a subir." width="330"></p>
+<p><span class="figura-num">Figura&nbsp;4.11.</span> Posición del objeto. Cambia de sentido en <span class="math inline">t=\frac12</span> y en <span class="nw"><span class="math inline">t=1</span>.</span></p>
+</div>
+</div>
+</div>
+<div id="ejemplo-extremo-implicita" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;4.12</span></p>
+<p>La función <span class="math inline">y(x)</span> cumple <span class="nw"><span class="math inline">x\cos y+y\sin x=0</span>.</span> Calcular <span class="math inline">y'(x)</span> y decidir si hay un extremo local en el punto <span class="nw"><span class="math inline">\left(\pi,\frac\pi2\right)</span>.</span> (2014/15 7E)</p>
+<div class="solucion">
+<p>Derivando implícitamente, <span class="math display">
+\cos y-x\,y'\sin y+y\cos x+y'\sin x=0\ \Rightarrow\ y'=-\frac{\cos y+y\cos x}{\sin x-x\sin y}.
+</span> En <span class="nw"><span class="math inline">\left(\pi,\frac\pi2\right)</span>,</span> <span class="nw"><span class="math inline">y'=-\frac{\pi/2\cdot(-1)}{-\pi}=-\frac12\ne0</span>.</span> La función es derivable en ese punto y su derivada no se anula, así que no es un punto crítico: no hay extremo local.</p>
+</div>
+</div>
+<p><span class="aviso-ejercicios">Con los contenidos de esta sección puedes hacer los ejercicios&nbsp;<a href="ejercicios.html#ejercicio-cre-racional">4.16</a>–<a href="ejercicios.html#ejercicio-cre-decreciente">4.21</a>.</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../04_estudio_local/punto_fijo.html" class="pagination-link" aria-label="4.3 Punto fijo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4.3 Punto fijo</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../04_estudio_local/concavidad.html" class="pagination-link" aria-label="4.5 Concavidad e inflexión">
+        <span class="nav-page-text">4.5 Concavidad e inflexión</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>window.PDF_CAPITULO = "estudio_local.pdf";</script>
+<script src="../js/apuntes.js"></script>
+
+
+
+
+</body></html>

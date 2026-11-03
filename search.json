@@ -340,6 +340,156 @@
     ]
   },
   {
+    "objectID": "04_estudio_local/crecimiento.html",
+    "href": "04_estudio_local/crecimiento.html",
+    "title": "4.4 Crecimiento y puntos críticos",
+    "section": "",
+    "text": "El signo de la derivada dice dónde crece y dónde decrece una función. Sus cambios de signo localizan y clasifican los extremos locales.",
+    "crumbs": [
+      "4.4 Crecimiento y puntos críticos"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/crecimiento.html#crecimiento-y-decrecimiento",
+    "href": "04_estudio_local/crecimiento.html#crecimiento-y-decrecimiento",
+    "title": "4.4 Crecimiento y puntos críticos",
+    "section": "Crecimiento y decrecimiento",
+    "text": "Crecimiento y decrecimiento\n\nDefinición 4.3\nUna función f es creciente en (a,b) si, para todo x_1,x_2\\in(a,b) con x_1&lt;x_2, se cumple f(x_1)&lt;f(x_2). Es decreciente si se cumple f(x_1)&gt;f(x_2).\n\n\nTeorema 4.6\nSi f es derivable en (a,b):\n\nSi f'(x)&gt;0 para todo x\\in(a,b), f es creciente en (a,b).\nSi f'(x)&lt;0 para todo x\\in(a,b), f es decreciente en (a,b).\nf'(x)=0 para todo x\\in(a,b) si y solo si f es constante en (a,b).\n\n\n\nDemostración\nSean x_1&lt;x_2 en (a,b). Por el teorema de Lagrange en [x_1,x_2], existe z\\in(x_1,x_2) tal que \nf(x_2)-f(x_1)=f'(z)\\,(x_2-x_1).\n Como x_2-x_1&gt;0, f(x_2)-f(x_1) tiene el signo de f'(z), y eso da (i) y (ii). Si f'=0 en (a,b), f(x_2)=f(x_1), así que f es constante. El recíproco de (iii) es inmediato.\n\nDos precauciones:\n\nEl teorema vale en un intervalo. Por ejemplo, f(x)=\\frac1x tiene f'(x)&lt;0 en todo su dominio, pero f(-1)&lt;f(1): es decreciente en (-\\infty,0) y en (0,\\infty), no en su dominio entero.\nEl recíproco de (i) es falso: f(x)=x^3 es creciente, pero f'(0)=0.\n\n\nTeorema 4.7\nSi f'(x)=g'(x) para todo x\\in(a,b), existe C\\in\\mathbb{R} tal que f(x)=g(x)+C en (a,b).\n\n\nDemostración\n(f-g)'=0 en (a,b), así que f-g es constante, por el Teorema 4.6.\n\n\n\nFigura 4.8. Dos funciones con la misma derivada se diferencian en una constante C.",
+    "crumbs": [
+      "4.4 Crecimiento y puntos críticos"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/crecimiento.html#puntos-críticos",
+    "href": "04_estudio_local/crecimiento.html#puntos-críticos",
+    "title": "4.4 Crecimiento y puntos críticos",
+    "section": "Puntos críticos",
+    "text": "Puntos críticos\n\nDefinición 4.4\nUn punto z\\in(a,b) es un punto crítico de f si f'(z)=0 o si f'(z) no existe.\n\nPor el Teorema 4.1, los extremos locales de f están en sus puntos críticos. No todo punto crítico es un extremo: para clasificarlos se usan estos dos tests.\n\nTeorema 4.8 (Test de la primera derivada)\nSea z un punto crítico de f, con f continua en z:\n\nSi f' pasa de positiva a negativa en z, f tiene un máximo local en z.\nSi f' pasa de negativa a positiva en z, f tiene un mínimo local en z.\nSi f' no cambia de signo en z, f no tiene un extremo en z.\n\n\nLa razón está en el Teorema 4.6: en (i), por ejemplo, f crece hasta z y decrece a partir de z (Figura 4.9).\n\n\nFigura 4.9. Test de la primera derivada: (a) y (b) máximo local; (c) y (d) mínimo local; (e) sin cambio de signo, no hay extremo. En (b) y (d), f'(z) no existe.\n\n\nTeorema 4.9 (Test de la segunda derivada)\nSea f'(z)=0:\n\nSi f''(z)&gt;0, f tiene un mínimo local en z.\nSi f''(z)&lt;0, f tiene un máximo local en z.\n\n\nEste test se justificará más adelante, en la sección del error de Taylor. Si f''(z)=0, no decide, y hay que recurrir al de la primera derivada.\n\nRecuerda: hallar y clasificar los extremos locales\n\nHallar los puntos críticos: f'(z)=0 o f'(z) no existe.\nEstudiar el signo de f' a cada lado de cada punto crítico.\nSi f'(z)=0, también se puede usar el signo de f''(z).\n\n\n\nEjemplo 4.9\nHallar los intervalos de crecimiento y los extremos locales de f(x)=x^4-2x^3.\n\nf'(x)=4x^3-6x^2=2x^2(2x-3) se anula en x=0 y en x=\\frac32. Como 2x^2\\ge0, el signo de f' es el de 2x-3:\n\n\\begin{array}{c|ccc}\n& x&lt;0 & 0&lt;x&lt;\\frac32 & x&gt;\\frac32\\\\ \\hline\nf' & - & - & +\\\\\nf & \\text{decrece} & \\text{decrece} & \\text{crece}\n\\end{array}\n\nEn x=\\frac32, f' pasa de negativa a positiva: hay un mínimo local, con f\\left(\\frac32\\right)=-\\frac{27}{16}. En x=0, f' no cambia de signo: no hay extremo (Figura 4.10).\nComprobación con f''. f''(x)=12x^2-12x da f''\\left(\\frac32\\right)=9&gt;0, un mínimo. En cambio, f''(0)=0 no decide.\n\n\n\nEjemplo 4.10\nHallar los intervalos de crecimiento y los extremos locales de f(x)=2x^{5/3}+5x^{2/3}.\n\n\nf'(x)=\\frac{10}{3}x^{2/3}+\\frac{10}{3}x^{-1/3}=\\frac{10}{3}\\cdot\\frac{x+1}{\\sqrt[3]{x}},\\qquad x\\ne0.\n Los puntos críticos son x=-1, donde f'(-1)=0, y x=0, donde f'(0) no existe. La función es continua en los dos.\n\n\\begin{array}{c|ccc}\n& x&lt;-1 & -1&lt;x&lt;0 & x&gt;0\\\\ \\hline\nf' & + & - & +\\\\\nf & \\text{crece} & \\text{decrece} & \\text{crece}\n\\end{array}\n\nHay un máximo local en x=-1, con f(-1)=3, y un mínimo local en x=0, con f(0)=0 (Figura 4.10). El test de la segunda derivada no serviría en x=0, porque f'(0) no existe.\n\n\n\n\nFigura 4.10. Funciones de los dos ejemplos: (a) x^4-2x^3; (b) 2x^{5/3}+5x^{2/3}.\n\n\nEjemplo 4.11\nUn objeto se mueve sobre una recta, con posición x(t)=(4t-1)(t-1)^2 para t\\ge0. (2020/21 7E)\n\n¿Cuándo se mueve hacia la derecha y cuándo hacia la izquierda? ¿Cuándo cambia de sentido?\n¿Cuál es su mayor rapidez mientras se mueve hacia la izquierda?\n\n\n(a) Se mueve hacia la derecha si x crece, y hacia la izquierda si x decrece. La derivada es \nx'(t)=12t^2-18t+6=6(2t-1)(t-1),\n que se anula en t=\\frac12 y en t=1. Es positiva en \\left(0,\\frac12\\right) y en (1,\\infty), y negativa en \\left(\\frac12,1\\right). El objeto va hacia la izquierda en \\left(\\frac12,1\\right) y hacia la derecha en el resto, y cambia de sentido en t=\\frac12 y en t=1 (Figura 4.11).\n(b) La velocidad es v=x', negativa en \\left(\\frac12,1\\right). La mayor rapidez corresponde al mínimo de v: v'(t)=24t-18=0 da t=\\frac34, y v''=24&gt;0 confirma el mínimo. Como v\\left(\\frac34\\right)=-\\frac34, la mayor rapidez hacia la izquierda es \\frac34.\n\n\nFigura 4.11. Posición del objeto. Cambia de sentido en t=\\frac12 y en t=1.\n\n\n\n\nEjemplo 4.12\nLa función y(x) cumple x\\cos y+y\\sin x=0. Calcular y'(x) y decidir si hay un extremo local en el punto \\left(\\pi,\\frac\\pi2\\right). (2014/15 7E)\n\nDerivando implícitamente, \n\\cos y-x\\,y'\\sin y+y\\cos x+y'\\sin x=0\\ \\Rightarrow\\ y'=-\\frac{\\cos y+y\\cos x}{\\sin x-x\\sin y}.\n En \\left(\\pi,\\frac\\pi2\\right), y'=-\\frac{\\pi/2\\cdot(-1)}{-\\pi}=-\\frac12\\ne0. La función es derivable en ese punto y su derivada no se anula, así que no es un punto crítico: no hay extremo local.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.16–4.21.",
+    "crumbs": [
+      "4.4 Crecimiento y puntos críticos"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/resumen.html",
+    "href": "04_estudio_local/resumen.html",
+    "title": "4.11 Resumen",
+    "section": "",
+    "text": "Resumen del capítulo 4\nExtremos. Si f es derivable en un extremo local z, entonces f'(z)=0. Los extremos absolutos en [a,b] están en los bordes, donde f'=0 o donde f' no existe.\nRolle y Lagrange. Si f es continua en [a,b] y derivable en (a,b), existe z\\in(a,b) con \nf'(z)=\\frac{f(b)-f(a)}{b-a}.\n Si f(a)=f(b), es Rolle: f'(z)=0.\nPunto fijo. f(z)=z. Si f es continua en [a,b] y f(x)\\in[a,b] en todo el intervalo, existe al menos uno. Si además |f'|&lt;1 en (a,b), es único.\nCrecimiento y extremos locales. Si f'&gt;0, f crece; si f'&lt;0, decrece; si f'=0 en un intervalo, es constante. En un punto crítico (f'(z)=0 o f'(z) no existe), un cambio de signo de f' da un extremo. Si f'(z)=0: f''(z)&gt;0 da un mínimo y f''(z)&lt;0, un máximo.\nConcavidad. f''&gt;0: cóncava (\\cup). f''&lt;0: convexa (\\cap). Los candidatos a inflexión tienen f''(z)=0 o f''(z) no existe; lo es si f'' cambia de signo.\nDerivadas de orden superior. Sea n el orden de la primera derivada no nula en z. Si se cuenta desde f': con n par hay un extremo (mínimo si f^{(n)}(z)&gt;0, máximo si f^{(n)}(z)&lt;0) y con n impar, no. Si se cuenta desde f'': con n par, f es cóncava o convexa, según el signo, y con n impar hay inflexión.\nGráficas. En la de f': su signo da el crecimiento de f; si sube o baja, la concavidad. Para h=g(f(x)), g' y g'' se leen en f(x): \nh'=g'(f)\\,f',\\qquad h''=g''(f)\\,f'^2+g'(f)\\,f''.\n\nOptimización. Modelizar, relacionar las variables hasta tener una sola con su intervalo, derivar y comprobar. En un intervalo cerrado, comparar con los bordes; con un solo punto crítico, el extremo local es absoluto.\nTaylor. Con z entre a y x, \nP_n(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k,\\qquad E_n(x)=f(x)-P_n(x)=\\frac{f^{(n+1)}(z)}{(n+1)!}(x-a)^{n+1},\n \n|E_n(x)|\\le\\frac{|x-a|^{n+1}}{(n+1)!}\\max\\left|f^{(n+1)}(z)\\right|.\n\nSerie de Taylor. Si E_n(x)\\to0, entonces f(x)=\\sum\\limits_{n=0}^{\\infty}\\dfrac{f^{(n)}(a)}{n!}(x-a)^n. Series de Maclaurin: \ne^x=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!},\\qquad \\sin x=\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+1}}{(2n+1)!},\\qquad \\cos x=\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n}}{(2n)!},\\qquad x\\in\\mathbb{R},\n \n\\ln(1+x)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n},\\ \\ -1&lt;x\\le1;\\qquad \\frac{1}{1-x}=\\sum_{n=0}^{\\infty}x^n,\\ \\ |x|&lt;1;\n \n\\arctan x=\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+1}}{2n+1},\\ \\ |x|\\le1.",
+    "crumbs": [
+      "4.11 Resumen"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/serie_taylor.html",
+    "href": "04_estudio_local/serie_taylor.html",
+    "title": "4.10 Serie de Taylor",
+    "section": "",
+    "text": "Si el error tiende a cero al subir el grado, el polinomio de Taylor se convierte en una serie que es igual a la función.",
+    "crumbs": [
+      "4.10 Serie de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/serie_taylor.html#desarrollo-en-serie",
+    "href": "04_estudio_local/serie_taylor.html#desarrollo-en-serie",
+    "title": "4.10 Serie de Taylor",
+    "section": "Desarrollo en serie",
+    "text": "Desarrollo en serie\n\nTeorema 4.12\nSea f derivable a cualquier orden en (a-R,a+R). Si E_n(x)\\to0 cuando n\\to\\infty para todo x de ese intervalo, entonces \nf(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n,\\qquad x\\in(a-R,a+R),\n y recíprocamente. Es la serie de Taylor de f en a, o de Maclaurin si a=0.\n\nAquí, R es el radio de convergencia. No se calcula aquí: se da el intervalo en cada caso. Fuera de él, la serie no converge a f.\nPara e^x, |E_n(x)|\\le e^{|x|}\\dfrac{|x|^{n+1}}{(n+1)!}\\to0 para todo x, porque el factorial crece más deprisa que cualquier potencia. Por tanto, su serie vale en todo \\mathbb{R}.\n\nRecuerda: series de Maclaurin\n\n\\begin{array}{ll}\ne^x=\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}, & x\\in\\mathbb{R}\\\\[14pt]\n\\sin x=\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+1}}{(2n+1)!}, & x\\in\\mathbb{R}\\\\[14pt]\n\\cos x=\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n}}{(2n)!}, & x\\in\\mathbb{R}\\\\[14pt]\n\\ln(1+x)=\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n}, & -1&lt;x\\le1\\\\[14pt]\n\\dfrac{1}{1-x}=\\displaystyle\\sum_{n=0}^{\\infty}x^n, & -1&lt;x&lt;1\\\\[14pt]\n\\arctan x=\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+1}}{2n+1}, & -1\\le x\\le1\n\\end{array}\n\n\n\nEjemplo 4.29\nCalcular la serie de Maclaurin de f(x)=\\ln(1+x). (2014/15 3E)\n\nf(0)=0 y, derivando, f^{(n)}(x)=(-1)^{n+1}(n-1)!\\,(1+x)^{-n} para n\\ge1. Así, f^{(n)}(0)=(-1)^{n+1}(n-1)! y \n\\ln(1+x)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(n-1)!}{n!}x^n=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n}=x-\\frac{x^2}{2}+\\frac{x^3}{3}-\\dots\n La serie vale en (-1,1]. Dentro de ese intervalo, los polinomios se acercan a la función al subir el grado; fuera, se alejan (Figura 4.29).\n\n\nFigura 4.29. \\ln(1+x) y sus polinomios de grado 1, 2, 5 y 10. En gris, el intervalo donde vale la serie.",
+    "crumbs": [
+      "4.10 Serie de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/serie_taylor.html#series-a-partir-de-otras",
+    "href": "04_estudio_local/serie_taylor.html#series-a-partir-de-otras",
+    "title": "4.10 Serie de Taylor",
+    "section": "Series a partir de otras",
+    "text": "Series a partir de otras\nMultiplicando o sustituyendo en una serie conocida se obtienen otras, sin calcular derivadas. Además, una serie da las derivadas en el centro: el coeficiente de (x-a)^n es \\dfrac{f^{(n)}(a)}{n!}.\n\nEjemplo 4.30\nCalcular la serie de Maclaurin de f(x)=x\\sin x, y hallar f^{(24)}(0) y f^{(25)}(0). (2018/19 6E)\n\nMultiplicando por x la serie de \\sin x, \nx\\sin x=\\sum_{n=0}^{\\infty}\\frac{(-1)^nx^{2n+2}}{(2n+1)!}.\n El término de x^{24} tiene n=11, así que su coeficiente es -\\dfrac{1}{23!}. Igualando con \\dfrac{f^{(24)}(0)}{24!}, \nf^{(24)}(0)=-\\frac{24!}{23!}=-24.\n Como solo hay potencias pares, f^{(25)}(0)=0.",
+    "crumbs": [
+      "4.10 Serie de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/serie_taylor.html#series-y-números",
+    "href": "04_estudio_local/serie_taylor.html#series-y-números",
+    "title": "4.10 Serie de Taylor",
+    "section": "Series y números",
+    "text": "Series y números\nAl dar un valor a x en una serie, un número queda escrito como una suma infinita: \ne=\\sum_{n=0}^{\\infty}\\frac{1}{n!},\\qquad \\ln2=1-\\frac12+\\frac13-\\frac14+\\dots,\\qquad \\frac\\pi4=1-\\frac13+\\frac15-\\frac17+\\dots\n\n\nEjemplo 4.31\nCalcular la serie de Taylor de f(x)=\\ln(2-x) en a=1, y usarla para hallar la suma 1-\\frac12+\\frac13-\\frac14+\\dots (2017/18 3E)\n\nf(1)=0 y, derivando, f^{(n)}(x)=-(n-1)!\\,(2-x)^{-n} para n\\ge1. Así, f^{(n)}(1)=-(n-1)! y \n\\ln(2-x)=-\\sum_{n=1}^{\\infty}\\frac{(x-1)^n}{n},\\qquad 0\\le x&lt;2.\n Con x=0, \n\\ln2=-\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n}=1-\\frac12+\\frac13-\\frac14+\\dots\n Comprobación: es la serie de \\ln(1+x) en x=1.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.45–4.47.",
+    "crumbs": [
+      "4.10 Serie de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/concavidad.html",
+    "href": "04_estudio_local/concavidad.html",
+    "title": "4.5 Concavidad e inflexión",
+    "section": "",
+    "text": "El signo de f' dice si la curva sube o baja. El signo de f'' dice cómo se dobla: si su pendiente aumenta o disminuye.",
+    "crumbs": [
+      "4.5 Concavidad e inflexión"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/concavidad.html#concavidad-y-convexidad",
+    "href": "04_estudio_local/concavidad.html#concavidad-y-convexidad",
+    "title": "4.5 Concavidad e inflexión",
+    "section": "Concavidad y convexidad",
+    "text": "Concavidad y convexidad\n\nDefinición 4.5\nSea f derivable en (a,b):\n\nf es cóncava (\\cup) en (a,b) si f' es creciente en (a,b).\nf es convexa (\\cap) en (a,b) si f' es decreciente en (a,b).\nz\\in(a,b) es un punto de inflexión si la concavidad de f cambia en z.\n\n\nHay libros que usan estos dos nombres al revés. Lo que no cambia es el dibujo: en el primer caso la curva queda por encima de sus tangentes, y en el segundo, por debajo (Figura 4.12).\n\n\nFigura 4.12. Cóncava, f''&gt;0: (a) y (b). Convexa, f''&lt;0: (c) y (d). Una función puede ser de cualquiera de los dos tipos, tanto si sube como si baja.\n\n\nTeorema 4.10\nSi f es dos veces derivable en (a,b):\n\nSi f''(x)&gt;0 para todo x\\in(a,b), f es cóncava en (a,b).\nSi f''(x)&lt;0 para todo x\\in(a,b), f es convexa en (a,b).\nSi z\\in(a,b) es un punto de inflexión, entonces f''(z)=0.\n\n\n\nDemostración\nLos apartados (i) y (ii) son el Teorema 4.6 aplicado a f'. En (iii), f' pasa de creciente a decreciente en z, o al revés, así que tiene un extremo local en z. Por el Teorema 4.1 aplicado a f', f''(z)=0.\n\nSi f no es dos veces derivable en z, también puede haber un punto de inflexión. Por eso, los candidatos son los puntos con f''(z)=0 y aquellos donde f''(z) no existe.\nEl recíproco de (iii) es falso, como muestra el Ejemplo 4.13.\n\n\nFigura 4.13. Punto de inflexión en z: (a) de cóncava a convexa; (b) de convexa a cóncava.\n\n\nRecuerda: hallar los puntos de inflexión\n\nHallar los candidatos: f''(z)=0 o f''(z) no existe.\nEstudiar el signo de f'' a cada lado: si cambia, z es un punto de inflexión.\n\nEs el mismo método que para los extremos locales, con f'' en lugar de f'.\n\n\nEjemplo 4.13\nEstudiar si x=0 es un punto de inflexión de f(x)=x^4 y de g(x)=x^5.\n\nEn los dos casos, la segunda derivada se anula en x=0, pero:\n\nf''(x)=12x^2\\ge0 no cambia de signo: x=0 no es un punto de inflexión.\ng''(x)=20x^3 pasa de negativa a positiva: x=0 es un punto de inflexión.",
+    "crumbs": [
+      "4.5 Concavidad e inflexión"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/concavidad.html#estudio-completo-de-una-función",
+    "href": "04_estudio_local/concavidad.html#estudio-completo-de-una-función",
+    "title": "4.5 Concavidad e inflexión",
+    "section": "Estudio completo de una función",
+    "text": "Estudio completo de una función\n\nEjemplo 4.14\nEstudiar el crecimiento, los extremos locales, la concavidad y los puntos de inflexión de f(x)=x^3-6x^2+9x+1.\n\nCrecimiento. f'(x)=3x^2-12x+9=3(x-1)(x-3) se anula en x=1 y en x=3: \n\\begin{array}{c|ccc}\n& x&lt;1 & 1&lt;x&lt;3 & x&gt;3\\\\ \\hline\nf' & + & - & +\\\\\nf & \\text{crece} & \\text{decrece} & \\text{crece}\n\\end{array}\n Hay un máximo local en x=1, con f(1)=5, y un mínimo local en x=3, con f(3)=1.\nConcavidad. f''(x)=6x-12=6(x-2) se anula en x=2. Es negativa si x&lt;2 (convexa) y positiva si x&gt;2 (cóncava). Hay un punto de inflexión en x=2, con f(2)=3 (Figura 4.14).\n\n\nFigura 4.14. Máximo en (1,5), inflexión en (2,3) y mínimo en (3,1).\n\n\n\n\nEjemplo 4.15\nSea f(x)=x^3+ax, con a\\in\\mathbb{R}. Estudiar, según el valor de a, el crecimiento, los extremos, la concavidad y los puntos de inflexión. (2019/20 2E)\n\nConcavidad. f''(x)=6x no depende de a: para todo a, f es convexa si x&lt;0 y cóncava si x&gt;0, con un punto de inflexión en x=0.\nCrecimiento. f'(x)=3x^2+a sí depende de a:\n\nSi a&gt;0, f'&gt;0 en todos los puntos: f es creciente y no tiene extremos.\nSi a=0, f'(x)=3x^2 solo se anula en x=0, sin cambiar de signo: f es creciente y no tiene extremos.\nSi a&lt;0, f' se anula en x=\\pm\\sqrt{-a/3}. Como f''\\left(-\\sqrt{-a/3}\\right)&lt;0 y f''\\left(\\sqrt{-a/3}\\right)&gt;0, hay un máximo local en x=-\\sqrt{-a/3} y un mínimo local en x=\\sqrt{-a/3}. f decrece entre los dos y crece fuera de ellos.\n\n\n\nFigura 4.15. f(x)=x^3+ax: (a) a&gt;0; (b) a=0; (c) a&lt;0. El punto de inflexión está siempre en el origen.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.22–4.24.",
+    "crumbs": [
+      "4.5 Concavidad e inflexión"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/index.html",
+    "href": "04_estudio_local/index.html",
+    "title": "4 Estudio local de una función",
+    "section": "",
+    "text": "La derivada de una función dice mucho sobre cómo es esa función. Con el signo de f' y de f'' se sabe dónde crece, dónde tiene sus máximos y mínimos y hacia qué lado se curva, tanto a partir de su fórmula como solo de su gráfica. Los teoremas de Rolle y de Lagrange aseguran que existen puntos con cierta derivada, y con todo ello se resuelven problemas de optimización, como elegir el trazado más barato para un oleoducto.\nDespués, la función se sustituye por un polinomio de Taylor. Este polinomio da valores como \\sqrt2 con un error que se puede acotar, y muestra cómo la energía cinética de la relatividad se reduce a \\frac12mv^2 a velocidades pequeñas. Si el error tiende a cero al subir el grado, el polinomio se convierte en una serie, y números como \\ln2 quedan escritos como una suma infinita.",
+    "crumbs": [
+      "4. Estudio local de una función"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/extremos.html",
+    "href": "04_estudio_local/extremos.html",
+    "title": "4.1 Extremos y derivada",
+    "section": "",
+    "text": "Una función puede alcanzar su mayor valor en todo un intervalo, o solo entre los puntos cercanos. En los dos casos la derivada ayuda a localizarlo.",
+    "crumbs": [
+      "4.1 Extremos y derivada"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/extremos.html#extremos-absolutos-y-locales",
+    "href": "04_estudio_local/extremos.html#extremos-absolutos-y-locales",
+    "title": "4.1 Extremos y derivada",
+    "section": "Extremos absolutos y locales",
+    "text": "Extremos absolutos y locales\n\nDefinición 4.1\nSea f definida en [a,b]. La función tiene en z\\in[a,b]:\n\nun máximo absoluto si f(z)\\ge f(x) para todo x\\in[a,b];\nun mínimo absoluto si f(z)\\le f(x) para todo x\\in[a,b].\n\nY tiene en z\\in(a,b):\n\nun máximo local si existe \\delta&gt;0 tal que f(z)\\ge f(x) para todo x\\in(z-\\delta,z+\\delta);\nun mínimo local si existe \\delta&gt;0 tal que f(z)\\le f(x) para todo x\\in(z-\\delta,z+\\delta).\n\nLos máximos y los mínimos se llaman extremos.\n\n\n\nFigura 4.1. Máximo absoluto M en a, mínimo local en z_1, máximo local en z_2 y mínimo absoluto m en b.\n\nUn extremo absoluto puede estar en un borde del intervalo, como M y m en la Figura 4.1. Si está en un punto interior, también es local.\nSi f es continua en [a,b], el teorema de Weierstrass asegura que tiene máximo y mínimo absolutos.",
+    "crumbs": [
+      "4.1 Extremos y derivada"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/extremos.html#extremo-local-y-derivada",
+    "href": "04_estudio_local/extremos.html#extremo-local-y-derivada",
+    "title": "4.1 Extremos y derivada",
+    "section": "Extremo local y derivada",
+    "text": "Extremo local y derivada\nEn la Figura 4.1, la tangente es horizontal en z_1 y en z_2. Esto ocurre siempre que la función es derivable en el punto.\n\nTeorema 4.1\nSi f tiene un extremo local en z y es derivable en z, entonces f'(z)=0.\n\n\nDemostración\nSupongamos que f tiene un mínimo local en z. Si h es suficientemente pequeño, f(z+h)-f(z)\\ge0. Por tanto:\n\nSi h&gt;0, \\ \\dfrac{f(z+h)-f(z)}{h}\\ge0. Al pasar al límite cuando h\\to0, f'(z)\\ge0.\nSi h&lt;0, \\ \\dfrac{f(z+h)-f(z)}{h}\\le0. Al pasar al límite cuando h\\to0, f'(z)\\le0.\n\nLas dos desigualdades juntas dan f'(z)=0. Con un máximo local, el razonamiento es análogo.\n\nEl teorema no dice más que eso, como muestra la Figura 4.2:\n\nHace falta que f sea derivable: f(x)=|x| tiene un mínimo local en x=0, pero f'(0) no existe.\nEl recíproco es falso: f(x)=x^3 cumple f'(0)=0, pero no tiene ningún extremo en x=0.\n\n\n\nFigura 4.2. Tres casos: (a) extremos locales con tangente horizontal; (b) mínimo local sin derivada en x=0; (c) f'(0)=0 sin extremo.\n\nEl teorema reduce la búsqueda de los extremos absolutos a unos pocos puntos:\n\nRecuerda: extremos absolutos en un intervalo cerrado\nSi f es continua en [a,b], sus extremos absolutos están entre estos puntos:\n\nlos bordes, a y b;\nlos puntos z\\in(a,b) con f'(z)=0;\nlos puntos z\\in(a,b) donde f'(z) no existe.\n\nSe compara el valor de f en todos ellos.\n\n\nEjemplo 4.1\nHallar los extremos absolutos de f(x)=x^3-3x en [-2,3].\n\nLa función es continua en [-2,3] y derivable en todos los puntos, con f'(x)=3x^2-3, que se anula en x=\\pm1. Los valores de f en los candidatos son: \nf(-2)=-2,\\qquad f(-1)=2,\\qquad f(1)=-2,\\qquad f(3)=18.\n El máximo absoluto es 18, en x=3. El mínimo absoluto es -2, y se alcanza en dos puntos: x=-2 y x=1.\nEl máximo absoluto está en un borde, donde f'(3)=24\\neq0. El teorema anterior no se aplica allí, porque solo habla de extremos locales.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.1–4.4.",
+    "crumbs": [
+      "4.1 Extremos y derivada"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Cálculo",
@@ -351,7 +501,7 @@
     "href": "index.html#capítulos",
     "title": "Cálculo",
     "section": "Capítulos",
-    "text": "Capítulos\n\n\n1. Números complejos\n2. Sucesiones y series\n3. Funciones reales de variable real\n4. Estudio local de una función En preparación\n5. Integración En preparación\n6. Funciones de varias variables reales En preparación\n7. Integral múltiple En preparación\n8. Integral curvilínea En preparación\n9. Ecuaciones diferenciales En preparación\n10. Transformada de Laplace En preparación\n11. Análisis de Fourier En preparación"
+    "text": "Capítulos\n\n\n1. Números complejos\n2. Sucesiones y series\n3. Funciones reales de variable real\n4. Estudio local de una función\n5. Integración En preparación\n6. Funciones de varias variables reales En preparación\n7. Integral múltiple En preparación\n8. Integral curvilínea En preparación\n9. Ecuaciones diferenciales En preparación\n10. Transformada de Laplace En preparación\n11. Análisis de Fourier En preparación"
   },
   {
     "objectID": "index.html#acerca-de-estos-apuntes",
@@ -698,6 +848,346 @@
     "text": "Resumen del capítulo 1\nForma binómica. z=a+bi, con i^2=-1. El afijo de z es el punto (a,b). \n\\bar z=a-bi,\n\\qquad\nz\\bar z=a^2+b^2,\n\\qquad\n\\frac{z_1}{z_2}=\\frac{z_1\\bar z_2}{z_2\\bar z_2},\n \n\\mathrm{Re}(z)=\\frac{z+\\bar z}{2},\n\\qquad\n\\mathrm{Im}(z)=\\frac{z-\\bar z}{2i}.\n\nForma exponencial. z=\\rho e^{i\\theta}, con módulo \\rho y fase \\theta; la fase se elige según el cuadrante. \n\\rho=\\sqrt{a^2+b^2},\n\\qquad\n\\tan\\theta=\\frac ba,\n\\qquad\ne^{\\pm i\\theta}=\\cos\\theta\\pm i\\sin\\theta,\n \n\\bar z=\\rho e^{-i\\theta},\n\\qquad\ne^{i(\\theta+2\\pi k)}=e^{i\\theta}.\n \n|z_1z_2|=|z_1||z_2|,\n\\qquad\n|z_1+z_2|\\le|z_1|+|z_2|,\n\\qquad\n|z_1-z_2|\\ \\text{ es la distancia entre afijos}.\n\nOperaciones. \nz_1z_2=\\rho_1\\rho_2\\,e^{i(\\theta_1+\\theta_2)},\n\\qquad\n\\frac{z_1}{z_2}=\\frac{\\rho_1}{\\rho_2}\\,e^{i(\\theta_1-\\theta_2)},\n\\qquad\nz^n=\\rho^ne^{in\\theta},\n \n\\sqrt[n]{z}=\\rho^{1/n}e^{i(\\theta+2\\pi k)/n},\\ \\ k=0,\\dots,n-1.\n Fórmula de Moivre: (\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta.\nLectura geométrica. La suma es la diagonal del paralelogramo, y z_1-z_2 es el vector de z_2 a z_1. Multiplicar por ke^{i\\alpha} escala por k y gira un ángulo \\alpha. Alrededor de un punto w: \nz'-w=(z-w)\\,k\\,e^{i\\alpha}.\n\nFunciones complejas. Con z=x+iy y k\\in\\mathbb{Z}: \ne^z=e^x(\\cos y+i\\sin y),\n\\qquad\n\\ln z=\\ln\\rho+i(\\theta+2\\pi k),\n\\qquad\nz_1^{z_2}=e^{z_2\\ln z_1}.\n \n\\sin z=\\frac{e^{iz}-e^{-iz}}{2i},\n\\qquad\n\\cos z=\\frac{e^{iz}+e^{-iz}}{2},\n\\qquad\n\\sinh z=\\frac{e^{z}-e^{-z}}{2},\n\\qquad\n\\cosh z=\\frac{e^{z}+e^{-z}}{2}.\n El valor principal de \\ln z es el que tiene la fase en (-\\pi,\\pi].\nEcuaciones. Con potencias, se despeja y se calculan raíces. Con conjugado o módulo, se escribe z=\\rho e^{i\\theta} y se igualan módulos y fases. Con funciones, se pasa a exponenciales y se usa el logaritmo: \n\\rho_1e^{i\\theta_1}=\\rho_2e^{i\\theta_2}\n\\iff\n\\rho_1=\\rho_2,\\ \\ \\theta_1=\\theta_2+2\\pi k;\n\\qquad\ne^{iz}=u\n\\iff\nz=-i\\ln u.\n\nLugares geométricos. Se sustituye z=x+iy, con |z|=\\sqrt{x^2+y^2}, se opera y se reconoce la curva. Con desigualdades, el resultado es una región; con varias condiciones, su intersección.",
     "crumbs": [
       "1.7 Resumen"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/rolle_lagrange.html",
+    "href": "04_estudio_local/rolle_lagrange.html",
+    "title": "4.2 Teoremas de Rolle y de Lagrange",
+    "section": "",
+    "text": "Una función derivable que sale de un valor y vuelve a él tiene que tener tangente horizontal en algún punto. Esa es la idea del teorema de Rolle, y de él sale el de Lagrange, que relaciona la pendiente media en un intervalo con la derivada en un punto.",
+    "crumbs": [
+      "4.2 Rolle y Lagrange"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/rolle_lagrange.html#teorema-de-rolle",
+    "href": "04_estudio_local/rolle_lagrange.html#teorema-de-rolle",
+    "title": "4.2 Teoremas de Rolle y de Lagrange",
+    "section": "Teorema de Rolle",
+    "text": "Teorema de Rolle\n\nTeorema 4.2 (Rolle)\nSi f es continua en [a,b], derivable en (a,b) y f(a)=f(b), entonces existe z\\in(a,b) tal que f'(z)=0.\n\n\nDemostración\nSi f es constante, f'(x)=0 para todo x\\in(a,b).\nSi no lo es, toma algún valor distinto de f(a). Supongamos que es mayor; si es menor, el razonamiento es análogo con el mínimo. Por el teorema de Weierstrass, f alcanza su máximo absoluto en algún z\\in[a,b]. Como ese máximo es mayor que f(a)=f(b), z no es un borde, así que z\\in(a,b) es un máximo local. Por el Teorema 4.1, f'(z)=0.\n\n\n\nFigura 4.3. Teorema de Rolle: (a) f constante; (b) un punto z; (c) varios puntos z.\n\n\nEjemplo 4.2\nComprobar que se puede aplicar el teorema de Rolle a f(x)=x^3-x en [-1,1] y hallar los valores de z.\n\nEs un polinomio, así que es continua y derivable, y f(-1)=f(1)=0. La ecuación f'(z)=3z^2-1=0 da z=\\pm\\frac{\\sqrt3}{3}, y los dos valores están en (-1,1).\nEl teorema asegura que hay al menos un valor, pero puede haber más.\n\n\n\nEjemplo 4.3\nEstudiar si se puede aplicar el teorema de Rolle a esta función en [0,2]: (2020/21 2E) \nf(x)=\\begin{cases}x^3 & 0\\le x\\le1\\\\ 2-x & 1&lt;x\\le2\\end{cases}\n\n\nSe cumple f(0)=f(2)=0. La función es continua en x=1, porque los dos trozos valen 1 allí. Sin embargo, no es derivable en x=1: la derivada vale 3 por la izquierda y -1 por la derecha. El teorema no se puede aplicar.\nDe hecho, la conclusión falla: f'(x)=3x^2&gt;0 en (0,1) y f'(x)=-1 en (1,2) (Figura 4.4).\n\n\nFigura 4.4. f(0)=f(2), pero hay un pico en x=1 y la tangente nunca es horizontal.",
+    "crumbs": [
+      "4.2 Rolle y Lagrange"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/rolle_lagrange.html#teorema-de-lagrange",
+    "href": "04_estudio_local/rolle_lagrange.html#teorema-de-lagrange",
+    "title": "4.2 Teoremas de Rolle y de Lagrange",
+    "section": "Teorema de Lagrange",
+    "text": "Teorema de Lagrange\nLa pendiente media (o velocidad media) de f en [a,b] es la de la recta que une (a,f(a)) y (b,f(b)): \n\\frac{f(b)-f(a)}{b-a}.\n\n\nTeorema 4.3 (Lagrange o del valor medio)\nSi f es continua en [a,b] y derivable en (a,b), entonces existe z\\in(a,b) tal que \nf'(z)=\\frac{f(b)-f(a)}{b-a}.\n\n\nGeométricamente, en algún punto la tangente es paralela a esa recta (Figura 4.5).\n\n\nFigura 4.5. La tangente en z_1 y en z_2 es paralela a la recta que une (a,f(a)) y (b,f(b)).\n\n\nDemo en GeoGebra\nMueve los puntos negros para cambiar la curva: cada X naranja marca un punto z del teorema. Activa el punto no derivable y busca una curva sin ninguna X: al fallar la derivabilidad, puede no existir z. La casilla de Rolle iguala los valores en los bordes.\nAbrir la demo Autoría: Doug Davis\n\n\nDemostración\nSea u(x)=f(a)+\\dfrac{f(b)-f(a)}{b-a}(x-a) la recta que une los dos puntos, y sea h(x)=f(x)-u(x).\nLa función h es continua en [a,b] y derivable en (a,b), porque f y u lo son. Además, h(a)=h(b)=0, porque u(a)=f(a) y u(b)=f(b). Por el teorema de Rolle, existe z\\in(a,b) tal que h'(z)=0, es decir, \nf'(z)=u'(z)=\\frac{f(b)-f(a)}{b-a}.\n\n\n\nRecuerda: aplicar Rolle o Lagrange\n\nComprobar que f es continua en [a,b] y derivable en (a,b); en Rolle, también que f(a)=f(b).\nResolver f'(z)=\\dfrac{f(b)-f(a)}{b-a} y quedarse con las soluciones de (a,b).\n\nSi falla una hipótesis, el teorema no se aplica, pero la conclusión todavía puede cumplirse.\n\n\nEjemplo 4.4\nUn coche recorre un tramo de 3.5 km en 2 minutos. ¿Qué asegura el teorema de Lagrange sobre su velocidad?\n\nLa posición es continua y derivable, y su pendiente media es la velocidad media: \n\\bar v=\\frac{3.5\\text{ km}}{\\frac1{30}\\text{ h}}=105\\text{ km/h}.\n El teorema asegura que, en algún instante, el velocímetro marcó exactamente 105 km/h. Por eso un radar de tramo puede multar sin medir la velocidad en ningún punto concreto: basta con la velocidad media.\n\n\n\nEjemplo 4.5\nEstudiar si se puede aplicar el teorema de Lagrange y, en caso afirmativo, hallar z: (2018/19 6E)\n\nf(x)=3\\sqrt x-4x en [1,4].\nf(x)=\\dfrac{x}{x-1} en [-1,1].\n\n\n(a) Se puede aplicar: f es continua en [1,4] y derivable en (1,4). Con f(1)=-1 y f(4)=-10, la pendiente media es -3, y \nf'(z)=\\frac{3}{2\\sqrt z}-4=-3\\ \\Rightarrow\\ \\sqrt z=\\frac32\\ \\Rightarrow\\ z=\\frac94\\in(1,4).\n\n(b) No se puede aplicar: f no está definida en x=1, así que no es continua en [-1,1].\n\n\n\nEjemplo 4.6\nSea f(x)=\\dfrac{7-16^{1/x}}{1+16^{1/x}} en [2,4]. Demostrar que: (2023/24 2E)\n\nf toma el valor 1 en (2,4).\nf' toma el valor \\frac{8}{15} en (2,4).\n\n\nEn [2,4], la función es continua y derivable, con f(2)=\\frac35 y f(4)=\\frac53.\n(a) Sea g(x)=f(x)-1, continua en [2,4]. Como g(2)=-\\frac25&lt;0 y g(4)=\\frac23&gt;0, por el teorema de Bolzano existe z\\in(2,4) con g(z)=0, es decir, f(z)=1.\n(b) Por el teorema de Lagrange, existe z\\in(2,4) tal que \nf'(z)=\\frac{f(4)-f(2)}{4-2}=\\frac{\\frac53-\\frac35}{2}=\\frac{8}{15}.\n\nComprobación de (a). f(z)=1 equivale a 16^{1/z}=3, es decir, z=\\frac{\\ln16}{\\ln3}\\approx2.52.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.5–4.12.",
+    "crumbs": [
+      "4.2 Rolle y Lagrange"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/optimizacion.html",
+    "href": "04_estudio_local/optimizacion.html",
+    "title": "4.7 Optimización",
+    "section": "",
+    "text": "Muchos problemas piden el mejor caso posible: el área mayor o el coste menor. Se resuelven buscando el extremo absoluto de una función de una variable.",
+    "crumbs": [
+      "4.7 Optimización"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/optimizacion.html#los-cuatro-pasos",
+    "href": "04_estudio_local/optimizacion.html#los-cuatro-pasos",
+    "title": "4.7 Optimización",
+    "section": "Los cuatro pasos",
+    "text": "Los cuatro pasos\n\nRecuerda: problemas de optimización\n\nModelizar: escribir la magnitud que se quiere optimizar en función de las variables del problema.\nRelacionar las variables: usar la condición del enunciado para dejar una función de una sola variable, con su intervalo.\nDerivar y resolver: hallar los puntos críticos.\nComprobar: ver que el punto es el máximo o el mínimo buscado e interpretar el resultado.\n\n\n\nEjemplo 4.19\nUna ventana está formada por un rectángulo con un semicírculo encima (Figura 4.20). Su perímetro es un valor fijo P. ¿Qué dimensiones dan la máxima luz? (2011/12 2E)\n\n\nFigura 4.20. Ventana de radio r y altura h.\n\n\nModelizar. La luz es proporcional al área: A=2rh+\\dfrac{\\pi r^2}{2}.\nRelacionar las variables. El perímetro es P=2h+2r+\\pi r, así que h=\\dfrac{P-2r-\\pi r}{2}. Sustituyendo, \nA(r)=Pr-\\left(2+\\frac{\\pi}{2}\\right)r^2,\\qquad 0&lt;r&lt;\\frac{P}{2+\\pi},\n donde el límite superior corresponde a h=0.\nDerivar y resolver. \nA'(r)=P-(4+\\pi)r=0\\quad\\Longrightarrow\\quad r=\\frac{P}{4+\\pi}.\n\nComprobar. A''(r)=-(4+\\pi)&lt;0 para todo r, así que es un máximo. La altura es \nh=\\frac{P-(2+\\pi)r}{2}=\\frac{P}{4+\\pi}=r.\n En la ventana óptima, el rectángulo mide el doble de ancho que de alto.",
+    "crumbs": [
+      "4.7 Optimización"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/optimizacion.html#máximo-o-mínimo-absoluto",
+    "href": "04_estudio_local/optimizacion.html#máximo-o-mínimo-absoluto",
+    "title": "4.7 Optimización",
+    "section": "Máximo o mínimo absoluto",
+    "text": "Máximo o mínimo absoluto\nEl paso de comprobar tiene una trampa: el test de la segunda derivada solo da un extremo local, y el problema pide uno absoluto. Hay dos formas de cerrarlo:\n\nEn un intervalo cerrado, se compara el valor de la función en los puntos críticos y en los extremos del intervalo, como en el Ejemplo 4.1.\nSi solo hay un punto crítico en el intervalo y es un mínimo local, también es el mínimo absoluto, porque para bajar de nuevo f tendría que pasar por otro punto crítico. Lo mismo vale para un máximo.\n\n\nEjemplo 4.20\nUn pozo de petróleo está en el mar, a 3 km de la costa. La refinería está en la costa, a 5 km del punto de la costa más cercano al pozo. Cada km de oleoducto bajo el mar cuesta el doble que en tierra. ¿Qué trazado es el más económico? (2013/14 5E)\n\n\nFigura 4.21. El oleoducto llega a la costa a una distancia x del punto más cercano al pozo.\n\n\nModelizar y relacionar. Sea p el precio de un km en tierra. Según la Figura 4.21, el coste es \nC(x)=2p\\sqrt{x^2+9}+p(5-x),\\qquad x\\in[0,5].\n\nDerivar y resolver. \nC'(x)=\\frac{2px}{\\sqrt{x^2+9}}-p=0\\quad\\Longrightarrow\\quad 2x=\\sqrt{x^2+9}\\quad\\Longrightarrow\\quad x=\\sqrt3,\n porque x\\ge0.\nComprobar. Se compara C en el punto crítico y en los extremos del intervalo: \nC(0)=11p,\\qquad C(\\sqrt3)=(5+3\\sqrt3)\\,p\\approx10.2p,\\qquad C(5)=2\\sqrt{34}\\,p\\approx11.7p.\n El oleoducto debe llegar a la costa a \\sqrt3\\approx1.73 km del punto más cercano. Ir en línea recta hasta la refinería o buscar directamente la costa sale más caro.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.29–4.33.",
+    "crumbs": [
+      "4.7 Optimización"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/error_taylor.html",
+    "href": "04_estudio_local/error_taylor.html",
+    "title": "4.9 Error de Taylor",
+    "section": "",
+    "text": "Al sustituir f por P_n se comete un error. Como normalmente no se conoce el valor exacto de f(x), ese error no se puede calcular, pero sí acotar.",
+    "crumbs": [
+      "4.9 Error de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/error_taylor.html#teorema-de-taylor",
+    "href": "04_estudio_local/error_taylor.html#teorema-de-taylor",
+    "title": "4.9 Error de Taylor",
+    "section": "Teorema de Taylor",
+    "text": "Teorema de Taylor\nEl Ejemplo 4.21 permite aproximar e evaluando en x=1 los polinomios de e^x. Con e\\approx2.71828: \n\\begin{array}{c|ccccc}\nn & 0 & 1 & 2 & 3 & 6\\\\ \\hline\nP_n(1) & 1 & 2 & 2.5 & 2.6667 & 2.71806\\\\\n|e-P_n(1)| & 1.718 & 0.718 & 0.218 & 0.052 & 0.00023\n\\end{array}\n El error disminuye al subir el grado. El teorema de Taylor da su expresión sin necesidad de conocer e.\n\nTeorema 4.11 (Taylor)\nSi f es n+1 veces derivable en un intervalo que contiene a a y a x, el error E_n(x)=f(x)-P_n(x) es \nE_n(x)=\\frac{f^{(n+1)}(z)}{(n+1)!}(x-a)^{n+1}\n para algún z entre a y x.\n\nCon n=0 es el Teorema de Lagrange: f(x)-f(a)=f'(z)(x-a).\nNo se sabe dónde está z, solo que está entre a y x. Por eso se toma el peor caso.\n\nRecuerda: cota del error\n\n|E_n(x)|\\le\\frac{|x-a|^{n+1}}{(n+1)!}\\,\\max\\left|f^{(n+1)}(z)\\right|,\\qquad z\\ \\text{entre}\\ a\\ \\text{y}\\ x\n\n\n\nEjemplo 4.26\nAcotar el error de aproximar e con el polinomio de Maclaurin de grado n de e^x, y comprobar la cota con n=6.\n\nAquí f^{(n+1)}(z)=e^z, con z\\in(0,1), así que e^z&lt;e&lt;3 y \n|E_n(1)|&lt;\\frac{3}{(n+1)!}.\n Con n=6, la cota es \\frac{3}{5040}\\approx0.0006. El error real, 0.00023, es menor, como debe ser.\n\n\n\nEjemplo 4.27\nSea f(x)=\\sqrt x. (2019/20 3E)\n\nCalcular su polinomio de Taylor de grado 2 en a=1.\nAproximar \\sqrt2 con ese polinomio.\nAcotar el error cometido.\n\n\n(a) f(1)=1, f'(1)=\\frac12 y f''(1)=-\\frac14, así que P_2(x)=1+\\dfrac{x-1}{2}-\\dfrac{(x-1)^2}{8}.\n(b) \\sqrt2\\approx P_2(2)=\\dfrac{11}{8}=1.375.\n(c) f'''(x)=\\frac38x^{-5/2} es positiva y decreciente en (1,2), así que su máximo en ese intervalo está en x=1 y vale \\frac38. Por tanto, \n|E_2(2)|\\le\\frac{1^3}{3!}\\cdot\\frac38=\\frac{1}{16}=0.0625.\n Es decir, \\sqrt2=1.375\\pm0.0625.\nComprobación: \\sqrt2\\approx1.41421, así que el error real es 0.039, menor que la cota (Figura 4.28).\n\n\nFigura 4.28. \\sqrt x y P_2. La separación en x=2 es el error E_2(2).",
+    "crumbs": [
+      "4.9 Error de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/error_taylor.html#elegir-el-grado",
+    "href": "04_estudio_local/error_taylor.html#elegir-el-grado",
+    "title": "4.9 Error de Taylor",
+    "section": "Elegir el grado",
+    "text": "Elegir el grado\nLa cota permite decidir de antemano qué grado hace falta para una precisión dada: se sube n hasta que la cota sea menor que el error admitido.\n\nEjemplo 4.28\nUsando el polinomio de Maclaurin de f(x)=\\ln(1-x), aproximar \\ln1.1 con un error menor que 10^{-3}. (2024/25 6E)\n\nLas derivadas son f^{(k)}(x)=-\\dfrac{(k-1)!}{(1-x)^k}, así que f^{(k)}(0)=-(k-1)! y \nP_n(x)=-\\left(x+\\frac{x^2}{2}+\\dots+\\frac{x^n}{n}\\right).\n Como \\ln1.1=f(-0.1), z está en (-0.1,0). Ahí, |f^{(n+1)}(z)|=\\dfrac{n!}{(1-z)^{n+1}} es máxima en z=0 y vale n!. Por tanto, \n|E_n(-0.1)|\\le\\frac{(0.1)^{n+1}}{(n+1)!}\\,n!=\\frac{(0.1)^{n+1}}{n+1}.\n Con n=1, la cota es 0.005, que no basta. Con n=2, es \\frac13\\cdot10^{-3}, que sí. Así, \n\\ln1.1\\approx P_2(-0.1)=0.1-\\frac{(0.1)^2}{2}=0.095.\n Comprobación: \\ln1.1\\approx0.09531, con un error de 0.00031.",
+    "crumbs": [
+      "4.9 Error de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/error_taylor.html#justificación-de-los-tests-de-la-segunda-derivada",
+    "href": "04_estudio_local/error_taylor.html#justificación-de-los-tests-de-la-segunda-derivada",
+    "title": "4.9 Error de Taylor",
+    "section": "Justificación de los tests de la segunda derivada",
+    "text": "Justificación de los tests de la segunda derivada\nEl Teorema 4.9 se justifica con el teorema de Taylor para n=1, centrado en el punto crítico z y llamando \\xi al punto intermedio. Como f'(z)=0, \nf(z+h)-f(z)=\\frac12f''(\\xi)\\,h^2,\\qquad \\xi\\ \\text{entre}\\ z\\ \\text{y}\\ z+h.\n Si f'' es continua y f''(z)&gt;0, entonces f''&gt;0 cerca de z. Para h pequeño, también f''(\\xi)&gt;0, de modo que f(z+h)&gt;f(z) y hay un mínimo local. Si f''(z)&lt;0, el mismo razonamiento da un máximo local.\nLa misma fórmula, sin f'(z)=0, da la distancia de la curva a su tangente: f(x)-P_1(x)=\\frac12f''(\\xi)(x-z)^2. Si f''&gt;0, la curva queda por encima de la tangente; si f''&lt;0, por debajo.",
+    "crumbs": [
+      "4.9 Error de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/error_taylor.html#derivadas-de-orden-superior",
+    "href": "04_estudio_local/error_taylor.html#derivadas-de-orden-superior",
+    "title": "4.9 Error de Taylor",
+    "section": "Derivadas de orden superior",
+    "text": "Derivadas de orden superior\nSi f''(z)=0, el test de la segunda derivada no decide. Se busca entonces la primera derivada que no se anule en z, de orden n. Si esa derivada es continua, por el teorema de Taylor, \nf(z+h)-f(z)=\\frac{f^{(n)}(\\xi)}{n!}\\,h^n,\\qquad \\xi\\ \\text{entre}\\ z\\ \\text{y}\\ z+h.\n El signo depende de f^{(n)}(z) y de si h^n cambia de signo con h, es decir, de si n es par o impar.\n\nRecuerda: extremos e inflexión con derivadas superiores\nSi f'(z)=\\dots=f^{(n-1)}(z)=0 y f^{(n)}(z)\\ne0: \n\\begin{array}{c|cc}\n& f^{(n)}(z)&gt;0 & f^{(n)}(z)&lt;0\\\\ \\hline\nn\\ \\text{par} & \\text{mínimo local} & \\text{máximo local}\\\\\nn\\ \\text{impar} & \\text{no es extremo} & \\text{no es extremo}\n\\end{array}\n Si f''(z)=\\dots=f^{(n-1)}(z)=0 y f^{(n)}(z)\\ne0, con cualquier f'(z): \n\\begin{array}{c|cc}\n& f^{(n)}(z)&gt;0 & f^{(n)}(z)&lt;0\\\\ \\hline\nn\\ \\text{par} & \\text{cóncava} & \\text{convexa}\\\\\nn\\ \\text{impar} & \\text{inflexión} & \\text{inflexión}\n\\end{array}\n\n\nPor ejemplo, en el Ejemplo 4.13, x^4 tiene n=4 y f^{(4)}(0)&gt;0, así que hay un mínimo local en x=0. Y x^5 tiene n=5, así que hay un punto de inflexión.\nCon los contenidos de esta sección puedes hacer los ejercicios 4.40–4.44.",
+    "crumbs": [
+      "4.9 Error de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/taylor.html",
+    "href": "04_estudio_local/taylor.html",
+    "title": "4.8 Polinomio de Taylor",
+    "section": "",
+    "text": "Cerca de un punto, una función se puede sustituir por un polinomio, que es fácil de evaluar y de derivar.",
+    "crumbs": [
+      "4.8 Polinomio de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/taylor.html#polinomio-de-taylor",
+    "href": "04_estudio_local/taylor.html#polinomio-de-taylor",
+    "title": "4.8 Polinomio de Taylor",
+    "section": "Polinomio de Taylor",
+    "text": "Polinomio de Taylor\nEl polinomio se construye grado a grado, de forma que cada uno comparta con f en x=a una derivada más que el anterior: \n\\begin{array}{c|c|l}\n\\text{grado} & \\text{condición nueva} & \\text{polinomio}\\\\ \\hline\n0 & P_0(a)=f(a) & P_0(x)=f(a)\\\\[2pt]\n1 & P_1'(a)=f'(a) & P_1(x)=f(a)+f'(a)(x-a)\\\\[2pt]\n2 & P_2''(a)=f''(a) & P_2(x)=f(a)+f'(a)(x-a)+\\dfrac{f''(a)}{2}(x-a)^2\n\\end{array}\n P_0 es una recta horizontal y P_1 es la recta tangente. El 2 del denominador aparece porque la derivada segunda de (x-a)^2 es 2. En general, la derivada k-ésima de (x-a)^k es k!.\n\nDefinición 4.6\nSi f es n veces derivable en x=a, su polinomio de Taylor de grado n en a es \nP_n(x)=f(a)+f'(a)(x-a)+\\frac{f''(a)}{2!}(x-a)^2+\\dots+\\frac{f^{(n)}(a)}{n!}(x-a)^n=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k.\n Si a=0, se llama polinomio de Maclaurin.\n\n\nEjemplo 4.21\nCalcular el polinomio de Maclaurin de grado n de f(x)=e^x y usar P_3 para aproximar e^{0.5}.\n\nTodas las derivadas de e^x son e^x, así que f^{(k)}(0)=1 para todo k: \nP_n(x)=1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\dots+\\frac{x^n}{n!}.\n Con n=3, P_3(0.5)=1+0.5+0.125+0.0208\\ldots\\approx1.6458. La calculadora da e^{0.5}\\approx1.6487.\nCuanto mayor es el grado, más lejos de x=0 se pega el polinomio a la función (Figura 4.22).\n\n\nFigura 4.22. e^x y sus polinomios P_0, P_1, P_2 y P_3.\n\n\n\n\nDemo en GeoGebra\nSube el grado del polinomio y observa hasta dónde se parece a la función.\nAbrir la demo Autoría: Doug Kuhlmann",
+    "crumbs": [
+      "4.8 Polinomio de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/taylor.html#polinomios-de-maclaurin-conocidos",
+    "href": "04_estudio_local/taylor.html#polinomios-de-maclaurin-conocidos",
+    "title": "4.8 Polinomio de Taylor",
+    "section": "Polinomios de Maclaurin conocidos",
+    "text": "Polinomios de Maclaurin conocidos\nLas derivadas de \\cos x en x=0 se repiten: 1,0,-1,0,\\dots Por eso, solo quedan las potencias pares, con signos alternos. Con \\sin x pasa lo mismo, con las impares (Figura 4.23).\n\nRecuerda: polinomios de Maclaurin\n\ne^x\\approx1+x+\\frac{x^2}{2!}+\\frac{x^3}{3!}+\\dots+\\frac{x^n}{n!}\n \n\\cos x\\approx1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\dots+\\frac{(-1)^nx^{2n}}{(2n)!}\n \n\\sin x\\approx x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\dots+\\frac{(-1)^nx^{2n+1}}{(2n+1)!}\n\n\n\n\nFigura 4.23. \\cos x y sus polinomios de grado 2, 4 y 6.",
+    "crumbs": [
+      "4.8 Polinomio de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/taylor.html#teorías-físicas-en-un-caso-límite",
+    "href": "04_estudio_local/taylor.html#teorías-físicas-en-un-caso-límite",
+    "title": "4.8 Polinomio de Taylor",
+    "section": "Teorías físicas en un caso límite",
+    "text": "Teorías físicas en un caso límite\nUna teoría física más general suele contener a otra más sencilla como caso límite. El polinomio de Taylor muestra cómo la primera tiende a la segunda.\n\nEjemplo 4.22\nLa energía potencial gravitatoria de una masa m a una altura h sobre la Tierra, de masa M y radio R, es \nE_p(h)=-\\frac{GMm}{R+h}.\n Ver a qué se reduce la diferencia \\Delta E_p=E_p(h)-E_p(0) si h\\ll R.\n\nSe usa el polinomio de Taylor de grado 1 en h=0. Como E_p'(h)=\\dfrac{GMm}{(R+h)^2}, \n\\Delta E_p\\approx E_p'(0)\\,h=m\\,\\frac{GM}{R^2}\\,h=mgh,\\qquad g=\\frac{GM}{R^2}.\n Es la fórmula habitual cerca del suelo. La fórmula exacta es \\Delta E_p=\\dfrac{mgh}{1+h/R}, así que a 10 km de altura, con R\\approx6370 km, la diferencia es de un 0.16% (Figura 4.24).\n\n\nFigura 4.24. \\Delta E_p, en unidades de mgR, en función de h/R.\n\n\n\n\nEjemplo 4.23\nLa energía cinética de una masa m a velocidad v es, en relatividad, \nE_c=mc^2\\left(\\frac{1}{\\sqrt{1-v^2/c^2}}-1\\right).\n Ver qué queda si v\\ll c.\n\nCon u=\\dfrac{v^2}{c^2}, que es muy pequeño, se aproxima g(u)=(1-u)^{-1/2} por su polinomio de Maclaurin de grado 1. Como g(0)=1 y g'(0)=\\frac12, \n\\frac{1}{\\sqrt{1-u}}\\approx1+\\frac u2\\quad\\Longrightarrow\\quad E_c\\approx mc^2\\left(1+\\frac{v^2}{2c^2}-1\\right)=\\frac12mv^2.\n Es la energía cinética clásica. Con v=0.1c, las dos fórmulas se diferencian en menos del 1% (Figura 4.25).\n\n\nFigura 4.25. Energía cinética, en unidades de mc^2, en función de v/c.",
+    "crumbs": [
+      "4.8 Polinomio de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/taylor.html#polinomio-sin-la-fórmula-de-la-función",
+    "href": "04_estudio_local/taylor.html#polinomio-sin-la-fórmula-de-la-función",
+    "title": "4.8 Polinomio de Taylor",
+    "section": "Polinomio sin la fórmula de la función",
+    "text": "Polinomio sin la fórmula de la función\nPara escribir P_n solo hacen falta los valores de f y sus derivadas en x=a. Esos valores pueden salir de una gráfica o de una ecuación.\n\nEjemplo 4.24\nSea f la función de la Figura 4.26 y P_2(x)=A+B(x-1)+C(x-1)^2 su polinomio de Taylor en a=1. (2014/15 7E)\n\nDeducir de la gráfica el signo de A, B y C.\nSi f(x)=\\sin\\frac{\\pi x}{2}, calcular A, B y C.\n¿Es P_2 una aproximación por exceso o por defecto en (0,2)?\n\n\n\nFigura 4.26. f en [0,2].\n\n\n(a) A=f(1)&gt;0. B=f'(1)=0, porque la tangente es horizontal. C=\\frac{f''(1)}{2}&lt;0, porque f es convexa.\n(b) f(1)=1, f'(x)=\\frac\\pi2\\cos\\frac{\\pi x}{2} da f'(1)=0, y f''(x)=-\\frac{\\pi^2}{4}\\sin\\frac{\\pi x}{2} da f''(1)=-\\frac{\\pi^2}{4}. Por tanto, \nP_2(x)=1-\\frac{\\pi^2}{8}(x-1)^2.\n\n(c) Por defecto: la parábola queda por debajo de f en (0,2) (Figura 4.27). Por ejemplo, P_2(0)=1-\\frac{\\pi^2}{8}\\approx-0.23, mientras que f(0)=0.\n\n\nFigura 4.27. f y P_2 en [0,2].\n\n\n\n\nEjemplo 4.25\nLa función y(x) cumple y'=-2xy y su gráfica pasa por (1,1). Calcular su polinomio de Taylor de grado 3 en el punto que se pueda y aproximar y(1.2). (2013/14 6E)\n\nSolo se conoce y en x=1, así que a=1. Las derivadas salen de derivar la ecuación: \ny'=-2xy,\\qquad y''=-2y-2xy',\\qquad y'''=-4y'-2xy''.\n En x=1, con y(1)=1, resulta y'(1)=-2, y''(1)=2 e y'''(1)=4. Por tanto, \nP_3(x)=1-2(x-1)+(x-1)^2+\\frac23(x-1)^3,\\qquad y(1.2)\\approx P_3(1.2)\\approx0.645.\n Comprobación: y=e^{1-x^2} cumple la ecuación y pasa por (1,1), y da y(1.2)=e^{-0.44}\\approx0.644.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.34–4.39.",
+    "crumbs": [
+      "4.8 Polinomio de Taylor"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/graficas.html",
+    "href": "04_estudio_local/graficas.html",
+    "title": "4.6 Estudio a partir de gráficas",
+    "section": "",
+    "text": "A veces no se tiene la fórmula de una función, sino su gráfica. No hace falta teoría nueva: el signo de las derivadas se lee en el dibujo.",
+    "crumbs": [
+      "4.6 Estudio a partir de gráficas"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/graficas.html#leer-una-gráfica",
+    "href": "04_estudio_local/graficas.html#leer-una-gráfica",
+    "title": "4.6 Estudio a partir de gráficas",
+    "section": "Leer una gráfica",
+    "text": "Leer una gráfica\n\nRecuerda: qué se lee en cada gráfica\nEn la gráfica de f:\n\nSi sube, f'&gt;0; si baja, f'&lt;0.\nSi es cóncava, f''&gt;0; si es convexa, f''&lt;0.\n\nEn la gráfica de f':\n\nEl signo de f' da el crecimiento de f. Un cero con cambio de signo es un extremo local de f.\nSi f' sube, f es cóncava; si baja, es convexa. Un extremo local de f' es un punto de inflexión de f.\n\n\n\nEjemplo 4.16\nLa Figura 4.16 muestra la derivada y'(x) de una función y(x). Las longitudes están en cm. (2023/24 2E)\n\nEstudiar el crecimiento y los extremos locales de y.\nEstudiar la concavidad y los puntos de inflexión de y.\nUn punto se mueve sobre la gráfica de y(x). Cuando x=0.5, su velocidad horizontal es de 2 cm/s. Calcular su velocidad vertical en ese instante.\nCuando x=6.5, su velocidad vertical es de 3 cm/s. Calcular su velocidad horizontal en ese instante.\n\n\n\nFigura 4.16. Gráfica de y'(x).\n\n\n(a) Se mira el signo de y': \n\\begin{array}{c|cccc}\n& (0,2) & (2,6) & (6,8) & (8,9.5)\\\\ \\hline\ny' & + & - & + & -\\\\\ny & \\text{crece} & \\text{decrece} & \\text{crece} & \\text{decrece}\n\\end{array}\n Hay máximos locales en x=2 y x=8, y un mínimo local en x=6.\n(b) Se mira si y' sube o baja, que es el signo de y'': \n\\begin{array}{c|ccccc}\n& (0,1) & (1,4) & (4,7) & (7,9) & (9,9.5)\\\\ \\hline\ny' & \\text{sube} & \\text{baja} & \\text{sube} & \\text{baja} & \\text{sube}\\\\\ny & \\text{cóncava} & \\text{convexa} & \\text{cóncava} & \\text{convexa} & \\text{cóncava}\n\\end{array}\n Hay puntos de inflexión en x=1,4,7,9.\n(c) Por la regla de la cadena, con y'(0.5)=0.5 en la gráfica: \n\\frac{dy}{dt}=\\frac{dy}{dx}\\frac{dx}{dt}=0.5\\cdot2=1\\ \\text{cm/s}.\n\n(d) La misma relación, con y'(6.5)=0.5: \n\\frac{dx}{dt}=\\frac{dy/dt}{dy/dx}=\\frac{3}{0.5}=6\\ \\text{cm/s}.",
+    "crumbs": [
+      "4.6 Estudio a partir de gráficas"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/graficas.html#funciones-construidas-con-una-gráfica",
+    "href": "04_estudio_local/graficas.html#funciones-construidas-con-una-gráfica",
+    "title": "4.6 Estudio a partir de gráficas",
+    "section": "Funciones construidas con una gráfica",
+    "text": "Funciones construidas con una gráfica\nSi una función nueva se construye a partir de una gráfica, se deriva con las reglas de siempre y se estudia el signo de cada factor.\n\nEjemplo 4.17\nLa Figura 4.17 muestra una función F(x) y su derivada F'(x) en (a,b). (2015/16 2E)\n\nDecir, razonando, qué curva es F y cuál es F'.\nEstudiar el crecimiento y los extremos de h(x)=e^{-2x}F(x)^2.\n\n\n\nFigura 4.17. Las curvas A y B: una es F y la otra es F'.\n\n\n(a) B es F y A es F'. La curva A se anula justo donde B tiene sus extremos, y es positiva donde B sube. Al revés no puede ser: A tiene un mínimo en un punto donde B no se anula.\n(b) La derivada es \nh'(x)=2F\\,F'\\,e^{-2x}-2e^{-2x}F^2=2e^{-2x}\\,F(x)\\,\\bigl[F'(x)-F(x)\\bigr].\n Como e^{-2x}&gt;0, el signo de h' es el de F\\,(F'-F). Se anula donde F=0, en x_1 y x_3, y donde se cortan las curvas, F'=F, en x_2 y x_4 (Figura 4.18): \n\\begin{array}{c|ccccc}\n& (a,x_1) & (x_1,x_2) & (x_2,x_3) & (x_3,x_4) & (x_4,b)\\\\ \\hline\nF & - & + & + & - & -\\\\\nF'-F & + & + & - & - & +\\\\\nh' & - & + & - & + & -\\\\\nh & \\text{decrece} & \\text{crece} & \\text{decrece} & \\text{crece} & \\text{decrece}\n\\end{array}\n Hay mínimos locales en x_1 y x_3, y máximos locales en x_2 y x_4.\nComprobación: h\\ge0 y h=0 en x_1 y x_3, así que estos puntos tienen que ser mínimos.\n\n\nFigura 4.18. F=0 en x_1 y x_3; F'=F en x_2 y x_4.",
+    "crumbs": [
+      "4.6 Estudio a partir de gráficas"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/graficas.html#composición-de-funciones",
+    "href": "04_estudio_local/graficas.html#composición-de-funciones",
+    "title": "4.6 Estudio a partir de gráficas",
+    "section": "Composición de funciones",
+    "text": "Composición de funciones\nSi h(x)=g(f(x)), la regla de la cadena da los signos a partir de las dos gráficas.\n\nRecuerda: derivadas de una composición\n\nh'(x)=g'\\bigl(f(x)\\bigr)\\,f'(x),\\qquad h''(x)=g''\\bigl(f(x)\\bigr)\\,f'(x)^2+g'\\bigl(f(x)\\bigr)\\,f''(x)\n\nf' y f'' se leen en x; g' y g'' se leen en f(x).\n\n\nEjemplo 4.18\nSean f y g las funciones de la Figura 4.19. Estudiar la concavidad de h(x)=g(f(x)) en (1,2). (2018/19 3E)\n\n\nFigura 4.19. En rojo, el tramo de f para x\\in(1,2) y el tramo de g en sus imágenes, (2,5).\n\n\nSi x\\in(1,2), f(x)\\in(2,5), así que g se mira en (2,5), no en (1,2):\n\nf crece y es convexa en (1,2): f'&gt;0 y f''&lt;0.\ng decrece y es cóncava en (2,5): g'&lt;0 y g''&gt;0.\n\nPor tanto, \nh''=\\underbrace{g''(f)}_{+}\\,\\underbrace{f'^2}_{+}+\\underbrace{g'(f)}_{-}\\,\\underbrace{f''}_{-}&gt;0,\n y h es cóncava en (1,2).\nComprobación: las gráficas corresponden a f(x)=6-(x-3)^2 y g(x)=(x-5)^2+1. Con u=x-3, resulta h=(1-u^2)^2+1 y h''=12u^2-4, que es positiva si u\\in(-2,-1).\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.25–4.28.",
+    "crumbs": [
+      "4.6 Estudio a partir de gráficas"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html",
+    "href": "04_estudio_local/ejercicios.html",
+    "title": "4.12 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 4.1\nDecir si se aplica el teorema de Weierstrass y hallar los extremos absolutos, si existen:\n\nf(x)=1+x^2 en [-1,2].\nf(x)=1+x^2 si x\\in[-1,0)\\cup(0,2], con f(0)=3.\nf(x)=1+x^2 en (-1,2).\n\n\n(a) Se aplica. Mínimo absoluto 1 en x=0 y máximo absoluto 5 en x=2.\n(b) No se aplica, porque f no es continua en x=0. Máximo absoluto 5 en x=2. No tiene mínimo absoluto: los valores se acercan a 1, pero no lo alcanzan.\n(c) No se aplica, porque el intervalo no es cerrado. Mínimo absoluto 1 en x=0. No tiene máximo absoluto: los valores se acercan a 5, pero no lo alcanzan.\n\n\n\nEjercicio 4.2\nHallar los extremos absolutos de f(x)=x\\,e^{-x} en [0,2].\n\nf'(x)=(1-x)\\,e^{-x} se anula en x=1. Con f(0)=0, f(1)=\\frac1e\\approx0.368 y f(2)=\\frac2{e^2}\\approx0.271, el mínimo absoluto es 0, en x=0, y el máximo absoluto es \\frac1e, en x=1.\n\n\n\nEjercicio 4.3\nHallar los extremos absolutos de f(x)=|x^2-1| en [-2,2]. ¿En cuáles de los puntos candidatos existe f'?\n\nLos candidatos son x=\\pm2 (bordes), x=0 (donde f'(0)=0) y x=\\pm1 (donde f' no existe), con f(\\pm2)=3, f(0)=1 y f(\\pm1)=0. El máximo absoluto es 3, en x=\\pm2, y el mínimo absoluto es 0, en x=\\pm1.\nLa derivada existe en x=0. En x=\\pm2, solo la derivada lateral hacia el interior del intervalo. En x=\\pm1 no existe.\n\n\n\nEjercicio 4.4\nDemostrar que, si f tiene un máximo local en z y es derivable en z, entonces f'(z)=0. (2016/17 7E)\n\nSi h es suficientemente pequeño, f(z+h)-f(z)\\le0. Si h&gt;0, el cociente \\frac{f(z+h)-f(z)}{h} es \\le0, así que f'(z)\\le0. Si h&lt;0, es \\ge0, así que f'(z)\\ge0. Por tanto, f'(z)=0.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#extremos-y-derivada",
+    "href": "04_estudio_local/ejercicios.html#extremos-y-derivada",
+    "title": "4.12 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 4.1\nDecir si se aplica el teorema de Weierstrass y hallar los extremos absolutos, si existen:\n\nf(x)=1+x^2 en [-1,2].\nf(x)=1+x^2 si x\\in[-1,0)\\cup(0,2], con f(0)=3.\nf(x)=1+x^2 en (-1,2).\n\n\n(a) Se aplica. Mínimo absoluto 1 en x=0 y máximo absoluto 5 en x=2.\n(b) No se aplica, porque f no es continua en x=0. Máximo absoluto 5 en x=2. No tiene mínimo absoluto: los valores se acercan a 1, pero no lo alcanzan.\n(c) No se aplica, porque el intervalo no es cerrado. Mínimo absoluto 1 en x=0. No tiene máximo absoluto: los valores se acercan a 5, pero no lo alcanzan.\n\n\n\nEjercicio 4.2\nHallar los extremos absolutos de f(x)=x\\,e^{-x} en [0,2].\n\nf'(x)=(1-x)\\,e^{-x} se anula en x=1. Con f(0)=0, f(1)=\\frac1e\\approx0.368 y f(2)=\\frac2{e^2}\\approx0.271, el mínimo absoluto es 0, en x=0, y el máximo absoluto es \\frac1e, en x=1.\n\n\n\nEjercicio 4.3\nHallar los extremos absolutos de f(x)=|x^2-1| en [-2,2]. ¿En cuáles de los puntos candidatos existe f'?\n\nLos candidatos son x=\\pm2 (bordes), x=0 (donde f'(0)=0) y x=\\pm1 (donde f' no existe), con f(\\pm2)=3, f(0)=1 y f(\\pm1)=0. El máximo absoluto es 3, en x=\\pm2, y el mínimo absoluto es 0, en x=\\pm1.\nLa derivada existe en x=0. En x=\\pm2, solo la derivada lateral hacia el interior del intervalo. En x=\\pm1 no existe.\n\n\n\nEjercicio 4.4\nDemostrar que, si f tiene un máximo local en z y es derivable en z, entonces f'(z)=0. (2016/17 7E)\n\nSi h es suficientemente pequeño, f(z+h)-f(z)\\le0. Si h&gt;0, el cociente \\frac{f(z+h)-f(z)}{h} es \\le0, así que f'(z)\\le0. Si h&lt;0, es \\ge0, así que f'(z)\\ge0. Por tanto, f'(z)=0.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#teoremas-de-rolle-y-de-lagrange",
+    "href": "04_estudio_local/ejercicios.html#teoremas-de-rolle-y-de-lagrange",
+    "title": "4.12 Ejercicios",
+    "section": "Teoremas de Rolle y de Lagrange",
+    "text": "Teoremas de Rolle y de Lagrange\n\nEjercicio 4.5\nEstudiar si se puede aplicar el teorema de Rolle a cada función en el intervalo indicado. En caso afirmativo, calcular z.\n\n\nf(x)=x-x^3, [0,1]\nf(x)=|x-1|, [0,2]\nf(x)=|x^2-1|, [-2,2]\n\n\n\n(a) Se puede aplicar, con z=\\frac{\\sqrt3}{3}.\n(b) No se puede aplicar: f no es derivable en x=1. La conclusión también falla, porque f'(x)=\\pm1.\n(c) No se puede aplicar: f no es derivable en x=\\pm1. Aun así, la conclusión se cumple, con z=0.\n\n\n\nEjercicio 4.6\nEstudiar si se puede aplicar el teorema de Lagrange a cada función en el intervalo indicado. En caso afirmativo, calcular z.\n\n\nf(x)=4x^2-5x+1, [0,2]\nf(x)=\\dfrac1{x^2}, [-1,2]\nf(x)=|x^2-1|, [-3,2]\n\n\n\n(a) Se puede aplicar, con z=1.\n(b) No se puede aplicar: f no está definida en x=0. La conclusión también falla: la pendiente media es -\\frac14 y f'(z)=-\\frac14 da z=2, que no está en (-1,2).\n(c) No se puede aplicar: f no es derivable en x=\\pm1. Aun así, la conclusión se cumple: la pendiente media es -1 y z=\\frac12.\n\n\n\nEjercicio 4.7\nEstudiar si se puede aplicar el teorema de Lagrange a f(x)=x-x^3 en [-2,1] y, en caso afirmativo, calcular z. (2012/13 5E)\n\nEs un polinomio, así que se puede aplicar. La pendiente media es \\frac{0-6}{3}=-2, y 1-3z^2=-2 da z=\\pm1. Solo z=-1 está en (-2,1).\n\n\n\nEjercicio 4.8\nHallar a y b para que se pueda aplicar el teorema de Lagrange a esta función en [0,6], y calcular z para esos valores. \nf(x)=\\begin{cases}ax-3 & x&lt;4\\\\ -x^2+10x-b & x\\ge4\\end{cases}\n\n\nContinuidad en x=4: 4a-3=24-b. Derivabilidad en x=4: a=-8+10=2. Por tanto, a=2 y b=19.\nLa pendiente media es \\frac{f(6)-f(0)}{6}=\\frac{5+3}{6}=\\frac43. En x&lt;4, f'=2, que no vale. En x&gt;4, -2z+10=\\frac43 da z=\\frac{13}{3}.\n\n\n\nEjercicio 4.9\nSea f una función continua en [-5,7]. En [-5,3] es f(x)=\\frac14x^2+\\frac14x-2. En (3,7], su derivada es constante e igual al valor de la derivada en x=3 (Figura 4.30). (2016/17 2E)\n\nEstudiar si f es derivable en x=3.\nHallar la expresión de f en [3,7].\nCalcular la pendiente media M de f en [-5,7].\nEstudiar si existe z\\in(-5,7) tal que f'(z)=M y, si existe, hallarlo.\n\n\n\nFigura 4.30. Gráfica de f en [-5,3].\n\n\n(a) Sí: la derivada por la izquierda es f'(3)=\\frac32+\\frac14=\\frac74, y por la derecha vale lo mismo por construcción.\n(b) Como f(3)=1, f(x)=1+\\frac74(x-3).\n(c) f(-5)=3 y f(7)=8, así que M=\\frac{5}{12}.\n(d) Existe, por el teorema de Lagrange. En (3,7), f'=\\frac74\\ne M. En (-5,3), \\frac z2+\\frac14=\\frac5{12} da z=\\frac13.\n\n\n\nEjercicio 4.10\nSea f definida en [-4,6], con f(x)=x^2-4 en [-4,0] (Figura 4.31). Dar una expresión de f en (0,6] para cada caso: (2021/22 2E)\n\nEl teorema de Lagrange se aplica en [-4,6]. Calcular z.\nEl teorema no se aplica, pero su conclusión se cumple.\nEl teorema no se aplica y su conclusión no se cumple.\n\n\n\nFigura 4.31. Gráfica de f en [-4,0].\n\n\nHay muchas respuestas. Por ejemplo:\n(a) f(x)=x^2-4. La pendiente media es \\frac{32-12}{10}=2, y 2z=2 da z=1.\n(b) f(x)=14-x, discontinua en x=0. La pendiente media es \\frac{8-12}{10}=-\\frac25, y 2z=-\\frac25 da z=-\\frac15\\in(-4,0).\n(c) f(x)=x+20, discontinua en x=0. La pendiente media es \\frac{26-12}{10}=\\frac75. En (-4,0), 2z=\\frac75 da z=\\frac7{10}, que no está en ese intervalo, y en (0,6), f'=1.\n\n\n\nEjercicio 4.11\nUn vehículo recorre D km en m minutos por una carretera con límite de v km/h. ¿Cuándo se puede asegurar que ha superado el límite en algún instante?\n\nSu velocidad media es \\frac{60D}{m} km/h. Por el teorema de Lagrange, alcanza ese valor en algún instante, así que se puede asegurar si \\frac{60D}{m}&gt;v.\n\n\n\nEjercicio 4.12\nDemostrar el teorema de Rolle a partir del de Lagrange. (2014/15 2E)\n\nSi f(a)=f(b), el teorema de Lagrange da z\\in(a,b) con f'(z)=\\frac{f(b)-f(a)}{b-a}=0.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#teorema-del-punto-fijo",
+    "href": "04_estudio_local/ejercicios.html#teorema-del-punto-fijo",
+    "title": "4.12 Ejercicios",
+    "section": "Teorema del punto fijo",
+    "text": "Teorema del punto fijo\n\nEjercicio 4.13\nDemostrar que la ecuación x=e^{-x} tiene una única solución en [0,1].\n\nLa función f(x)=e^{-x} es continua y baja de f(0)=1 a f(1)=\\frac1e\\approx0.37, así que sus valores están en [0,1]. Además, |f'(x)|=e^{-x}&lt;1 en (0,1). La solución existe y es única (es x\\approx0.567).\n\n\n\nEjercicio 4.14\nEscribir la ecuación x^3+4x^2-10=0 en la forma x=\\sqrt{\\dfrac{10}{4+x}} y demostrar que tiene una única solución en [1,2].\n\nSi x\\in[1,2], x^2(x+4)=10 equivale a x=\\sqrt{\\frac{10}{4+x}}, porque x&gt;0.\nSea f(x)=\\sqrt{\\frac{10}{4+x}}, continua en [1,2]. Al crecer x baja la raíz, así que los valores van de f(1)=\\sqrt2\\approx1.41 a f(2)=\\sqrt{5/3}\\approx1.29, y todos están en [1,2]. Además, \n|f'(x)|=\\frac{\\sqrt{10}}{2\\,(4+x)^{3/2}}\\le\\frac{\\sqrt{10}}{2\\cdot5^{3/2}}\\approx0.14&lt;1.\n La solución existe y es única (es x\\approx1.365).\n\n\n\nEjercicio 4.15\nLa función f(x)=x^2 tiene dos puntos fijos en [0,1]. ¿Cuáles son? ¿Qué hipótesis del teorema de unicidad no se cumple?\n\nx^2=x da x=0 y x=1. Las hipótesis de existencia se cumplen, pero |f'(x)|=2x no es menor que 1 en todo (0,1): falla para x\\ge\\frac12.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#crecimiento-y-puntos-críticos",
+    "href": "04_estudio_local/ejercicios.html#crecimiento-y-puntos-críticos",
+    "title": "4.12 Ejercicios",
+    "section": "Crecimiento y puntos críticos",
+    "text": "Crecimiento y puntos críticos\n\nEjercicio 4.16\nSea f(x)=\\dfrac{x}{1-x^2}. (2016/17 7E)\n\nHallar su dominio y los intervalos donde es creciente.\nRazonar si tiene máximos o mínimos.\nHallar la recta tangente en x=0.\nDibujar f.\n\n\n(a) Dominio: x\\ne\\pm1. Como f'(x)=\\dfrac{1+x^2}{(1-x^2)^2}&gt;0, es creciente en cada uno de los intervalos (-\\infty,-1), (-1,1) y (1,\\infty). No lo es en todo su dominio: f(-2)=\\frac23&gt;f(0)=0.\n(b) No tiene extremos locales, porque f' nunca se anula y existe en todo el dominio.\n(c) f(0)=0 y f'(0)=1: la tangente es y=x.\n(d) Ver la Figura 4.32.\n\n\nFigura 4.32. f(x)=\\frac{x}{1-x^2} y su tangente en x=0.\n\n\n\n\nEjercicio 4.17\nSea f(x)=e^x(x-1)-x+2 en [0,1]. Estudiar la existencia de extremos locales de f: (2018/19 2E)\n\nCon el teorema de Lagrange.\nCon el teorema de Bolzano.\n\n\nSe tiene f'(x)=x\\,e^x-1 y f''(x)=e^x(1+x)&gt;0 en (0,1).\n(a) Como f(0)=f(1)=1, existe z\\in(0,1) con f'(z)=\\frac{f(1)-f(0)}{1}=0. Como f''(z)&gt;0, hay un mínimo local en z.\n(b) f' es continua, con f'(0)=-1&lt;0 y f'(1)=e-1&gt;0. Por el teorema de Bolzano, existe z\\in(0,1) con f'(z)=0, y es un mínimo local por la misma razón.\n\n\n\nEjercicio 4.18\nSea f(x)=(x^2+1)\\,e^{3x-x^2}. Demostrar que f' se anula en algún punto de (1,2). (2011/12 7E)\n\nf'(x)=e^{3x-x^2}\\left[2x+(x^2+1)(3-2x)\\right] es continua, con f'(1)=4e^2&gt;0 y f'(2)=-e^2&lt;0. Por el teorema de Bolzano, se anula en algún punto de (1,2).\n\n\n\nEjercicio 4.19\nSea y(x) una función que cumple y=e^{xy}. (2019/20 3E)\n\nCalcular y'(x).\nEstudiar el crecimiento y el decrecimiento de y(x).\n\n\n(a) Derivando, y'=(y+x\\,y')\\,e^{xy}=y^2+x\\,y\\,y', así que y'=\\dfrac{y^2}{1-xy}.\n(b) El numerador es positivo, así que el signo de y' es el de 1-xy. Como y=e^{xy}, xy=\\ln y: la función crece si y&lt;e y decrece si y&gt;e. El cambio ocurre en y=e, x=\\frac1e, donde la tangente es vertical (Figura 4.33).\n\n\nFigura 4.33. La curva y=e^{xy}. Crece por debajo de y=e y decrece por encima.\n\n\n\n\nEjercicio 4.20\nComprobar que f''(0)=0 en f(x)=x^3, en g(x)=x^4 y en h(x)=-x^4, y clasificar x=0 en cada caso con el test de la primera derivada.\n\nLas tres tienen derivada y segunda derivada nulas en x=0. f'=3x^2 no cambia de signo: no hay extremo. g'=4x^3 pasa de negativa a positiva: mínimo local. h'=-4x^3 pasa de positiva a negativa: máximo local. Por eso f''(0)=0 no decide.\n\n\n\nEjercicio 4.21\nDemostrar que, si f'(x)&lt;0 para todo x\\in(a,b), f es decreciente en (a,b).\n\nSi x_1&lt;x_2 en (a,b), por el teorema de Lagrange existe z\\in(x_1,x_2) con f(x_2)-f(x_1)=f'(z)(x_2-x_1)&lt;0, es decir, f(x_1)&gt;f(x_2).",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#concavidad-e-inflexión",
+    "href": "04_estudio_local/ejercicios.html#concavidad-e-inflexión",
+    "title": "4.12 Ejercicios",
+    "section": "Concavidad e inflexión",
+    "text": "Concavidad e inflexión\n\nEjercicio 4.22\nEstudiar los intervalos de crecimiento, los extremos locales, los intervalos de concavidad y los puntos de inflexión de:\n\n\nf(x)=\\dfrac{x+1}{x-1}\nf(x)=\\dfrac{x+2}{x^2-1}\nf(x)=x\\,e^{-x}\nf(x)=x\\,e^{2x}\nf(x)=\\dfrac{x^2}{x+1}\nf(x)=x^3-3x^2+4x-2\nf(x)=x^4-6x^2+4\nf(x)=|x^2-1|\n\n\n\n(a) Dominio x\\ne1. f'=\\frac{-2}{(x-1)^2}&lt;0: decreciente en (-\\infty,1) y en (1,\\infty), sin extremos. f''=\\frac{4}{(x-1)^3}: convexa si x&lt;1 y cóncava si x&gt;1. Sin inflexión, porque x=1 no está en el dominio.\n(b) Dominio x\\ne\\pm1. f'=-\\frac{x^2+4x+1}{(x^2-1)^2} se anula en x=-2\\pm\\sqrt3. Decreciente en \\left(-\\infty,-2-\\sqrt3\\right), \\left(-2+\\sqrt3,1\\right) y (1,\\infty), y creciente en \\left(-2-\\sqrt3,-1\\right) y \\left(-1,-2+\\sqrt3\\right). Mínimo local en x=-2-\\sqrt3 y máximo local en x=-2+\\sqrt3. f''=\\frac{2(x^3+6x^2+3x+2)}{(x^2-1)^3} se anula solo en x\\approx-5.52: convexa en (-\\infty,-5.52) y (-1,1), y cóncava en (-5.52,-1) y (1,\\infty). Inflexión en x\\approx-5.52.\n(c) f'=(1-x)e^{-x}: crece si x&lt;1 y decrece si x&gt;1; máximo en \\left(1,\\frac1e\\right). f''=(x-2)e^{-x}: convexa si x&lt;2 y cóncava si x&gt;2; inflexión en \\left(2,\\frac2{e^2}\\right).\n(d) f'=(1+2x)e^{2x}: decrece si x&lt;-\\frac12 y crece si x&gt;-\\frac12; mínimo en \\left(-\\frac12,-\\frac1{2e}\\right). f''=4(1+x)e^{2x}: convexa si x&lt;-1 y cóncava si x&gt;-1; inflexión en \\left(-1,-\\frac1{e^2}\\right).\n(e) Dominio x\\ne-1. f'=\\frac{x(x+2)}{(x+1)^2}: crece si x&lt;-2 o x&gt;0, y decrece en (-2,-1) y (-1,0). Máximo local en (-2,-4) y mínimo local en (0,0). f''=\\frac{2}{(x+1)^3}: convexa si x&lt;-1 y cóncava si x&gt;-1. Sin inflexión.\n(f) f'=3x^2-6x+4&gt;0 en todos los puntos: creciente, sin extremos. f''=6(x-1): convexa si x&lt;1 y cóncava si x&gt;1; inflexión en (1,0).\n(g) f'=4x(x^2-3): decrece en \\left(-\\infty,-\\sqrt3\\right) y \\left(0,\\sqrt3\\right), y crece en \\left(-\\sqrt3,0\\right) y \\left(\\sqrt3,\\infty\\right). Mínimos en \\left(\\pm\\sqrt3,-5\\right) y máximo en (0,4). f''=12(x^2-1): cóncava si |x|&gt;1 y convexa si |x|&lt;1; inflexión en (\\pm1,-1).\n(h) f' no existe en x=\\pm1 y se anula en x=0. Decrece en (-\\infty,-1) y (0,1), y crece en (-1,0) y (1,\\infty). Mínimos en (\\pm1,0) y máximo en (0,1). f''=2 si |x|&gt;1 (cóncava) y f''=-2 si |x|&lt;1 (convexa). La concavidad cambia en x=\\pm1, donde f'' no existe: son puntos de inflexión, además de mínimos.\n\n\n\nEjercicio 4.23\nLa velocidad de un objeto que se mueve sobre una recta es v(t)=(1-t)(t-3) cm/s, y su posición es x(t), con x(0)=2 cm. (2022/23 7E)\n\nEstudiar el crecimiento y los extremos de x(t).\nEstudiar la concavidad y los puntos de inflexión de x(t).\nDibujar x(t) en [0,5].\n\n\n(a) x'=v se anula en t=1 y t=3. x decrece en (0,1), crece en (1,3) y decrece en (3,5). Mínimo local en t=1 y máximo local en t=3.\n(b) x''=-2t+4: cóncava en (0,2) y convexa en (2,5); inflexión en t=2.\n(c) Una función con esa derivada y x(0)=2 es x(t)=-\\frac{t^3}{3}+2t^2-3t+2 (Figura 4.34).\n\n\nFigura 4.34. x(t), con mínimo en t=1, inflexión en t=2 y máximo en t=3.\n\n\n\n\nEjercicio 4.24\nLa función h(x)=-\\dfrac{x^3}{160}+\\dfrac{3x^2}{80} da la altura de un dron desde que despega hasta que alcanza 0.2 km, tras recorrer 4 km en horizontal (Figura 4.35). (2017/18 2E)\n\nCalcular h'(x) y h''(x) y dibujarlas en la misma gráfica.\nEstudiar el crecimiento, la concavidad, los extremos y los puntos de inflexión de h en [0,4], e interpretarlos.\nHallar el punto x=p donde la velocidad de h respecto al desplazamiento horizontal es máxima.\nEn x=p, la velocidad horizontal del dron es de 75 km/h. Calcular la velocidad de la altura respecto al tiempo en ese instante.\nA partir del km 4, la velocidad de h respecto al desplazamiento horizontal es constante. Dibujar la trayectoria a partir de ese punto.\n\n\n\nFigura 4.35. Trayectoria del dron entre x=0 y x=4.\n\n\n(a) h'(x)=-\\dfrac{3x^2}{160}+\\dfrac{3x}{40} y h''(x)=-\\dfrac{3x}{80}+\\dfrac{3}{40} (Figura 4.36).\n(b) h'&gt;0 en (0,4): h crece, sin extremos en el interior. h''&gt;0 en (0,2), donde es cóncava, y h''&lt;0 en (2,4), donde es convexa. Hay un punto de inflexión en x=2. La altura siempre aumenta: hasta el km 2, cada vez más deprisa, y después, cada vez más despacio.\n(c) El máximo de h' está donde h''=0, en p=2, con h'(2)=\\frac3{40}.\n(d) Por la regla de la cadena, \\dfrac{dh}{dt}=\\dfrac{dh}{dx}\\dfrac{dx}{dt}=\\dfrac{3}{40}\\cdot75=5.625 km/h.\n(e) Si la trayectoria es derivable, la pendiente constante es h'(4)=0. A partir del km 4, el dron vuela horizontalmente a 0.2 km de altura.\n\n\nFigura 4.36. h, h' y h''. El máximo de h' coincide con el cero de h'', en x=2.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#estudio-a-partir-de-gráficas",
+    "href": "04_estudio_local/ejercicios.html#estudio-a-partir-de-gráficas",
+    "title": "4.12 Ejercicios",
+    "section": "Estudio a partir de gráficas",
+    "text": "Estudio a partir de gráficas\n\nEjercicio 4.25\nLa Figura 4.37 muestra una función y(x) y su derivada en (a,b). Estudiar el crecimiento y los extremos locales de h(x)=y(x)\\,e^{-x}. (2012/13 3E)\n\n\nFigura 4.37. y(x) e y'(x) en (a,b).\n\n\nh'(x)=e^{-x}\\,[y'(x)-y(x)] se anula donde se cortan las curvas. Sean c&lt;d esos dos puntos. Como e^{-x}&gt;0, h' tiene el signo de y'-y: positivo en (a,c), negativo en (c,d) y positivo en (d,b). Por tanto, h crece, decrece y crece, con un máximo local en c y un mínimo local en d.\n\n\n\nEjercicio 4.26\nSea f dos veces derivable en (a,b), con función inversa f^{-1}. (2013/14 2E, 2016/17 2E)\n\nDerivar dos veces f\\bigl(f^{-1}(x)\\bigr)=x para hallar (f^{-1})' y (f^{-1})''.\nDeducir la concavidad de f^{-1} en los cuatro casos: f creciente o decreciente, y cóncava o convexa.\n\n\n(a) Por la regla de la cadena, f'\\bigl(f^{-1}(x)\\bigr)\\,(f^{-1})'(x)=1, así que \n(f^{-1})'(x)=\\frac{1}{f'\\bigl(f^{-1}(x)\\bigr)},\\qquad (f^{-1})''(x)=-\\frac{f''\\bigl(f^{-1}(x)\\bigr)}{f'\\bigl(f^{-1}(x)\\bigr)^3}.\n\n(b) Con los signos de f' y f'': \n\\begin{array}{c|cc}\n& f\\ \\text{cóncava} & f\\ \\text{convexa}\\\\ \\hline\nf\\ \\text{creciente} & f^{-1}\\ \\text{convexa} & f^{-1}\\ \\text{cóncava}\\\\\nf\\ \\text{decreciente} & f^{-1}\\ \\text{cóncava} & f^{-1}\\ \\text{convexa}\n\\end{array}\n\n\n\n\nEjercicio 4.27\nSean f y g las funciones de la figura, las mismas del Ejemplo 4.18. Decir si las afirmaciones son ciertas, razonando la respuesta. (2021/22 6E)\n\nLa inversa de f restringida a (3,4) es decreciente.\nLa inversa de f restringida a (3,4) es convexa.\nh(x)=g(f(x)) es creciente en (1,2).\n\n\n\n\n\nEn (3,4), f decrece y es convexa: f'&lt;0 y f''&lt;0. Se usan las fórmulas del Ejercicio 4.26.\n(a) Cierta: (f^{-1})'=\\frac{1}{f'}&lt;0.\n(b) Cierta: (f^{-1})''=-\\frac{f''}{f'^3}=-\\frac{(-)}{(-)}&lt;0.\n(c) Falsa. Si x\\in(1,2), f(x)\\in(2,5), donde g'&lt;0; además, f'(x)&gt;0. Por tanto, h'=g'(f)\\,f'&lt;0 y h es decreciente.\n\n\n\nEjercicio 4.28\nSea f(t)=h(x(t)), donde x(t) y h(x) son las funciones de la Figura 4.38, dos veces derivables. (2025/26 2E)\n\nEstudiar el crecimiento y los extremos locales de f.\nEstudiar la concavidad y los puntos de inflexión de f.\n\n\n\nFigura 4.38. x(t) en (c,d), con inflexión en t=p, y h(x) en (a,b), con inflexión en x=q=x(p).\n\n\n(a) f'(t)=h'(x(t))\\,x'(t). Como h'&gt;0 y x'&lt;0 en todos los puntos, f'&lt;0: f es decreciente y no tiene extremos locales.\n(b) f''(t)=h''(x(t))\\,x'(t)^2+h'(x(t))\\,x''(t).\n\nSi t\\in(c,p), x(t)\\in(q,b): h''&gt;0, h'&gt;0 y x''&gt;0, así que f''&gt;0 y f es cóncava.\nSi t\\in(p,d), x(t)\\in(a,q): h''&lt;0, h'&gt;0 y x''&lt;0, así que f''&lt;0 y f es convexa.\n\nHay un punto de inflexión en t=p.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#optimización",
+    "href": "04_estudio_local/ejercicios.html#optimización",
+    "title": "4.12 Ejercicios",
+    "section": "Optimización",
+    "text": "Optimización\n\nEjercicio 4.29\nHay que construir un depósito cilíndrico sin tapa de 5000\\ \\text{m}^3. La base cuesta 5 €/m2 y la pared lateral, 8 €/m2. ¿Qué dimensiones son las más económicas? (2015/16 2E)\n\nCon V=\\pi r^2h=5000, el coste en función del radio es \nc(r)=5\\pi r^2+8\\cdot2\\pi rh=5\\pi r^2+\\frac{80000}{r},\\qquad r&gt;0.\n c'(r)=10\\pi r-\\dfrac{80000}{r^2}=0 da r^3=\\dfrac{8000}{\\pi}, es decir, r=\\dfrac{20}{\\pi^{1/3}}\\approx13.66 m, y entonces h=\\dfrac{5000}{\\pi r^2}=\\dfrac{25}{2\\pi^{1/3}}\\approx8.53 m.\nComo c''(r)=10\\pi+\\dfrac{160000}{r^3}&gt;0 y es el único punto crítico en r&gt;0, es el mínimo absoluto.\n\n\n\nEjercicio 4.30\nUn alambre de 10 m se corta en dos partes. Con una se forma un cuadrado y con la otra, un triángulo equilátero. ¿Por dónde hay que cortarlo para que la suma de las dos áreas sea mínima? (2023/24 2E)\n\nSi el triángulo usa x metros, su lado es \\frac x3, y el del cuadrado, \\frac{10-x}{4}: \nA(x)=\\frac{\\sqrt3}{36}x^2+\\frac{(10-x)^2}{16},\\qquad x\\in[0,10].\n A'(x)=\\dfrac{\\sqrt3}{18}x-\\dfrac{10-x}{8}=0 da x=\\dfrac{90}{9+4\\sqrt3}\\approx5.65 m. Comparando, A(5.65)\\approx2.72, A(0)=6.25 y A(10)\\approx4.81 m2. Hay que usar 5.65 m para el triángulo y 4.35 m para el cuadrado.\n\n\n\nEjercicio 4.31\nDos postes de 2 y 3 m de altura están a 5 m de distancia. Hay que unir sus extremos superiores con un cable sujeto a un punto del suelo situado entre ellos (Figura 4.39). ¿En qué punto se usa la menor cantidad de cable? (2017/18 2E)\n\n\nFigura 4.39. Cable sujeto a una distancia x del poste de 2 m.\n\n\nl(x)=\\sqrt{x^2+4}+\\sqrt{(5-x)^2+9}, con x\\in[0,5]. La condición l'(x)=0 es \n\\frac{x}{\\sqrt{x^2+4}}=\\frac{5-x}{\\sqrt{(5-x)^2+9}}\\quad\\Longrightarrow\\quad 9x^2=4(5-x)^2\\quad\\Longrightarrow\\quad x=2,\n donde se ha elegido la raíz de [0,5]. Comparando, l(2)=5\\sqrt2\\approx7.07, l(0)=2+\\sqrt{34}\\approx7.83 y l(5)=\\sqrt{29}+3\\approx8.39. El mínimo está a 2 m del poste de 2 m.\n\n\n\nEjercicio 4.32\nEn la curva \\dfrac{x^2}{400}+\\dfrac{y^2}{225}=1 se inscribe un rectángulo con los lados paralelos a los ejes (Figura 4.40). Hallar las dimensiones del rectángulo de área máxima. (2019/20 6E)\n\n\nFigura 4.40. Rectángulo inscrito, con un vértice en (x,y).\n\n\nCon un vértice (x,y) en el primer cuadrante, A=4xy e y=15\\sqrt{1-\\frac{x^2}{400}}, así que \nA(x)=60\\,x\\sqrt{1-\\frac{x^2}{400}},\\qquad x\\in[0,20].\n A'(x)=0 da 1-\\dfrac{x^2}{400}=\\dfrac{x^2}{400}, es decir, x=10\\sqrt2, y entonces y=\\dfrac{15}{\\sqrt2}. Como A(0)=A(20)=0, es el máximo. La base es 2x=20\\sqrt2, la altura es 2y=15\\sqrt2 y el área es 600.\n\n\n\nEjercicio 4.33\nUna recta pasa por el punto (1,2) y corta a los ejes en (a,0) y (0,b), con a,b&gt;0 (Figura 4.41). Hallar a y b para que el triángulo que forman la recta y los ejes tenga área mínima. (2024/25 3E)\n\n\nFigura 4.41. Triángulo formado por los ejes y una recta que pasa por (1,2).\n\n\nPor semejanza de triángulos, \\dfrac ba=\\dfrac{2}{a-1}, así que b=\\dfrac{2a}{a-1}, con a&gt;1, y \nA(a)=\\frac{ab}{2}=\\frac{a^2}{a-1},\\qquad A'(a)=\\frac{a(a-2)}{(a-1)^2}=0\\quad\\Longrightarrow\\quad a=2,\n porque a&gt;1. Como A''(a)=\\dfrac{2}{(a-1)^3}, A''(2)=2&gt;0. Es el único punto crítico en a&gt;1, así que es el mínimo absoluto. Entonces b=4 y el área es A=4.\nComprobación: la recta y=-2x+4 pasa por (1,2).",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#polinomio-de-taylor",
+    "href": "04_estudio_local/ejercicios.html#polinomio-de-taylor",
+    "title": "4.12 Ejercicios",
+    "section": "Polinomio de Taylor",
+    "text": "Polinomio de Taylor\n\nEjercicio 4.34\nCalcular el polinomio de Maclaurin de grado 3 de:\n\n\nf(x)=\\tan x\nf(x)=\\dfrac{1}{x+1}\nf(x)=\\ln(\\cos x)\nf(x)=\\sqrt{x+1}\n\n\n\n(a) P_3(x)=x+\\dfrac{x^3}{3}. (b) P_3(x)=1-x+x^2-x^3. (c) P_3(x)=-\\dfrac{x^2}{2}. (d) P_3(x)=1+\\dfrac x2-\\dfrac{x^2}{8}+\\dfrac{x^3}{16}.\n\n\n\nEjercicio 4.35\nCalcular el polinomio de Maclaurin de:\n\n\nf(x)=e^{-x}, grado n\nf(x)=\\ln(1+x), grado n\nf(x)=\\sinh x, grado 2n+1\nf(x)=\\cos2x, grado 2n\n\n\n\n(a) \\sum\\limits_{k=0}^{n}\\dfrac{(-1)^kx^k}{k!}. (b) \\sum\\limits_{k=1}^{n}\\dfrac{(-1)^{k-1}x^k}{k}. (c) \\sum\\limits_{k=0}^{n}\\dfrac{x^{2k+1}}{(2k+1)!}. (d) \\sum\\limits_{k=0}^{n}\\dfrac{(-1)^k(2x)^{2k}}{(2k)!}.\n\n\n\nEjercicio 4.36\nCalcular el polinomio de Taylor de grado 2 de f(x)=x^4-3x^2-2x en a=-1. ¿Qué grado debe tener el polinomio para coincidir con f en todos los puntos?\n\nf(-1)=0, f'(-1)=0 y f''(-1)=6, así que P_2(x)=3(x+1)^2. Hace falta grado 4, porque f es un polinomio de grado 4 y sus derivadas de orden 5 o más son cero.\n\n\n\nEjercicio 4.37\nP_2(x)=-x+2x^2 es el polinomio de Maclaurin de grado 2 de f. Calcular el de g(x)=e^{f(x)}. (2019/20 2E)\n\nDel polinomio se lee f(0)=0, f'(0)=-1 y f''(0)=4. Como g'=f'g y g''=f''g+f'g', resulta g(0)=1, g'(0)=-1 y g''(0)=5. Por tanto, Q_2(x)=1-x+\\dfrac52x^2.\n\n\n\nEjercicio 4.38\nSea y=e^{xy} la curva del Ejercicio 4.19. (2024/25 7E)\n\nCalcular su polinomio de Maclaurin de grado 2, en el punto (0,1).\nAproximar el valor de y en x=0.1.\n\n\n(a) Derivando, y'=(y+xy')\\,e^{xy} e y''=(y+xy')^2e^{xy}+(2y'+xy'')\\,e^{xy}. En (0,1), y'=1 e y''=3, así que P_2(x)=1+x+\\dfrac32x^2.\n(b) y(0.1)\\approx P_2(0.1)=1.115.\n\n\n\nEjercicio 4.39\nSea f la función de la figura y P_2(x)=a+b(x-4)+c(x-4)^2 su polinomio de Taylor de grado 2 en x=4. Decir el signo de a, b y c. (2021/22 6E)\n\n\n\n\na=f(4)&gt;0. b=f'(4)&lt;0, porque f decrece. c=\\frac{f''(4)}{2}&lt;0, porque f es convexa.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#error-de-taylor",
+    "href": "04_estudio_local/ejercicios.html#error-de-taylor",
+    "title": "4.12 Ejercicios",
+    "section": "Error de Taylor",
+    "text": "Error de Taylor\n\nEjercicio 4.40\nCalcular el polinomio de Maclaurin indicado y acotar el error en x=1:\n\n\nf(x)=e^x, grado 4\nf(x)=\\cos x, grado 5\nf(x)=\\sqrt{x+1}, grado 2\n\n\n\n(a) P_4(x)=1+x+\\dfrac{x^2}{2!}+\\dfrac{x^3}{3!}+\\dfrac{x^4}{4!}, con |E_4(1)|\\le\\dfrac{e}{5!}.\n(b) P_5(x)=1-\\dfrac{x^2}{2!}+\\dfrac{x^4}{4!}, con |E_5(1)|\\le\\dfrac{1}{6!}.\n(c) P_2(x)=1+\\dfrac x2-\\dfrac{x^2}{8}, con |E_2(1)|\\le\\dfrac{1}{16}.\n\n\n\nEjercicio 4.41\nSea f(x)=\\sqrt[3]{1+x}. (2020/21 2E)\n\nCalcular su polinomio de Maclaurin de grado 2.\nAproximar \\sqrt[3]{0.9} con ese polinomio.\nAcotar el error cometido.\n\n\n(a) P_2(x)=1+\\dfrac x3-\\dfrac{x^2}{9}.\n(b) \\sqrt[3]{0.9}\\approx P_2(-0.1)=\\dfrac{869}{900}\\approx0.965556.\n(c) f'''(x)=\\frac{10}{27}(1+x)^{-8/3} es decreciente, así que su máximo en (-0.1,0) está en x=-0.1 y vale 0.491 aproximadamente. Por tanto, |E_2(-0.1)|\\le\\dfrac{(0.1)^3}{3!}\\cdot0.491\\approx8.2\\cdot10^{-5}.\n\n\n\nEjercicio 4.42\nLa Figura 4.42 muestra la derivada quinta de una función y(x). Se aproxima y(0) con el polinomio de Taylor de grado 4 centrado en a=-2. Acotar el error cometido. (2012/13 6E)\n\n\nFigura 4.42. Gráfica de y^{(5)}(x).\n\n\nE_4(0)=\\dfrac{y^{(5)}(z)}{5!}\\,2^5, con z\\in(-2,0). En ese intervalo, |y^{(5)}|&lt;3 según la gráfica, así que |E_4(0)|&lt;3\\cdot\\dfrac{2^5}{5!}=0.8.\n\n\n\nEjercicio 4.43\nLa Figura 4.43 muestra y(x), y'(x) e y''(x). (2022/23 2E)\n\nCalcular el polinomio de Taylor de grado 1 en a=-1.\nAcotar el error de aproximar y\\left(-\\frac13\\right) con ese polinomio.\nCalcular el error exacto y comprobar la cota.\n\n\n\nFigura 4.43. y, y' e y''.\n\n\n(a) P_1(x)=-4+8(x+1).\n(b) |y''|&lt;6 en \\left(-1,-\\frac13\\right), así que |E|&lt;6\\cdot\\dfrac{(2/3)^2}{2!}=\\dfrac43.\n(c) y\\left(-\\frac13\\right)=2 y P_1\\left(-\\frac13\\right)=\\frac43, así que |E|=\\frac23&lt;\\frac43.\n\n\n\nEjercicio 4.44\nPara la función de la Figura 4.43, hallar el punto z del teorema de Taylor con a=-1, n=1 y x=1. (2013/14 3E)\n\nEl error real es E_1(1)=y(1)-P_1(1)=8-12=-4. Por el teorema, E_1(1)=\\dfrac{y''(z)}{2}\\,2^2=2y''(z). Igualando, y''(z)=-2, y en la gráfica se lee z=-\\frac13.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/ejercicios.html#serie-de-taylor",
+    "href": "04_estudio_local/ejercicios.html#serie-de-taylor",
+    "title": "4.12 Ejercicios",
+    "section": "Serie de Taylor",
+    "text": "Serie de Taylor\n\nEjercicio 4.45\nCalcular la serie de Maclaurin de: (e) 2018/19 5E, (f) 2018/19 3E\n\n\nf(x)=\\sin x\nf(x)=x\\sin2x\nf(x)=x^3e^x\nf(x)=\\dfrac{1}{1-x}\nf(x)=e^{-|x|}\nf(x)=\\ln\\dfrac{1+x}{1-x}\n\n\n\n(a) \\sum\\limits_{n=0}^{\\infty}\\dfrac{(-1)^nx^{2n+1}}{(2n+1)!}, para todo x.\n(b) \\sum\\limits_{n=0}^{\\infty}\\dfrac{(-1)^n2^{2n+1}x^{2n+2}}{(2n+1)!}, para todo x.\n(c) \\sum\\limits_{n=0}^{\\infty}\\dfrac{x^{n+3}}{n!}, para todo x.\n(d) \\sum\\limits_{n=0}^{\\infty}x^n, para x\\in(-1,1).\n(e) No tiene: f no es derivable en x=0.\n(f) Como f(x)=\\ln(1+x)-\\ln(1-x), restando las dos series, 2\\sum\\limits_{n=0}^{\\infty}\\dfrac{x^{2n+1}}{2n+1}, para x\\in(-1,1).\n\n\n\nEjercicio 4.46\nSea y(x) una función con y'(x)=y(x)+e^x e y(0)=0. Calcular su serie de Maclaurin y deducir de ella cuál es la función. (2018/19 2E)\n\nDerivando la ecuación, y^{(n)}(0)=y^{(n-1)}(0)+1, así que y^{(n)}(0)=n. Por tanto, \ny(x)=\\sum_{n=1}^{\\infty}\\frac{n\\,x^n}{n!}=\\sum_{n=1}^{\\infty}\\frac{x^n}{(n-1)!}=x\\left(1+x+\\frac{x^2}{2!}+\\dots\\right)=x\\,e^x.\n Comprobación: (xe^x)'=e^x+xe^x=y+e^x.\n\n\n\nEjercicio 4.47\nSustituyendo x por ix en la serie de e^x, obtener la fórmula de Euler, e^{ix}=\\cos x+i\\sin x.\n\nCon i^2=-1, los términos pares son reales y los impares, imaginarios: \ne^{ix}=\\left(1-\\frac{x^2}{2!}+\\frac{x^4}{4!}-\\dots\\right)+i\\left(x-\\frac{x^3}{3!}+\\frac{x^5}{5!}-\\dots\\right)=\\cos x+i\\sin x.\n Es un argumento formal: las series se han obtenido con x real y no se demuestra aquí que la de e^x valga para números complejos.",
+    "crumbs": [
+      "4.12 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/punto_fijo.html",
+    "href": "04_estudio_local/punto_fijo.html",
+    "title": "4.3 Teorema del punto fijo",
+    "section": "",
+    "text": "Muchas ecuaciones se pueden escribir en la forma x=f(x). Este teorema asegura, sin resolverla, que tiene solución y que esa solución es única.",
+    "crumbs": [
+      "4.3 Punto fijo"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/punto_fijo.html#existencia",
+    "href": "04_estudio_local/punto_fijo.html#existencia",
+    "title": "4.3 Teorema del punto fijo",
+    "section": "Existencia",
+    "text": "Existencia\n\nDefinición 4.2\nUn punto fijo de f es un valor z tal que f(z)=z.\n\nEn la gráfica, los puntos fijos son los cortes de y=f(x) con la recta y=x (Figura 4.6).\n\nTeorema 4.4 (Punto fijo: existencia)\nSi f es continua en [a,b] y f(x)\\in[a,b] para todo x\\in[a,b], entonces f tiene al menos un punto fijo en [a,b].\n\n\n\nFigura 4.6. La curva no sale del cuadrado [a,b]\\times[a,b]. Corta a la recta y=x en tres puntos fijos.\n\n\nDemostración\nSi f(a)=a o f(b)=b, ya hay un punto fijo. Si no, como f(x)\\in[a,b], se cumple f(a)&gt;a y f(b)&lt;b.\nSea h(x)=f(x)-x, continua en [a,b], con h(a)&gt;0 y h(b)&lt;0. Por el teorema de Bolzano, existe z\\in(a,b) con h(z)=0, es decir, f(z)=z.",
+    "crumbs": [
+      "4.3 Punto fijo"
+    ]
+  },
+  {
+    "objectID": "04_estudio_local/punto_fijo.html#unicidad",
+    "href": "04_estudio_local/punto_fijo.html#unicidad",
+    "title": "4.3 Teorema del punto fijo",
+    "section": "Unicidad",
+    "text": "Unicidad\n\nTeorema 4.5 (Punto fijo: unicidad)\nSi, además, f es derivable en (a,b) y |f'(x)|&lt;1 para todo x\\in(a,b), entonces el punto fijo de [a,b] es único.\n\n\nDemostración\nSupongamos que hay dos puntos fijos, z_1\\ne z_2. Por el teorema de Lagrange, existe z entre z_1 y z_2 tal que \nf'(z)=\\frac{f(z_2)-f(z_1)}{z_2-z_1}=\\frac{z_2-z_1}{z_2-z_1}=1,\n lo que contradice |f'(z)|&lt;1.\n\n\nEjemplo 4.7\n¿Tiene solución la ecuación x=\\sqrt{2x+3} en [0,4]? ¿Es única? (2017/18 6E)\n\nSea f(x)=\\sqrt{2x+3}, continua en [0,4]. Al crecer x crece la raíz, así que los valores de f van de f(0)=\\sqrt3\\approx1.73 a f(4)=\\sqrt{11}\\approx3.32, y todos están en [0,4]. Por tanto, hay solución.\nAdemás, f'(x)=\\dfrac1{\\sqrt{2x+3}} cumple |f'(x)|\\le\\dfrac1{\\sqrt3}&lt;1 en (0,4). Por tanto, la solución es única (Figura 4.7).\nComprobación. Elevando al cuadrado, x^2-2x-3=0, con soluciones x=3 y x=-1. Solo x=3 está en [0,4], y \\sqrt{2\\cdot3+3}=3.\n\n\nFigura 4.7. y=\\sqrt{2x+3} corta a y=x una sola vez en [0,4], en x=3.\n\n\n\n\nEjemplo 4.8\nDemostrar que la ecuación x=\\cos x tiene una única solución en [0,1].\n\nLa función f(x)=\\cos x es continua y, en [0,1], baja de f(0)=1 a f(1)\\approx0.54, así que sus valores están en [0,1]. Hay solución.\nAdemás, |f'(x)|=\\sin x\\le\\sin1\\approx0.84&lt;1 en (0,1). La solución es única.\nComprobación. \\cos(0.739)\\approx0.739. La ecuación no se puede despejar, pero el teorema asegura que su solución existe y es única.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 4.13–4.15.",
+    "crumbs": [
+      "4.3 Punto fijo"
     ]
   },
   {

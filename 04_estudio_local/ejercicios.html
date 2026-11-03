@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4.12 Ejercicios – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../04_estudio_local/resumen.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2c9897760a6acc1c19756737572cfcb0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../02_sucesiones/index.html">
+ <span class="dropdown-text">2. Sucesiones y series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../03_funciones/index.html">
+ <span class="dropdown-text">3. Funciones reales de variable real</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../04_estudio_local/index.html">
+ <span class="dropdown-text">4. Estudio local de una función</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../05_integracion/index.html">
+ <span class="dropdown-text">5. Integración</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../06_varias_variables/index.html">
+ <span class="dropdown-text">6. Funciones de varias variables reales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../07_integral_multiple/index.html">
+ <span class="dropdown-text">7. Integral múltiple</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../08_integral_curvilinea/index.html">
+ <span class="dropdown-text">8. Integral curvilínea</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../09_ecuaciones_diferenciales/index.html">
+ <span class="dropdown-text">9. Ecuaciones diferenciales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../10_laplace/index.html">
+ <span class="dropdown-text">10. Transformada de Laplace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../11_fourier/index.html">
+ <span class="dropdown-text">11. Análisis de Fourier</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../04_estudio_local/ejercicios.html">4.12 Ejercicios</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Estudio local de una función</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/extremos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 Extremos y derivada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/rolle_lagrange.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 Rolle y Lagrange</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/punto_fijo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 Punto fijo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/crecimiento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.4 Crecimiento y puntos críticos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/concavidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.5 Concavidad e inflexión</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/graficas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.6 Estudio a partir de gráficas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/optimizacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.7 Optimización</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.8 Polinomio de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/error_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.9 Error de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/serie_taylor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.10 Serie de Taylor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.11 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_estudio_local/ejercicios.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">4.12 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#extremos-y-derivada" id="toc-extremos-y-derivada" class="nav-link active" data-scroll-target="#extremos-y-derivada">Extremos y derivada</a></li>
+  <li><a href="#teoremas-de-rolle-y-de-lagrange" id="toc-teoremas-de-rolle-y-de-lagrange" class="nav-link" data-scroll-target="#teoremas-de-rolle-y-de-lagrange">Teoremas de Rolle y de Lagrange</a></li>
+  <li><a href="#teorema-del-punto-fijo" id="toc-teorema-del-punto-fijo" class="nav-link" data-scroll-target="#teorema-del-punto-fijo">Teorema del punto fijo</a></li>
+  <li><a href="#crecimiento-y-puntos-críticos" id="toc-crecimiento-y-puntos-críticos" class="nav-link" data-scroll-target="#crecimiento-y-puntos-críticos">Crecimiento y puntos críticos</a></li>
+  <li><a href="#concavidad-e-inflexión" id="toc-concavidad-e-inflexión" class="nav-link" data-scroll-target="#concavidad-e-inflexión">Concavidad e inflexión</a></li>
+  <li><a href="#estudio-a-partir-de-gráficas" id="toc-estudio-a-partir-de-gráficas" class="nav-link" data-scroll-target="#estudio-a-partir-de-gráficas">Estudio a partir de gráficas</a></li>
+  <li><a href="#optimización" id="toc-optimización" class="nav-link" data-scroll-target="#optimización">Optimización</a></li>
+  <li><a href="#polinomio-de-taylor" id="toc-polinomio-de-taylor" class="nav-link" data-scroll-target="#polinomio-de-taylor">Polinomio de Taylor</a></li>
+  <li><a href="#error-de-taylor" id="toc-error-de-taylor" class="nav-link" data-scroll-target="#error-de-taylor">Error de Taylor</a></li>
+  <li><a href="#serie-de-taylor" id="toc-serie-de-taylor" class="nav-link" data-scroll-target="#serie-de-taylor">Serie de Taylor</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">4.12 Ejercicios</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="extremos-y-derivada" class="level2">
+<h2 data-anchor-id="extremos-y-derivada">Extremos y derivada</h2>
+<div id="ejercicio-ext-weierstrass" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.1</span></p>
+<p>Decir si se aplica el teorema de Weierstrass y hallar los extremos absolutos, si existen:</p>
+<ol type="a">
+<li><span class="math inline">f(x)=1+x^2</span> en <span class="nw"><span class="math inline">[-1,2]</span>.</span></li>
+<li><span class="math inline">f(x)=1+x^2</span> si <span class="nw"><span class="math inline">x\in[-1,0)\cup(0,2]</span>,</span> con <span class="nw"><span class="math inline">f(0)=3</span>.</span></li>
+<li><span class="math inline">f(x)=1+x^2</span> en <span class="nw"><span class="math inline">(-1,2)</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) Se aplica. Mínimo absoluto <span class="math inline">1</span> en <span class="math inline">x=0</span> y máximo absoluto <span class="math inline">5</span> en <span class="nw"><span class="math inline">x=2</span>.</span></p>
+<p>(b) No se aplica, porque <span class="math inline">f</span> no es continua en <span class="nw"><span class="math inline">x=0</span>.</span> Máximo absoluto <span class="math inline">5</span> en <span class="nw"><span class="math inline">x=2</span>.</span> No tiene mínimo absoluto: los valores se acercan a <span class="nw"><span class="math inline">1</span>,</span> pero no lo alcanzan.</p>
+<p>(c) No se aplica, porque el intervalo no es cerrado. Mínimo absoluto <span class="math inline">1</span> en <span class="nw"><span class="math inline">x=0</span>.</span> No tiene máximo absoluto: los valores se acercan a <span class="nw"><span class="math inline">5</span>,</span> pero no lo alcanzan.</p>
+</div>
+</div>
+<div id="ejercicio-ext-xexp" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.2</span></p>
+<p>Hallar los extremos absolutos de <span class="math inline">f(x)=x\,e^{-x}</span> en <span class="nw"><span class="math inline">[0,2]</span>.</span></p>
+<div class="solucion">
+<p><span class="math inline">f'(x)=(1-x)\,e^{-x}</span> se anula en <span class="nw"><span class="math inline">x=1</span>.</span> Con <span class="nw"><span class="math inline">f(0)=0</span>,</span> <span class="math inline">f(1)=\frac1e\approx0.368</span> y <span class="nw"><span class="math inline">f(2)=\frac2{e^2}\approx0.271</span>,</span> el mínimo absoluto es <span class="nw"><span class="math inline">0</span>,</span> en <span class="nw"><span class="math inline">x=0</span>,</span> y el máximo absoluto es <span class="nw"><span class="math inline">\frac1e</span>,</span> en <span class="nw"><span class="math inline">x=1</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-ext-pico" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.3</span></p>
+<p>Hallar los extremos absolutos de <span class="math inline">f(x)=|x^2-1|</span> en <span class="nw"><span class="math inline">[-2,2]</span>.</span> ¿En cuáles de los puntos candidatos existe <span class="math inline">f'</span>?</p>
+<div class="solucion">
+<p>Los candidatos son <span class="math inline">x=\pm2</span> (bordes), <span class="math inline">x=0</span> (donde <span class="nw"><span class="math inline">f'(0)=0</span>)</span> y <span class="math inline">x=\pm1</span> (donde <span class="math inline">f'</span> no existe), con <span class="nw"><span class="math inline">f(\pm2)=3</span>,</span> <span class="math inline">f(0)=1</span> y <span class="nw"><span class="math inline">f(\pm1)=0</span>.</span> El máximo absoluto es <span class="nw"><span class="math inline">3</span>,</span> en <span class="nw"><span class="math inline">x=\pm2</span>,</span> y el mínimo absoluto es <span class="nw"><span class="math inline">0</span>,</span> en <span class="nw"><span class="math inline">x=\pm1</span>.</span></p>
+<p>La derivada existe en <span class="nw"><span class="math inline">x=0</span>.</span> En <span class="nw"><span class="math inline">x=\pm2</span>,</span> solo la derivada lateral hacia el interior del intervalo. En <span class="math inline">x=\pm1</span> no existe.</p>
+</div>
+</div>
+<div id="ejercicio-ext-maximo" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.4</span></p>
+<p>Demostrar que, si <span class="math inline">f</span> tiene un máximo local en <span class="math inline">z</span> y es derivable en <span class="nw"><span class="math inline">z</span>,</span> entonces <span class="nw"><span class="math inline">f'(z)=0</span>.</span> (2016/17 7E)</p>
+<div class="solucion">
+<p>Si <span class="math inline">h</span> es suficientemente pequeño, <span class="nw"><span class="math inline">f(z+h)-f(z)\le0</span>.</span> Si <span class="nw"><span class="math inline">h&gt;0</span>,</span> el cociente <span class="math inline">\frac{f(z+h)-f(z)}{h}</span> es <span class="nw"><span class="math inline">\le0</span>,</span> así que <span class="nw"><span class="math inline">f'(z)\le0</span>.</span> Si <span class="nw"><span class="math inline">h&lt;0</span>,</span> es <span class="nw"><span class="math inline">\ge0</span>,</span> así que <span class="nw"><span class="math inline">f'(z)\ge0</span>.</span> Por tanto, <span class="nw"><span class="math inline">f'(z)=0</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="teoremas-de-rolle-y-de-lagrange" class="level2">
+<h2 data-anchor-id="teoremas-de-rolle-y-de-lagrange">Teoremas de Rolle y de Lagrange</h2>
+<div id="ejercicio-rl-rolle" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.5</span></p>
+<p>Estudiar si se puede aplicar el teorema de Rolle a cada función en el intervalo indicado. En caso afirmativo, calcular <span class="nw"><span class="math inline">z</span>.</span></p>
+<div class="columnas c3">
+<ol type="a">
+<li><span class="nw"><span class="math inline">f(x)=x-x^3</span>,</span> <span class="math inline">[0,1]</span></li>
+<li><span class="nw"><span class="math inline">f(x)=|x-1|</span>,</span> <span class="math inline">[0,2]</span></li>
+<li><span class="nw"><span class="math inline">f(x)=|x^2-1|</span>,</span> <span class="math inline">[-2,2]</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) Se puede aplicar, con <span class="nw"><span class="math inline">z=\frac{\sqrt3}{3}</span>.</span></p>
+<p>(b) No se puede aplicar: <span class="math inline">f</span> no es derivable en <span class="nw"><span class="math inline">x=1</span>.</span> La conclusión también falla, porque <span class="nw"><span class="math inline">f'(x)=\pm1</span>.</span></p>
+<p>(c) No se puede aplicar: <span class="math inline">f</span> no es derivable en <span class="nw"><span class="math inline">x=\pm1</span>.</span> Aun así, la conclusión se cumple, con <span class="nw"><span class="math inline">z=0</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-lagrange" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.6</span></p>
+<p>Estudiar si se puede aplicar el teorema de Lagrange a cada función en el intervalo indicado. En caso afirmativo, calcular <span class="nw"><span class="math inline">z</span>.</span></p>
+<div class="columnas c3">
+<ol type="a">
+<li><span class="nw"><span class="math inline">f(x)=4x^2-5x+1</span>,</span> <span class="math inline">[0,2]</span></li>
+<li><span class="nw"><span class="math inline">f(x)=\dfrac1{x^2}</span>,</span> <span class="math inline">[-1,2]</span></li>
+<li><span class="nw"><span class="math inline">f(x)=|x^2-1|</span>,</span> <span class="math inline">[-3,2]</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) Se puede aplicar, con <span class="nw"><span class="math inline">z=1</span>.</span></p>
+<p>(b) No se puede aplicar: <span class="math inline">f</span> no está definida en <span class="nw"><span class="math inline">x=0</span>.</span> La conclusión también falla: la pendiente media es <span class="math inline">-\frac14</span> y <span class="math inline">f'(z)=-\frac14</span> da <span class="nw"><span class="math inline">z=2</span>,</span> que no está en <span class="nw"><span class="math inline">(-1,2)</span>.</span></p>
+<p>(c) No se puede aplicar: <span class="math inline">f</span> no es derivable en <span class="nw"><span class="math inline">x=\pm1</span>.</span> Aun así, la conclusión se cumple: la pendiente media es <span class="math inline">-1</span> y <span class="nw"><span class="math inline">z=\frac12</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-cubica" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.7</span></p>
+<p>Estudiar si se puede aplicar el teorema de Lagrange a <span class="math inline">f(x)=x-x^3</span> en <span class="math inline">[-2,1]</span> y, en caso afirmativo, calcular <span class="nw"><span class="math inline">z</span>.</span> (2012/13 5E)</p>
+<div class="solucion">
+<p>Es un polinomio, así que se puede aplicar. La pendiente media es <span class="nw"><span class="math inline">\frac{0-6}{3}=-2</span>,</span> y <span class="math inline">1-3z^2=-2</span> da <span class="nw"><span class="math inline">z=\pm1</span>.</span> Solo <span class="math inline">z=-1</span> está en <span class="nw"><span class="math inline">(-2,1)</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-parametros" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.8</span></p>
+<p>Hallar <span class="math inline">a</span> y <span class="math inline">b</span> para que se pueda aplicar el teorema de Lagrange a esta función en <span class="nw"><span class="math inline">[0,6]</span>,</span> y calcular <span class="math inline">z</span> para esos valores. <span class="math display">
+f(x)=\begin{cases}ax-3 &amp; x&lt;4\\ -x^2+10x-b &amp; x\ge4\end{cases}
+</span></p>
+<div class="solucion">
+<p>Continuidad en <span class="nw"><span class="math inline">x=4</span>:</span> <span class="nw"><span class="math inline">4a-3=24-b</span>.</span> Derivabilidad en <span class="nw"><span class="math inline">x=4</span>:</span> <span class="nw"><span class="math inline">a=-8+10=2</span>.</span> Por tanto, <span class="math inline">a=2</span> y <span class="nw"><span class="math inline">b=19</span>.</span></p>
+<p>La pendiente media es <span class="nw"><span class="math inline">\frac{f(6)-f(0)}{6}=\frac{5+3}{6}=\frac43</span>.</span> En <span class="nw"><span class="math inline">x&lt;4</span>,</span> <span class="nw"><span class="math inline">f'=2</span>,</span> que no vale. En <span class="nw"><span class="math inline">x&gt;4</span>,</span> <span class="math inline">-2z+10=\frac43</span> da <span class="nw"><span class="math inline">z=\frac{13}{3}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-trozos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.9</span></p>
+<p>Sea <span class="math inline">f</span> una función continua en <span class="nw"><span class="math inline">[-5,7]</span>.</span> En <span class="math inline">[-5,3]</span> es <span class="nw"><span class="math inline">f(x)=\frac14x^2+\frac14x-2</span>.</span> En <span class="nw"><span class="math inline">(3,7]</span>,</span> su derivada es constante e igual al valor de la derivada en <span class="math inline">x=3</span> (<a href="#figura-ej-trozos-lagrange">Figura&nbsp;4.30</a>). (2016/17 2E)</p>
+<ol type="a">
+<li>Estudiar si <span class="math inline">f</span> es derivable en <span class="nw"><span class="math inline">x=3</span>.</span></li>
+<li>Hallar la expresión de <span class="math inline">f</span> en <span class="nw"><span class="math inline">[3,7]</span>.</span></li>
+<li>Calcular la pendiente media <span class="math inline">M</span> de <span class="math inline">f</span> en <span class="nw"><span class="math inline">[-5,7]</span>.</span></li>
+<li>Estudiar si existe <span class="math inline">z\in(-5,7)</span> tal que <span class="math inline">f'(z)=M</span> y, si existe, hallarlo.</li>
+</ol>
+<div id="figura-ej-trozos-lagrange" class="figura">
+<p><img src="../figs/ej_trozos_lagrange.svg" class="img-fluid" alt="Parábola entre x igual a menos 5 y x igual a 3, que vale 3 en menos 5, menos 2 en 0 y 1 en 3. El eje llega hasta 7, y de 3 a 7 no hay gráfica." width="360"></p>
+<p><span class="figura-num">Figura&nbsp;4.30.</span> Gráfica de <span class="math inline">f</span> en <span class="nw"><span class="math inline">[-5,3]</span>.</span></p>
+</div>
+<div class="solucion">
+<p>(a) Sí: la derivada por la izquierda es <span class="nw"><span class="math inline">f'(3)=\frac32+\frac14=\frac74</span>,</span> y por la derecha vale lo mismo por construcción.</p>
+<p>(b) Como <span class="nw"><span class="math inline">f(3)=1</span>,</span> <span class="nw"><span class="math inline">f(x)=1+\frac74(x-3)</span>.</span></p>
+<p>(c) <span class="math inline">f(-5)=3</span> y <span class="nw"><span class="math inline">f(7)=8</span>,</span> así que <span class="nw"><span class="math inline">M=\frac{5}{12}</span>.</span></p>
+<p>(d) Existe, por el teorema de Lagrange. En <span class="nw"><span class="math inline">(3,7)</span>,</span> <span class="nw"><span class="math inline">f'=\frac74\ne M</span>.</span> En <span class="nw"><span class="math inline">(-5,3)</span>,</span> <span class="math inline">\frac z2+\frac14=\frac5{12}</span> da <span class="nw"><span class="math inline">z=\frac13</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-hipotesis" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.10</span></p>
+<p>Sea <span class="math inline">f</span> definida en <span class="nw"><span class="math inline">[-4,6]</span>,</span> con <span class="math inline">f(x)=x^2-4</span> en <span class="math inline">[-4,0]</span> (<a href="#figura-ej-hipotesis-lagrange">Figura&nbsp;4.31</a>). Dar una expresión de <span class="math inline">f</span> en <span class="math inline">(0,6]</span> para cada caso: (2021/22 2E)</p>
+<ol type="a">
+<li>El teorema de Lagrange se aplica en <span class="nw"><span class="math inline">[-4,6]</span>.</span> Calcular <span class="nw"><span class="math inline">z</span>.</span></li>
+<li>El teorema no se aplica, pero su conclusión se cumple.</li>
+<li>El teorema no se aplica y su conclusión no se cumple.</li>
+</ol>
+<div id="figura-ej-hipotesis-lagrange" class="figura">
+<p><img src="../figs/ej_hipotesis_lagrange.svg" class="img-fluid" alt="Parábola entre x igual a menos 4 y x igual a 0, que vale 12 en menos 4 y menos 4 en 0. El eje llega hasta 6, y de 0 a 6 no hay gráfica." width="360"></p>
+<p><span class="figura-num">Figura&nbsp;4.31.</span> Gráfica de <span class="math inline">f</span> en <span class="nw"><span class="math inline">[-4,0]</span>.</span></p>
+</div>
+<div class="solucion">
+<p>Hay muchas respuestas. Por ejemplo:</p>
+<p>(a) <span class="nw"><span class="math inline">f(x)=x^2-4</span>.</span> La pendiente media es <span class="nw"><span class="math inline">\frac{32-12}{10}=2</span>,</span> y <span class="math inline">2z=2</span> da <span class="nw"><span class="math inline">z=1</span>.</span></p>
+<p>(b) <span class="nw"><span class="math inline">f(x)=14-x</span>,</span> discontinua en <span class="nw"><span class="math inline">x=0</span>.</span> La pendiente media es <span class="nw"><span class="math inline">\frac{8-12}{10}=-\frac25</span>,</span> y <span class="math inline">2z=-\frac25</span> da <span class="nw"><span class="math inline">z=-\frac15\in(-4,0)</span>.</span></p>
+<p>(c) <span class="nw"><span class="math inline">f(x)=x+20</span>,</span> discontinua en <span class="nw"><span class="math inline">x=0</span>.</span> La pendiente media es <span class="nw"><span class="math inline">\frac{26-12}{10}=\frac75</span>.</span> En <span class="nw"><span class="math inline">(-4,0)</span>,</span> <span class="math inline">2z=\frac75</span> da <span class="nw"><span class="math inline">z=\frac7{10}</span>,</span> que no está en ese intervalo, y en <span class="nw"><span class="math inline">(0,6)</span>,</span> <span class="nw"><span class="math inline">f'=1</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-multa" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.11</span></p>
+<p>Un vehículo recorre <span class="math inline">D</span> km en <span class="math inline">m</span> minutos por una carretera con límite de <span class="math inline">v</span> km/h. ¿Cuándo se puede asegurar que ha superado el límite en algún instante?</p>
+<div class="solucion">
+<p>Su velocidad media es <span class="math inline">\frac{60D}{m}</span> km/h. Por el teorema de Lagrange, alcanza ese valor en algún instante, así que se puede asegurar si <span class="nw"><span class="math inline">\frac{60D}{m}&gt;v</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-rl-demostrar" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.12</span></p>
+<p>Demostrar el teorema de Rolle a partir del de Lagrange. (2014/15 2E)</p>
+<div class="solucion">
+<p>Si <span class="nw"><span class="math inline">f(a)=f(b)</span>,</span> el teorema de Lagrange da <span class="math inline">z\in(a,b)</span> con <span class="nw"><span class="math inline">f'(z)=\frac{f(b)-f(a)}{b-a}=0</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="teorema-del-punto-fijo" class="level2">
+<h2 data-anchor-id="teorema-del-punto-fijo">Teorema del punto fijo</h2>
+<div id="ejercicio-pf-exponencial" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.13</span></p>
+<p>Demostrar que la ecuación <span class="math inline">x=e^{-x}</span> tiene una única solución en <span class="nw"><span class="math inline">[0,1]</span>.</span></p>
+<div class="solucion">
+<p>La función <span class="math inline">f(x)=e^{-x}</span> es continua y baja de <span class="math inline">f(0)=1</span> a <span class="nw"><span class="math inline">f(1)=\frac1e\approx0.37</span>,</span> así que sus valores están en <span class="nw"><span class="math inline">[0,1]</span>.</span> Además, <span class="math inline">|f'(x)|=e^{-x}&lt;1</span> en <span class="nw"><span class="math inline">(0,1)</span>.</span> La solución existe y es única (es <span class="nw"><span class="math inline">x\approx0.567</span>)</span>.</p>
+</div>
+</div>
+<div id="ejercicio-pf-cubica" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.14</span></p>
+<p>Escribir la ecuación <span class="math inline">x^3+4x^2-10=0</span> en la forma <span class="math inline">x=\sqrt{\dfrac{10}{4+x}}</span> y demostrar que tiene una única solución en <span class="nw"><span class="math inline">[1,2]</span>.</span></p>
+<div class="solucion">
+<p>Si <span class="nw"><span class="math inline">x\in[1,2]</span>,</span> <span class="math inline">x^2(x+4)=10</span> equivale a <span class="nw"><span class="math inline">x=\sqrt{\frac{10}{4+x}}</span>,</span> porque <span class="nw"><span class="math inline">x&gt;0</span>.</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(x)=\sqrt{\frac{10}{4+x}}</span>,</span> continua en <span class="nw"><span class="math inline">[1,2]</span>.</span> Al crecer <span class="math inline">x</span> baja la raíz, así que los valores van de <span class="math inline">f(1)=\sqrt2\approx1.41</span> a <span class="nw"><span class="math inline">f(2)=\sqrt{5/3}\approx1.29</span>,</span> y todos están en <span class="nw"><span class="math inline">[1,2]</span>.</span> Además, <span class="math display">
+|f'(x)|=\frac{\sqrt{10}}{2\,(4+x)^{3/2}}\le\frac{\sqrt{10}}{2\cdot5^{3/2}}\approx0.14&lt;1.
+</span> La solución existe y es única (es <span class="nw"><span class="math inline">x\approx1.365</span>)</span>.</p>
+</div>
+</div>
+<div id="ejercicio-pf-hipotesis" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.15</span></p>
+<p>La función <span class="math inline">f(x)=x^2</span> tiene dos puntos fijos en <span class="nw"><span class="math inline">[0,1]</span>.</span> ¿Cuáles son? ¿Qué hipótesis del teorema de unicidad no se cumple?</p>
+<div class="solucion">
+<p><span class="math inline">x^2=x</span> da <span class="math inline">x=0</span> y <span class="nw"><span class="math inline">x=1</span>.</span> Las hipótesis de existencia se cumplen, pero <span class="math inline">|f'(x)|=2x</span> no es menor que 1 en todo <span class="nw"><span class="math inline">(0,1)</span>:</span> falla para <span class="nw"><span class="math inline">x\ge\frac12</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="crecimiento-y-puntos-críticos" class="level2">
+<h2 data-anchor-id="crecimiento-y-puntos-críticos">Crecimiento y puntos críticos</h2>
+<div id="ejercicio-cre-racional" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.16</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(x)=\dfrac{x}{1-x^2}</span>.</span> (2016/17 7E)</p>
+<ol type="a">
+<li>Hallar su dominio y los intervalos donde es creciente.</li>
+<li>Razonar si tiene máximos o mínimos.</li>
+<li>Hallar la recta tangente en <span class="nw"><span class="math inline">x=0</span>.</span></li>
+<li>Dibujar <span class="nw"><span class="math inline">f</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) Dominio: <span class="nw"><span class="math inline">x\ne\pm1</span>.</span> Como <span class="nw"><span class="math inline">f'(x)=\dfrac{1+x^2}{(1-x^2)^2}&gt;0</span>,</span> es creciente en cada uno de los intervalos <span class="nw"><span class="math inline">(-\infty,-1)</span>,</span> <span class="math inline">(-1,1)</span> y <span class="nw"><span class="math inline">(1,\infty)</span>.</span> No lo es en todo su dominio: <span class="nw"><span class="math inline">f(-2)=\frac23&gt;f(0)=0</span>.</span></p>
+<p>(b) No tiene extremos locales, porque <span class="math inline">f'</span> nunca se anula y existe en todo el dominio.</p>
+<p>(c) <span class="math inline">f(0)=0</span> y <span class="nw"><span class="math inline">f'(0)=1</span>:</span> la tangente es <span class="nw"><span class="math inline">y=x</span>.</span></p>
+<p>(d) Ver la <a href="#figura-ej-racional">Figura&nbsp;4.32</a>.</p>
+<div id="figura-ej-racional" class="figura">
+<p><img src="../figs/ej_racional.svg" class="img-fluid" alt="Gráfica de x entre 1 menos x al cuadrado, con asíntotas verticales en x igual a 1 y x igual a menos 1. Es creciente en cada uno de los tres tramos, y su tangente en el origen es y igual a x." width="300"></p>
+<p><span class="figura-num">Figura&nbsp;4.32.</span> <span class="math inline">f(x)=\frac{x}{1-x^2}</span> y su tangente en <span class="nw"><span class="math inline">x=0</span>.</span></p>
+</div>
+</div>
+</div>
+<div id="ejercicio-cre-lagrange-bolzano" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.17</span></p>
+<p>Sea <span class="math inline">f(x)=e^x(x-1)-x+2</span> en <span class="nw"><span class="math inline">[0,1]</span>.</span> Estudiar la existencia de extremos locales de <span class="nw"><span class="math inline">f</span>:</span> (2018/19 2E)</p>
+<ol type="a">
+<li>Con el teorema de Lagrange.</li>
+<li>Con el teorema de Bolzano.</li>
+</ol>
+<div class="solucion">
+<p>Se tiene <span class="math inline">f'(x)=x\,e^x-1</span> y <span class="math inline">f''(x)=e^x(1+x)&gt;0</span> en <span class="nw"><span class="math inline">(0,1)</span>.</span></p>
+<p>(a) Como <span class="nw"><span class="math inline">f(0)=f(1)=1</span>,</span> existe <span class="math inline">z\in(0,1)</span> con <span class="nw"><span class="math inline">f'(z)=\frac{f(1)-f(0)}{1}=0</span>.</span> Como <span class="nw"><span class="math inline">f''(z)&gt;0</span>,</span> hay un mínimo local en <span class="nw"><span class="math inline">z</span>.</span></p>
+<p>(b) <span class="math inline">f'</span> es continua, con <span class="math inline">f'(0)=-1&lt;0</span> y <span class="nw"><span class="math inline">f'(1)=e-1&gt;0</span>.</span> Por el teorema de Bolzano, existe <span class="math inline">z\in(0,1)</span> con <span class="nw"><span class="math inline">f'(z)=0</span>,</span> y es un mínimo local por la misma razón.</p>
+</div>
+</div>
+<div id="ejercicio-cre-bolzano" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.18</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(x)=(x^2+1)\,e^{3x-x^2}</span>.</span> Demostrar que <span class="math inline">f'</span> se anula en algún punto de <span class="nw"><span class="math inline">(1,2)</span>.</span> (2011/12 7E)</p>
+<div class="solucion">
+<p><span class="math inline">f'(x)=e^{3x-x^2}\left[2x+(x^2+1)(3-2x)\right]</span> es continua, con <span class="math inline">f'(1)=4e^2&gt;0</span> y <span class="nw"><span class="math inline">f'(2)=-e^2&lt;0</span>.</span> Por el teorema de Bolzano, se anula en algún punto de <span class="nw"><span class="math inline">(1,2)</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-cre-implicita" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.19</span></p>
+<p>Sea <span class="math inline">y(x)</span> una función que cumple <span class="nw"><span class="math inline">y=e^{xy}</span>.</span> (2019/20 3E)</p>
+<ol type="a">
+<li>Calcular <span class="nw"><span class="math inline">y'(x)</span>.</span></li>
+<li>Estudiar el crecimiento y el decrecimiento de <span class="nw"><span class="math inline">y(x)</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) Derivando, <span class="nw"><span class="math inline">y'=(y+x\,y')\,e^{xy}=y^2+x\,y\,y'</span>,</span> así que <span class="nw"><span class="math inline">y'=\dfrac{y^2}{1-xy}</span>.</span></p>
+<p>(b) El numerador es positivo, así que el signo de <span class="math inline">y'</span> es el de <span class="nw"><span class="math inline">1-xy</span>.</span> Como <span class="nw"><span class="math inline">y=e^{xy}</span>,</span> <span class="nw"><span class="math inline">xy=\ln y</span>:</span> la función crece si <span class="math inline">y&lt;e</span> y decrece si <span class="nw"><span class="math inline">y&gt;e</span>.</span> El cambio ocurre en <span class="nw"><span class="math inline">y=e</span>,</span> <span class="nw"><span class="math inline">x=\frac1e</span>,</span> donde la tangente es vertical (<a href="#figura-ej-implicita">Figura&nbsp;4.33</a>).</p>
+<div id="figura-ej-implicita" class="figura">
+<p><img src="../figs/ej_implicita.svg" class="img-fluid" alt="Curva y igual a e elevado a x y. La rama inferior crece hasta el punto de abscisa 1 entre e y ordenada e, donde la tangente es vertical; la rama superior decrece desde ese punto." width="300"></p>
+<p><span class="figura-num">Figura&nbsp;4.33.</span> La curva <span class="nw"><span class="math inline">y=e^{xy}</span>.</span> Crece por debajo de <span class="math inline">y=e</span> y decrece por encima.</p>
+</div>
+</div>
+</div>
+<div id="ejercicio-cre-segunda" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.20</span></p>
+<p>Comprobar que <span class="math inline">f''(0)=0</span> en <span class="nw"><span class="math inline">f(x)=x^3</span>,</span> en <span class="math inline">g(x)=x^4</span> y en <span class="nw"><span class="math inline">h(x)=-x^4</span>,</span> y clasificar <span class="math inline">x=0</span> en cada caso con el test de la primera derivada.</p>
+<div class="solucion">
+<p>Las tres tienen derivada y segunda derivada nulas en <span class="nw"><span class="math inline">x=0</span>.</span> <span class="math inline">f'=3x^2</span> no cambia de signo: no hay extremo. <span class="math inline">g'=4x^3</span> pasa de negativa a positiva: mínimo local. <span class="math inline">h'=-4x^3</span> pasa de positiva a negativa: máximo local. Por eso <span class="math inline">f''(0)=0</span> no decide.</p>
+</div>
+</div>
+<div id="ejercicio-cre-decreciente" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.21</span></p>
+<p>Demostrar que, si <span class="math inline">f'(x)&lt;0</span> para todo <span class="nw"><span class="math inline">x\in(a,b)</span>,</span> <span class="math inline">f</span> es decreciente en <span class="nw"><span class="math inline">(a,b)</span>.</span></p>
+<div class="solucion">
+<p>Si <span class="math inline">x_1&lt;x_2</span> en <span class="nw"><span class="math inline">(a,b)</span>,</span> por el teorema de Lagrange existe <span class="math inline">z\in(x_1,x_2)</span> con <span class="nw"><span class="math inline">f(x_2)-f(x_1)=f'(z)(x_2-x_1)&lt;0</span>,</span> es decir, <span class="nw"><span class="math inline">f(x_1)&gt;f(x_2)</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="concavidad-e-inflexión" class="level2">
+<h2 data-anchor-id="concavidad-e-inflexión">Concavidad e inflexión</h2>
+<div id="ejercicio-con-estudio" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.22</span></p>
+<p>Estudiar los intervalos de crecimiento, los extremos locales, los intervalos de concavidad y los puntos de inflexión de:</p>
+<div class="columnas c2">
+<ol type="a">
+<li><span class="math inline">f(x)=\dfrac{x+1}{x-1}</span></li>
+<li><span class="math inline">f(x)=\dfrac{x+2}{x^2-1}</span></li>
+<li><span class="math inline">f(x)=x\,e^{-x}</span></li>
+<li><span class="math inline">f(x)=x\,e^{2x}</span></li>
+<li><span class="math inline">f(x)=\dfrac{x^2}{x+1}</span></li>
+<li><span class="math inline">f(x)=x^3-3x^2+4x-2</span></li>
+<li><span class="math inline">f(x)=x^4-6x^2+4</span></li>
+<li><span class="math inline">f(x)=|x^2-1|</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) Dominio <span class="nw"><span class="math inline">x\ne1</span>.</span> <span class="nw"><span class="math inline">f'=\frac{-2}{(x-1)^2}&lt;0</span>:</span> decreciente en <span class="math inline">(-\infty,1)</span> y en <span class="nw"><span class="math inline">(1,\infty)</span>,</span> sin extremos. <span class="nw"><span class="math inline">f''=\frac{4}{(x-1)^3}</span>:</span> convexa si <span class="math inline">x&lt;1</span> y cóncava si <span class="nw"><span class="math inline">x&gt;1</span>.</span> Sin inflexión, porque <span class="math inline">x=1</span> no está en el dominio.</p>
+<p>(b) Dominio <span class="nw"><span class="math inline">x\ne\pm1</span>.</span> <span class="math inline">f'=-\frac{x^2+4x+1}{(x^2-1)^2}</span> se anula en <span class="nw"><span class="math inline">x=-2\pm\sqrt3</span>.</span> Decreciente en <span class="nw"><span class="math inline">\left(-\infty,-2-\sqrt3\right)</span>,</span> <span class="math inline">\left(-2+\sqrt3,1\right)</span> y <span class="nw"><span class="math inline">(1,\infty)</span>,</span> y creciente en <span class="math inline">\left(-2-\sqrt3,-1\right)</span> y <span class="nw"><span class="math inline">\left(-1,-2+\sqrt3\right)</span>.</span> Mínimo local en <span class="math inline">x=-2-\sqrt3</span> y máximo local en <span class="nw"><span class="math inline">x=-2+\sqrt3</span>.</span> <span class="math inline">f''=\frac{2(x^3+6x^2+3x+2)}{(x^2-1)^3}</span> se anula solo en <span class="nw"><span class="math inline">x\approx-5.52</span>:</span> convexa en <span class="math inline">(-\infty,-5.52)</span> y <span class="nw"><span class="math inline">(-1,1)</span>,</span> y cóncava en <span class="math inline">(-5.52,-1)</span> y <span class="nw"><span class="math inline">(1,\infty)</span>.</span> Inflexión en <span class="nw"><span class="math inline">x\approx-5.52</span>.</span></p>
+<p>(c) <span class="nw"><span class="math inline">f'=(1-x)e^{-x}</span>:</span> crece si <span class="math inline">x&lt;1</span> y decrece si <span class="nw"><span class="math inline">x&gt;1</span>;</span> máximo en <span class="nw"><span class="math inline">\left(1,\frac1e\right)</span>.</span> <span class="nw"><span class="math inline">f''=(x-2)e^{-x}</span>:</span> convexa si <span class="math inline">x&lt;2</span> y cóncava si <span class="nw"><span class="math inline">x&gt;2</span>;</span> inflexión en <span class="nw"><span class="math inline">\left(2,\frac2{e^2}\right)</span>.</span></p>
+<p>(d) <span class="nw"><span class="math inline">f'=(1+2x)e^{2x}</span>:</span> decrece si <span class="math inline">x&lt;-\frac12</span> y crece si <span class="nw"><span class="math inline">x&gt;-\frac12</span>;</span> mínimo en <span class="nw"><span class="math inline">\left(-\frac12,-\frac1{2e}\right)</span>.</span> <span class="nw"><span class="math inline">f''=4(1+x)e^{2x}</span>:</span> convexa si <span class="math inline">x&lt;-1</span> y cóncava si <span class="nw"><span class="math inline">x&gt;-1</span>;</span> inflexión en <span class="nw"><span class="math inline">\left(-1,-\frac1{e^2}\right)</span>.</span></p>
+<p>(e) Dominio <span class="nw"><span class="math inline">x\ne-1</span>.</span> <span class="nw"><span class="math inline">f'=\frac{x(x+2)}{(x+1)^2}</span>:</span> crece si <span class="math inline">x&lt;-2</span> o <span class="nw"><span class="math inline">x&gt;0</span>,</span> y decrece en <span class="math inline">(-2,-1)</span> y <span class="nw"><span class="math inline">(-1,0)</span>.</span> Máximo local en <span class="math inline">(-2,-4)</span> y mínimo local en <span class="nw"><span class="math inline">(0,0)</span>.</span> <span class="nw"><span class="math inline">f''=\frac{2}{(x+1)^3}</span>:</span> convexa si <span class="math inline">x&lt;-1</span> y cóncava si <span class="nw"><span class="math inline">x&gt;-1</span>.</span> Sin inflexión.</p>
+<p>(f) <span class="math inline">f'=3x^2-6x+4&gt;0</span> en todos los puntos: creciente, sin extremos. <span class="nw"><span class="math inline">f''=6(x-1)</span>:</span> convexa si <span class="math inline">x&lt;1</span> y cóncava si <span class="nw"><span class="math inline">x&gt;1</span>;</span> inflexión en <span class="nw"><span class="math inline">(1,0)</span>.</span></p>
+<p>(g) <span class="nw"><span class="math inline">f'=4x(x^2-3)</span>:</span> decrece en <span class="math inline">\left(-\infty,-\sqrt3\right)</span> y <span class="nw"><span class="math inline">\left(0,\sqrt3\right)</span>,</span> y crece en <span class="math inline">\left(-\sqrt3,0\right)</span> y <span class="nw"><span class="math inline">\left(\sqrt3,\infty\right)</span>.</span> Mínimos en <span class="math inline">\left(\pm\sqrt3,-5\right)</span> y máximo en <span class="nw"><span class="math inline">(0,4)</span>.</span> <span class="nw"><span class="math inline">f''=12(x^2-1)</span>:</span> cóncava si <span class="math inline">|x|&gt;1</span> y convexa si <span class="nw"><span class="math inline">|x|&lt;1</span>;</span> inflexión en <span class="nw"><span class="math inline">(\pm1,-1)</span>.</span></p>
+<p>(h) <span class="math inline">f'</span> no existe en <span class="math inline">x=\pm1</span> y se anula en <span class="nw"><span class="math inline">x=0</span>.</span> Decrece en <span class="math inline">(-\infty,-1)</span> y <span class="nw"><span class="math inline">(0,1)</span>,</span> y crece en <span class="math inline">(-1,0)</span> y <span class="nw"><span class="math inline">(1,\infty)</span>.</span> Mínimos en <span class="math inline">(\pm1,0)</span> y máximo en <span class="nw"><span class="math inline">(0,1)</span>.</span> <span class="math inline">f''=2</span> si <span class="math inline">|x|&gt;1</span> (cóncava) y <span class="math inline">f''=-2</span> si <span class="math inline">|x|&lt;1</span> (convexa). La concavidad cambia en <span class="nw"><span class="math inline">x=\pm1</span>,</span> donde <span class="math inline">f''</span> no existe: son puntos de inflexión, además de mínimos.</p>
+</div>
+</div>
+<div id="ejercicio-con-velocidad" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.23</span></p>
+<p>La velocidad de un objeto que se mueve sobre una recta es <span class="math inline">v(t)=(1-t)(t-3)</span> cm/s, y su posición es <span class="nw"><span class="math inline">x(t)</span>,</span> con <span class="math inline">x(0)=2</span> cm. (2022/23 7E)</p>
+<ol type="a">
+<li>Estudiar el crecimiento y los extremos de <span class="nw"><span class="math inline">x(t)</span>.</span></li>
+<li>Estudiar la concavidad y los puntos de inflexión de <span class="nw"><span class="math inline">x(t)</span>.</span></li>
+<li>Dibujar <span class="math inline">x(t)</span> en <span class="nw"><span class="math inline">[0,5]</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) <span class="math inline">x'=v</span> se anula en <span class="math inline">t=1</span> y <span class="nw"><span class="math inline">t=3</span>.</span> <span class="math inline">x</span> decrece en <span class="nw"><span class="math inline">(0,1)</span>,</span> crece en <span class="math inline">(1,3)</span> y decrece en <span class="nw"><span class="math inline">(3,5)</span>.</span> Mínimo local en <span class="math inline">t=1</span> y máximo local en <span class="nw"><span class="math inline">t=3</span>.</span></p>
+<p>(b) <span class="nw"><span class="math inline">x''=-2t+4</span>:</span> cóncava en <span class="math inline">(0,2)</span> y convexa en <span class="nw"><span class="math inline">(2,5)</span>;</span> inflexión en <span class="nw"><span class="math inline">t=2</span>.</span></p>
+<p>(c) Una función con esa derivada y <span class="math inline">x(0)=2</span> es <span class="math inline">x(t)=-\frac{t^3}{3}+2t^2-3t+2</span> (<a href="#figura-ej-posicion">Figura&nbsp;4.34</a>).</p>
+<div id="figura-ej-posicion" class="figura">
+<p><img src="../figs/ej_posicion.svg" class="img-fluid" alt="Posición x de t entre 0 y 5: baja hasta t igual a 1, sube hasta t igual a 3, y baja. El punto de inflexión está en t igual a 2." width="330"></p>
+<p><span class="figura-num">Figura&nbsp;4.34.</span> <span class="nw"><span class="math inline">x(t)</span>,</span> con mínimo en <span class="nw"><span class="math inline">t=1</span>,</span> inflexión en <span class="math inline">t=2</span> y máximo en <span class="nw"><span class="math inline">t=3</span>.</span></p>
+</div>
+</div>
+</div>
+<div id="ejercicio-con-dron" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.24</span></p>
+<p>La función <span class="math inline">h(x)=-\dfrac{x^3}{160}+\dfrac{3x^2}{80}</span> da la altura de un dron desde que despega hasta que alcanza <span class="math inline">0.2</span> km, tras recorrer <span class="math inline">4</span> km en horizontal (<a href="#figura-ej-dron">Figura&nbsp;4.35</a>). (2017/18 2E)</p>
+<ol type="a">
+<li>Calcular <span class="math inline">h'(x)</span> y <span class="math inline">h''(x)</span> y dibujarlas en la misma gráfica.</li>
+<li>Estudiar el crecimiento, la concavidad, los extremos y los puntos de inflexión de <span class="math inline">h</span> en <span class="nw"><span class="math inline">[0,4]</span>,</span> e interpretarlos.</li>
+<li>Hallar el punto <span class="math inline">x=p</span> donde la velocidad de <span class="math inline">h</span> respecto al desplazamiento horizontal es máxima.</li>
+<li>En <span class="nw"><span class="math inline">x=p</span>,</span> la velocidad horizontal del dron es de <span class="math inline">75</span> km/h. Calcular la velocidad de la altura respecto al tiempo en ese instante.</li>
+<li>A partir del km 4, la velocidad de <span class="math inline">h</span> respecto al desplazamiento horizontal es constante. Dibujar la trayectoria a partir de ese punto.</li>
+</ol>
+<div id="figura-ej-dron" class="figura">
+<p><img src="../figs/ej_dron.svg" class="img-fluid" alt="Trayectoria del dron: sube desde el origen hasta una altura de 0.2 kilómetros en x igual a 4, y su pendiente se anula allí." width="400"></p>
+<p><span class="figura-num">Figura&nbsp;4.35.</span> Trayectoria del dron entre <span class="math inline">x=0</span> y <span class="nw"><span class="math inline">x=4</span>.</span></p>
+</div>
+<div class="solucion">
+<p>(a) <span class="math inline">h'(x)=-\dfrac{3x^2}{160}+\dfrac{3x}{40}</span> y <span class="math inline">h''(x)=-\dfrac{3x}{80}+\dfrac{3}{40}</span> (<a href="#figura-ej-dron-derivadas">Figura&nbsp;4.36</a>).</p>
+<p>(b) <span class="math inline">h'&gt;0</span> en <span class="nw"><span class="math inline">(0,4)</span>:</span> <span class="math inline">h</span> crece, sin extremos en el interior. <span class="math inline">h''&gt;0</span> en <span class="nw"><span class="math inline">(0,2)</span>,</span> donde es cóncava, y <span class="math inline">h''&lt;0</span> en <span class="nw"><span class="math inline">(2,4)</span>,</span> donde es convexa. Hay un punto de inflexión en <span class="nw"><span class="math inline">x=2</span>.</span> La altura siempre aumenta: hasta el km 2, cada vez más deprisa, y después, cada vez más despacio.</p>
+<p>(c) El máximo de <span class="math inline">h'</span> está donde <span class="nw"><span class="math inline">h''=0</span>,</span> en <span class="nw"><span class="math inline">p=2</span>,</span> con <span class="nw"><span class="math inline">h'(2)=\frac3{40}</span>.</span></p>
+<p>(d) Por la regla de la cadena, <span class="math inline">\dfrac{dh}{dt}=\dfrac{dh}{dx}\dfrac{dx}{dt}=\dfrac{3}{40}\cdot75=5.625</span> km/h.</p>
+<p>(e) Si la trayectoria es derivable, la pendiente constante es <span class="nw"><span class="math inline">h'(4)=0</span>.</span> A partir del km 4, el dron vuela horizontalmente a <span class="math inline">0.2</span> km de altura.</p>
+<div id="figura-ej-dron-derivadas" class="figura">
+<p><img src="../figs/ej_dron_derivadas.svg" class="img-fluid" alt="Gráficas de h, de h prima y de h segunda entre 0 y 4. La derivada primera tiene su máximo en x igual a 2, donde se anula la segunda." width="400"></p>
+<p><span class="figura-num">Figura&nbsp;4.36.</span> <span class="nw"><span class="math inline">h</span>,</span> <span class="math inline">h'</span> y <span class="nw"><span class="math inline">h''</span>.</span> El máximo de <span class="math inline">h'</span> coincide con el cero de <span class="nw"><span class="math inline">h''</span>,</span> en <span class="nw"><span class="math inline">x=2</span>.</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="estudio-a-partir-de-gráficas" class="level2">
+<h2 data-anchor-id="estudio-a-partir-de-gráficas">Estudio a partir de gráficas</h2>
+<div id="ejercicio-gra-producto" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.25</span></p>
+<p>La <a href="#figura-ej-graf-producto">Figura&nbsp;4.37</a> muestra una función <span class="math inline">y(x)</span> y su derivada en <span class="nw"><span class="math inline">(a,b)</span>.</span> Estudiar el crecimiento y los extremos locales de <span class="nw"><span class="math inline">h(x)=y(x)\,e^{-x}</span>.</span> (2012/13 3E)</p>
+<div id="figura-ej-graf-producto" class="figura">
+<p><img src="../figs/ej_graf_producto.svg" class="img-fluid" alt="Dos curvas entre a y b: y, positiva y con poca variación, e y prima, que empieza por encima de y, baja por debajo y vuelve a subir por encima. Se cortan en dos puntos." width="375"></p>
+<p><span class="figura-num">Figura&nbsp;4.37.</span> <span class="math inline">y(x)</span> e <span class="math inline">y'(x)</span> en <span class="nw"><span class="math inline">(a,b)</span>.</span></p>
+</div>
+<div class="solucion">
+<p><span class="math inline">h'(x)=e^{-x}\,[y'(x)-y(x)]</span> se anula donde se cortan las curvas. Sean <span class="math inline">c&lt;d</span> esos dos puntos. Como <span class="nw"><span class="math inline">e^{-x}&gt;0</span>,</span> <span class="math inline">h'</span> tiene el signo de <span class="nw"><span class="math inline">y'-y</span>:</span> positivo en <span class="nw"><span class="math inline">(a,c)</span>,</span> negativo en <span class="math inline">(c,d)</span> y positivo en <span class="nw"><span class="math inline">(d,b)</span>.</span> Por tanto, <span class="math inline">h</span> crece, decrece y crece, con un máximo local en <span class="math inline">c</span> y un mínimo local en <span class="nw"><span class="math inline">d</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-gra-inversa" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.26</span></p>
+<p>Sea <span class="math inline">f</span> dos veces derivable en <span class="nw"><span class="math inline">(a,b)</span>,</span> con función inversa <span class="nw"><span class="math inline">f^{-1}</span>.</span> (2013/14 2E, 2016/17 2E)</p>
+<ol type="a">
+<li>Derivar dos veces <span class="math inline">f\bigl(f^{-1}(x)\bigr)=x</span> para hallar <span class="math inline">(f^{-1})'</span> y <span class="nw"><span class="math inline">(f^{-1})''</span>.</span></li>
+<li>Deducir la concavidad de <span class="math inline">f^{-1}</span> en los cuatro casos: <span class="math inline">f</span> creciente o decreciente, y cóncava o convexa.</li>
+</ol>
+<div class="solucion">
+<p>(a) Por la regla de la cadena, <span class="nw"><span class="math inline">f'\bigl(f^{-1}(x)\bigr)\,(f^{-1})'(x)=1</span>,</span> así que <span class="math display">
+(f^{-1})'(x)=\frac{1}{f'\bigl(f^{-1}(x)\bigr)},\qquad (f^{-1})''(x)=-\frac{f''\bigl(f^{-1}(x)\bigr)}{f'\bigl(f^{-1}(x)\bigr)^3}.
+</span></p>
+<p>(b) Con los signos de <span class="math inline">f'</span> y <span class="nw"><span class="math inline">f''</span>:</span> <span class="math display">
+\begin{array}{c|cc}
+&amp; f\ \text{cóncava} &amp; f\ \text{convexa}\\ \hline
+f\ \text{creciente} &amp; f^{-1}\ \text{convexa} &amp; f^{-1}\ \text{cóncava}\\
+f\ \text{decreciente} &amp; f^{-1}\ \text{cóncava} &amp; f^{-1}\ \text{convexa}
+\end{array}
+</span></p>
+</div>
+</div>
+<div id="ejercicio-gra-verdadero" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.27</span></p>
+<p>Sean <span class="math inline">f</span> y <span class="math inline">g</span> las funciones de la figura, las mismas del Ejemplo <a href="graficas.html#ejemplo-grafica-composicion">4.18</a>. Decir si las afirmaciones son ciertas, razonando la respuesta. (2021/22 6E)</p>
+<ol type="a">
+<li>La inversa de <span class="math inline">f</span> restringida a <span class="math inline">(3,4)</span> es decreciente.</li>
+<li>La inversa de <span class="math inline">f</span> restringida a <span class="math inline">(3,4)</span> es convexa.</li>
+<li><span class="math inline">h(x)=g(f(x))</span> es creciente en <span class="nw"><span class="math inline">(1,2)</span>.</span></li>
+</ol>
+<div class="figura-sin-pie">
+<p><img src="../figs/ej_graf_composicion.svg" class="img-fluid" alt="Izquierda: f, una parábola hacia abajo con vértice en (3,6) y extremos en (1,2) y (5,2). Derecha: g, que baja de (2,10) a un mínimo en (5,1) y sube hasta (6,2)." width="600"></p>
+</div>
+<div class="solucion">
+<p>En <span class="nw"><span class="math inline">(3,4)</span>,</span> <span class="math inline">f</span> decrece y es convexa: <span class="math inline">f'&lt;0</span> y <span class="nw"><span class="math inline">f''&lt;0</span>.</span> Se usan las fórmulas del Ejercicio <a href="#ejercicio-gra-inversa">4.26</a>.</p>
+<p>(a) Cierta: <span class="nw"><span class="math inline">(f^{-1})'=\frac{1}{f'}&lt;0</span>.</span></p>
+<p>(b) Cierta: <span class="math inline">(f^{-1})''=-\frac{f''}{f'^3}=-\frac{(-)}{(-)}&lt;0</span>.</p>
+<p>(c) Falsa. Si <span class="nw"><span class="math inline">x\in(1,2)</span>,</span> <span class="nw"><span class="math inline">f(x)\in(2,5)</span>,</span> donde <span class="nw"><span class="math inline">g'&lt;0</span>;</span> además, <span class="nw"><span class="math inline">f'(x)&gt;0</span>.</span> Por tanto, <span class="math inline">h'=g'(f)\,f'&lt;0</span> y <span class="math inline">h</span> es decreciente.</p>
+</div>
+</div>
+<div id="ejercicio-gra-compuesta" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.28</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(t)=h(x(t))</span>,</span> donde <span class="math inline">x(t)</span> y <span class="math inline">h(x)</span> son las funciones de la <a href="#figura-ej-graf-compuesta">Figura&nbsp;4.38</a>, dos veces derivables. (2025/26 2E)</p>
+<ol type="a">
+<li>Estudiar el crecimiento y los extremos locales de <span class="nw"><span class="math inline">f</span>.</span></li>
+<li>Estudiar la concavidad y los puntos de inflexión de <span class="nw"><span class="math inline">f</span>.</span></li>
+</ol>
+<div id="figura-ej-graf-compuesta" class="figura">
+<p><img src="../figs/ej_graf_compuesta.svg" class="img-fluid" alt="Izquierda: x de t decreciente entre c y d, de b a a, con un punto de inflexión en t igual a p, donde vale q. Derecha: h de x creciente entre a y b, con un punto de inflexión en x igual a q." width="600"></p>
+<p><span class="figura-num">Figura&nbsp;4.38.</span> <span class="math inline">x(t)</span> en <span class="nw"><span class="math inline">(c,d)</span>,</span> con inflexión en <span class="nw"><span class="math inline">t=p</span>,</span> y <span class="math inline">h(x)</span> en <span class="nw"><span class="math inline">(a,b)</span>,</span> con inflexión en <span class="nw"><span class="math inline">x=q=x(p)</span>.</span></p>
+</div>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">f'(t)=h'(x(t))\,x'(t)</span>.</span> Como <span class="math inline">h'&gt;0</span> y <span class="math inline">x'&lt;0</span> en todos los puntos, <span class="nw"><span class="math inline">f'&lt;0</span>:</span> <span class="math inline">f</span> es decreciente y no tiene extremos locales.</p>
+<p>(b) <span class="nw"><span class="math inline">f''(t)=h''(x(t))\,x'(t)^2+h'(x(t))\,x''(t)</span>.</span></p>
+<ul>
+<li>Si <span class="nw"><span class="math inline">t\in(c,p)</span>,</span> <span class="nw"><span class="math inline">x(t)\in(q,b)</span>:</span> <span class="nw"><span class="math inline">h''&gt;0</span>,</span> <span class="math inline">h'&gt;0</span> y <span class="nw"><span class="math inline">x''&gt;0</span>,</span> así que <span class="math inline">f''&gt;0</span> y <span class="math inline">f</span> es cóncava.</li>
+<li>Si <span class="nw"><span class="math inline">t\in(p,d)</span>,</span> <span class="nw"><span class="math inline">x(t)\in(a,q)</span>:</span> <span class="nw"><span class="math inline">h''&lt;0</span>,</span> <span class="math inline">h'&gt;0</span> y <span class="nw"><span class="math inline">x''&lt;0</span>,</span> así que <span class="math inline">f''&lt;0</span> y <span class="math inline">f</span> es convexa.</li>
+</ul>
+<p>Hay un punto de inflexión en <span class="nw"><span class="math inline">t=p</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="optimización" class="level2">
+<h2 data-anchor-id="optimización">Optimización</h2>
+<div id="ejercicio-opt-deposito" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.29</span></p>
+<p>Hay que construir un depósito cilíndrico sin tapa de <span class="nw"><span class="math inline">5000\ \text{m}^3</span>.</span> La base cuesta <span class="math inline">5</span> €/m<sup>2</sup> y la pared lateral, <span class="math inline">8</span> €/m<sup>2</sup>. ¿Qué dimensiones son las más económicas? (2015/16 2E)</p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">V=\pi r^2h=5000</span>,</span> el coste en función del radio es <span class="math display">
+c(r)=5\pi r^2+8\cdot2\pi rh=5\pi r^2+\frac{80000}{r},\qquad r&gt;0.
+</span> <span class="math inline">c'(r)=10\pi r-\dfrac{80000}{r^2}=0</span> da <span class="nw"><span class="math inline">r^3=\dfrac{8000}{\pi}</span>,</span> es decir, <span class="math inline">r=\dfrac{20}{\pi^{1/3}}\approx13.66</span> m, y entonces <span class="math inline">h=\dfrac{5000}{\pi r^2}=\dfrac{25}{2\pi^{1/3}}\approx8.53</span> m.</p>
+<p>Como <span class="math inline">c''(r)=10\pi+\dfrac{160000}{r^3}&gt;0</span> y es el único punto crítico en <span class="nw"><span class="math inline">r&gt;0</span>,</span> es el mínimo absoluto.</p>
+</div>
+</div>
+<div id="ejercicio-opt-alambre" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.30</span></p>
+<p>Un alambre de 10 m se corta en dos partes. Con una se forma un cuadrado y con la otra, un triángulo equilátero. ¿Por dónde hay que cortarlo para que la suma de las dos áreas sea mínima? (2023/24 2E)</p>
+<div class="solucion">
+<p>Si el triángulo usa <span class="math inline">x</span> metros, su lado es <span class="nw"><span class="math inline">\frac x3</span>,</span> y el del cuadrado, <span class="nw"><span class="math inline">\frac{10-x}{4}</span>:</span> <span class="math display">
+A(x)=\frac{\sqrt3}{36}x^2+\frac{(10-x)^2}{16},\qquad x\in[0,10].
+</span> <span class="math inline">A'(x)=\dfrac{\sqrt3}{18}x-\dfrac{10-x}{8}=0</span> da <span class="math inline">x=\dfrac{90}{9+4\sqrt3}\approx5.65</span> m. Comparando, <span class="nw"><span class="math inline">A(5.65)\approx2.72</span>,</span> <span class="math inline">A(0)=6.25</span> y <span class="math inline">A(10)\approx4.81</span> m<sup>2</sup>. Hay que usar <span class="math inline">5.65</span> m para el triángulo y <span class="math inline">4.35</span> m para el cuadrado.</p>
+</div>
+</div>
+<div id="ejercicio-opt-postes" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.31</span></p>
+<p>Dos postes de 2 y 3 m de altura están a 5 m de distancia. Hay que unir sus extremos superiores con un cable sujeto a un punto del suelo situado entre ellos (<a href="#figura-ej-postes">Figura&nbsp;4.39</a>). ¿En qué punto se usa la menor cantidad de cable? (2017/18 2E)</p>
+<div id="figura-ej-postes" class="figura">
+<p><img src="../figs/ej_postes.svg" class="img-fluid" alt="Dos postes verticales de 2 y 3 metros separados 5 metros. Un cable baja desde el extremo de cada poste a un punto del suelo, a distancia x del poste de 2 metros." width="330"></p>
+<p><span class="figura-num">Figura&nbsp;4.39.</span> Cable sujeto a una distancia <span class="math inline">x</span> del poste de 2 m.</p>
+</div>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">l(x)=\sqrt{x^2+4}+\sqrt{(5-x)^2+9}</span>,</span> con <span class="nw"><span class="math inline">x\in[0,5]</span>.</span> La condición <span class="math inline">l'(x)=0</span> es <span class="math display">
+\frac{x}{\sqrt{x^2+4}}=\frac{5-x}{\sqrt{(5-x)^2+9}}\quad\Longrightarrow\quad 9x^2=4(5-x)^2\quad\Longrightarrow\quad x=2,
+</span> donde se ha elegido la raíz de <span class="nw"><span class="math inline">[0,5]</span>.</span> Comparando, <span class="nw"><span class="math inline">l(2)=5\sqrt2\approx7.07</span>,</span> <span class="math inline">l(0)=2+\sqrt{34}\approx7.83</span> y <span class="nw"><span class="math inline">l(5)=\sqrt{29}+3\approx8.39</span>.</span> El mínimo está a 2 m del poste de 2 m.</p>
+</div>
+</div>
+<div id="ejercicio-opt-elipse" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.32</span></p>
+<p>En la curva <span class="math inline">\dfrac{x^2}{400}+\dfrac{y^2}{225}=1</span> se inscribe un rectángulo con los lados paralelos a los ejes (<a href="#figura-ej-elipse">Figura&nbsp;4.40</a>). Hallar las dimensiones del rectángulo de área máxima. (2019/20 6E)</p>
+<div id="figura-ej-elipse" class="figura">
+<p><img src="../figs/ej_elipse.svg" class="img-fluid" alt="Elipse centrada en el origen, de semiejes 20 y 15, con un rectángulo inscrito de vértices (más menos x, más menos y)." width="330"></p>
+<p><span class="figura-num">Figura&nbsp;4.40.</span> Rectángulo inscrito, con un vértice en <span class="nw"><span class="math inline">(x,y)</span>.</span></p>
+</div>
+<div class="solucion">
+<p>Con un vértice <span class="math inline">(x,y)</span> en el primer cuadrante, <span class="math inline">A=4xy</span> e <span class="nw"><span class="math inline">y=15\sqrt{1-\frac{x^2}{400}}</span>,</span> así que <span class="math display">
+A(x)=60\,x\sqrt{1-\frac{x^2}{400}},\qquad x\in[0,20].
+</span> <span class="math inline">A'(x)=0</span> da <span class="nw"><span class="math inline">1-\dfrac{x^2}{400}=\dfrac{x^2}{400}</span>,</span> es decir, <span class="nw"><span class="math inline">x=10\sqrt2</span>,</span> y entonces <span class="nw"><span class="math inline">y=\dfrac{15}{\sqrt2}</span>.</span> Como <span class="nw"><span class="math inline">A(0)=A(20)=0</span>,</span> es el máximo. La base es <span class="nw"><span class="math inline">2x=20\sqrt2</span>,</span> la altura es <span class="math inline">2y=15\sqrt2</span> y el área es 600.</p>
+</div>
+</div>
+<div id="ejercicio-opt-recta" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.33</span></p>
+<p>Una recta pasa por el punto <span class="math inline">(1,2)</span> y corta a los ejes en <span class="math inline">(a,0)</span> y <span class="nw"><span class="math inline">(0,b)</span>,</span> con <span class="math inline">a,b&gt;0</span> (<a href="#figura-ej-recta-ejes">Figura&nbsp;4.41</a>). Hallar <span class="math inline">a</span> y <span class="math inline">b</span> para que el triángulo que forman la recta y los ejes tenga área mínima. (2024/25 3E)</p>
+<div id="figura-ej-recta-ejes" class="figura">
+<p><img src="../figs/ej_recta_ejes.svg" class="img-fluid" alt="Recta decreciente que pasa por el punto (1,2) y corta a los ejes en (a,0) y (0,b), formando un triángulo con ellos." width="282"></p>
+<p><span class="figura-num">Figura&nbsp;4.41.</span> Triángulo formado por los ejes y una recta que pasa por <span class="nw"><span class="math inline">(1,2)</span>.</span></p>
+</div>
+<div class="solucion">
+<p>Por semejanza de triángulos, <span class="nw"><span class="math inline">\dfrac ba=\dfrac{2}{a-1}</span>,</span> así que <span class="nw"><span class="math inline">b=\dfrac{2a}{a-1}</span>,</span> con <span class="nw"><span class="math inline">a&gt;1</span>,</span> y <span class="math display">
+A(a)=\frac{ab}{2}=\frac{a^2}{a-1},\qquad A'(a)=\frac{a(a-2)}{(a-1)^2}=0\quad\Longrightarrow\quad a=2,
+</span> porque <span class="nw"><span class="math inline">a&gt;1</span>.</span> Como <span class="nw"><span class="math inline">A''(a)=\dfrac{2}{(a-1)^3}</span>,</span> <span class="nw"><span class="math inline">A''(2)=2&gt;0</span>.</span> Es el único punto crítico en <span class="nw"><span class="math inline">a&gt;1</span>,</span> así que es el mínimo absoluto. Entonces <span class="math inline">b=4</span> y el área es <span class="nw"><span class="math inline">A=4</span>.</span></p>
+<p>Comprobación: la recta <span class="math inline">y=-2x+4</span> pasa por <span class="nw"><span class="math inline">(1,2)</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="polinomio-de-taylor" class="level2">
+<h2 data-anchor-id="polinomio-de-taylor">Polinomio de Taylor</h2>
+<div id="ejercicio-tay-maclaurin" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.34</span></p>
+<p>Calcular el polinomio de Maclaurin de grado 3 de:</p>
+<div class="columnas c2">
+<ol type="a">
+<li><span class="math inline">f(x)=\tan x</span></li>
+<li><span class="math inline">f(x)=\dfrac{1}{x+1}</span></li>
+<li><span class="math inline">f(x)=\ln(\cos x)</span></li>
+<li><span class="math inline">f(x)=\sqrt{x+1}</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">P_3(x)=x+\dfrac{x^3}{3}</span>.</span> (b) <span class="nw"><span class="math inline">P_3(x)=1-x+x^2-x^3</span>.</span> (c) <span class="nw"><span class="math inline">P_3(x)=-\dfrac{x^2}{2}</span>.</span> (d) <span class="math inline">P_3(x)=1+\dfrac x2-\dfrac{x^2}{8}+\dfrac{x^3}{16}</span>.</p>
+</div>
+</div>
+<div id="ejercicio-tay-grado-n" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.35</span></p>
+<p>Calcular el polinomio de Maclaurin de:</p>
+<div class="columnas c2">
+<ol type="a">
+<li><span class="nw"><span class="math inline">f(x)=e^{-x}</span>,</span> grado <span class="math inline">n</span></li>
+<li><span class="nw"><span class="math inline">f(x)=\ln(1+x)</span>,</span> grado <span class="math inline">n</span></li>
+<li><span class="nw"><span class="math inline">f(x)=\sinh x</span>,</span> grado <span class="math inline">2n+1</span></li>
+<li><span class="nw"><span class="math inline">f(x)=\cos2x</span>,</span> grado <span class="math inline">2n</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">\sum\limits_{k=0}^{n}\dfrac{(-1)^kx^k}{k!}</span>.</span> (b) <span class="nw"><span class="math inline">\sum\limits_{k=1}^{n}\dfrac{(-1)^{k-1}x^k}{k}</span>.</span> (c) <span class="math inline">\sum\limits_{k=0}^{n}\dfrac{x^{2k+1}}{(2k+1)!}</span>. (d) <span class="math inline">\sum\limits_{k=0}^{n}\dfrac{(-1)^k(2x)^{2k}}{(2k)!}</span>.</p>
+</div>
+</div>
+<div id="ejercicio-tay-polinomio" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.36</span></p>
+<p>Calcular el polinomio de Taylor de grado 2 de <span class="math inline">f(x)=x^4-3x^2-2x</span> en <span class="nw"><span class="math inline">a=-1</span>.</span> ¿Qué grado debe tener el polinomio para coincidir con <span class="math inline">f</span> en todos los puntos?</p>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">f(-1)=0</span>,</span> <span class="math inline">f'(-1)=0</span> y <span class="nw"><span class="math inline">f''(-1)=6</span>,</span> así que <span class="nw"><span class="math inline">P_2(x)=3(x+1)^2</span>.</span> Hace falta grado 4, porque <span class="math inline">f</span> es un polinomio de grado 4 y sus derivadas de orden 5 o más son cero.</p>
+</div>
+</div>
+<div id="ejercicio-tay-exp-f" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.37</span></p>
+<p><span class="math inline">P_2(x)=-x+2x^2</span> es el polinomio de Maclaurin de grado 2 de <span class="nw"><span class="math inline">f</span>.</span> Calcular el de <span class="nw"><span class="math inline">g(x)=e^{f(x)}</span>.</span> (2019/20 2E)</p>
+<div class="solucion">
+<p>Del polinomio se lee <span class="nw"><span class="math inline">f(0)=0</span>,</span> <span class="math inline">f'(0)=-1</span> y <span class="nw"><span class="math inline">f''(0)=4</span>.</span> Como <span class="math inline">g'=f'g</span> y <span class="nw"><span class="math inline">g''=f''g+f'g'</span>,</span> resulta <span class="nw"><span class="math inline">g(0)=1</span>,</span> <span class="math inline">g'(0)=-1</span> y <span class="nw"><span class="math inline">g''(0)=5</span>.</span> Por tanto, <span class="nw"><span class="math inline">Q_2(x)=1-x+\dfrac52x^2</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-tay-implicita" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.38</span></p>
+<p>Sea <span class="math inline">y=e^{xy}</span> la curva del Ejercicio <a href="#ejercicio-cre-implicita">4.19</a>. (2024/25 7E)</p>
+<ol type="a">
+<li>Calcular su polinomio de Maclaurin de grado 2, en el punto <span class="nw"><span class="math inline">(0,1)</span>.</span></li>
+<li>Aproximar el valor de <span class="math inline">y</span> en <span class="nw"><span class="math inline">x=0.1</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) Derivando, <span class="math inline">y'=(y+xy')\,e^{xy}</span> e <span class="nw"><span class="math inline">y''=(y+xy')^2e^{xy}+(2y'+xy'')\,e^{xy}</span>.</span> En <span class="nw"><span class="math inline">(0,1)</span>,</span> <span class="math inline">y'=1</span> e <span class="nw"><span class="math inline">y''=3</span>,</span> así que <span class="nw"><span class="math inline">P_2(x)=1+x+\dfrac32x^2</span>.</span></p>
+<p>(b) <span class="nw"><span class="math inline">y(0.1)\approx P_2(0.1)=1.115</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-tay-grafica" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.39</span></p>
+<p>Sea <span class="math inline">f</span> la función de la figura y <span class="math inline">P_2(x)=a+b(x-4)+c(x-4)^2</span> su polinomio de Taylor de grado 2 en <span class="nw"><span class="math inline">x=4</span>.</span> Decir el signo de <span class="nw"><span class="math inline">a</span>,</span> <span class="math inline">b</span> y <span class="nw"><span class="math inline">c</span>.</span> (2021/22 6E)</p>
+<div class="figura-sin-pie">
+<p><img src="../figs/ej_graf_composicion.svg" class="img-fluid" alt="Izquierda: f, una parábola hacia abajo con vértice en (3,6) y extremos en (1,2) y (5,2). Derecha: g, que baja de (2,10) a un mínimo en (5,1) y sube hasta (6,2)." width="600"></p>
+</div>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">a=f(4)&gt;0</span>.</span> <span class="nw"><span class="math inline">b=f'(4)&lt;0</span>,</span> porque <span class="math inline">f</span> decrece. <span class="nw"><span class="math inline">c=\frac{f''(4)}{2}&lt;0</span>,</span> porque <span class="math inline">f</span> es convexa.</p>
+</div>
+</div>
+</section>
+<section id="error-de-taylor" class="level2">
+<h2 data-anchor-id="error-de-taylor">Error de Taylor</h2>
+<div id="ejercicio-err-maclaurin" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.40</span></p>
+<p>Calcular el polinomio de Maclaurin indicado y acotar el error en <span class="nw"><span class="math inline">x=1</span>:</span></p>
+<div class="columnas c3">
+<ol type="a">
+<li><span class="nw"><span class="math inline">f(x)=e^x</span>,</span> grado 4</li>
+<li><span class="nw"><span class="math inline">f(x)=\cos x</span>,</span> grado 5</li>
+<li><span class="nw"><span class="math inline">f(x)=\sqrt{x+1}</span>,</span> grado 2</li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) <span class="math inline">P_4(x)=1+x+\dfrac{x^2}{2!}+\dfrac{x^3}{3!}+\dfrac{x^4}{4!}</span>, con <span class="nw"><span class="math inline">|E_4(1)|\le\dfrac{e}{5!}</span>.</span></p>
+<p>(b) <span class="nw"><span class="math inline">P_5(x)=1-\dfrac{x^2}{2!}+\dfrac{x^4}{4!}</span>,</span> con <span class="nw"><span class="math inline">|E_5(1)|\le\dfrac{1}{6!}</span>.</span></p>
+<p>(c) <span class="nw"><span class="math inline">P_2(x)=1+\dfrac x2-\dfrac{x^2}{8}</span>,</span> con <span class="nw"><span class="math inline">|E_2(1)|\le\dfrac{1}{16}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-err-cubica" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.41</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(x)=\sqrt[3]{1+x}</span>.</span> (2020/21 2E)</p>
+<ol type="a">
+<li>Calcular su polinomio de Maclaurin de grado 2.</li>
+<li>Aproximar <span class="math inline">\sqrt[3]{0.9}</span> con ese polinomio.</li>
+<li>Acotar el error cometido.</li>
+</ol>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">P_2(x)=1+\dfrac x3-\dfrac{x^2}{9}</span>.</span></p>
+<p>(b) <span class="math inline">\sqrt[3]{0.9}\approx P_2(-0.1)=\dfrac{869}{900}\approx0.965556</span>.</p>
+<p>(c) <span class="math inline">f'''(x)=\frac{10}{27}(1+x)^{-8/3}</span> es decreciente, así que su máximo en <span class="math inline">(-0.1,0)</span> está en <span class="math inline">x=-0.1</span> y vale <span class="math inline">0.491</span> aproximadamente. Por tanto, <span class="math inline">|E_2(-0.1)|\le\dfrac{(0.1)^3}{3!}\cdot0.491\approx8.2\cdot10^{-5}</span>.</p>
+</div>
+</div>
+<div id="ejercicio-err-quinta" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.42</span></p>
+<p>La <a href="#figura-ej-quinta">Figura&nbsp;4.42</a> muestra la derivada quinta de una función <span class="nw"><span class="math inline">y(x)</span>.</span> Se aproxima <span class="math inline">y(0)</span> con el polinomio de Taylor de grado 4 centrado en <span class="nw"><span class="math inline">a=-2</span>.</span> Acotar el error cometido. (2012/13 6E)</p>
+<div id="figura-ej-quinta" class="figura">
+<p><img src="../figs/ej_quinta.svg" class="img-fluid" alt="Gráfica de la derivada quinta de y entre menos 4 y 3.5. En el intervalo de menos 2 a 0 toma valores entre un mínimo cercano a menos 3 y 1." width="400"></p>
+<p><span class="figura-num">Figura&nbsp;4.42.</span> Gráfica de <span class="nw"><span class="math inline">y^{(5)}(x)</span>.</span></p>
+</div>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">E_4(0)=\dfrac{y^{(5)}(z)}{5!}\,2^5</span>,</span> con <span class="nw"><span class="math inline">z\in(-2,0)</span>.</span> En ese intervalo, <span class="math inline">|y^{(5)}|&lt;3</span> según la gráfica, así que <span class="nw"><span class="math inline">|E_4(0)|&lt;3\cdot\dfrac{2^5}{5!}=0.8</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-err-graficas" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.43</span></p>
+<p>La <a href="#figura-ej-taylor-error">Figura&nbsp;4.43</a> muestra <span class="nw"><span class="math inline">y(x)</span>,</span> <span class="math inline">y'(x)</span> e <span class="nw"><span class="math inline">y''(x)</span>.</span> (2022/23 2E)</p>
+<ol type="a">
+<li>Calcular el polinomio de Taylor de grado 1 en <span class="nw"><span class="math inline">a=-1</span>.</span></li>
+<li>Acotar el error de aproximar <span class="math inline">y\left(-\frac13\right)</span> con ese polinomio.</li>
+<li>Calcular el error exacto y comprobar la cota.</li>
+</ol>
+<div id="figura-ej-taylor-error" class="figura">
+<p><img src="../figs/ej_taylor_error.svg" class="img-fluid" alt="Gráficas de y, y prima e y segunda entre menos 1.5 y 1.5. y segunda es una recta decreciente; y prima, una parábola con máximo cerca de menos 0.5; y, una cúbica con máximo cerca de 0.8." width="450"></p>
+<p><span class="figura-num">Figura&nbsp;4.43.</span> <span class="nw"><span class="math inline">y</span>,</span> <span class="math inline">y'</span> e <span class="nw"><span class="math inline">y''</span>.</span></p>
+</div>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">P_1(x)=-4+8(x+1)</span>.</span></p>
+<p>(b) <span class="math inline">|y''|&lt;6</span> en <span class="nw"><span class="math inline">\left(-1,-\frac13\right)</span>,</span> así que <span class="nw"><span class="math inline">|E|&lt;6\cdot\dfrac{(2/3)^2}{2!}=\dfrac43</span>.</span></p>
+<p>(c) <span class="math inline">y\left(-\frac13\right)=2</span> y <span class="nw"><span class="math inline">P_1\left(-\frac13\right)=\frac43</span>,</span> así que <span class="nw"><span class="math inline">|E|=\frac23&lt;\frac43</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-err-punto" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.44</span></p>
+<p>Para la función de la <a href="#figura-ej-taylor-error">Figura&nbsp;4.43</a>, hallar el punto <span class="math inline">z</span> del teorema de Taylor con <span class="nw"><span class="math inline">a=-1</span>,</span> <span class="math inline">n=1</span> y <span class="nw"><span class="math inline">x=1</span>.</span> (2013/14 3E)</p>
+<div class="solucion">
+<p>El error real es <span class="nw"><span class="math inline">E_1(1)=y(1)-P_1(1)=8-12=-4</span>.</span> Por el teorema, <span class="nw"><span class="math inline">E_1(1)=\dfrac{y''(z)}{2}\,2^2=2y''(z)</span>.</span> Igualando, <span class="nw"><span class="math inline">y''(z)=-2</span>,</span> y en la gráfica se lee <span class="nw"><span class="math inline">z=-\frac13</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="serie-de-taylor" class="level2">
+<h2 data-anchor-id="serie-de-taylor">Serie de Taylor</h2>
+<div id="ejercicio-ser-maclaurin" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.45</span></p>
+<p>Calcular la serie de Maclaurin de: (e) 2018/19 5E, (f) 2018/19 3E</p>
+<div class="columnas c2">
+<ol type="a">
+<li><span class="math inline">f(x)=\sin x</span></li>
+<li><span class="math inline">f(x)=x\sin2x</span></li>
+<li><span class="math inline">f(x)=x^3e^x</span></li>
+<li><span class="math inline">f(x)=\dfrac{1}{1-x}</span></li>
+<li><span class="math inline">f(x)=e^{-|x|}</span></li>
+<li><span class="math inline">f(x)=\ln\dfrac{1+x}{1-x}</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) <span class="math inline">\sum\limits_{n=0}^{\infty}\dfrac{(-1)^nx^{2n+1}}{(2n+1)!}</span>, para todo <span class="nw"><span class="math inline">x</span>.</span></p>
+<p>(b) <span class="math inline">\sum\limits_{n=0}^{\infty}\dfrac{(-1)^n2^{2n+1}x^{2n+2}}{(2n+1)!}</span>, para todo <span class="nw"><span class="math inline">x</span>.</span></p>
+<p>(c) <span class="nw"><span class="math inline">\sum\limits_{n=0}^{\infty}\dfrac{x^{n+3}}{n!}</span>,</span> para todo <span class="nw"><span class="math inline">x</span>.</span></p>
+<p>(d) <span class="nw"><span class="math inline">\sum\limits_{n=0}^{\infty}x^n</span>,</span> para <span class="nw"><span class="math inline">x\in(-1,1)</span>.</span></p>
+<p>(e) No tiene: <span class="math inline">f</span> no es derivable en <span class="nw"><span class="math inline">x=0</span>.</span></p>
+<p>(f) Como <span class="nw"><span class="math inline">f(x)=\ln(1+x)-\ln(1-x)</span>,</span> restando las dos series, <span class="math inline">2\sum\limits_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}</span>, para <span class="nw"><span class="math inline">x\in(-1,1)</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-ser-ecuacion" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.46</span></p>
+<p>Sea <span class="math inline">y(x)</span> una función con <span class="math inline">y'(x)=y(x)+e^x</span> e <span class="nw"><span class="math inline">y(0)=0</span>.</span> Calcular su serie de Maclaurin y deducir de ella cuál es la función. (2018/19 2E)</p>
+<div class="solucion">
+<p>Derivando la ecuación, <span class="nw"><span class="math inline">y^{(n)}(0)=y^{(n-1)}(0)+1</span>,</span> así que <span class="nw"><span class="math inline">y^{(n)}(0)=n</span>.</span> Por tanto, <span class="math display">
+y(x)=\sum_{n=1}^{\infty}\frac{n\,x^n}{n!}=\sum_{n=1}^{\infty}\frac{x^n}{(n-1)!}=x\left(1+x+\frac{x^2}{2!}+\dots\right)=x\,e^x.
+</span> Comprobación: <span class="nw"><span class="math inline">(xe^x)'=e^x+xe^x=y+e^x</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-ser-euler" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;4.47</span></p>
+<p>Sustituyendo <span class="math inline">x</span> por <span class="math inline">ix</span> en la serie de <span class="nw"><span class="math inline">e^x</span>,</span> obtener la fórmula de Euler, <span class="nw"><span class="math inline">e^{ix}=\cos x+i\sin x</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">i^2=-1</span>,</span> los términos pares son reales y los impares, imaginarios: <span class="math display">
+e^{ix}=\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots\right)+i\left(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots\right)=\cos x+i\sin x.
+</span> Es un argumento formal: las series se han obtenido con <span class="math inline">x</span> real y no se demuestra aquí que la de <span class="math inline">e^x</span> valga para números complejos.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../04_estudio_local/resumen.html" class="pagination-link" aria-label="4.11 Resumen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4.11 Resumen</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>window.PDF_CAPITULO = "estudio_local.pdf";</script>
+<script src="../js/apuntes.js"></script>
+
+
+
+
+</body></html>
