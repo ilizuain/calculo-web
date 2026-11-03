@@ -1,5 +1,155 @@
 [
   {
+    "objectID": "02_sucesiones/ejercicios.html",
+    "href": "02_sucesiones/ejercicios.html",
+    "title": "2.8 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 2.1\nDada la sucesión x_1=2, x_n=3x_{n-1}, escribir sus cinco primeros términos y hallar su término general.\n\n2,\\ 6,\\ 18,\\ 54,\\ 162; x_n=2\\cdot3^{n-1}.\n\n\n\nEjercicio 2.2\nEstudiar el crecimiento y la acotación de las siguientes sucesiones:\n\n\na_n=n^2\na_n=-2n+1\na_n=\\dfrac{(-1)^n}{n}\na_n=\\begin{cases}n&n\\text{ par}\\\\[2pt]\\dfrac1n&n\\text{ impar}\\end{cases}\n\n\n\n(a) Creciente; acotada inferiormente, no superiormente. (b) Decreciente; acotada superiormente, no inferiormente. (c) Ni creciente ni decreciente; acotada, -1\\le a_n\\le\\frac12. (d) Ni creciente ni decreciente (a_1=1, a_2=2, a_3=\\frac13); acotada inferiormente, no superiormente.\n\n\n\nEjercicio 2.3\nDecidir si las siguientes afirmaciones son ciertas para todo k\\in\\mathbb{R}. Demostrar las ciertas y dar un contraejemplo de las falsas.\n\nSi \\{x_n\\} es creciente, \\{k\\,x_n\\} es creciente.\nSi \\{x_n\\} está acotada, \\{k\\,x_n\\} está acotada.\n\n\n(a) Falsa: con x_n=n y k=-1, \\{-n\\} es decreciente. (b) Cierta: si p\\le x_n\\le q, entonces |x_n|\\le M con M=\\max\\{|p|,|q|\\}, y por tanto -|k|M\\le k\\,x_n\\le|k|M.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#sucesiones-y-sus-propiedades",
+    "href": "02_sucesiones/ejercicios.html#sucesiones-y-sus-propiedades",
+    "title": "2.8 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 2.1\nDada la sucesión x_1=2, x_n=3x_{n-1}, escribir sus cinco primeros términos y hallar su término general.\n\n2,\\ 6,\\ 18,\\ 54,\\ 162; x_n=2\\cdot3^{n-1}.\n\n\n\nEjercicio 2.2\nEstudiar el crecimiento y la acotación de las siguientes sucesiones:\n\n\na_n=n^2\na_n=-2n+1\na_n=\\dfrac{(-1)^n}{n}\na_n=\\begin{cases}n&n\\text{ par}\\\\[2pt]\\dfrac1n&n\\text{ impar}\\end{cases}\n\n\n\n(a) Creciente; acotada inferiormente, no superiormente. (b) Decreciente; acotada superiormente, no inferiormente. (c) Ni creciente ni decreciente; acotada, -1\\le a_n\\le\\frac12. (d) Ni creciente ni decreciente (a_1=1, a_2=2, a_3=\\frac13); acotada inferiormente, no superiormente.\n\n\n\nEjercicio 2.3\nDecidir si las siguientes afirmaciones son ciertas para todo k\\in\\mathbb{R}. Demostrar las ciertas y dar un contraejemplo de las falsas.\n\nSi \\{x_n\\} es creciente, \\{k\\,x_n\\} es creciente.\nSi \\{x_n\\} está acotada, \\{k\\,x_n\\} está acotada.\n\n\n(a) Falsa: con x_n=n y k=-1, \\{-n\\} es decreciente. (b) Cierta: si p\\le x_n\\le q, entonces |x_n|\\le M con M=\\max\\{|p|,|q|\\}, y por tanto -|k|M\\le k\\,x_n\\le|k|M.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#convergencia",
+    "href": "02_sucesiones/ejercicios.html#convergencia",
+    "title": "2.8 Ejercicios",
+    "section": "Convergencia",
+    "text": "Convergencia\n\nEjercicio 2.4\nSea L el límite de la sucesión convergente a_n=\\dfrac{n-3}{n+1}. Para \\varepsilon=10^{-10}, hallar el menor m tal que a_n\\in(L-\\varepsilon,L+\\varepsilon) para todo n&gt;m. (2011/12 4E)\n\nL=1 y a_n=1-\\dfrac{4}{n+1}&lt;1, así que basta imponer a_n&gt;1-\\varepsilon: \\dfrac{4}{n+1}&lt;\\varepsilon\\iff n&gt;4\\cdot10^{10}-1. Luego m=39999999999.\n\n\n\nEjercicio 2.5\nEstudiar la convergencia de las siguientes sucesiones:\n\nx_n=\\begin{cases}1&n\\text{ par}\\\\[2pt]\\dfrac1n&n\\text{ impar}\\end{cases}\ny_n=\\begin{cases}3&n\\le10^6\\\\[2pt]\\dfrac1n&n&gt;10^6\\end{cases}\nz_n=\\begin{cases}n^2&n\\text{ par}\\\\[2pt]1+\\dfrac1n&n\\text{ impar}\\end{cases}\n\n\n(a) No converge: los términos pares valen 1 y los impares se acercan a 0. (b) Converge a 0: los primeros términos no importan. (c) No converge: los términos pares crecen sin límite.\n\n\n\nEjercicio 2.6\nEstudiar el crecimiento y la convergencia de la sucesión a_n=\\begin{cases}n^3&n&lt;100\\\\[2pt]5-\\dfrac2n&n\\ge100\\end{cases} (2018/19 5E)\n\nNi creciente ni decreciente: sube hasta a_{99}=99^3 y después a_{100}=4.98&lt;a_{99}. Converge y su límite es 5.\n\n\n\nEjercicio 2.7\nEscribir con símbolos la condición «L no es el límite de \\{x_n\\}».\n\n\\exists\\varepsilon&gt;0\\ /\\ \\forall n_0\\in\\mathbb{N}\\quad\\exists n&gt;n_0\\ /\\ x_n\\notin(L-\\varepsilon,L+\\varepsilon).\n\n\n\nEjercicio 2.8\nDecidir si las siguientes afirmaciones son ciertas. Demostrar las ciertas y dar un contraejemplo de las falsas.\n\nSi cada término de \\{a_n\\} está más cerca de L que el anterior, L es el límite de \\{a_n\\}. (2011/12 3E)\nSi \\{a_n\\} converge a L, ningún término vale L. (2011/12 5E)\nSi \\{a_n\\} converge a L&lt;0, a partir de cierto término todos son negativos. (2011/12 2E, 6E)\n\n\n(a) Falsa: a_n=\\frac1n se acerca cada vez más a -2, pero su límite es 0. (b) Falsa: la sucesión constante a_n=L converge a L. (c) Cierta: con \\varepsilon=-L&gt;0, a partir de cierto término a_n&lt;L+\\varepsilon=0.\n\n\n\nEjercicio 2.9\nSea \\{a_n\\} una sucesión convergente con infinitos términos positivos e infinitos términos negativos. Demostrar formalmente que su límite es 0. (2012/13 1E)\n\nSi L&gt;0, con \\varepsilon=L todos los términos a partir de cierto n_0 están en (0,2L) y son positivos, lo que contradice que haya infinitos negativos. Si L&lt;0, con \\varepsilon=-L ocurre lo mismo con el signo contrario. Luego L=0.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#propiedades-de-las-sucesiones-convergentes",
+    "href": "02_sucesiones/ejercicios.html#propiedades-de-las-sucesiones-convergentes",
+    "title": "2.8 Ejercicios",
+    "section": "Propiedades de las sucesiones convergentes",
+    "text": "Propiedades de las sucesiones convergentes\n\nEjercicio 2.10\nCalcular los siguientes límites con las operaciones con límites:\n\n\n\\dfrac{n+5}{2n}\n\\dfrac{3n^2-1}{n^2+n}\n\\left(2+\\dfrac1n\\right)\\left(3-\\dfrac1{n^2}\\right)\n\n\n\n(a) \\frac12; (b) 3; (c) 6.\n\n\n\nEjercicio 2.11\nSean \\{a_n\\} y \\{b_n\\} tales que \\{a_n+b_n\\} converge. Decir qué afirmaciones son ciertas: (2011/12 4E, 2014/15 3E)\n\n\\{a_n\\} y \\{b_n\\} convergen necesariamente.\nEs posible que ni \\{a_n\\} ni \\{b_n\\} converjan.\nUna de las dos, \\{a_n\\} o \\{b_n\\}, converge necesariamente.\n\n\nSolo (b): con a_n=n y b_n=-n, ninguna converge, pero a_n+b_n=0. Este mismo ejemplo prueba que (a) y (c) son falsas.\n\n\n\nEjercicio 2.12\nDecir si es cierta la afirmación: si \\{a_n\\} y \\{b_n\\} no convergen, \\{a_n\\cdot b_n\\} no converge. (2021/22 3E)\n\nFalsa: con a_n=b_n=(-1)^n, ninguna converge, pero a_n\\cdot b_n=1.\n\n\n\nEjercicio 2.13\nSea \\{a_n\\} una sucesión con límite L tal que a_n&gt;b para todo n. Decir si son ciertas las afirmaciones: (2025/26 1E)\n\nEs posible que L=b.\nNecesariamente, L\\ge b.\n\n\n(a) Cierta: a_n=b+\\frac1n cumple a_n&gt;b y tiende a b. (b) Cierta: si L&lt;b, con \\varepsilon=b-L, a partir de cierto término a_n&lt;L+\\varepsilon=b, lo que contradice la hipótesis.\n\n\n\nEjercicio 2.14\n(Teorema del sándwich). Sean \\{x_n\\} e \\{y_n\\} dos sucesiones que convergen a L, y sea \\{z_n\\} tal que x_n\\le z_n\\le y_n para todo n. Demostrar que \\{z_n\\} converge a L.\n\nDado \\varepsilon&gt;0, existen n_1 y n_2 tales que x_n\\in(L-\\varepsilon,L+\\varepsilon) para n&gt;n_1 e y_n\\in(L-\\varepsilon,L+\\varepsilon) para n&gt;n_2. Para n&gt;\\max\\{n_1,n_2\\}, \nL-\\varepsilon&lt;x_n\\le z_n\\le y_n&lt;L+\\varepsilon,\n es decir, z_n\\in(L-\\varepsilon,L+\\varepsilon).\n\n\n\nEjercicio 2.15\nLa sucesión \\{a_n\\} converge a L, con a_n=x_n si n es par y a_n=y_n si n es impar. (2026/27 1E)\n\nDemostrar que si \\{x_n\\} e \\{y_n\\} convergen, sus límites son iguales.\n¿Deben converger \\{x_n\\} e \\{y_n\\}?\n\n\n(a) Sea \\{x_n\\}\\to\\ell y supongamos que \\ell\\neq L. Con \\varepsilon igual a la mitad de la distancia entre \\ell y L, los intervalos alrededor de \\ell y de L no se solapan. Para n par y grande, a_n=x_n estaría en los dos, lo cual es imposible. Luego \\ell=L, y de igual modo para \\{y_n\\}.\n(b) No: con x_n=(-1)^n e y_n=(-1)^{n+1}, ninguna converge, pero a_n=1 para todo n.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#convergencia-monótona-y-divergencia",
+    "href": "02_sucesiones/ejercicios.html#convergencia-monótona-y-divergencia",
+    "title": "2.8 Ejercicios",
+    "section": "Convergencia monótona y divergencia",
+    "text": "Convergencia monótona y divergencia\n\nEjercicio 2.16\nEstudiar el crecimiento de a_n=\\dfrac{2n+1}{n+1} y hallar su supremo, su ínfimo y su límite.\n\na_n=2-\\dfrac1{n+1} es creciente, porque \\frac1{n+1} decrece. El ínfimo es a_1=\\frac32. Como a_n&lt;2 y \\frac1{n+1}\\to0, el supremo y el límite son 2.\n\n\n\nEjercicio 2.17\nEstudiar el crecimiento, el supremo, el ínfimo y la convergencia de (2019/20 4E) \na_n=\\begin{cases}4+\\dfrac1n&n&lt;10\\\\[6pt]\\left(\\dfrac23\\right)^n&n\\ge10\\end{cases}\n\n\nDecrece en cada trozo y en el salto, porque a_9=4+\\frac19&gt;a_{10}=\\left(\\frac23\\right)^{10}: es decreciente. El supremo es a_1=5. Como a_n&gt;0, está acotada inferiormente y, por el teorema de la convergencia monótona, converge a su ínfimo L. Para n\\ge10, a_{n+1}=\\frac23a_n; en el límite, L=\\frac23L, así que L=0. El ínfimo y el límite son 0.\n\n\n\nEjercicio 2.18\nEstudiar el crecimiento, la acotación, el supremo, el ínfimo y la convergencia de (2020/21 1E) \na_n=\\begin{cases}\\left(\\dfrac4n\\right)^n&n&lt;20\\\\[6pt]1-\\dfrac1n&n\\ge20\\end{cases}\n\n\nNo es creciente, porque a_3=\\frac{64}{27}&lt;a_2=4. No es decreciente, porque a_{20}=\\frac{19}{20}&gt;a_{19}. Converge a L=1, porque los primeros 19 términos no afectan al límite; por tanto, está acotada. En el primer trozo, los términos bajan desde a_1=a_2=4 hasta a_{19}=\\left(\\frac4{19}\\right)^{19}. En el segundo, \\frac{19}{20}\\le a_n&lt;1. El supremo es 4 y el ínfimo es \\left(\\frac4{19}\\right)^{19}.\n\n\n\nEjercicio 2.19\nSea, con a,b\\in\\mathbb{R}, (2018/19 7E) \nx_n=\\begin{cases}-\\dfrac{a}{n}&n&lt;10\\\\[6pt]b\\,(-1)^n&n\\ge10\\end{cases}\n\n\nHallar a y b sabiendo que el supremo es 3, el ínfimo es -2 y |x_{10}-x_9|=\\frac73.\nEstudiar el crecimiento y la convergencia de \\{x_n\\}.\n\n\n(a) El segundo trozo oscila entre |b| y -|b|. Si a\\ge0, el primer trozo es negativo o nulo y creciente, así que el supremo sale del segundo: |b|=3; pero entonces el ínfimo sería como mucho -3, y no -2. Luego a&lt;0: el primer trozo es positivo y decreciente, el ínfimo sale del segundo, |b|=2, y el supremo es x_1=-a=3. Con a=-3, x_9=\\frac13 y x_{10}=b, y \\left|b-\\frac13\\right|=\\frac73 solo se cumple con b=-2.\n(b) No es decreciente, porque x_{11}=2&gt;x_{10}=-2; no es creciente, porque x_{10}&lt;x_9. No converge, porque sus términos saltan entre -2 y 2.\n\n\n\nEjercicio 2.20\nUsando la definición, demostrar que \\{2n-5\\} diverge a \\infty.\n\nDado M, 2n-5&gt;M\\iff n&gt;\\frac{M+5}{2}. Basta tomar como n_0 un natural mayor o igual que \\frac{M+5}{2}.\n\n\n\nEjercicio 2.21\nSea \\{a_n\\} una sucesión creciente con límite 0. Decir qué afirmaciones son correctas: (2011/12 4E)\n\nExiste n tal que a_n&gt;0.\na_n&lt;0 para todo n.\n\\{a_n\\} puede tener términos positivos y negativos.\nExiste n tal que a_n=0.\n\n\nSolo (b). Por el teorema de la convergencia monótona, 0 es el supremo, así que a_n\\le0 para todo n. Si algún a_n fuera 0, por ser creciente sería a_{n+1}&gt;0, lo cual es imposible.\n\n\n\nEjercicio 2.22\nSea \\{a_n\\} una sucesión divergente a -\\infty y sea A\\in\\mathbb{R}. Estudiar la convergencia de \\left\\{1+\\dfrac{A}{a_n}\\right\\}. (2012/13 4E)\n\nConverge a 1. Si A=0, es inmediato. Si A\\ne0, dado \\varepsilon&gt;0, se toma M=-\\frac{|A|}{\\varepsilon}. Existe n_0 tal que a_n&lt;M&lt;0 para n&gt;n_0, y entonces \\frac{|A|}{|a_n|}&lt;\\varepsilon, es decir, \\frac{A}{a_n}\\in(-\\varepsilon,\\varepsilon). Por tanto, 1+\\frac{A}{a_n}\\in(1-\\varepsilon,1+\\varepsilon).",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#series-numéricas",
+    "href": "02_sucesiones/ejercicios.html#series-numéricas",
+    "title": "2.8 Ejercicios",
+    "section": "Series numéricas",
+    "text": "Series numéricas\n\nEjercicio 2.23\nLas sumas parciales de una serie son S_N=\\dfrac{2N}{N+1}. Hallar a_1, a_n para n\\ge2 y la suma de la serie.\n\na_1=S_1=1. Para n\\ge2, a_n=S_n-S_{n-1}=\\dfrac{2n}{n+1}-\\dfrac{2n-2}{n}=\\dfrac{2}{n(n+1)}. La suma es \\lim\\limits_{N\\to\\infty}S_N=2.\n\n\n\nEjercicio 2.24\n¿Es convergente \\displaystyle\\sum_{n=1}^\\infty a_n, con la sucesión del Ejercicio 2.18? (2020/21 1E)\n\nNo: \\{a_n\\} tiende a 1, y no a 0.\n\n\n\nEjercicio 2.25\nUna serie \\displaystyle\\sum_{n=1}^\\infty a_n de términos positivos se llama hipergeométrica si existen \\alpha,\\beta,\\gamma\\in\\mathbb{R}, con \\alpha y \\gamma no nulos a la vez, tales que \\dfrac{a_{n+1}}{a_n}=\\dfrac{\\alpha n+\\beta}{\\alpha n+\\gamma}. Si \\alpha+\\beta\\ge\\gamma, la serie es divergente. Si \\alpha+\\beta&lt;\\gamma, es convergente y su suma es el límite de la sucesión \n\\left\\{\\frac{a_n(\\alpha n+\\beta)-a_1\\gamma}{\\alpha+\\beta-\\gamma}\\right\\}.\n Con este resultado: (2025/26 1E)\n\nCalcular \\displaystyle\\sum_{n=1}^\\infty\\frac1{(n+2)(n+3)}.\nPara cada n, se forma un rectángulo de base \\frac1n y altura \\frac1{n+1}. ¿Converge la suma de las bases? ¿Y la suma de las áreas? Si convergen, hallar su valor.\n\n\n(a) \\dfrac{a_{n+1}}{a_n}=\\dfrac{n+2}{n+4}, con \\alpha=1, \\beta=2 y \\gamma=4. Como 3&lt;4, converge. Con a_1=\\frac1{12} y a_n(n+2)=\\frac1{n+3}\\to0, la suma es \\dfrac{0-\\frac13}{-1}=\\dfrac13.\n(b) Las bases forman la serie armónica: \\dfrac{a_{n+1}}{a_n}=\\dfrac{n}{n+1}, con \\alpha=1, \\beta=0 y \\gamma=1. Como \\alpha+\\beta=\\gamma, diverge. Las áreas son \\frac1{n(n+1)}: \\dfrac{a_{n+1}}{a_n}=\\dfrac{n}{n+2}, con \\alpha=1, \\beta=0 y \\gamma=2. Converge, con a_1=\\frac12 y a_n\\,n=\\frac1{n+1}\\to0, y la suma es \\dfrac{0-1}{-1}=1, como en el Ejemplo 2.14.\n\n\n\nEjercicio 2.26\nCon el resultado del Ejercicio 2.25: (2025/26 3E)\n\nDemostrar que \\displaystyle\\sum_{n=1}^\\infty\\frac1{(2n-1)(2n+1)(2n+3)} es hipergeométrica y convergente, y calcular su suma.\nPara cada n, se forma un cilindro de radio \\frac1n y altura n. ¿Converge la suma de sus volúmenes?\n\n\n(a) \\dfrac{a_{n+1}}{a_n}=\\dfrac{2n-1}{2n+5}, con \\alpha=2, \\beta=-1 y \\gamma=5. Como 1&lt;5, converge. Con a_1=\\frac1{15} y a_n(2n-1)=\\frac1{(2n+1)(2n+3)}\\to0, la suma es \\dfrac{0-\\frac13}{-4}=\\dfrac1{12}.\n(b) Los volúmenes son \\pi\\frac1{n^2}n=\\frac{\\pi}{n}, así que la suma es \\pi por la serie armónica. No converge.\n\n\n\nEjercicio 2.27\nDemostrar que \\displaystyle\\sum_{n=1}^\\infty\\frac1{\\sqrt{n}} es divergente, comparando sus sumas parciales con las de la serie armónica.\n\nComo \\sqrt{n}\\le n, se tiene \\frac1{\\sqrt{n}}\\ge\\frac1n. Cada suma parcial es mayor o igual que la de la serie armónica, que no está acotada. Por tanto, sus sumas parciales tampoco lo están, y la serie no converge.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/ejercicios.html#serie-geométrica",
+    "href": "02_sucesiones/ejercicios.html#serie-geométrica",
+    "title": "2.8 Ejercicios",
+    "section": "Serie geométrica",
+    "text": "Serie geométrica\n\nEjercicio 2.28\nEscribir el decimal periódico 0.272727\\ldots como una serie geométrica y hallar su valor como fracción.\n\n\\dfrac{27}{100}+\\dfrac{27}{100^2}+\\dots=\\dfrac{27/100}{1-1/100}=\\dfrac{27}{99}=\\dfrac3{11}.\n\n\n\nEjercicio 2.29\nEstudiar la convergencia de las series y, si convergen, hallar su suma:\n\n\\displaystyle\\sum_{n=0}^\\infty\\left(-\\frac13\\right)^n\n\\displaystyle\\sum_{n=2}^\\infty\\left(\\frac23\\right)^n\n\\displaystyle\\sum_{n=1}^\\infty3\\left(\\frac14\\right)^n\n\\displaystyle\\sum_{n=0}^\\infty\\left(\\frac54\\right)^n\n\n\n(a) \\dfrac1{1+\\frac13}=\\dfrac34. (b) \\dfrac{4/9}{1-\\frac23}=\\dfrac43. (c) \\dfrac{3/4}{1-\\frac14}=1. (d) Divergente, porque r=\\frac54&gt;1.\n\n\n\nEjercicio 2.30\nEstudiar la convergencia de \\displaystyle\\sum_{n=1}^\\infty a_n y, si converge, calcular su suma, con (2023/24 1E) \na_n=\\begin{cases}n^2&n\\le2\\\\[6pt]\\dfrac1{3^n}&n&gt;2\\end{cases}\n\n\nLos dos primeros términos suman 1+4=5. El resto es una serie geométrica de razón \\frac13 y primer término \\frac1{27}, que suma \\dfrac{1/27}{1-\\frac13}=\\dfrac1{18}. La serie converge, y S=5+\\dfrac1{18}=\\dfrac{91}{18}.\n\n\n\nEjercicio 2.31\n¿Es convergente \\displaystyle\\sum_{n=1}^\\infty a_n, con la sucesión del Ejercicio 2.17? (2019/20 4E)\n\nSí. Los 9 primeros términos tienen suma finita, y el resto es una serie geométrica de razón \\frac23. Aunque no se pide, su suma es 36+\\sum_{n=1}^9\\frac1n+\\dfrac{(2/3)^{10}}{1/3}\\approx38.88.\n\n\n\nEjercicio 2.32\nSea a_n=\\dfrac{(-3)^n}{4^{n+2}}, con n\\ge0. (2026/27 1E)\n\n¿Es convergente la serie \\displaystyle\\sum_{n=0}^\\infty a_n? Si lo es, hallar su suma.\n¿Es convergente la sucesión \\{a_n\\}? Justificar la respuesta.\n\n\n(a) Es geométrica de razón r=-\\frac34 y primer término a_0=\\frac1{16}. Converge, y su suma es \\dfrac{1/16}{1+\\frac34}=\\dfrac1{28}.\n(b) Sí: como la serie converge, \\{a_n\\}\\to0, por el Teorema 2.5.\n\n\n\nEjercicio 2.33\nSe parte de un cuadrado de lado 1. Uniendo los puntos medios de sus lados se obtiene otro cuadrado, y se repite el proceso indefinidamente. Hallar la suma de las áreas y la suma de los perímetros de todos los cuadrados.\n\nCada cuadrado tiene la mitad de área que el anterior, y su lado es el anterior dividido entre \\sqrt2. Áreas: \\dfrac1{1-\\frac12}=2. Perímetros: \\dfrac4{1-\\frac1{\\sqrt2}}=8+4\\sqrt2\\approx13.66.\n\n\n\nEjercicio 2.34\nSabiendo que \\displaystyle\\sum_{k=0}^\\infty r^k=\\frac1{1-r} si |r|&lt;1, calcular:\n\n\\displaystyle\\sum_{k=1}^\\infty k\\,r^k\n\\displaystyle\\sum_{k=1}^\\infty k(k+1)\\,r^k\n\nAyuda: derivar respecto de r término a término.\n\n(a) Derivando, \\displaystyle\\sum_{k=1}^\\infty k\\,r^{k-1}=\\frac1{(1-r)^2}. Multiplicando por r, \n\\sum_{k=1}^\\infty k\\,r^k=\\frac{r}{(1-r)^2}.\n\n(b) Derivando otra vez, \\displaystyle\\sum_{k=2}^\\infty k(k-1)\\,r^{k-2}=\\frac2{(1-r)^3}. Cambiando k por k+1, \\displaystyle\\sum_{k=1}^\\infty (k+1)k\\,r^{k-1}=\\frac2{(1-r)^3}. Multiplicando por r, \n\\sum_{k=1}^\\infty k(k+1)\\,r^k=\\frac{2r}{(1-r)^3}.\n\nComprobación con r=\\frac12: (a) da 2 y (b) da 8, que coinciden con las sumas numéricas.\n\n\n\nEjercicio 2.35\n(*) La serie \\displaystyle\\sum_{k=1}^\\infty k\\,r^k del Ejercicio 2.34 converge si |r|&lt;1 y diverge si |r|\\ge1. Sea g(x) la función de la Figura 2.9, definida en [-0.25,0.5], y sea S=\\displaystyle\\sum_{k=1}^\\infty k\\,g(x)^k. (2024/25 1E)\n\nDeterminar los valores de x para los que S es convergente.\nCalcular S para esos valores.\n\n\n\nFigura 2.9. Función g(x).\n\n\n(a) Converge si |g(x)|&lt;1, es decir, para x\\in(-0.25,-0.2)\\cup(-0.05,0.1)\\cup(0.25,0.5].\n(b) Por el Ejercicio 2.34, S=\\dfrac{g(x)}{(1-g(x))^2}.",
+    "crumbs": [
+      "2.8 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/monotona.html",
+    "href": "02_sucesiones/monotona.html",
+    "title": "2.4 Convergencia monótona y divergencia",
+    "section": "",
+    "text": "Para demostrar con la definición que una sucesión converge hay que conocer antes su límite. Si la sucesión es creciente o decreciente, basta con mirar sus cotas.",
+    "crumbs": [
+      "2.4 Convergencia monótona y divergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/monotona.html#supremo-e-ínfimo",
+    "href": "02_sucesiones/monotona.html#supremo-e-ínfimo",
+    "title": "2.4 Convergencia monótona y divergencia",
+    "section": "Supremo e ínfimo",
+    "text": "Supremo e ínfimo\nLas cotas no son únicas (Figura 2.1). De todas ellas, interesan las más ajustadas.\n\nDefinición 2.5\nUna sucesión acotada superiormente tiene una cota superior mínima, que se llama supremo. Una sucesión acotada inferiormente tiene una cota inferior máxima, que se llama ínfimo.\n\n\nEjemplo 2.10\nHallar el supremo y el ínfimo de a_n=-1+\\dfrac1n, la sucesión decreciente del Ejemplo 2.2.\n\nSupremo. Como la sucesión es decreciente, el mayor término es a_1=0. Es cota superior, y ningún número menor lo es, porque a_1 quedaría por encima. El supremo es 0.\nÍnfimo. Como \\frac1n&gt;0, -1 es cota inferior. Ningún número mayor, -1+\\delta con \\delta&gt;0, lo es, porque \\frac1n&lt;\\delta a partir de cierto término. El ínfimo es -1.\nEl supremo es un término de la sucesión, pero el ínfimo no lo es: ningún a_n vale -1.",
+    "crumbs": [
+      "2.4 Convergencia monótona y divergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/monotona.html#teorema-de-la-convergencia-monótona",
+    "href": "02_sucesiones/monotona.html#teorema-de-la-convergencia-monótona",
+    "title": "2.4 Convergencia monótona y divergencia",
+    "section": "Teorema de la convergencia monótona",
+    "text": "Teorema de la convergencia monótona\nUna sucesión creciente y acotada superiormente no puede pasar de su supremo, y sus términos suben sin parar. Solo le queda acercarse a él.\n\nTeorema 2.4 (convergencia monótona)\nSi \\{x_n\\} es creciente y acotada superiormente, es convergente, y su límite es el supremo.\nSi \\{x_n\\} es decreciente y acotada inferiormente, es convergente, y su límite es el ínfimo.\n\nEl teorema garantiza la convergencia sin conocer el límite.\nEl recíproco es falso: a_n=\\frac{(-1)^n}{n} tiende a 0 sin ser creciente ni decreciente (Figura 2.1).\n\nEjemplo 2.11\nDemostrar que a_n=1-\\dfrac1n es convergente y hallar su límite con el teorema de la convergencia monótona.\n\nPartiendo de n&lt;n+1: \n\\frac1n&gt;\\frac1{n+1}\n\\quad\\Rightarrow\\quad\n1-\\frac1n&lt;1-\\frac1{n+1}\n\\quad\\Rightarrow\\quad\na_n&lt;a_{n+1}.\n La sucesión es creciente. Además, a_n&lt;1 para todo n: está acotada superiormente y, por el teorema, converge a su supremo.\nEl supremo es 1: es cota superior, y ningún número menor, 1-\\delta con \\delta&gt;0, lo es, porque \\frac1n&lt;\\delta a partir de cierto término.\nComprobación: con las operaciones con límites, 1-\\frac1n\\to1-0=1.",
+    "crumbs": [
+      "2.4 Convergencia monótona y divergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/monotona.html#divergencia-a-infinito",
+    "href": "02_sucesiones/monotona.html#divergencia-a-infinito",
+    "title": "2.4 Convergencia monótona y divergencia",
+    "section": "Divergencia a infinito",
+    "text": "Divergencia a infinito\nLos términos de \\{n^2\\} superan cualquier número si se avanza lo suficiente. Esa sucesión no converge, pero su comportamiento también tiene una definición precisa (Figura 2.6).\n\nDefinición 2.6\nLa sucesión \\{y_n\\} es divergente a \\infty si \n\\forall M\\in\\mathbb{R}\\quad\\exists n_0\\in\\mathbb{N}\\ /\\quad\\forall n&gt;n_0\\Rightarrow y_n&gt;M.\n Se escribe \\lim\\limits_{n\\to\\infty}y_n=\\infty.\nLa sucesión \\{y_n\\} es divergente a -\\infty si \n\\forall M\\in\\mathbb{R}\\quad\\exists n_0\\in\\mathbb{N}\\ /\\quad\\forall n&gt;n_0\\Rightarrow y_n&lt;M.\n Se escribe \\lim\\limits_{n\\to\\infty}y_n=-\\infty.\n\n\n\nFigura 2.6. A partir de n_0, todos los términos están (a) por encima de M o (b) por debajo de M.\n\nUna sucesión divergente a \\pm\\infty no está acotada. El recíproco es falso: y_n=(-1)^n\\,n no está acotada, pero sus términos saltan de signo, así que no converge ni diverge a \\pm\\infty.\n\nEjemplo 2.12\nUsando la definición, demostrar que \\{n^2\\} diverge a \\infty y que \\{1-n\\} diverge a -\\infty.\n\nSucesión \\{n^2\\}. Dado M, si M\\le0 todos los términos cumplen n^2&gt;M. Si M&gt;0, \nn^2&gt;M\\iff n&gt;\\sqrt{M},\n así que basta tomar como n_0 un natural mayor o igual que \\sqrt{M}.\nSucesión \\{1-n\\}. Dado M, \n1-n&lt;M\\iff n&gt;1-M,\n así que basta tomar como n_0 un natural mayor o igual que 1-M.\nComprobación: con M=100, n_0=10 y 11^2=121&gt;100. Con M=-100, n_0=101 y 1-102=-101&lt;-100.",
+    "crumbs": [
+      "2.4 Convergencia monótona y divergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/monotona.html#estudio-completo-de-una-sucesión",
+    "href": "02_sucesiones/monotona.html#estudio-completo-de-una-sucesión",
+    "title": "2.4 Convergencia monótona y divergencia",
+    "section": "Estudio completo de una sucesión",
+    "text": "Estudio completo de una sucesión\nLo habitual en una sucesión definida a trozos es estudiar todas estas propiedades a la vez.\n\nRecuerda: estudio de una sucesión\n\nCrecimiento: cada trozo y los saltos entre trozos. Para negarlo, basta una pareja de términos.\nAcotación: cotas de cada trozo.\nSupremo e ínfimo: se comparan los de cada trozo.\nConvergencia: solo importa el último trozo.\n\n\n\nEjemplo 2.13\nEstudiar el crecimiento, la acotación, el supremo, el ínfimo y la convergencia de (2014/15 4E) \na_n=\\begin{cases}-\\dfrac1{n^2}&n&lt;100\\\\[6pt]n&100\\le n\\le200\\\\[6pt]1-\\dfrac1n&n&gt;200\\end{cases}\n\n\nCrecimiento. Como a_2=-\\frac14&gt;a_1=-1, no es decreciente. Como a_{201}=1-\\frac1{201}&lt;a_{200}=200, no es creciente.\nAcotación. En cada trozo:\n\nn&lt;100: -1\\le a_n&lt;0;\n100\\le n\\le200: 100\\le a_n\\le200;\nn&gt;200: 0&lt;a_n&lt;1.\n\nPor tanto, -1\\le a_n\\le200 para todo n: está acotada.\nSupremo e ínfimo. Las dos cotas son términos de la sucesión, así que el supremo es a_{200}=200 y el ínfimo es a_1=-1.\nConvergencia. Los primeros 200 términos no afectan al límite, y 1-\\frac1n\\to1. Converge a L=1.\nEl límite no es el supremo ni el ínfimo: la sucesión no es creciente ni decreciente, así que no se aplica el teorema de la convergencia monótona.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.16–2.22.",
+    "crumbs": [
+      "2.4 Convergencia monótona y divergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/definicion.html",
+    "href": "02_sucesiones/definicion.html",
+    "title": "2.1 Sucesiones y sus propiedades",
+    "section": "",
+    "text": "Una sucesión coloca números uno detrás de otro, como las medidas sucesivas de un experimento. Lo primero es saber darla y reconocer si crece o decrece y si se mantiene entre dos valores.",
+    "crumbs": [
+      "2.1 Sucesiones y sus propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/definicion.html#definición-y-formas-de-darla",
+    "href": "02_sucesiones/definicion.html#definición-y-formas-de-darla",
+    "title": "2.1 Sucesiones y sus propiedades",
+    "section": "Definición y formas de darla",
+    "text": "Definición y formas de darla\n\nDefinición 2.1\nUna sucesión es un conjunto numerado de valores reales: \n\\{x_1,x_2,x_3,x_4,\\dots\\}=\\{x_n\\}_{n\\in\\mathbb{N}}.\n El número x_n es el término n-ésimo de la sucesión.\n\nUna sucesión se puede dar de tres formas:\n\nPor sus valores: \\{3,\\ 3.1,\\ 3.14,\\ 3.141,\\ \\dots\\}.\nPor su término general, una regla que da x_n para cada n: x_n=\\dfrac1n.\nPor recurrencia, una regla que da cada término a partir de los anteriores, junto con los primeros términos: x_1=1, x_n=2x_{n-1}.\n\n\nEjemplo 2.1\nLa sucesión de Fibonacci empieza con x_1=1 y x_2=1, y sigue la relación de recurrencia x_n=x_{n-1}+x_{n-2} para n&gt;2. Hallar x_{10}.\n\nLa regla usa los dos términos anteriores, por eso hay que dar los dos primeros. Sumando paso a paso: \n1,\\ 1,\\ 2,\\ 3,\\ 5,\\ 8,\\ 13,\\ 21,\\ 34,\\ 55,\\ \\dots\n Por tanto, x_{10}=55.",
+    "crumbs": [
+      "2.1 Sucesiones y sus propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/definicion.html#crecimiento-y-acotación",
+    "href": "02_sucesiones/definicion.html#crecimiento-y-acotación",
+    "title": "2.1 Sucesiones y sus propiedades",
+    "section": "Crecimiento y acotación",
+    "text": "Crecimiento y acotación\n\nDefinición 2.2\nUna sucesión \\{a_n\\} es creciente si a_{n+1}&gt;a_n para todo n\\in\\mathbb{N}, y decreciente si a_{n+1}&lt;a_n para todo n\\in\\mathbb{N}.\n\nLa desigualdad es estricta: una sucesión constante no es creciente ni decreciente. Tampoco lo es una sucesión que sube y baja.\n\nDefinición 2.3\nUna sucesión \\{a_n\\} está acotada si existen p,q\\in\\mathbb{R} tales que \np\\le a_n\\le q\\quad\\text{para todo }n\\in\\mathbb{N}.\n El número p es una cota inferior y q una cota superior. Si solo existe q, la sucesión está acotada superiormente; si solo existe p, inferiormente.\n\nLas cotas no son únicas: cualquier número mayor que q también es cota superior.\nUna sucesión se dibuja con n en el eje horizontal y a_n en el vertical (Figura 2.1).\n\n\nFigura 2.1. Sucesión (a) creciente, (b) decreciente y (c) ni creciente ni decreciente. Las tres están acotadas: en discontinuo, una cota inferior p y una cota superior q.\n\n\nEjemplo 2.2\nEstudiar el crecimiento y la acotación de a_n=-1+\\dfrac1n.\n\nPartiendo de n&lt;n+1: \n\\frac1n&gt;\\frac1{n+1}\n\\quad\\Rightarrow\\quad\n-1+\\frac1n&gt;-1+\\frac1{n+1}\n\\quad\\Rightarrow\\quad\na_n&gt;a_{n+1}.\n La sucesión es decreciente. Además, 0&lt;\\frac1n\\le1, así que -1&lt;a_n\\le0: está acotada, con p=-1 y q=0.\nComprobación: a_1=0, a_2=-\\frac12 y a_3=-\\frac23 bajan y quedan entre las dos cotas (Figura 2.1).\n\n\n\nEjemplo 2.3\nAnalizar el crecimiento de la sucesión a_n=\\dfrac{(-3)^n}{4^{n+2}}. (2026/27 1E)\n\nPor el factor (-3)^n, el signo de los términos se alterna: \na_1=-\\frac{3}{64},\n\\qquad\na_2=\\frac{9}{256},\n\\qquad\na_3=-\\frac{27}{1024}.\n Como a_2&gt;a_1, no es decreciente; como a_3&lt;a_2, no es creciente. No es ni creciente ni decreciente.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.1–2.3.",
+    "crumbs": [
+      "2.1 Sucesiones y sus propiedades"
+    ]
+  },
+  {
     "objectID": "03_funciones/inversa.html",
     "href": "03_funciones/inversa.html",
     "title": "3.2 Función inversa",
@@ -191,14 +341,14 @@
     "href": "index.html#capítulos",
     "title": "Cálculo",
     "section": "Capítulos",
-    "text": "Capítulos\n\n\n1. Números complejos\n2. Sucesiones y series En preparación\n3. Funciones reales de variable real\n4. Estudio local de una función En preparación\n5. Integración En preparación\n6. Funciones de varias variables reales En preparación\n7. Integral múltiple En preparación\n8. Integral curvilínea En preparación\n9. Ecuaciones diferenciales En preparación\n10. Transformada de Laplace En preparación\n11. Análisis de Fourier En preparación"
+    "text": "Capítulos\n\n\n1. Números complejos\n2. Sucesiones y series\n3. Funciones reales de variable real\n4. Estudio local de una función En preparación\n5. Integración En preparación\n6. Funciones de varias variables reales En preparación\n7. Integral múltiple En preparación\n8. Integral curvilínea En preparación\n9. Ecuaciones diferenciales En preparación\n10. Transformada de Laplace En preparación\n11. Análisis de Fourier En preparación"
   },
   {
-    "objectID": "index.html#cómo-usar-estos-apuntes",
-    "href": "index.html#cómo-usar-estos-apuntes",
+    "objectID": "index.html#acerca-de-estos-apuntes",
+    "href": "index.html#acerca-de-estos-apuntes",
     "title": "Cálculo",
-    "section": "Cómo usar estos apuntes",
-    "text": "Cómo usar estos apuntes\n\nLas soluciones de los ejemplos y ejercicios están plegadas: se abren enteras o paso a paso.\nEn los recuadros interactivos, los puntos se arrastran con el ratón o con el dedo.\nLos recuadros «Practica» cambian los datos cada vez y corrigen el resultado, no el procedimiento.\nCada capítulo se puede descargar en PDF desde su menú lateral.\n\nVersión de prueba."
+    "section": "Acerca de estos apuntes",
+    "text": "Acerca de estos apuntes\n\nSon los apuntes de Cálculo de 1.º de ingeniería, ramas industrial y civil, de la Escuela de Ingeniería de Gipuzkoa (UPV/EHU).\nEstán en construcción: los capítulos marcados «En preparación» todavía no están escritos, y los demás aún pueden cambiar.\nCada capítulo disponible se puede descargar en PDF desde su menú lateral, para tenerlo en papel.\nLa web añade lo que el papel no puede dar: soluciones plegadas, que se abren enteras o paso a paso; recuadros interactivos, cuyos puntos se arrastran con el ratón o con el dedo; y recuadros «Practica», que cambian los datos cada vez y corrigen el resultado, no el procedimiento.\nLos ejemplos y ejercicios sacados de un examen indican de cuál proceden, por ejemplo (2013/14 1E)."
   },
   {
     "objectID": "01_complejos/funciones.html",
@@ -708,6 +858,186 @@
     "text": "Segundas derivadas\nLas dos reglas anteriores se pueden volver a derivar para obtener la derivada segunda.\n\nRecuerda\n\nh(x)=f(g(x)):\\quad h''=f''(g)\\,(g')^2+f'(g)\\,g'',\n\\qquad\\qquad\ng=f^{-1}:\\quad g''=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\n\n\nEjemplo 3.27\nSea la función compuesta h(x)=f(g(x)). Calcular h''(x). (2018/19 3E)\n\nLa primera derivada es h'=f'(g)\\,g'. Aplicando la regla del producto y otra vez la de la cadena, \nh''=\\left[f'(g)\\right]'g'+f'(g)\\,g''=f''(g)\\,(g')^2+f'(g)\\,g''.\n\nComprobación. Con h(x)=\\sin(x^2), la fórmula da h''=-\\sin(x^2)\\,4x^2+\\cos(x^2)\\cdot2, igual que al derivar dos veces.\n\n\n\nEjemplo 3.28\nSea f^{-1} la función inversa de f. Calcular \\left[f^{-1}(x)\\right]''. (2016/17 2E)\n\nCon g=f^{-1}, la primera derivada es g'=\\left[f'(g)\\right]^{-1}. Derivando otra vez, \ng''=-\\left[f'(g)\\right]^{-2}f''(g)\\,g'=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\nComprobación. Con f(x)=e^x y g(x)=\\ln x, la fórmula da g''=-\\dfrac{x}{x^3}=-\\dfrac{1}{x^2}, igual que al derivar \\ln x dos veces.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.26–3.31.",
     "crumbs": [
       "3.6 Regla de la cadena e inversa"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/index.html",
+    "href": "02_sucesiones/index.html",
+    "title": "2 Sucesiones y series",
+    "section": "",
+    "text": "Una sucesión es una lista infinita y ordenada de números. Lo que interesa de ella es cómo se comporta al avanzar: si sus términos crecen o decrecen, si se mantienen acotados y, sobre todo, si se acercan a un valor, su límite. Este capítulo da una definición precisa de esa idea y las propiedades que permiten trabajar con ella.\nUna serie suma los infinitos términos de una sucesión, y esa suma puede dar un número finito. Una pelota que se suelta desde 9 m y rebota hasta el 80 % de su altura previa da infinitos botes, pero las alturas de todos ellos suman 36 m. Este caso es una serie geométrica, el tipo de serie central del capítulo, porque su suma tiene una fórmula cerrada.",
+    "crumbs": [
+      "2. Sucesiones y series"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/geometrica.html",
+    "href": "02_sucesiones/geometrica.html",
+    "title": "2.6 Serie geométrica",
+    "section": "",
+    "text": "En una serie geométrica, cada término es el anterior multiplicado por un número fijo. Es el tipo de serie cuya suma se calcula con una fórmula cerrada.",
+    "crumbs": [
+      "2.6 Serie geométrica"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/geometrica.html#suma-de-la-serie-geométrica",
+    "href": "02_sucesiones/geometrica.html#suma-de-la-serie-geométrica",
+    "title": "2.6 Serie geométrica",
+    "section": "Suma de la serie geométrica",
+    "text": "Suma de la serie geométrica\n\nDefinición 2.8\nLa serie \n\\sum_{n=0}^\\infty r^n=1+r+r^2+r^3+\\dots,\\qquad r\\in\\mathbb{R},\n se llama serie geométrica, y r es su razón.\n\nSu suma parcial se obtiene restando S_N y rS_N: \n\\begin{aligned}\nS_N&=1+r+r^2+\\dots+r^N\\\\\nrS_N&=r+r^2+\\dots+r^N+r^{N+1}\\\\\n(1-r)S_N&=1-r^{N+1}\n\\end{aligned}\n Por tanto, si r\\ne1, \nS_N=\\frac{1-r^{N+1}}{1-r}.\n\n\n|r|&lt;1: r^{N+1}\\to0, así que S_N\\to\\frac1{1-r}.\n|r|&gt;1: |r^{N+1}| crece sin límite, así que S_N no converge.\nr=1: S_N=N+1, que no converge.\nr=-1: S_N salta entre 1 y 0, que tampoco converge.\n\n\nRecuerda\n\n\\sum_{n=0}^\\infty r^n=\\frac1{1-r}\\quad\\text{si }|r|&lt;1.\n Si |r|\\ge1, la serie es divergente.\n\n\nEjemplo 2.18\nEstudiar la convergencia de \\displaystyle\\sum_{n=0}^\\infty\\left(\\frac12\\right)^n y de \\displaystyle\\sum_{n=0}^\\infty\\left(\\frac32\\right)^n.\n\nLa primera tiene razón r=\\frac12, así que converge, y su suma es \\frac1{1-\\frac12}=2.\nLa segunda tiene razón r=\\frac32&gt;1, así que es divergente.\nComprobación: quitando el primer término de la primera, \\frac12+\\frac14+\\frac18+\\dots=2-1=1, el valor de la Figura 2.7.",
+    "crumbs": [
+      "2.6 Serie geométrica"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/geometrica.html#otro-índice-inicial-o-un-factor-delante",
+    "href": "02_sucesiones/geometrica.html#otro-índice-inicial-o-un-factor-delante",
+    "title": "2.6 Serie geométrica",
+    "section": "Otro índice inicial o un factor delante",
+    "text": "Otro índice inicial o un factor delante\nSi la serie tiene un factor delante, o empieza en otro índice, se saca factor común y queda la serie geométrica: \n\\sum_{n=m}^\\infty c\\,r^n=c\\,r^m+c\\,r^{m+1}+\\dots=c\\,r^m\\left(1+r+r^2+\\dots\\right).\n\n\nRecuerda\nSi |r|&lt;1, \n\\sum_{n=m}^\\infty c\\,r^n=\\frac{c\\,r^m}{1-r}=\\frac{\\text{primer término}}{1-r}.\n\n\n\nEjemplo 2.19\nObtener el valor de \\displaystyle\\sum_{n=3}^\\infty r^n, con |r|&lt;1. (2017/18 3E)\n\nEl primer término es r^3, así que \n\\sum_{n=3}^\\infty r^n=\\frac{r^3}{1-r}.\n\nComprobación: restando a la serie completa sus tres primeros términos, \n\\frac1{1-r}-1-r-r^2=\\frac{1-(1+r+r^2)(1-r)}{1-r}=\\frac{r^3}{1-r}.\n\n\n\n\nEjemplo 2.20\nEstudiar la convergencia de S=5-\\dfrac{10}3+\\dfrac{20}9-\\dfrac{40}{27}+\\dots y, si converge, calcular su suma. (2021/22 1E)\n\nCada término es el anterior multiplicado por r=-\\frac23. Como |r|&lt;1, converge, y \nS=\\frac{5}{1+\\frac23}=3.\n\nComprobación: las sumas parciales saltan a un lado y otro de 3, con S_4\\approx2.41 y S_5\\approx3.40.",
+    "crumbs": [
+      "2.6 Serie geométrica"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/geometrica.html#problemas",
+    "href": "02_sucesiones/geometrica.html#problemas",
+    "title": "2.6 Serie geométrica",
+    "section": "Problemas",
+    "text": "Problemas\nUn proceso en el que cada paso es una fracción fija del anterior se plantea como una serie geométrica.\n\nEjemplo 2.21\nSe suelta una pelota desde una altura de 9 m. Con cada bote, rebota hasta el 80 % de su altura previa (Figura 2.8). (2024/25 3E)\n\n¿Hasta qué altura rebota en el quinto bote?\n¿Cuál es la suma de las alturas de todos los botes?\n\n\nLa altura del bote n es a_n=9\\cdot0.8^n.\n(a) a_5=9\\cdot0.8^5\\approx2.95 m.\n(b) Es una serie geométrica de razón r=0.8 y primer término a_1=7.2: \nS=\\sum_{n=1}^\\infty9\\cdot0.8^n=\\frac{7.2}{1-0.8}=36\\text{ m}.\n\nLos 9 m iniciales no cuentan, porque no corresponden a un bote; con ellos, serían 45 m.\n\n\n\n\nFigura 2.8. Altura de la pelota a lo largo del tiempo. Cada altura, a_1, a_2, a_3…, es el 80 % de la anterior.\n\n\nEjemplo 2.22\nUn alpinista quiere escalar una pared de 200 m. En el primer intento sube 100 m. Después se cansa, y cada ascenso cumple a_{n+1}=a_n\\,r. Sabiendo que en el tercer intento sube 25 m, calcular r y estudiar si llega a la cima. (2019/20 5E)\n\nComo a_3=100\\,r^2=25, se obtiene r=\\frac12. La suma de todos los intentos es \nS=\\sum_{n=1}^\\infty100\\left(\\frac12\\right)^{n-1}=\\frac{100}{1-\\frac12}=200\\text{ m}.\n La suma es justo la altura de la pared, pero solo con infinitos intentos. Con un número finito N de intentos, S_N=200\\left(1-\\frac1{2^N}\\right)&lt;200: no llega a la cima.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.28–2.35.",
+    "crumbs": [
+      "2.6 Serie geométrica"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/propiedades.html",
+    "href": "02_sucesiones/propiedades.html",
+    "title": "2.3 Propiedades de las sucesiones convergentes",
+    "section": "",
+    "text": "Algunas propiedades se demuestran una sola vez con la definición. Después, los límites se calculan con ellas, sin volver a \\varepsilon.",
+    "crumbs": [
+      "2.3 Propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/propiedades.html#unicidad-del-límite",
+    "href": "02_sucesiones/propiedades.html#unicidad-del-límite",
+    "title": "2.3 Propiedades de las sucesiones convergentes",
+    "section": "Unicidad del límite",
+    "text": "Unicidad del límite\n\nTeorema 2.1\nUna sucesión convergente tiene un único límite.\n\n\nDemostración\nSupongamos que \\{x_n\\} tiene dos límites, a&lt;b. Dado \\varepsilon&gt;0:\n\nPor ser a límite, existe n_1 tal que x_n\\in I_1=(a-\\varepsilon,a+\\varepsilon) para todo n&gt;n_1.\nPor ser b límite, existe n_2 tal que x_n\\in I_2=(b-\\varepsilon,b+\\varepsilon) para todo n&gt;n_2.\n\nTomemos \\varepsilon=\\frac{b-a}{2}. Entonces a+\\varepsilon=b-\\varepsilon=\\frac{a+b}{2}, así que los intervalos son disjuntos: I_1\\cap I_2=\\emptyset (Figura 2.4).\nPero, si n&gt;\\max\\{n_1,n_2\\}, entonces x_n\\in I_1\\cap I_2, lo cual es una contradicción. Por tanto, no puede haber dos límites diferentes.\n\n\n\nFigura 2.4. Con \\varepsilon igual a la mitad de la distancia entre a y b, los dos intervalos no se solapan.",
+    "crumbs": [
+      "2.3 Propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/propiedades.html#operaciones-con-límites",
+    "href": "02_sucesiones/propiedades.html#operaciones-con-límites",
+    "title": "2.3 Propiedades de las sucesiones convergentes",
+    "section": "Operaciones con límites",
+    "text": "Operaciones con límites\n\nRecuerda\nSi \\{x_n\\}\\to L_1 e \\{y_n\\}\\to L_2:\n\n\\{x_n+y_n\\}\\to L_1+L_2\n\\{x_n\\cdot y_n\\}\\to L_1\\cdot L_2\n\\{k\\,x_n\\}\\to k\\,L_1 para todo k\\in\\mathbb{R}\n\\left\\{\\dfrac{x_n}{y_n}\\right\\}\\to\\dfrac{L_1}{L_2} si y_n\\neq0 para todo n y L_2\\neq0\n\n\nLa condición L_2\\neq0 es necesaria. Con x_n=\\frac1{n^2} e y_n=\\frac1n, las dos sucesiones tienden a 0, y el cociente es \\frac{x_n}{y_n}=\\frac1n\\to0; pero \\frac{y_n}{x_n}=n, que no converge.\n\nEjemplo 2.8\nCalcular \\lim\\limits_{n\\to\\infty}\\dfrac{2n+3}{3n-1} con las operaciones con límites.\n\nSe dividen numerador y denominador entre n y se usa que \\frac1n\\to0: \n\\frac{2n+3}{3n-1}=\\frac{2+\\frac3n}{3-\\frac1n}\\to\\frac{2+0}{3-0}=\\frac23.\n Es el valor que se usó en el Ejemplo 2.6.",
+    "crumbs": [
+      "2.3 Propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/propiedades.html#convergencia-y-acotación",
+    "href": "02_sucesiones/propiedades.html#convergencia-y-acotación",
+    "title": "2.3 Propiedades de las sucesiones convergentes",
+    "section": "Convergencia y acotación",
+    "text": "Convergencia y acotación\n\nTeorema 2.2\nToda sucesión convergente está acotada.\n\n\nDemostración\nSea \\{x_n\\}\\to L. Tomando \\varepsilon=1 en la definición de límite, existe n_0 tal que x_n\\in(L-1,L+1) para todo n&gt;n_0.\nFuera de ese intervalo solo pueden quedar x_1,\\dots,x_{n_0}, que son un número finito de términos. Por tanto, para todo n, \np=\\min\\{x_1,\\dots,x_{n_0},L-1\\}\\le x_n\\le\\max\\{x_1,\\dots,x_{n_0},L+1\\}=q.\n\n\nEl recíproco es falso: \\{(-1)^n\\} está acotada, pero no converge, porque sus términos saltan entre -1 y 1.\nEl teorema también sirve al revés: una sucesión no acotada, como \\{n^2\\}, no converge.",
+    "crumbs": [
+      "2.3 Propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/propiedades.html#límites-y-desigualdades",
+    "href": "02_sucesiones/propiedades.html#límites-y-desigualdades",
+    "title": "2.3 Propiedades de las sucesiones convergentes",
+    "section": "Límites y desigualdades",
+    "text": "Límites y desigualdades\n\nTeorema 2.3\nSi x_n\\le y_n para todo n, \\{x_n\\}\\to x e \\{y_n\\}\\to y, entonces x\\le y.\n\n\nDemostración\nSupongamos que x&gt;y y tomemos \\varepsilon=\\frac{x-y}{2}. Los intervalos I_1=(x-\\varepsilon,x+\\varepsilon) e I_2=(y-\\varepsilon,y+\\varepsilon) son disjuntos, es decir, no se solapan, y I_1 está a la derecha de I_2 (Figura 2.5). A partir de cierto término, x_n está en I_1 e y_n en I_2, así que x_n&gt;y_n, lo que contradice la hipótesis.\n\n\n\nFigura 2.5. Con \\varepsilon igual a la mitad de la distancia entre y y x, I_1 queda a la derecha de I_2. Si x_n\\in I_1 e y_n\\in I_2, entonces y_n&lt;x_n.\n\n\nEjemplo 2.9\nDecir si las afirmaciones son ciertas, con demostración o contraejemplo: (2020/21 4E)\n\nSi a_n\\ge0 para todo n y \\{a_n\\}\\to L, entonces L\\ge0.\nSi a_n&gt;0 para todo n y \\{a_n\\}\\to L, entonces L&gt;0.\n\n\n(a) Cierta. Supongamos que L&lt;0 y tomemos \\varepsilon=-L&gt;0. A partir de cierto término, a_n\\in(2L,0), es decir, a_n&lt;0, lo que contradice la hipótesis.\n(b) Falsa. La sucesión a_n=\\frac1n cumple a_n&gt;0 para todo n, pero su límite es 0.\nAl pasar al límite, la desigualdad estricta puede convertirse en igualdad.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.10–2.15.",
+    "crumbs": [
+      "2.3 Propiedades"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/series.html",
+    "href": "02_sucesiones/series.html",
+    "title": "2.5 Series numéricas",
+    "section": "",
+    "text": "Sumar infinitos números puede dar un resultado finito. Para dar sentido a esa suma se usa una sucesión: la de las sumas parciales.",
+    "crumbs": [
+      "2.5 Series numéricas"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/series.html#serie-suma-parcial-y-suma",
+    "href": "02_sucesiones/series.html#serie-suma-parcial-y-suma",
+    "title": "2.5 Series numéricas",
+    "section": "Serie, suma parcial y suma",
+    "text": "Serie, suma parcial y suma\n¿Cuánto vale \\frac12+\\frac14+\\frac18+\\dots? Se suman los términos uno a uno:\n\nS_1=\\frac12,\n\\qquad\nS_2=\\frac12+\\frac14=\\frac34,\n\\qquad\nS_3=\\frac34+\\frac18=\\frac78,\n\\qquad\nS_4=\\frac78+\\frac1{16}=\\frac{15}{16}.\n\nLos resultados parecen acercarse a 1 (Figura 2.7). La suma de la serie se define como el límite de esos resultados.\n\nDefinición 2.7\nDada una sucesión \\{a_n\\}, la expresión \n\\sum_{n=1}^\\infty a_n=a_1+a_2+a_3+\\dots\n se llama serie, y \nS_N=\\sum_{n=1}^N a_n=a_1+a_2+\\dots+a_N\n se llama suma parcial. La serie es convergente si existe y es finito el límite \nS=\\lim_{N\\to\\infty}S_N,\n que se llama suma de la serie. Si no, la serie es divergente.\n\n\n\nFigura 2.7. Serie de a_n=\\frac1{2^n}: los términos a_n tienden a 0 y las sumas parciales S_N se acercan a 1.\n\n\nEjemplo 2.14\nHallar la suma parcial S_N de \\displaystyle\\sum_{n=1}^\\infty\\frac1{n(n+1)} y la suma de la serie.\n\nCada término es una diferencia, \\frac1{n(n+1)}=\\frac1n-\\frac1{n+1}, así que casi todo se cancela: \nS_N=\\left(1-\\frac12\\right)+\\left(\\frac12-\\frac13\\right)+\\dots+\\left(\\frac1N-\\frac1{N+1}\\right)=1-\\frac1{N+1}.\n Por tanto, S=\\lim\\limits_{N\\to\\infty}S_N=1.\nComprobación: S_3=\\frac12+\\frac16+\\frac1{12}=\\frac34, y la fórmula da 1-\\frac14=\\frac34.\n\n\n\nEjemplo 2.15\nEstudiar la convergencia de \\displaystyle\\sum_{n=1}^\\infty(-1)^n.\n\nLas sumas parciales son S_1=-1, S_2=0, S_3=-1, S_4=0, y así sucesivamente. Saltan entre -1 y 0, así que \\{S_N\\} no tiene límite: la serie es divergente.",
+    "crumbs": [
+      "2.5 Series numéricas"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/series.html#condición-necesaria-de-convergencia",
+    "href": "02_sucesiones/series.html#condición-necesaria-de-convergencia",
+    "title": "2.5 Series numéricas",
+    "section": "Condición necesaria de convergencia",
+    "text": "Condición necesaria de convergencia\n\nTeorema 2.5\nSi \\displaystyle\\sum_{n=1}^\\infty a_n es convergente, entonces \\lim\\limits_{n\\to\\infty}a_n=0.\n\n\nDemostración\nCada término es la diferencia de dos sumas parciales, a_N=S_N-S_{N-1}. Como S_N\\to S y S_{N-1}\\to S, se tiene a_N\\to S-S=0.\n\nEl teorema se usa, sobre todo, al revés: si \\{a_n\\} no tiende a 0, la serie no converge.\n\nEjemplo 2.16\n¿Es convergente \\displaystyle\\sum_{n=1}^\\infty a_n, con la siguiente sucesión? (2019/20 1E) \na_n=\\begin{cases}n^3&n&lt;1000\\\\[2pt]1&1000\\le n&lt;2000\\\\[2pt]1-\\dfrac1n&n\\ge2000\\end{cases}\n\n\nLos primeros términos no afectan al límite de la sucesión, y 1-\\frac1n\\to1. Como \\{a_n\\} tiende a 1 y no a 0, la serie no es convergente.",
+    "crumbs": [
+      "2.5 Series numéricas"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/series.html#la-serie-armónica",
+    "href": "02_sucesiones/series.html#la-serie-armónica",
+    "title": "2.5 Series numéricas",
+    "section": "La serie armónica",
+    "text": "La serie armónica\nEl recíproco del teorema es falso: que los términos tiendan a 0 no basta para que la serie converja. El contraejemplo es la serie armónica, \\sum_{n=1}^\\infty\\frac1n.\n\nEjemplo 2.17\nSi \\{a_n\\}\\to0, ¿es necesariamente convergente \\displaystyle\\sum_{n=1}^\\infty a_n? (2012/13 3E)\n\nNo. En la serie armónica, \\frac1n\\to0. Sin embargo, agrupando sus términos en bloques de 2, 4, 8… términos, cada bloque suma más de \\frac12, porque cada término es mayor o igual que el último del bloque: \n\\frac13+\\frac14&gt;\\frac14+\\frac14=\\frac12,\n\\qquad\n\\frac15+\\frac16+\\frac17+\\frac18&gt;4\\cdot\\frac18=\\frac12.\n Por tanto, \nS_2=1+\\frac12,\n\\qquad\nS_4&gt;1+2\\cdot\\frac12,\n\\qquad\nS_8&gt;1+3\\cdot\\frac12,\n\\qquad\nS_{2^k}\\ge1+\\frac{k}{2}.\n Las sumas parciales no están acotadas, así que no convergen (Teorema 2.2): la serie armónica es divergente.\nComprobación: S_8\\approx2.72&gt;2.5. La divergencia es muy lenta: S_N no supera 10 hasta N=12367.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.23–2.27.",
+    "crumbs": [
+      "2.5 Series numéricas"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/convergencia.html",
+    "href": "02_sucesiones/convergencia.html",
+    "title": "2.2 Convergencia",
+    "section": "",
+    "text": "Los términos de x_n=\\frac1n se acercan a 0. Decir con precisión qué significa «acercarse» es lo que permite demostrar que una sucesión tiene límite, o que no lo tiene.",
+    "crumbs": [
+      "2.2 Convergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/convergencia.html#definición-de-límite",
+    "href": "02_sucesiones/convergencia.html#definición-de-límite",
+    "title": "2.2 Convergencia",
+    "section": "Definición de límite",
+    "text": "Definición de límite\n¿Desde qué término está x_n=\\frac1n a menos de cierta distancia de 0?\n\nA menos de 0.1: \\frac1n&lt;0.1 si n&gt;10.\nA menos de 0.01: \\frac1n&lt;0.01 si n&gt;100.\n\nPor pequeña que sea la distancia, a partir de cierto término todos quedan dentro. Esa es la definición de límite (Figura 2.2).\n\nDefinición 2.4\nEl límite de la sucesión \\{x_n\\} es el número real L si \n\\forall\\varepsilon&gt;0\\quad\\exists n_0\\in\\mathbb{N}\\ /\\quad\\forall n&gt;n_0\\Rightarrow x_n\\in(L-\\varepsilon,L+\\varepsilon).\n Se escribe \\lim\\limits_{n\\to\\infty}x_n=L o \\{x_n\\}\\to L. Una sucesión con límite finito es convergente.\n\n\n\nFigura 2.2. A partir de n_0, todos los términos están dentro de la banda (L-\\varepsilon,L+\\varepsilon).\n\n\nDemo en GeoGebra\nIlustra la definición de límite de una sucesión.\nAbrir la demo Autoría: Taeil Yi\n\n\nEjemplo 2.4\nUsando la definición, demostrar que el límite de \\left\\{\\frac1n\\right\\} es 0. ¿Cuál es el límite de \\left\\{-\\frac1n\\right\\}? (2016/17 4E)\n\nDado \\varepsilon&gt;0, hay que encontrar desde qué término \\frac1n\\in(-\\varepsilon,\\varepsilon). Como \\frac1n es positivo, solo hay que imponer \n\\frac1n&lt;\\varepsilon\n\\iff\nn&gt;\\frac1\\varepsilon.\n Basta tomar como n_0 un natural mayor o igual que \\frac1\\varepsilon. Por tanto, el límite es 0.\nPara \\left\\{-\\frac1n\\right\\}, como -\\frac1n es negativo, solo hay que imponer -\\frac1n&gt;-\\varepsilon, que es la misma desigualdad. Su límite también es 0.\n\n\nPara probar que L no es el límite, basta encontrar un solo \\varepsilon que no cumpla la definición.\n\nEjemplo 2.5\nUsando la definición, probar que \\left\\{\\frac1n\\right\\} no tiende a -2. (2018/19 4E)\n\nSe toma \\varepsilon=1. Si el límite fuera -2, a partir de cierto término todos estarían en (-3,-1). Es imposible, porque todos los términos de \\left\\{\\frac1n\\right\\} son positivos.",
+    "crumbs": [
+      "2.2 Convergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/convergencia.html#cálculo-de-m-para-un-varepsilon-dado",
+    "href": "02_sucesiones/convergencia.html#cálculo-de-m-para-un-varepsilon-dado",
+    "title": "2.2 Convergencia",
+    "section": "Cálculo de m para un \\varepsilon dado",
+    "text": "Cálculo de m para un \\varepsilon dado\nCon un \\varepsilon concreto, se puede calcular a partir de qué término se cumple la condición de la definición.\n\nRecuerda\nSi a_n\\in(L-\\varepsilon,L+\\varepsilon)\\iff n&gt;n^*, el menor m tal que a_n\\in(L-\\varepsilon,L+\\varepsilon) para todo n&gt;m es la parte entera de n^*.\n\n\nEjemplo 2.6\nSea L el límite de la sucesión convergente a_n=\\dfrac{2n+3}{3n-1}. Para \\varepsilon=0.0002, hallar el menor m tal que a_n\\in(L-\\varepsilon,L+\\varepsilon) para todo n&gt;m. (2013/14 4E)\n\nPara n grande, a_n se parece a \\frac{2n}{3n}, así que L=\\frac23. La diferencia con el límite es \na_n-\\frac23=\\frac{3(2n+3)-2(3n-1)}{3(3n-1)}=\\frac{11}{3(3n-1)}&gt;0.\n Como a_n&gt;L, solo hay que imponer a_n&lt;L+\\varepsilon: \n\\frac{11}{3(3n-1)}&lt;0.0002\n\\iff\n3n-1&gt;18333.33\n\\iff\nn&gt;6111.44.\n Por tanto, m=6111.\nComprobación: a_n-L vale 0.00020001 para n=6111 y 0.00019998 para n=6112.",
+    "crumbs": [
+      "2.2 Convergencia"
+    ]
+  },
+  {
+    "objectID": "02_sucesiones/convergencia.html#los-primeros-términos-no-afectan-al-límite",
+    "href": "02_sucesiones/convergencia.html#los-primeros-términos-no-afectan-al-límite",
+    "title": "2.2 Convergencia",
+    "section": "Los primeros términos no afectan al límite",
+    "text": "Los primeros términos no afectan al límite\nLa definición solo mira los términos con n&gt;n_0. Por eso, cambiar un número finito de términos no cambia ni la convergencia ni el límite.\n\nEjemplo 2.7\nEstudiar la convergencia de las sucesiones (2016/17 3E) \na_n=\\begin{cases}2+\\dfrac1n&n\\text{ impar}\\\\[6pt]-2-\\dfrac1n&n\\text{ par}\\end{cases}\n\\qquad\\qquad\nb_n=\\begin{cases}2+\\dfrac1n&n&lt;50\\\\[6pt]-2-\\dfrac1n&n\\ge50\\end{cases}\n\n\nSucesión \\{b_n\\}. Los primeros 49 términos no importan. Para n\\ge50, b_n=-2-\\frac1n es menor que -2, así que para que b_n\\in(-2-\\varepsilon,-2+\\varepsilon) solo hay que imponer \n-2-\\frac1n&gt;-2-\\varepsilon\n\\iff\nn&gt;\\frac1\\varepsilon,\n así que \\{b_n\\} converge y su límite es -2.\nSucesión \\{a_n\\}. Los términos impares son mayores que 2 y los pares, menores que -2. Con \\varepsilon=1, ningún intervalo (L-1,L+1) puede contener a la vez términos de los dos tipos, porque su longitud es 2 y distan más de 4. Luego \\{a_n\\} no converge (Figura 2.3).\n\n\nFigura 2.3. (a) \\{a_n\\} salta sin parar entre las dos rectas. (b) \\{b_n\\} salta una sola vez, en n=50.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 2.4–2.9.",
+    "crumbs": [
+      "2.2 Convergencia"
     ]
   }
 ]

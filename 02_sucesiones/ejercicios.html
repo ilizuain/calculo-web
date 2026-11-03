@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2.8 Ejercicios – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../02_sucesiones/resumen.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2c9897760a6acc1c19756737572cfcb0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../02_sucesiones/index.html">
+ <span class="dropdown-text">2. Sucesiones y series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../03_funciones/index.html">
+ <span class="dropdown-text">3. Funciones reales de variable real</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../04_estudio_local/index.html">
+ <span class="dropdown-text">4. Estudio local de una función</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../05_integracion/index.html">
+ <span class="dropdown-text">5. Integración</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../06_varias_variables/index.html">
+ <span class="dropdown-text">6. Funciones de varias variables reales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../07_integral_multiple/index.html">
+ <span class="dropdown-text">7. Integral múltiple</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../08_integral_curvilinea/index.html">
+ <span class="dropdown-text">8. Integral curvilínea</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../09_ecuaciones_diferenciales/index.html">
+ <span class="dropdown-text">9. Ecuaciones diferenciales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../10_laplace/index.html">
+ <span class="dropdown-text">10. Transformada de Laplace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../11_fourier/index.html">
+ <span class="dropdown-text">11. Análisis de Fourier</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_sucesiones/ejercicios.html">2.8 Ejercicios</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Sucesiones y series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/definicion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Sucesiones y sus propiedades</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/convergencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Convergencia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/propiedades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Propiedades</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/monotona.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Convergencia monótona y divergencia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Series numéricas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/geometrica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Serie geométrica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_sucesiones/ejercicios.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.8 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sucesiones-y-sus-propiedades" id="toc-sucesiones-y-sus-propiedades" class="nav-link active" data-scroll-target="#sucesiones-y-sus-propiedades">Sucesiones y sus propiedades</a></li>
+  <li><a href="#convergencia" id="toc-convergencia" class="nav-link" data-scroll-target="#convergencia">Convergencia</a></li>
+  <li><a href="#propiedades-de-las-sucesiones-convergentes" id="toc-propiedades-de-las-sucesiones-convergentes" class="nav-link" data-scroll-target="#propiedades-de-las-sucesiones-convergentes">Propiedades de las sucesiones convergentes</a></li>
+  <li><a href="#convergencia-monótona-y-divergencia" id="toc-convergencia-monótona-y-divergencia" class="nav-link" data-scroll-target="#convergencia-monótona-y-divergencia">Convergencia monótona y divergencia</a></li>
+  <li><a href="#series-numéricas" id="toc-series-numéricas" class="nav-link" data-scroll-target="#series-numéricas">Series numéricas</a></li>
+  <li><a href="#serie-geométrica" id="toc-serie-geométrica" class="nav-link" data-scroll-target="#serie-geométrica">Serie geométrica</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">2.8 Ejercicios</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sucesiones-y-sus-propiedades" class="level2">
+<h2 data-anchor-id="sucesiones-y-sus-propiedades">Sucesiones y sus propiedades</h2>
+<div id="ejercicio-suc-recurrente" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.1</span></p>
+<p>Dada la sucesión <span class="nw"><span class="math inline">x_1=2</span>,</span> <span class="nw"><span class="math inline">x_n=3x_{n-1}</span>,</span> escribir sus cinco primeros términos y hallar su término general.</p>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">2,\ 6,\ 18,\ 54,\ 162</span>;</span> <span class="nw"><span class="math inline">x_n=2\cdot3^{n-1}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-suc-estudiar" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.2</span></p>
+<p>Estudiar el crecimiento y la acotación de las siguientes sucesiones:</p>
+<div class="columnas c2">
+<ol type="a">
+<li><span class="math inline">a_n=n^2</span></li>
+<li><span class="math inline">a_n=-2n+1</span></li>
+<li><span class="math inline">a_n=\dfrac{(-1)^n}{n}</span></li>
+<li><span class="math inline">a_n=\begin{cases}n&amp;n\text{ par}\\[2pt]\dfrac1n&amp;n\text{ impar}\end{cases}</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) Creciente; acotada inferiormente, no superiormente. (b) Decreciente; acotada superiormente, no inferiormente. (c) Ni creciente ni decreciente; acotada, <span class="nw"><span class="math inline">-1\le a_n\le\frac12</span>.</span> (d) Ni creciente ni decreciente (<span class="nw"><span class="math inline">a_1=1</span>,</span> <span class="nw"><span class="math inline">a_2=2</span>,</span> <span class="nw"><span class="math inline">a_3=\frac13</span>)</span>; acotada inferiormente, no superiormente.</p>
+</div>
+</div>
+<div id="ejercicio-suc-afirmaciones" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.3</span></p>
+<p>Decidir si las siguientes afirmaciones son ciertas para todo <span class="nw"><span class="math inline">k\in\mathbb{R}</span>.</span> Demostrar las ciertas y dar un contraejemplo de las falsas.</p>
+<ol type="a">
+<li>Si <span class="math inline">\{x_n\}</span> es creciente, <span class="math inline">\{k\,x_n\}</span> es creciente.</li>
+<li>Si <span class="math inline">\{x_n\}</span> está acotada, <span class="math inline">\{k\,x_n\}</span> está acotada.</li>
+</ol>
+<div class="solucion">
+<p>(a) Falsa: con <span class="math inline">x_n=n</span> y <span class="nw"><span class="math inline">k=-1</span>,</span> <span class="math inline">\{-n\}</span> es decreciente. (b) Cierta: si <span class="nw"><span class="math inline">p\le x_n\le q</span>,</span> entonces <span class="math inline">|x_n|\le M</span> con <span class="nw"><span class="math inline">M=\max\{|p|,|q|\}</span>,</span> y por tanto <span class="nw"><span class="math inline">-|k|M\le k\,x_n\le|k|M</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="convergencia" class="level2">
+<h2 data-anchor-id="convergencia">Convergencia</h2>
+<div id="ejercicio-conv-m" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.4</span></p>
+<p>Sea <span class="math inline">L</span> el límite de la sucesión convergente <span class="nw"><span class="math inline">a_n=\dfrac{n-3}{n+1}</span>.</span> Para <span class="nw"><span class="math inline">\varepsilon=10^{-10}</span>,</span> hallar el menor <span class="math inline">m</span> tal que <span class="math inline">a_n\in(L-\varepsilon,L+\varepsilon)</span> para todo <span class="nw"><span class="math inline">n&gt;m</span>.</span> (2011/12 4E)</p>
+<div class="solucion">
+<p><span class="math inline">L=1</span> y <span class="nw"><span class="math inline">a_n=1-\dfrac{4}{n+1}&lt;1</span>,</span> así que basta imponer <span class="nw"><span class="math inline">a_n&gt;1-\varepsilon</span>:</span> <span class="math inline">\dfrac{4}{n+1}&lt;\varepsilon\iff n&gt;4\cdot10^{10}-1</span>. Luego <span class="nw"><span class="math inline">m=39999999999</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-conv-estudiar" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.5</span></p>
+<p>Estudiar la convergencia de las siguientes sucesiones:</p>
+<ol type="a">
+<li><span class="math inline">x_n=\begin{cases}1&amp;n\text{ par}\\[2pt]\dfrac1n&amp;n\text{ impar}\end{cases}</span></li>
+<li><span class="math inline">y_n=\begin{cases}3&amp;n\le10^6\\[2pt]\dfrac1n&amp;n&gt;10^6\end{cases}</span></li>
+<li><span class="math inline">z_n=\begin{cases}n^2&amp;n\text{ par}\\[2pt]1+\dfrac1n&amp;n\text{ impar}\end{cases}</span></li>
+</ol>
+<div class="solucion">
+<p>(a) No converge: los términos pares valen 1 y los impares se acercan a 0. (b) Converge a 0: los primeros términos no importan. (c) No converge: los términos pares crecen sin límite.</p>
+</div>
+</div>
+<div id="ejercicio-conv-trozos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.6</span></p>
+<p>Estudiar el crecimiento y la convergencia de la sucesión <span class="math inline">a_n=\begin{cases}n^3&amp;n&lt;100\\[2pt]5-\dfrac2n&amp;n\ge100\end{cases}</span> (2018/19 5E)</p>
+<div class="solucion">
+<p>Ni creciente ni decreciente: sube hasta <span class="math inline">a_{99}=99^3</span> y después <span class="nw"><span class="math inline">a_{100}=4.98&lt;a_{99}</span>.</span> Converge y su límite es 5.</p>
+</div>
+</div>
+<div id="ejercicio-conv-no-limite" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.7</span></p>
+<p>Escribir con símbolos la condición «<span class="math inline">L</span> no es el límite de <span class="math inline">\{x_n\}</span>».</p>
+<div class="solucion">
+<p><span class="math inline">\exists\varepsilon&gt;0\ /\ \forall n_0\in\mathbb{N}\quad\exists n&gt;n_0\ /\ x_n\notin(L-\varepsilon,L+\varepsilon)</span>.</p>
+</div>
+</div>
+<div id="ejercicio-conv-afirmaciones" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.8</span></p>
+<p>Decidir si las siguientes afirmaciones son ciertas. Demostrar las ciertas y dar un contraejemplo de las falsas.</p>
+<ol type="a">
+<li>Si cada término de <span class="math inline">\{a_n\}</span> está más cerca de <span class="math inline">L</span> que el anterior, <span class="math inline">L</span> es el límite de <span class="nw"><span class="math inline">\{a_n\}</span>.</span> (2011/12 3E)</li>
+<li>Si <span class="math inline">\{a_n\}</span> converge a <span class="nw"><span class="math inline">L</span>,</span> ningún término vale <span class="nw"><span class="math inline">L</span>.</span> (2011/12 5E)</li>
+<li>Si <span class="math inline">\{a_n\}</span> converge a <span class="nw"><span class="math inline">L&lt;0</span>,</span> a partir de cierto término todos son negativos. (2011/12 2E, 6E)</li>
+</ol>
+<div class="solucion">
+<p>(a) Falsa: <span class="math inline">a_n=\frac1n</span> se acerca cada vez más a <span class="nw"><span class="math inline">-2</span>,</span> pero su límite es 0. (b) Falsa: la sucesión constante <span class="math inline">a_n=L</span> converge a <span class="nw"><span class="math inline">L</span>.</span> (c) Cierta: con <span class="nw"><span class="math inline">\varepsilon=-L&gt;0</span>,</span> a partir de cierto término <span class="nw"><span class="math inline">a_n&lt;L+\varepsilon=0</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-conv-signos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.9</span></p>
+<p>Sea <span class="math inline">\{a_n\}</span> una sucesión convergente con infinitos términos positivos e infinitos términos negativos. Demostrar formalmente que su límite es 0. (2012/13 1E)</p>
+<div class="solucion">
+<p>Si <span class="nw"><span class="math inline">L&gt;0</span>,</span> con <span class="math inline">\varepsilon=L</span> todos los términos a partir de cierto <span class="math inline">n_0</span> están en <span class="math inline">(0,2L)</span> y son positivos, lo que contradice que haya infinitos negativos. Si <span class="nw"><span class="math inline">L&lt;0</span>,</span> con <span class="math inline">\varepsilon=-L</span> ocurre lo mismo con el signo contrario. Luego <span class="nw"><span class="math inline">L=0</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="propiedades-de-las-sucesiones-convergentes" class="level2">
+<h2 data-anchor-id="propiedades-de-las-sucesiones-convergentes">Propiedades de las sucesiones convergentes</h2>
+<div id="ejercicio-prop-calcular" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.10</span></p>
+<p>Calcular los siguientes límites con las operaciones con límites:</p>
+<div class="columnas c3">
+<ol type="a">
+<li><span class="math inline">\dfrac{n+5}{2n}</span></li>
+<li><span class="math inline">\dfrac{3n^2-1}{n^2+n}</span></li>
+<li><span class="math inline">\left(2+\dfrac1n\right)\left(3-\dfrac1{n^2}\right)</span></li>
+</ol>
+</div>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">\frac12</span>;</span> (b) 3; (c) 6.</p>
+</div>
+</div>
+<div id="ejercicio-prop-suma" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.11</span></p>
+<p>Sean <span class="math inline">\{a_n\}</span> y <span class="math inline">\{b_n\}</span> tales que <span class="math inline">\{a_n+b_n\}</span> converge. Decir qué afirmaciones son ciertas: (2011/12 4E, 2014/15 3E)</p>
+<ol type="a">
+<li><span class="math inline">\{a_n\}</span> y <span class="math inline">\{b_n\}</span> convergen necesariamente.</li>
+<li>Es posible que ni <span class="math inline">\{a_n\}</span> ni <span class="math inline">\{b_n\}</span> converjan.</li>
+<li>Una de las dos, <span class="math inline">\{a_n\}</span> o <span class="nw"><span class="math inline">\{b_n\}</span>,</span> converge necesariamente.</li>
+</ol>
+<div class="solucion">
+<p>Solo (b): con <span class="math inline">a_n=n</span> y <span class="nw"><span class="math inline">b_n=-n</span>,</span> ninguna converge, pero <span class="nw"><span class="math inline">a_n+b_n=0</span>.</span> Este mismo ejemplo prueba que (a) y (c) son falsas.</p>
+</div>
+</div>
+<div id="ejercicio-prop-producto" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.12</span></p>
+<p>Decir si es cierta la afirmación: si <span class="math inline">\{a_n\}</span> y <span class="math inline">\{b_n\}</span> no convergen, <span class="math inline">\{a_n\cdot b_n\}</span> no converge. (2021/22 3E)</p>
+<div class="solucion">
+<p>Falsa: con <span class="nw"><span class="math inline">a_n=b_n=(-1)^n</span>,</span> ninguna converge, pero <span class="nw"><span class="math inline">a_n\cdot b_n=1</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-prop-cota" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.13</span></p>
+<p>Sea <span class="math inline">\{a_n\}</span> una sucesión con límite <span class="math inline">L</span> tal que <span class="math inline">a_n&gt;b</span> para todo <span class="nw"><span class="math inline">n</span>.</span> Decir si son ciertas las afirmaciones: (2025/26 1E)</p>
+<ol type="a">
+<li>Es posible que <span class="nw"><span class="math inline">L=b</span>.</span></li>
+<li>Necesariamente, <span class="nw"><span class="math inline">L\ge b</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) Cierta: <span class="math inline">a_n=b+\frac1n</span> cumple <span class="math inline">a_n&gt;b</span> y tiende a <span class="nw"><span class="math inline">b</span>.</span> (b) Cierta: si <span class="nw"><span class="math inline">L&lt;b</span>,</span> con <span class="nw"><span class="math inline">\varepsilon=b-L</span>,</span> a partir de cierto término <span class="nw"><span class="math inline">a_n&lt;L+\varepsilon=b</span>,</span> lo que contradice la hipótesis.</p>
+</div>
+</div>
+<div id="ejercicio-prop-sandwich" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.14</span></p>
+<p>(<em>Teorema del sándwich</em>). Sean <span class="math inline">\{x_n\}</span> e <span class="math inline">\{y_n\}</span> dos sucesiones que convergen a <span class="nw"><span class="math inline">L</span>,</span> y sea <span class="math inline">\{z_n\}</span> tal que <span class="math inline">x_n\le z_n\le y_n</span> para todo <span class="nw"><span class="math inline">n</span>.</span> Demostrar que <span class="math inline">\{z_n\}</span> converge a <span class="nw"><span class="math inline">L</span>.</span></p>
+<div class="solucion">
+<p>Dado <span class="nw"><span class="math inline">\varepsilon&gt;0</span>,</span> existen <span class="math inline">n_1</span> y <span class="math inline">n_2</span> tales que <span class="math inline">x_n\in(L-\varepsilon,L+\varepsilon)</span> para <span class="math inline">n&gt;n_1</span> e <span class="math inline">y_n\in(L-\varepsilon,L+\varepsilon)</span> para <span class="nw"><span class="math inline">n&gt;n_2</span>.</span> Para <span class="nw"><span class="math inline">n&gt;\max\{n_1,n_2\}</span>,</span> <span class="math display">
+L-\varepsilon&lt;x_n\le z_n\le y_n&lt;L+\varepsilon,
+</span> es decir, <span class="nw"><span class="math inline">z_n\in(L-\varepsilon,L+\varepsilon)</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-prop-paridad" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.15</span></p>
+<p>La sucesión <span class="math inline">\{a_n\}</span> converge a <span class="nw"><span class="math inline">L</span>,</span> con <span class="math inline">a_n=x_n</span> si <span class="math inline">n</span> es par y <span class="math inline">a_n=y_n</span> si <span class="math inline">n</span> es impar. (2026/27 1E)</p>
+<ol type="a">
+<li>Demostrar que si <span class="math inline">\{x_n\}</span> e <span class="math inline">\{y_n\}</span> convergen, sus límites son iguales.</li>
+<li>¿Deben converger <span class="math inline">\{x_n\}</span> e <span class="math inline">\{y_n\}</span>?</li>
+</ol>
+<div class="solucion">
+<p>(a) Sea <span class="math inline">\{x_n\}\to\ell</span> y supongamos que <span class="nw"><span class="math inline">\ell\neq L</span>.</span> Con <span class="math inline">\varepsilon</span> igual a la mitad de la distancia entre <span class="math inline">\ell</span> y <span class="nw"><span class="math inline">L</span>,</span> los intervalos alrededor de <span class="math inline">\ell</span> y de <span class="math inline">L</span> no se solapan. Para <span class="math inline">n</span> par y grande, <span class="math inline">a_n=x_n</span> estaría en los dos, lo cual es imposible. Luego <span class="nw"><span class="math inline">\ell=L</span>,</span> y de igual modo para <span class="nw"><span class="math inline">\{y_n\}</span>.</span></p>
+<p>(b) No: con <span class="math inline">x_n=(-1)^n</span> e <span class="nw"><span class="math inline">y_n=(-1)^{n+1}</span>,</span> ninguna converge, pero <span class="math inline">a_n=1</span> para todo <span class="nw"><span class="math inline">n</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="convergencia-monótona-y-divergencia" class="level2">
+<h2 data-anchor-id="convergencia-monótona-y-divergencia">Convergencia monótona y divergencia</h2>
+<div id="ejercicio-mon-supremo" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.16</span></p>
+<p>Estudiar el crecimiento de <span class="math inline">a_n=\dfrac{2n+1}{n+1}</span> y hallar su supremo, su ínfimo y su límite.</p>
+<div class="solucion">
+<p><span class="math inline">a_n=2-\dfrac1{n+1}</span> es creciente, porque <span class="math inline">\frac1{n+1}</span> decrece. El ínfimo es <span class="nw"><span class="math inline">a_1=\frac32</span>.</span> Como <span class="math inline">a_n&lt;2</span> y <span class="nw"><span class="math inline">\frac1{n+1}\to0</span>,</span> el supremo y el límite son 2.</p>
+</div>
+</div>
+<div id="ejercicio-mon-trozos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.17</span></p>
+<p>Estudiar el crecimiento, el supremo, el ínfimo y la convergencia de (2019/20 4E) <span class="math display">
+a_n=\begin{cases}4+\dfrac1n&amp;n&lt;10\\[6pt]\left(\dfrac23\right)^n&amp;n\ge10\end{cases}
+</span></p>
+<div class="solucion">
+<p>Decrece en cada trozo y en el salto, porque <span class="math inline">a_9=4+\frac19&gt;a_{10}=\left(\frac23\right)^{10}</span>: es decreciente. El supremo es <span class="nw"><span class="math inline">a_1=5</span>.</span> Como <span class="nw"><span class="math inline">a_n&gt;0</span>,</span> está acotada inferiormente y, por el teorema de la convergencia monótona, converge a su ínfimo <span class="nw"><span class="math inline">L</span>.</span> Para <span class="nw"><span class="math inline">n\ge10</span>,</span> <span class="nw"><span class="math inline">a_{n+1}=\frac23a_n</span>;</span> en el límite, <span class="nw"><span class="math inline">L=\frac23L</span>,</span> así que <span class="nw"><span class="math inline">L=0</span>.</span> El ínfimo y el límite son 0.</p>
+</div>
+</div>
+<div id="ejercicio-mon-trozos-2" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.18</span></p>
+<p>Estudiar el crecimiento, la acotación, el supremo, el ínfimo y la convergencia de (2020/21 1E) <span class="math display">
+a_n=\begin{cases}\left(\dfrac4n\right)^n&amp;n&lt;20\\[6pt]1-\dfrac1n&amp;n\ge20\end{cases}
+</span></p>
+<div class="solucion">
+<p>No es creciente, porque <span class="nw"><span class="math inline">a_3=\frac{64}{27}&lt;a_2=4</span>.</span> No es decreciente, porque <span class="nw"><span class="math inline">a_{20}=\frac{19}{20}&gt;a_{19}</span>.</span> Converge a <span class="nw"><span class="math inline">L=1</span>,</span> porque los primeros 19 términos no afectan al límite; por tanto, está acotada. En el primer trozo, los términos bajan desde <span class="math inline">a_1=a_2=4</span> hasta <span class="nw"><span class="math inline">a_{19}=\left(\frac4{19}\right)^{19}</span>.</span> En el segundo, <span class="nw"><span class="math inline">\frac{19}{20}\le a_n&lt;1</span>.</span> El supremo es 4 y el ínfimo es <span class="nw"><span class="math inline">\left(\frac4{19}\right)^{19}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-mon-ab" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.19</span></p>
+<p>Sea, con <span class="nw"><span class="math inline">a,b\in\mathbb{R}</span>,</span> (2018/19 7E) <span class="math display">
+x_n=\begin{cases}-\dfrac{a}{n}&amp;n&lt;10\\[6pt]b\,(-1)^n&amp;n\ge10\end{cases}
+</span></p>
+<ol type="a">
+<li>Hallar <span class="math inline">a</span> y <span class="math inline">b</span> sabiendo que el supremo es 3, el ínfimo es <span class="math inline">-2</span> y <span class="nw"><span class="math inline">|x_{10}-x_9|=\frac73</span>.</span></li>
+<li>Estudiar el crecimiento y la convergencia de <span class="nw"><span class="math inline">\{x_n\}</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>(a) El segundo trozo oscila entre <span class="math inline">|b|</span> y <span class="nw"><span class="math inline">-|b|</span>.</span> Si <span class="nw"><span class="math inline">a\ge0</span>,</span> el primer trozo es negativo o nulo y creciente, así que el supremo sale del segundo: <span class="nw"><span class="math inline">|b|=3</span>;</span> pero entonces el ínfimo sería como mucho <span class="nw"><span class="math inline">-3</span>,</span> y no <span class="nw"><span class="math inline">-2</span>.</span> Luego <span class="nw"><span class="math inline">a&lt;0</span>:</span> el primer trozo es positivo y decreciente, el ínfimo sale del segundo, <span class="nw"><span class="math inline">|b|=2</span>,</span> y el supremo es <span class="nw"><span class="math inline">x_1=-a=3</span>.</span> Con <span class="nw"><span class="math inline">a=-3</span>,</span> <span class="math inline">x_9=\frac13</span> y <span class="nw"><span class="math inline">x_{10}=b</span>,</span> y <span class="math inline">\left|b-\frac13\right|=\frac73</span> solo se cumple con <span class="nw"><span class="math inline">b=-2</span>.</span></p>
+<p>(b) No es decreciente, porque <span class="nw"><span class="math inline">x_{11}=2&gt;x_{10}=-2</span>;</span> no es creciente, porque <span class="nw"><span class="math inline">x_{10}&lt;x_9</span>.</span> No converge, porque sus términos saltan entre <span class="math inline">-2</span> y 2.</p>
+</div>
+</div>
+<div id="ejercicio-mon-definicion" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.20</span></p>
+<p>Usando la definición, demostrar que <span class="math inline">\{2n-5\}</span> diverge a <span class="nw"><span class="math inline">\infty</span>.</span></p>
+<div class="solucion">
+<p>Dado <span class="nw"><span class="math inline">M</span>,</span> <span class="nw"><span class="math inline">2n-5&gt;M\iff n&gt;\frac{M+5}{2}</span>.</span> Basta tomar como <span class="math inline">n_0</span> un natural mayor o igual que <span class="nw"><span class="math inline">\frac{M+5}{2}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-mon-signo" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.21</span></p>
+<p>Sea <span class="math inline">\{a_n\}</span> una sucesión creciente con límite 0. Decir qué afirmaciones son correctas: (2011/12 4E)</p>
+<ol type="a">
+<li>Existe <span class="math inline">n</span> tal que <span class="nw"><span class="math inline">a_n&gt;0</span>.</span></li>
+<li><span class="math inline">a_n&lt;0</span> para todo <span class="nw"><span class="math inline">n</span>.</span></li>
+<li><span class="math inline">\{a_n\}</span> puede tener términos positivos y negativos.</li>
+<li>Existe <span class="math inline">n</span> tal que <span class="nw"><span class="math inline">a_n=0</span>.</span></li>
+</ol>
+<div class="solucion">
+<p>Solo (b). Por el teorema de la convergencia monótona, 0 es el supremo, así que <span class="math inline">a_n\le0</span> para todo <span class="nw"><span class="math inline">n</span>.</span> Si algún <span class="math inline">a_n</span> fuera 0, por ser creciente sería <span class="nw"><span class="math inline">a_{n+1}&gt;0</span>,</span> lo cual es imposible.</p>
+</div>
+</div>
+<div id="ejercicio-mon-inversa" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.22</span></p>
+<p>Sea <span class="math inline">\{a_n\}</span> una sucesión divergente a <span class="math inline">-\infty</span> y sea <span class="nw"><span class="math inline">A\in\mathbb{R}</span>.</span> Estudiar la convergencia de <span class="nw"><span class="math inline">\left\{1+\dfrac{A}{a_n}\right\}</span>.</span> (2012/13 4E)</p>
+<div class="solucion">
+<p>Converge a 1. Si <span class="nw"><span class="math inline">A=0</span>,</span> es inmediato. Si <span class="nw"><span class="math inline">A\ne0</span>,</span> dado <span class="nw"><span class="math inline">\varepsilon&gt;0</span>,</span> se toma <span class="nw"><span class="math inline">M=-\frac{|A|}{\varepsilon}</span>.</span> Existe <span class="math inline">n_0</span> tal que <span class="math inline">a_n&lt;M&lt;0</span> para <span class="nw"><span class="math inline">n&gt;n_0</span>,</span> y entonces <span class="nw"><span class="math inline">\frac{|A|}{|a_n|}&lt;\varepsilon</span>,</span> es decir, <span class="nw"><span class="math inline">\frac{A}{a_n}\in(-\varepsilon,\varepsilon)</span>.</span> Por tanto, <span class="math inline">1+\frac{A}{a_n}\in(1-\varepsilon,1+\varepsilon)</span>.</p>
+</div>
+</div>
+</section>
+<section id="series-numéricas" class="level2">
+<h2 data-anchor-id="series-numéricas">Series numéricas</h2>
+<div id="ejercicio-ser-suma" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.23</span></p>
+<p>Las sumas parciales de una serie son <span class="nw"><span class="math inline">S_N=\dfrac{2N}{N+1}</span>.</span> Hallar <span class="nw"><span class="math inline">a_1</span>,</span> <span class="math inline">a_n</span> para <span class="math inline">n\ge2</span> y la suma de la serie.</p>
+<div class="solucion">
+<p><span class="nw"><span class="math inline">a_1=S_1=1</span>.</span> Para <span class="nw"><span class="math inline">n\ge2</span>,</span> <span class="math inline">a_n=S_n-S_{n-1}=\dfrac{2n}{n+1}-\dfrac{2n-2}{n}=\dfrac{2}{n(n+1)}</span>. La suma es <span class="nw"><span class="math inline">\lim\limits_{N\to\infty}S_N=2</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-ser-trozos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.24</span></p>
+<p>¿Es convergente <span class="nw"><span class="math inline">\displaystyle\sum_{n=1}^\infty a_n</span>,</span> con la sucesión del Ejercicio <a href="#ejercicio-mon-trozos-2">2.18</a>? (2020/21 1E)</p>
+<div class="solucion">
+<p>No: <span class="math inline">\{a_n\}</span> tiende a 1, y no a 0.</p>
+</div>
+</div>
+<div id="ejercicio-ser-hiper" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.25</span></p>
+<p>Una serie <span class="math inline">\displaystyle\sum_{n=1}^\infty a_n</span> de términos positivos se llama <em>hipergeométrica</em> si existen <span class="nw"><span class="math inline">\alpha,\beta,\gamma\in\mathbb{R}</span>,</span> con <span class="math inline">\alpha</span> y <span class="math inline">\gamma</span> no nulos a la vez, tales que <span class="math inline">\dfrac{a_{n+1}}{a_n}=\dfrac{\alpha n+\beta}{\alpha n+\gamma}</span>. Si <span class="nw"><span class="math inline">\alpha+\beta\ge\gamma</span>,</span> la serie es divergente. Si <span class="nw"><span class="math inline">\alpha+\beta&lt;\gamma</span>,</span> es convergente y su suma es el límite de la sucesión <span class="math display">
+\left\{\frac{a_n(\alpha n+\beta)-a_1\gamma}{\alpha+\beta-\gamma}\right\}.
+</span> Con este resultado: (2025/26 1E)</p>
+<ol type="a">
+<li>Calcular <span class="math inline">\displaystyle\sum_{n=1}^\infty\frac1{(n+2)(n+3)}</span>.</li>
+<li>Para cada <span class="nw"><span class="math inline">n</span>,</span> se forma un rectángulo de base <span class="math inline">\frac1n</span> y altura <span class="nw"><span class="math inline">\frac1{n+1}</span>.</span> ¿Converge la suma de las bases? ¿Y la suma de las áreas? Si convergen, hallar su valor.</li>
+</ol>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">\dfrac{a_{n+1}}{a_n}=\dfrac{n+2}{n+4}</span>,</span> con <span class="nw"><span class="math inline">\alpha=1</span>,</span> <span class="math inline">\beta=2</span> y <span class="nw"><span class="math inline">\gamma=4</span>.</span> Como <span class="nw"><span class="math inline">3&lt;4</span>,</span> converge. Con <span class="math inline">a_1=\frac1{12}</span> y <span class="nw"><span class="math inline">a_n(n+2)=\frac1{n+3}\to0</span>,</span> la suma es <span class="nw"><span class="math inline">\dfrac{0-\frac13}{-1}=\dfrac13</span>.</span></p>
+<p>(b) Las bases forman la serie armónica: <span class="nw"><span class="math inline">\dfrac{a_{n+1}}{a_n}=\dfrac{n}{n+1}</span>,</span> con <span class="nw"><span class="math inline">\alpha=1</span>,</span> <span class="math inline">\beta=0</span> y <span class="nw"><span class="math inline">\gamma=1</span>.</span> Como <span class="nw"><span class="math inline">\alpha+\beta=\gamma</span>,</span> diverge. Las áreas son <span class="nw"><span class="math inline">\frac1{n(n+1)}</span>:</span> <span class="nw"><span class="math inline">\dfrac{a_{n+1}}{a_n}=\dfrac{n}{n+2}</span>,</span> con <span class="nw"><span class="math inline">\alpha=1</span>,</span> <span class="math inline">\beta=0</span> y <span class="nw"><span class="math inline">\gamma=2</span>.</span> Converge, con <span class="math inline">a_1=\frac12</span> y <span class="nw"><span class="math inline">a_n\,n=\frac1{n+1}\to0</span>,</span> y la suma es <span class="nw"><span class="math inline">\dfrac{0-1}{-1}=1</span>,</span> como en el Ejemplo <a href="series.html#ejemplo-suma-serie">2.14</a>.</p>
+</div>
+</div>
+<div id="ejercicio-ser-hiper-2" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.26</span></p>
+<p>Con el resultado del Ejercicio <a href="#ejercicio-ser-hiper">2.25</a>: (2025/26 3E)</p>
+<ol type="a">
+<li>Demostrar que <span class="math inline">\displaystyle\sum_{n=1}^\infty\frac1{(2n-1)(2n+1)(2n+3)}</span> es hipergeométrica y convergente, y calcular su suma.</li>
+<li>Para cada <span class="nw"><span class="math inline">n</span>,</span> se forma un cilindro de radio <span class="math inline">\frac1n</span> y altura <span class="nw"><span class="math inline">n</span>.</span> ¿Converge la suma de sus volúmenes?</li>
+</ol>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">\dfrac{a_{n+1}}{a_n}=\dfrac{2n-1}{2n+5}</span>,</span> con <span class="nw"><span class="math inline">\alpha=2</span>,</span> <span class="math inline">\beta=-1</span> y <span class="nw"><span class="math inline">\gamma=5</span>.</span> Como <span class="nw"><span class="math inline">1&lt;5</span>,</span> converge. Con <span class="math inline">a_1=\frac1{15}</span> y <span class="nw"><span class="math inline">a_n(2n-1)=\frac1{(2n+1)(2n+3)}\to0</span>,</span> la suma es <span class="nw"><span class="math inline">\dfrac{0-\frac13}{-4}=\dfrac1{12}</span>.</span></p>
+<p>(b) Los volúmenes son <span class="nw"><span class="math inline">\pi\frac1{n^2}n=\frac{\pi}{n}</span>,</span> así que la suma es <span class="math inline">\pi</span> por la serie armónica. No converge.</p>
+</div>
+</div>
+<div id="ejercicio-ser-raiz" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.27</span></p>
+<p>Demostrar que <span class="math inline">\displaystyle\sum_{n=1}^\infty\frac1{\sqrt{n}}</span> es divergente, comparando sus sumas parciales con las de la serie armónica.</p>
+<div class="solucion">
+<p>Como <span class="nw"><span class="math inline">\sqrt{n}\le n</span>,</span> se tiene <span class="nw"><span class="math inline">\frac1{\sqrt{n}}\ge\frac1n</span>.</span> Cada suma parcial es mayor o igual que la de la serie armónica, que no está acotada. Por tanto, sus sumas parciales tampoco lo están, y la serie no converge.</p>
+</div>
+</div>
+</section>
+<section id="serie-geométrica" class="level2">
+<h2 data-anchor-id="serie-geométrica">Serie geométrica</h2>
+<div id="ejercicio-geo-decimal" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.28</span></p>
+<p>Escribir el decimal periódico <span class="math inline">0.272727\ldots</span> como una serie geométrica y hallar su valor como fracción.</p>
+<div class="solucion">
+<p><span class="math inline">\dfrac{27}{100}+\dfrac{27}{100^2}+\dots=\dfrac{27/100}{1-1/100}=\dfrac{27}{99}=\dfrac3{11}</span>.</p>
+</div>
+</div>
+<div id="ejercicio-geo-sumas" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.29</span></p>
+<p>Estudiar la convergencia de las series y, si convergen, hallar su suma:</p>
+<ol type="a">
+<li><span class="math inline">\displaystyle\sum_{n=0}^\infty\left(-\frac13\right)^n</span></li>
+<li><span class="math inline">\displaystyle\sum_{n=2}^\infty\left(\frac23\right)^n</span></li>
+<li><span class="math inline">\displaystyle\sum_{n=1}^\infty3\left(\frac14\right)^n</span></li>
+<li><span class="math inline">\displaystyle\sum_{n=0}^\infty\left(\frac54\right)^n</span></li>
+</ol>
+<div class="solucion">
+<p>(a) <span class="nw"><span class="math inline">\dfrac1{1+\frac13}=\dfrac34</span>.</span> (b) <span class="nw"><span class="math inline">\dfrac{4/9}{1-\frac23}=\dfrac43</span>.</span> (c) <span class="nw"><span class="math inline">\dfrac{3/4}{1-\frac14}=1</span>.</span> (d) Divergente, porque <span class="nw"><span class="math inline">r=\frac54&gt;1</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-geo-trozos" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.30</span></p>
+<p>Estudiar la convergencia de <span class="math inline">\displaystyle\sum_{n=1}^\infty a_n</span> y, si converge, calcular su suma, con (2023/24 1E) <span class="math display">
+a_n=\begin{cases}n^2&amp;n\le2\\[6pt]\dfrac1{3^n}&amp;n&gt;2\end{cases}
+</span></p>
+<div class="solucion">
+<p>Los dos primeros términos suman <span class="nw"><span class="math inline">1+4=5</span>.</span> El resto es una serie geométrica de razón <span class="math inline">\frac13</span> y primer término <span class="nw"><span class="math inline">\frac1{27}</span>,</span> que suma <span class="nw"><span class="math inline">\dfrac{1/27}{1-\frac13}=\dfrac1{18}</span>.</span> La serie converge, y <span class="nw"><span class="math inline">S=5+\dfrac1{18}=\dfrac{91}{18}</span>.</span></p>
+</div>
+</div>
+<div id="ejercicio-geo-trozos-2" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.31</span></p>
+<p>¿Es convergente <span class="nw"><span class="math inline">\displaystyle\sum_{n=1}^\infty a_n</span>,</span> con la sucesión del Ejercicio <a href="#ejercicio-mon-trozos">2.17</a>? (2019/20 4E)</p>
+<div class="solucion">
+<p>Sí. Los 9 primeros términos tienen suma finita, y el resto es una serie geométrica de razón <span class="nw"><span class="math inline">\frac23</span>.</span> Aunque no se pide, su suma es <span class="math inline">36+\sum_{n=1}^9\frac1n+\dfrac{(2/3)^{10}}{1/3}\approx38.88</span>.</p>
+</div>
+</div>
+<div id="ejercicio-geo-alterna" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.32</span></p>
+<p>Sea <span class="nw"><span class="math inline">a_n=\dfrac{(-3)^n}{4^{n+2}}</span>,</span> con <span class="nw"><span class="math inline">n\ge0</span>.</span> (2026/27 1E)</p>
+<ol type="a">
+<li>¿Es convergente la serie <span class="math inline">\displaystyle\sum_{n=0}^\infty a_n</span>? Si lo es, hallar su suma.</li>
+<li>¿Es convergente la sucesión <span class="math inline">\{a_n\}</span>? Justificar la respuesta.</li>
+</ol>
+<div class="solucion">
+<p>(a) Es geométrica de razón <span class="math inline">r=-\frac34</span> y primer término <span class="nw"><span class="math inline">a_0=\frac1{16}</span>.</span> Converge, y su suma es <span class="nw"><span class="math inline">\dfrac{1/16}{1+\frac34}=\dfrac1{28}</span>.</span></p>
+<p>(b) Sí: como la serie converge, <span class="nw"><span class="math inline">\{a_n\}\to0</span>,</span> por el Teorema <a href="series.html#teorema-condicion-necesaria">2.5</a>.</p>
+</div>
+</div>
+<div id="ejercicio-geo-cuadrados" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.33</span></p>
+<p>Se parte de un cuadrado de lado 1. Uniendo los puntos medios de sus lados se obtiene otro cuadrado, y se repite el proceso indefinidamente. Hallar la suma de las áreas y la suma de los perímetros de todos los cuadrados.</p>
+<div class="solucion">
+<p>Cada cuadrado tiene la mitad de área que el anterior, y su lado es el anterior dividido entre <span class="nw"><span class="math inline">\sqrt2</span>.</span> Áreas: <span class="nw"><span class="math inline">\dfrac1{1-\frac12}=2</span>.</span> Perímetros: <span class="math inline">\dfrac4{1-\frac1{\sqrt2}}=8+4\sqrt2\approx13.66</span>.</p>
+</div>
+</div>
+<div id="ejercicio-geo-derivar" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.34</span></p>
+<p>Sabiendo que <span class="math inline">\displaystyle\sum_{k=0}^\infty r^k=\frac1{1-r}</span> si <span class="nw"><span class="math inline">|r|&lt;1</span>,</span> calcular:</p>
+<ol type="a">
+<li><span class="math inline">\displaystyle\sum_{k=1}^\infty k\,r^k</span></li>
+<li><span class="math inline">\displaystyle\sum_{k=1}^\infty k(k+1)\,r^k</span></li>
+</ol>
+<p>Ayuda: derivar respecto de <span class="math inline">r</span> término a término.</p>
+<div class="solucion">
+<p>(a) Derivando, <span class="math inline">\displaystyle\sum_{k=1}^\infty k\,r^{k-1}=\frac1{(1-r)^2}</span>. Multiplicando por <span class="nw"><span class="math inline">r</span>,</span> <span class="math display">
+\sum_{k=1}^\infty k\,r^k=\frac{r}{(1-r)^2}.
+</span></p>
+<p>(b) Derivando otra vez, <span class="math inline">\displaystyle\sum_{k=2}^\infty k(k-1)\,r^{k-2}=\frac2{(1-r)^3}</span>. Cambiando <span class="math inline">k</span> por <span class="nw"><span class="math inline">k+1</span>,</span> <span class="math inline">\displaystyle\sum_{k=1}^\infty (k+1)k\,r^{k-1}=\frac2{(1-r)^3}</span>. Multiplicando por <span class="nw"><span class="math inline">r</span>,</span> <span class="math display">
+\sum_{k=1}^\infty k(k+1)\,r^k=\frac{2r}{(1-r)^3}.
+</span></p>
+<p>Comprobación con <span class="nw"><span class="math inline">r=\frac12</span>:</span> (a) da 2 y (b) da 8, que coinciden con las sumas numéricas.</p>
+</div>
+</div>
+<div id="ejercicio-geo-g" class="ejercicio">
+<p><span class="caja-titulo">Ejercicio&nbsp;2.35</span></p>
+<p>(*) La serie <span class="math inline">\displaystyle\sum_{k=1}^\infty k\,r^k</span> del Ejercicio <a href="#ejercicio-geo-derivar">2.34</a> converge si <span class="math inline">|r|&lt;1</span> y diverge si <span class="nw"><span class="math inline">|r|\ge1</span>.</span> Sea <span class="math inline">g(x)</span> la función de la <a href="#figura-serie-g">Figura&nbsp;2.9</a>, definida en <span class="nw"><span class="math inline">[-0.25,0.5]</span>,</span> y sea <span class="nw"><span class="math inline">S=\displaystyle\sum_{k=1}^\infty k\,g(x)^k</span>.</span> (2024/25 1E)</p>
+<ol type="a">
+<li>Determinar los valores de <span class="math inline">x</span> para los que <span class="math inline">S</span> es convergente.</li>
+<li>Calcular <span class="math inline">S</span> para esos valores.</li>
+</ol>
+<div id="figura-serie-g" class="figura">
+<p><img src="../figs/serie_g.svg" class="img-fluid" alt="Gráfica de g en el intervalo de menos 0.25 a 0.5. Vale 1 en menos 0.25, menos 1 en menos 0.2 y en menos 0.05, 1 en 0.1 y en 0.25, y 0 en 0.5. Entre menos 0.2 y menos 0.05 queda por debajo de menos 1, y entre 0.1 y 0.25 por encima de 1." width="405"></p>
+<p><span class="figura-num">Figura&nbsp;2.9.</span> Función <span class="nw"><span class="math inline">g(x)</span>.</span></p>
+</div>
+<div class="solucion">
+<p>(a) Converge si <span class="nw"><span class="math inline">|g(x)|&lt;1</span>,</span> es decir, para <span class="nw"><span class="math inline">x\in(-0.25,-0.2)\cup(-0.05,0.1)\cup(0.25,0.5]</span>.</span></p>
+<p>(b) Por el Ejercicio <a href="#ejercicio-geo-derivar">2.34</a>, <span class="nw"><span class="math inline">S=\dfrac{g(x)}{(1-g(x))^2}</span>.</span></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../02_sucesiones/resumen.html" class="pagination-link" aria-label="2.7 Resumen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.7 Resumen</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>window.PDF_CAPITULO = "sucesiones.pdf";</script>
+<script src="../js/apuntes.js"></script>
+
+
+
+
+</body></html>
