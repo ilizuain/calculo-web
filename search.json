@@ -1,5 +1,15 @@
 [
   {
+    "objectID": "02_sucesiones/resumen.html",
+    "href": "02_sucesiones/resumen.html",
+    "title": "2.7 Resumen",
+    "section": "",
+    "text": "Resumen del capítulo 2\nSucesión. Conjunto numerado de valores reales, \\{x_n\\}_{n\\in\\mathbb{N}}. Se da por sus valores, por su término general o por recurrencia.\nCrecimiento y cotas. \\{a_n\\} es creciente si a_{n+1}&gt;a_n y decreciente si a_{n+1}&lt;a_n para todo n. Está acotada si existen p,q con p\\le a_n\\le q para todo n. El supremo es la cota superior mínima y el ínfimo, la cota inferior máxima.\nLímite. \\lim\\limits_{n\\to\\infty}x_n=L si \n\\forall\\varepsilon&gt;0\\quad\\exists n_0\\in\\mathbb{N}\\ /\\quad\\forall n&gt;n_0\\Rightarrow x_n\\in(L-\\varepsilon,L+\\varepsilon).\n Con límite finito, la sucesión es convergente. Cambiar un número finito de términos no cambia el límite.\nPropiedades. Si \\{x_n\\}\\to L_1 e \\{y_n\\}\\to L_2:\n\nEl límite es único, y la sucesión está acotada (el recíproco es falso).\n\\{x_n+y_n\\}\\to L_1+L_2, \\{x_n\\,y_n\\}\\to L_1L_2 y \\{k\\,x_n\\}\\to k\\,L_1.\n\\left\\{\\frac{x_n}{y_n}\\right\\}\\to\\frac{L_1}{L_2} si y_n\\ne0 para todo n y L_2\\ne0.\nSi x_n\\le y_n para todo n, entonces L_1\\le L_2.\n\nConvergencia monótona. Creciente y acotada superiormente: converge a su supremo. Decreciente y acotada inferiormente: converge a su ínfimo.\nDivergencia. \\lim\\limits_{n\\to\\infty}y_n=\\infty si \\forall M\\in\\mathbb{R}\\ \\exists n_0\\ /\\ \\forall n&gt;n_0\\Rightarrow y_n&gt;M. Para -\\infty, y_n&lt;M.\nSeries. \\displaystyle\\sum_{n=1}^\\infty a_n es convergente, con suma S, si existe y es finito S=\\lim\\limits_{N\\to\\infty}S_N, con S_N=\\displaystyle\\sum_{n=1}^N a_n. Si no, es divergente.\n\nSi la serie converge, a_n\\to0. Si \\{a_n\\} no tiende a 0, la serie no converge.\nEl recíproco es falso: la serie armónica, \\sum\\frac1n, es divergente.\n\nSerie geométrica. Si |r|&lt;1, \n\\sum_{n=0}^\\infty r^n=\\frac1{1-r},\n\\qquad\n\\sum_{n=m}^\\infty c\\,r^n=\\frac{c\\,r^m}{1-r}=\\frac{\\text{primer término}}{1-r}.\n Si |r|\\ge1, es divergente.",
+    "crumbs": [
+      "2.7 Resumen"
+    ]
+  },
+  {
     "objectID": "02_sucesiones/ejercicios.html",
     "href": "02_sucesiones/ejercicios.html",
     "title": "2.8 Ejercicios",

@@ -71,6 +71,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="robots" content="noindex">
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -255,6 +298,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="resumen">
+<p><span class="caja-titulo">Resumen del capítulo&nbsp;2</span></p>
+<p><strong>Sucesión.</strong> Conjunto numerado de valores reales, <span class="nw"><span class="math inline">\{x_n\}_{n\in\mathbb{N}}</span>.</span> Se da por sus valores, por su término general o por recurrencia.</p>
+<p><strong>Crecimiento y cotas.</strong> <span class="math inline">\{a_n\}</span> es <em>creciente</em> si <span class="math inline">a_{n+1}&gt;a_n</span> y <em>decreciente</em> si <span class="math inline">a_{n+1}&lt;a_n</span> para todo <span class="nw"><span class="math inline">n</span>.</span> Está <em>acotada</em> si existen <span class="math inline">p,q</span> con <span class="math inline">p\le a_n\le q</span> para todo <span class="nw"><span class="math inline">n</span>.</span> El <em>supremo</em> es la cota superior mínima y el <em>ínfimo</em>, la cota inferior máxima.</p>
+<p><strong>Límite.</strong> <span class="math inline">\lim\limits_{n\to\infty}x_n=L</span> si <span class="math display">
+\forall\varepsilon&gt;0\quad\exists n_0\in\mathbb{N}\ /\quad\forall n&gt;n_0\Rightarrow x_n\in(L-\varepsilon,L+\varepsilon).
+</span> Con límite finito, la sucesión es <em>convergente</em>. Cambiar un número finito de términos no cambia el límite.</p>
+<p><strong>Propiedades.</strong> Si <span class="math inline">\{x_n\}\to L_1</span> e <span class="nw"><span class="math inline">\{y_n\}\to L_2</span>:</span></p>
+<ul>
+<li>El límite es único, y la sucesión está acotada (el recíproco es falso).</li>
+<li><span class="nw"><span class="math inline">\{x_n+y_n\}\to L_1+L_2</span>,</span> <span class="math inline">\{x_n\,y_n\}\to L_1L_2</span> y <span class="nw"><span class="math inline">\{k\,x_n\}\to k\,L_1</span>.</span></li>
+<li><span class="math inline">\left\{\frac{x_n}{y_n}\right\}\to\frac{L_1}{L_2}</span> si <span class="math inline">y_n\ne0</span> para todo <span class="math inline">n</span> y <span class="nw"><span class="math inline">L_2\ne0</span>.</span></li>
+<li>Si <span class="math inline">x_n\le y_n</span> para todo <span class="nw"><span class="math inline">n</span>,</span> entonces <span class="nw"><span class="math inline">L_1\le L_2</span>.</span></li>
+</ul>
+<p><strong>Convergencia monótona.</strong> Creciente y acotada superiormente: converge a su supremo. Decreciente y acotada inferiormente: converge a su ínfimo.</p>
+<p><strong>Divergencia.</strong> <span class="math inline">\lim\limits_{n\to\infty}y_n=\infty</span> si <span class="math inline">\forall M\in\mathbb{R}\ \exists n_0\ /\ \forall n&gt;n_0\Rightarrow y_n&gt;M</span>. Para <span class="nw"><span class="math inline">-\infty</span>,</span> <span class="nw"><span class="math inline">y_n&lt;M</span>.</span></p>
+<p><strong>Series.</strong> <span class="math inline">\displaystyle\sum_{n=1}^\infty a_n</span> es <em>convergente</em>, con suma <span class="nw"><span class="math inline">S</span>,</span> si existe y es finito <span class="nw"><span class="math inline">S=\lim\limits_{N\to\infty}S_N</span>,</span> con <span class="nw"><span class="math inline">S_N=\displaystyle\sum_{n=1}^N a_n</span>.</span> Si no, es <em>divergente</em>.</p>
+<ul>
+<li>Si la serie converge, <span class="nw"><span class="math inline">a_n\to0</span>.</span> Si <span class="math inline">\{a_n\}</span> no tiende a 0, la serie no converge.</li>
+<li>El recíproco es falso: la serie armónica, <span class="nw"><span class="math inline">\sum\frac1n</span>,</span> es divergente.</li>
+</ul>
+<p><strong>Serie geométrica.</strong> Si <span class="nw"><span class="math inline">|r|&lt;1</span>,</span> <span class="math display">
+\sum_{n=0}^\infty r^n=\frac1{1-r},
+\qquad
+\sum_{n=m}^\infty c\,r^n=\frac{c\,r^m}{1-r}=\frac{\text{primer término}}{1-r}.
+</span> Si <span class="nw"><span class="math inline">|r|\ge1</span>,</span> es divergente.</p>
+</div>
 
 
 
