@@ -68,6 +68,29 @@
       window.PDF_CAPITULO + '"><span class="menu-text">Descargar capítulo como PDF</span></a></div>';
     menu.appendChild(item);
   }
+  // El capítulo actual, en la barra superior y en la miga de pan del móvil. Se toma
+  // de la primera entrada del menú lateral. Sin JavaScript, la barra dice «Capítulos».
+  var capitulo = document.querySelector("#quarto-sidebar .sidebar-menu-container > ul > li:first-child a");
+  if (capitulo) {
+    var nombre = capitulo.textContent.trim();
+    var desplegable = document.querySelector(".navbar .dropdown-toggle .menu-text");
+    if (desplegable) desplegable.textContent = nombre;
+    var migas = document.querySelector(".quarto-page-breadcrumbs .breadcrumb");
+    if (migas && !capitulo.classList.contains("active")) {
+      var miga = document.createElement("li");
+      miga.className = "breadcrumb-item";
+      var enlace = document.createElement("a");
+      enlace.href = capitulo.getAttribute("href");
+      enlace.textContent = nombre;
+      miga.appendChild(enlace);
+      migas.insertBefore(miga, migas.firstChild);
+    }
+  }
+  // El número de la sección, en el título del índice de la derecha.
+  var seccion = document.querySelector("#quarto-sidebar .sidebar-link.active");
+  var tituloIndice = document.getElementById("toc-title");
+  var numero = seccion && seccion.textContent.trim().match(/^\d+\.\d+/);
+  if (tituloIndice && numero) tituloIndice.textContent = "En la sección " + numero[0];
   window.addEventListener("hashchange", abrirDestino);
   abrirDestino();
 })();
