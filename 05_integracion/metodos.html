@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5.6 Métodos de integración – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../05_integracion/aplicaciones.html" rel="next">
+<link href="../05_integracion/cambio_variable.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e7aab4f3c3f345eb47e789dd861cda50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../02_sucesiones/index.html">
+ <span class="dropdown-text">2. Sucesiones y series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../03_funciones/index.html">
+ <span class="dropdown-text">3. Funciones reales de variable real</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../04_estudio_local/index.html">
+ <span class="dropdown-text">4. Estudio local de una función</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../05_integracion/index.html">
+ <span class="dropdown-text">5. Integración</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../06_varias_variables/index.html">
+ <span class="dropdown-text">6. Funciones de varias variables reales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../07_integral_multiple/index.html">
+ <span class="dropdown-text">7. Integral múltiple</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../08_integral_curvilinea/index.html">
+ <span class="dropdown-text">8. Integral curvilínea</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../09_ecuaciones_diferenciales/index.html">
+ <span class="dropdown-text">9. Ecuaciones diferenciales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../10_laplace/index.html">
+ <span class="dropdown-text">10. Transformada de Laplace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../11_fourier/index.html">
+ <span class="dropdown-text">11. Análisis de Fourier</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_integracion/metodos.html">5.6 Métodos de integración</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integración</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/definida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 Integral definida y propiedades</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/valor_medio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 Valor medio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/fundamental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Teorema fundamental y Barrow</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/funciones_integrales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 Funciones integrales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/cambio_variable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 Primitivas y cambio de variable</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/metodos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5.6 Métodos de integración</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.7 Otras aplicaciones de la integral</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/impropias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.8 Integrales impropias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.9 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.10 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta sección</h2>
+   
+  <ul class="collapse">
+  <li><a href="#integración-por-partes" id="toc-integración-por-partes" class="nav-link active" data-scroll-target="#integración-por-partes">Integración por partes</a></li>
+  <li><a href="#funciones-racionales" id="toc-funciones-racionales" class="nav-link" data-scroll-target="#funciones-racionales">Funciones racionales</a></li>
+  <li><a href="#funciones-trigonométricas" id="toc-funciones-trigonométricas" class="nav-link" data-scroll-target="#funciones-trigonométricas">Funciones trigonométricas</a></li>
+  <li><a href="#funciones-irracionales" id="toc-funciones-irracionales" class="nav-link" data-scroll-target="#funciones-irracionales">Funciones irracionales</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">5.6 Métodos de integración</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Si la integral no es inmediata ni sale con un cambio sencillo, el método depende del tipo de integrando.</p>
+<section id="integración-por-partes" class="level2">
+<h2 data-anchor-id="integración-por-partes">Integración por partes</h2>
+<p>Sale de la derivada de un producto: <span class="math display">
+\frac{d(uv)}{dx}=\frac{du}{dx}\,v+u\,\frac{dv}{dx}\quad\Longrightarrow\quad u\,\frac{dv}{dx}=\frac{d(uv)}{dx}-v\,\frac{du}{dx},
+</span> e integrando los dos miembros se obtiene la fórmula. Conviene tomar como <span class="math inline">u</span> lo que se simplifica al derivar.</p>
+<div class="recuerda">
+<p><span class="caja-titulo">Recuerda</span></p>
+<p><span class="math inline">\displaystyle\int u\,dv=u\,v-\int v\,du</span></p>
+</div>
+<div id="ejemplo-partes-polinomio" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.15</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int x^2\sin x\,dx</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="math inline">u=x^2</span> y <span class="nw"><span class="math inline">dv=\sin x\,dx</span>,</span> es <span class="math inline">du=2x\,dx</span> y <span class="nw"><span class="math inline">v=-\cos x</span>:</span> <span class="math display">
+\int x^2\sin x\,dx=-x^2\cos x+2\int x\cos x\,dx.
+</span> Otra vez por partes, con <span class="math inline">u=x</span> y <span class="nw"><span class="math inline">dv=\cos x\,dx</span>:</span> <span class="math display">
+\int x\cos x\,dx=x\sin x-\int\sin x\,dx=x\sin x+\cos x.
+</span> Por tanto, <span class="math display">
+\int x^2\sin x\,dx=-x^2\cos x+2x\sin x+2\cos x+C.
+</span></p>
+</div>
+</div>
+<div id="ejemplo-partes-arcotangente" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.16</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\arctan x\,dx</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="math inline">u=\arctan x</span> y <span class="nw"><span class="math inline">dv=dx</span>,</span> es <span class="math inline">du=\dfrac{dx}{1+x^2}</span> y <span class="nw"><span class="math inline">v=x</span>:</span> <span class="math display">
+\int\arctan x\,dx=x\arctan x-\int\frac{x}{1+x^2}\,dx=x\arctan x-\frac12\ln(1+x^2)+C.
+</span></p>
+</div>
+</div>
+<div id="ejemplo-partes-ciclica" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.17</span></p>
+<p>Calcular <span class="nw"><span class="math inline">I=\displaystyle\int e^x\sin x\,dx</span>.</span></p>
+<div class="solucion">
+<p>Dos veces por partes, con <span class="math inline">u</span> la función trigonométrica y <span class="nw"><span class="math inline">dv=e^x\,dx</span>:</span> <span class="math display">
+I=e^x\sin x-\int e^x\cos x\,dx=e^x\sin x-e^x\cos x-I.
+</span> Reaparece la integral de partida. Despejando, <span class="math display">
+I=\frac12\,e^x(\sin x-\cos x)+C.
+</span></p>
+</div>
+</div>
+</section>
+<section id="funciones-racionales" class="level2">
+<h2 data-anchor-id="funciones-racionales">Funciones racionales</h2>
+<p>Para integrar <span class="math inline">\dfrac{P(x)}{Q(x)}</span> hace falta que el grado de <span class="math inline">P</span> sea menor que el de <span class="nw"><span class="math inline">Q</span>.</span> Si no lo es, se dividen los polinomios: <span class="math display">
+\frac{P(x)}{Q(x)}=C(x)+\frac{R(x)}{Q(x)},\qquad \text{con grado de } R&lt;\text{ grado de } Q.
+</span> Después se descompone en fracciones simples, según las raíces de <span class="nw"><span class="math inline">Q</span>.</span></p>
+<div class="recuerda" data-titulo="descomposición en fracciones simples">
+<p><span class="caja-titulo">Recuerda: descomposición en fracciones simples</span></p>
+<ul>
+<li>Raíces reales simples: <span class="math inline">\dfrac{P(x)}{(x+a)(x+b)}=\dfrac{A}{x+a}+\dfrac{B}{x+b}</span></li>
+<li>Raíces reales múltiples: <span class="math inline">\dfrac{P(x)}{(x+a)^2(x+b)}=\dfrac{A}{x+a}+\dfrac{B}{(x+a)^2}+\dfrac{C}{x+b}</span></li>
+<li>Raíces complejas: <span class="math inline">\dfrac{P(x)}{(x^2+a^2)(x^2+b^2)}=\dfrac{Ax+B}{x^2+a^2}+\dfrac{Cx+D}{x^2+b^2}</span></li>
+</ul>
+</div>
+<div id="ejemplo-racional-simples" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.18</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\frac{dx}{(x-1)(x+2)(x+3)}</span>.</span></p>
+<div class="solucion">
+<p>Se busca <span class="math inline">\dfrac{1}{(x-1)(x+2)(x+3)}=\dfrac{A}{x-1}+\dfrac{B}{x+2}+\dfrac{C}{x+3}</span>. Quitando denominadores y dando a <span class="math inline">x</span> los valores <span class="nw"><span class="math inline">1</span>,</span> <span class="math inline">-2</span> y <span class="nw"><span class="math inline">-3</span>,</span> sale <span class="nw"><span class="math inline">A=\frac1{12}</span>,</span> <span class="math inline">B=-\frac13</span> y <span class="nw"><span class="math inline">C=\frac14</span>.</span> Por tanto, <span class="math display">
+\int\frac{dx}{(x-1)(x+2)(x+3)}=\frac1{12}\ln|x-1|-\frac13\ln|x+2|+\frac14\ln|x+3|+C.
+</span></p>
+</div>
+</div>
+<div id="ejemplo-racional-multiples" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.19</span></p>
+<p>Calcular <span class="math inline">\displaystyle\int\frac{x^2+2}{(x+1)^3(x-2)}\,dx</span>.</p>
+<div class="solucion">
+<p>La raíz <span class="math inline">x=-1</span> es triple, así que aporta tres fracciones: <span class="math display">
+\frac{x^2+2}{(x+1)^3(x-2)}=\frac{A}{x+1}+\frac{B}{(x+1)^2}+\frac{D}{(x+1)^3}+\frac{E}{x-2}.
+</span> Dando valores e identificando coeficientes, <span class="nw"><span class="math inline">A=-\frac29</span>,</span> <span class="nw"><span class="math inline">B=\frac13</span>,</span> <span class="math inline">D=-1</span> y <span class="nw"><span class="math inline">E=\frac29</span>.</span> Por tanto, <span class="math display">
+\int\frac{x^2+2}{(x+1)^3(x-2)}\,dx=-\frac29\ln|x+1|-\frac{1}{3(x+1)}+\frac{1}{2(x+1)^2}+\frac29\ln|x-2|+C.
+</span></p>
+</div>
+</div>
+<div id="ejemplo-racional-complejas" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.20</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\frac{x+2}{x^2+2x+2}\,dx</span>.</span></p>
+<div class="solucion">
+<p>El denominador no tiene raíces reales: <span class="nw"><span class="math inline">x^2+2x+2=(x+1)^2+1</span>.</span> Se busca en el numerador la derivada del denominador, <span class="nw"><span class="math inline">x+2=\frac12(2x+2)+1</span>:</span> <span class="math display">
+\int\frac{x+2}{x^2+2x+2}\,dx=\frac12\int\frac{2x+2}{x^2+2x+2}\,dx+\int\frac{dx}{(x+1)^2+1}=\frac12\ln(x^2+2x+2)+\arctan(x+1)+C.
+</span></p>
+</div>
+</div>
+</section>
+<section id="funciones-trigonométricas" class="level2">
+<h2 data-anchor-id="funciones-trigonométricas">Funciones trigonométricas</h2>
+<p>Las potencias y productos se simplifican con las identidades. Para el resto, un cambio de variable convierte la integral en una racional, y la paridad del integrando indica cuál.</p>
+<div class="recuerda" data-titulo="identidades trigonométricas">
+<p><span class="caja-titulo">Recuerda: identidades trigonométricas</span></p>
+<ul>
+<li><span class="math inline">\sin^2x+\cos^2x=1,\qquad \cos^2x-\sin^2x=\cos2x,\qquad \sin2x=2\sin x\cos x</span></li>
+<li><span class="math inline">\sin^2x=\dfrac{1-\cos2x}{2},\qquad \cos^2x=\dfrac{1+\cos2x}{2}</span></li>
+</ul>
+</div>
+<div class="recuerda" data-titulo="cambios para integrales trigonométricas">
+<p><span class="caja-titulo">Recuerda: cambios para integrales trigonométricas</span></p>
+<p><span class="math display">
+\begin{array}{ll}
+\text{Paridad de } R &amp; \text{Cambio}\\ \hline
+\text{impar en } \sin x:\ \ R(-\sin x,\cos x)=-R(\sin x,\cos x) &amp; t=\cos x\\[1mm]
+\text{impar en } \cos x:\ \ R(\sin x,-\cos x)=-R(\sin x,\cos x) &amp; t=\sin x\\[1mm]
+\text{par:}\ \ R(-\sin x,-\cos x)=R(\sin x,\cos x) &amp; t=\tan x\\[1mm]
+\text{en los demás casos} &amp; t=\tan\dfrac x2
+\end{array}
+</span></p>
+</div>
+<div id="ejemplo-trig-identidad" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.21</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\sin4x\cos2x\,dx</span>.</span> (2011/12 7E)</p>
+<div class="solucion">
+<p>Como <span class="nw"><span class="math inline">\sin4x=2\sin2x\cos2x</span>,</span> con el cambio <span class="nw"><span class="math inline">u=\cos2x</span>,</span> <span class="nw"><span class="math inline">du=-2\sin2x\,dx</span>:</span> <span class="math display">
+\int2\sin2x\cos^22x\,dx=-\int u^2\,du=-\frac{\cos^32x}{3}+C.
+</span></p>
+</div>
+</div>
+<div id="ejemplo-trig-impar" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.22</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\frac{\sin^3x}{2+\cos x}\,dx</span>.</span></p>
+<div class="solucion">
+<p>Es impar en <span class="nw"><span class="math inline">\sin x</span>.</span> Con <span class="nw"><span class="math inline">t=\cos x</span>,</span> <span class="math inline">dt=-\sin x\,dx</span> y <span class="nw"><span class="math inline">\sin^2x=1-t^2</span>.</span> Dividiendo los polinomios: <span class="math display">
+\int\frac{\sin^3x}{2+\cos x}\,dx=-\int\frac{1-t^2}{2+t}\,dt=-\int\left(2-t-\frac{3}{2+t}\right)dt=-2t+\frac{t^2}{2}+3\ln|2+t|+C.
+</span> Deshaciendo el cambio, el resultado es <span class="nw"><span class="math inline">-2\cos x+\frac12\cos^2x+3\ln(2+\cos x)+C</span>.</span></p>
+</div>
+</div>
+<div id="ejemplo-trig-par" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.23</span></p>
+<p>Calcular <span class="math inline">\displaystyle\int\frac{dx}{\sin^2x-5\sin x\cos x}</span>. (2019/20 3E)</p>
+<div class="solucion">
+<p>Es par. Dividiendo numerador y denominador por <span class="nw"><span class="math inline">\cos^2x</span>,</span> y con <span class="nw"><span class="math inline">t=\tan x</span>,</span> <span class="nw"><span class="math inline">dt=\dfrac{dx}{\cos^2x}</span>:</span> <span class="math display">
+\int\frac{dt}{t^2-5t}=\frac15\int\left(\frac{1}{t-5}-\frac1t\right)dt=\frac15\ln\left|\frac{t-5}{t}\right|+C=\frac15\ln\left|\frac{\tan x-5}{\tan x}\right|+C.
+</span></p>
+</div>
+</div>
+</section>
+<section id="funciones-irracionales" class="level2">
+<h2 data-anchor-id="funciones-irracionales">Funciones irracionales</h2>
+<p>En muchos casos basta con quitar la raíz con un cambio de variable.</p>
+<div id="ejemplo-raiz-directa" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.24</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int x\sqrt{x+1}\,dx</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">t=\sqrt{x+1}</span>,</span> es <span class="math inline">x=t^2-1</span> y <span class="nw"><span class="math inline">dx=2t\,dt</span>:</span> <span class="math display">
+\int x\sqrt{x+1}\,dx=2\int(t^2-1)\,t^2\,dt=\frac25t^5-\frac23t^3+C=\frac25(x+1)^{5/2}-\frac23(x+1)^{3/2}+C.
+</span> Comprobación: al derivar sale <span class="nw"><span class="math inline">(x+1)^{3/2}-(x+1)^{1/2}=x\sqrt{x+1}</span>.</span></p>
+</div>
+</div>
+<p>A veces un cambio sencillo no es suficiente. Con raíces de un polinomio de grado 2, hay que hacer cambios que involucran funciones trigonométricas o hiperbólicas.</p>
+<div class="recuerda" data-titulo="cambios para funciones irracionales">
+<p><span class="caja-titulo">Recuerda: cambios para funciones irracionales</span></p>
+<p><span class="math display">
+\begin{array}{ll}
+\text{Integral} &amp; \text{Cambio}\\ \hline
+\displaystyle\int R\big(x,\sqrt{a^2-x^2}\big)\,dx &amp; x=a\sin t \ \text{ o } \ x=a\tanh t\\[3mm]
+\displaystyle\int R\big(x,\sqrt{a^2+x^2}\big)\,dx &amp; x=a\tan t \ \text{ o } \ x=a\sinh t\\[3mm]
+\displaystyle\int R\big(x,\sqrt{x^2-a^2}\big)\,dx &amp; x=a\sec t \ \text{ o } \ x=a\cosh t
+\end{array}
+</span></p>
+</div>
+<div id="ejemplo-raiz-seno" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.25</span></p>
+<p>Calcular <span class="nw"><span class="math inline">\displaystyle\int\sqrt{1-x^2}\,dx</span>.</span></p>
+<div class="solucion">
+<p>Con <span class="nw"><span class="math inline">x=\sin t</span>,</span> <span class="math inline">dx=\cos t\,dt</span> y <span class="nw"><span class="math inline">\sqrt{1-x^2}=\cos t</span>.</span> Como <span class="nw"><span class="math inline">\cos^2t=\frac{1+\cos2t}{2}</span>:</span> <span class="math display">
+\int\cos^2t\,dt=\frac t2+\frac{\sin2t}{4}+C=\frac12\left(\arcsin x+x\sqrt{1-x^2}\right)+C,
+</span> porque <span class="nw"><span class="math inline">\sin2t=2\sin t\cos t=2x\sqrt{1-x^2}</span>.</span></p>
+</div>
+</div>
+<div id="ejemplo-raiz-tangente" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.26</span></p>
+<p>Calcular <span class="math inline">I=\displaystyle\int_{-1}^1\frac{dx}{(x^2+1)^{3/2}}</span> con el cambio <span class="nw"><span class="math inline">x=\tan t</span>.</span> (2015/16 3E)</p>
+<div class="solucion">
+<p>Es <span class="math inline">dx=\dfrac{dt}{\cos^2t}</span> y <span class="nw"><span class="math inline">(x^2+1)^{3/2}=\dfrac{1}{\cos^3t}</span>.</span> Si <span class="nw"><span class="math inline">x=\pm1</span>,</span> <span class="nw"><span class="math inline">t=\pm\frac\pi4</span>:</span> <span class="math display">
+I=\int_{-\pi/4}^{\pi/4}\cos t\,dt=\Big[\sin t\Big]_{-\pi/4}^{\pi/4}=\sqrt2.
+</span></p>
+</div>
+</div>
+<p><span class="aviso-ejercicios">Con los contenidos de esta sección puedes hacer los ejercicios&nbsp;<a href="ejercicios.html#ejercicio-partes">5.12</a>–<a href="ejercicios.html#ejercicio-irracionales">5.15</a>.</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../05_integracion/cambio_variable.html" class="pagination-link" aria-label="5.5 Primitivas y cambio de variable">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5.5 Primitivas y cambio de variable</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../05_integracion/aplicaciones.html" class="pagination-link" aria-label="5.7 Otras aplicaciones de la integral">
+        <span class="nav-page-text">5.7 Otras aplicaciones de la integral</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../js/apuntes.js"></script>
+
+
+
+
+</body></html>

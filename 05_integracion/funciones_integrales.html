@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5.4 Funciones integrales – Cálculo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../05_integracion/cambio_variable.html" rel="next">
+<link href="../05_integracion/fundamental.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e7aab4f3c3f345eb47e789dd861cda50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<meta name="robots" content="noindex">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cálculo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-capítulos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Capítulos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-capítulos">    
+        <li>
+    <a class="dropdown-item" href="../01_complejos/index.html">
+ <span class="dropdown-text">1. Números complejos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../02_sucesiones/index.html">
+ <span class="dropdown-text">2. Sucesiones y series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../03_funciones/index.html">
+ <span class="dropdown-text">3. Funciones reales de variable real</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../04_estudio_local/index.html">
+ <span class="dropdown-text">4. Estudio local de una función</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../05_integracion/index.html">
+ <span class="dropdown-text">5. Integración</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../06_varias_variables/index.html">
+ <span class="dropdown-text">6. Funciones de varias variables reales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../07_integral_multiple/index.html">
+ <span class="dropdown-text">7. Integral múltiple</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../08_integral_curvilinea/index.html">
+ <span class="dropdown-text">8. Integral curvilínea</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../09_ecuaciones_diferenciales/index.html">
+ <span class="dropdown-text">9. Ecuaciones diferenciales</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../10_laplace/index.html">
+ <span class="dropdown-text">10. Transformada de Laplace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../11_fourier/index.html">
+ <span class="dropdown-text">11. Análisis de Fourier</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_integracion/funciones_integrales.html">5.4 Funciones integrales</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Integración</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/definida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 Integral definida y propiedades</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/valor_medio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 Valor medio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/fundamental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 Teorema fundamental y Barrow</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/funciones_integrales.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5.4 Funciones integrales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/cambio_variable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.5 Primitivas y cambio de variable</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/metodos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.6 Métodos de integración</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.7 Otras aplicaciones de la integral</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/impropias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.8 Integrales impropias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/resumen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.9 Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../05_integracion/ejercicios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.10 Ejercicios</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta sección</h2>
+   
+  <ul class="collapse">
+  <li><a href="#integrandos-a-trozos" id="toc-integrandos-a-trozos" class="nav-link active" data-scroll-target="#integrandos-a-trozos">Integrandos a trozos</a></li>
+  <li><a href="#derivada-con-límites-variables" id="toc-derivada-con-límites-variables" class="nav-link" data-scroll-target="#derivada-con-límites-variables">Derivada con límites variables</a></li>
+  <li><a href="#estudio-sin-calcular-la-integral" id="toc-estudio-sin-calcular-la-integral" class="nav-link" data-scroll-target="#estudio-sin-calcular-la-integral">Estudio sin calcular la integral</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">5.4 Funciones integrales</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La función integral <span class="math inline">F(x)=\displaystyle\int_a^x f(t)\,dt</span> es el <em>área hasta <span class="math inline">x</span></em> (<a href="#figura-funcion-integral-area">Figura&nbsp;5.7</a>): a cada <span class="math inline">x</span> le asigna lo acumulado desde <span class="nw"><span class="math inline">a</span>.</span></p>
+<div id="figura-funcion-integral-area" class="figura">
+<p><img src="../figs/funcion_integral_area.svg" class="img-fluid" alt="Curva sobre el intervalo que empieza en a, con el área sombreada entre a y x, marcada como F de x, y una flecha que indica que x se desplaza a la derecha." width="240"></p>
+<p><span class="figura-num">Figura&nbsp;5.7.</span> La función integral <span class="nw"><span class="math inline">F(x)</span>:</span> el área hasta <span class="nw"><span class="math inline">x</span>.</span></p>
+</div>
+<p>Una función integral se calcula con Barrow y, muchas veces, se estudia sin calcular la integral: el teorema fundamental da directamente su derivada.</p>
+<section id="integrandos-a-trozos" class="level2">
+<h2 data-anchor-id="integrandos-a-trozos">Integrandos a trozos</h2>
+<p>Si la función cambia de expresión, se integra por tramos.</p>
+<div id="ejemplo-funcion-integral-valor-absoluto" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.7</span></p>
+<p>Calcular <span class="math inline">F(x)=\displaystyle\int_0^x|z-1|\,dz</span> para <span class="math inline">x&gt;0</span> y comprobar que es derivable. (2022/23 3E)</p>
+<div class="solucion">
+<p>Hay que separar los tramos, porque <span class="math inline">|z-1|=1-z</span> si <span class="math inline">z\le1</span> y <span class="math inline">|z-1|=z-1</span> si <span class="nw"><span class="math inline">z&gt;1</span>:</span> <span class="math display">
+F(x)=\begin{cases}\displaystyle\int_0^x(1-z)\,dz=x-\dfrac{x^2}{2} &amp; 0&lt;x\le1,\\[2mm]
+\displaystyle\frac12+\int_1^x(z-1)\,dz=1-x+\dfrac{x^2}{2} &amp; x&gt;1.\end{cases}
+</span> Derivando, <span class="math inline">F'(x)=1-x</span> si <span class="math inline">x&lt;1</span> y <span class="math inline">F'(x)=x-1</span> si <span class="nw"><span class="math inline">x&gt;1</span>.</span> Los dos valores coinciden en <span class="nw"><span class="math inline">x=1</span>,</span> así que <span class="math inline">F</span> es derivable y <span class="nw"><span class="math inline">F'(x)=|x-1|</span>,</span> como dice el teorema. La función <span class="math inline">f</span> no es derivable en <span class="nw"><span class="math inline">x=1</span>,</span> pero <span class="math inline">F</span> sí.</p>
+</div>
+</div>
+</section>
+<section id="derivada-con-límites-variables" class="level2">
+<h2 data-anchor-id="derivada-con-límites-variables">Derivada con límites variables</h2>
+<p>Sea <span class="nw"><span class="math inline">H(x)=\displaystyle\int_1^{x^3}t^2\,dt</span>.</span> Es <span class="math inline">H(x)=F(x^3)</span> con <span class="nw"><span class="math inline">F(u)=\displaystyle\int_1^u t^2\,dt</span>.</span> Por el teorema fundamental, <span class="nw"><span class="math inline">F'(u)=u^2</span>,</span> y por la regla de la cadena: <span class="math display">
+H'(x)=F'(x^3)\cdot3x^2=(x^3)^2\cdot3x^2=3x^8.
+</span> Si también varía el límite inferior, se divide la integral en dos: <span class="nw"><span class="math inline">\int_{v}^{u}f=\int_a^{u}f-\int_a^{v}f</span>.</span></p>
+<div class="recuerda">
+<p><span class="caja-titulo">Recuerda</span></p>
+<p><span class="math inline">\dfrac{d}{dx}\displaystyle\int_{v(x)}^{u(x)}f(t)\,dt=f\big(u(x)\big)\,u'(x)-f\big(v(x)\big)\,v'(x)</span></p>
+</div>
+<div id="ejemplo-limites-variables" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.8</span></p>
+<p>Sin calcular la integral, derivar <span class="nw"><span class="math inline">H(x)=\displaystyle\int_{x^2}^{x^3}t\,dt</span>.</span></p>
+<div class="solucion">
+<p><span class="math display">
+H'(x)=x^3\cdot3x^2-x^2\cdot2x=3x^5-2x^3.
+</span> Comprobación: con Barrow, <span class="nw"><span class="math inline">H(x)=\frac12\left(x^6-x^4\right)</span>,</span> cuya derivada es <span class="nw"><span class="math inline">3x^5-2x^3</span>.</span></p>
+</div>
+</div>
+<div id="ejemplo-hallar-limite" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.9</span></p>
+<p>Sea <span class="nw"><span class="math inline">5x^3+40=\displaystyle\int_a^x f(u)\,du</span>.</span> Calcular <span class="math inline">f(x)</span> y <span class="nw"><span class="math inline">a</span>.</span> (2014/15 4E AT)</p>
+<div class="solucion">
+<p>Derivando los dos miembros, por el teorema fundamental, <span class="nw"><span class="math inline">f(x)=15x^2</span>.</span> Con Barrow, <span class="math display">
+5x^3+40=\int_a^x 15u^2\,du=5x^3-5a^3\quad\Longrightarrow\quad a^3=-8\quad\Longrightarrow\quad a=-2.
+</span> Comprobación: en <span class="math inline">x=a=-2</span> los dos miembros valen <span class="nw"><span class="math inline">0</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="estudio-sin-calcular-la-integral" class="level2">
+<h2 data-anchor-id="estudio-sin-calcular-la-integral">Estudio sin calcular la integral</h2>
+<p>Como <span class="math inline">F'(x)=f(x)</span> y <span class="nw"><span class="math inline">F''(x)=f'(x)</span>,</span> el crecimiento, la concavidad, los extremos y el polinomio de Maclaurin de <span class="math inline">F</span> salen de <span class="nw"><span class="math inline">f</span>.</span></p>
+<div id="ejemplo-integral-grafica" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.10</span></p>
+<p>Estudiar el crecimiento, la concavidad, los extremos relativos y los puntos de inflexión de <span class="math inline">F(x)=\displaystyle\int_0^x f(z)\,dz</span> en <span class="nw"><span class="math inline">(0,5)</span>,</span> donde <span class="math inline">f</span> es la función de la <a href="#figura-funcion-grafica-integral">Figura&nbsp;5.8</a>.</p>
+<div id="figura-funcion-grafica-integral" class="figura">
+<p><img src="../figs/funcion_grafica_integral.svg" class="img-fluid" alt="Gráfica de f entre 0 y 5: máximo de 1.25 en x igual a 0.5, se anula en 1.5, mínimo de menos 0.78 en 2.5, se anula cerca de 3.7, máximo de 0.55 en 4.5 y vale 0 en 5." width="360"></p>
+<p><span class="figura-num">Figura&nbsp;5.8.</span> Gráfica de <span class="nw"><span class="math inline">f</span>.</span></p>
+</div>
+<div class="solucion">
+<p>No hace falta calcular la integral. Por el teorema fundamental, <span class="math inline">F'(x)=f(x)</span> y, por tanto, <span class="nw"><span class="math inline">F''(x)=f'(x)</span>.</span> Basta leer en la gráfica el signo de <span class="math inline">f</span> y su pendiente.</p>
+<ul>
+<li><strong>Crecimiento:</strong> <span class="math inline">F</span> es creciente donde <span class="nw"><span class="math inline">f&gt;0</span>,</span> en <span class="math inline">(0,\,1.5)</span> y <span class="nw"><span class="math inline">(3.7,\,5)</span>,</span> y decreciente donde <span class="nw"><span class="math inline">f&lt;0</span>,</span> en <span class="nw"><span class="math inline">(1.5,\,3.7)</span>.</span></li>
+<li><strong>Extremos:</strong> máximo relativo en <span class="math inline">x=1.5</span> y mínimo relativo en <span class="nw"><span class="math inline">x\approx3.7</span>.</span></li>
+<li><strong>Concavidad:</strong> <span class="math inline">F</span> es cóncava donde <span class="math inline">f</span> crece, en <span class="math inline">(0,\,0.5)</span> y <span class="nw"><span class="math inline">(2.5,\,4.5)</span>,</span> y convexa donde <span class="math inline">f</span> decrece, en <span class="math inline">(0.5,\,2.5)</span> y <span class="nw"><span class="math inline">(4.5,\,5)</span>.</span></li>
+<li><strong>Inflexión:</strong> en <span class="nw"><span class="math inline">x=0.5</span>,</span> <span class="math inline">x=2.5</span> y <span class="nw"><span class="math inline">x=4.5</span>,</span> los extremos de <span class="nw"><span class="math inline">f</span>.</span></li>
+</ul>
+</div>
+</div>
+<div id="ejemplo-maclaurin-integral" class="ejemplo">
+<p><span class="caja-titulo">Ejemplo&nbsp;5.11</span></p>
+<p>Sea <span class="nw"><span class="math inline">f(x)=\displaystyle\int_0^x e^{t^2}\,dt</span>.</span> (2023/24 7E)</p>
+<ol type="a">
+<li>Calcular su polinomio de Maclaurin de orden 3.</li>
+<li>¿Tiene puntos de inflexión?</li>
+</ol>
+<div class="solucion">
+<p>(a) Derivando: <span class="math display">
+\begin{aligned}
+f(x)&amp;=\int_0^x e^{t^2}\,dt, &amp; f(0)&amp;=0,\\
+f'(x)&amp;=e^{x^2}, &amp; f'(0)&amp;=1,\\
+f''(x)&amp;=2x\,e^{x^2}, &amp; f''(0)&amp;=0,\\
+f'''(x)&amp;=(2+4x^2)\,e^{x^2}, &amp; f'''(0)&amp;=2.
+\end{aligned}
+</span> Por tanto, <span class="nw"><span class="math inline">P_3(x)=x+\dfrac{x^3}{3}</span>.</span></p>
+<p>Comprobación: como <span class="nw"><span class="math inline">e^{t^2}\approx1+t^2</span>,</span> integrando se obtiene <span class="nw"><span class="math inline">x+\frac{x^3}{3}</span>.</span></p>
+<p>(b) <span class="math inline">f''(x)=2x\,e^{x^2}</span> es negativa si <span class="math inline">x&lt;0</span> y positiva si <span class="nw"><span class="math inline">x&gt;0</span>.</span> Hay un punto de inflexión en <span class="nw"><span class="math inline">x=0</span>.</span></p>
+</div>
+</div>
+<p><span class="aviso-ejercicios">Con los contenidos de esta sección puedes hacer los ejercicios&nbsp;<a href="ejercicios.html#ejercicio-funciones-integrales">5.6</a>–<a href="ejercicios.html#ejercicio-funcion-media">5.10</a>.</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../05_integracion/fundamental.html" class="pagination-link" aria-label="5.3 Teorema fundamental y Barrow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">5.3 Teorema fundamental y Barrow</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../05_integracion/cambio_variable.html" class="pagination-link" aria-label="5.5 Primitivas y cambio de variable">
+        <span class="nav-page-text">5.5 Primitivas y cambio de variable</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script src="../js/apuntes.js"></script>
+
+
+
+
+</body></html>

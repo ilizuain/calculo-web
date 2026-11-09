@@ -160,6 +160,246 @@
     ]
   },
   {
+    "objectID": "05_integracion/valor_medio.html",
+    "href": "05_integracion/valor_medio.html",
+    "title": "5.2 Valor medio",
+    "section": "",
+    "text": "Para hallar la media de una magnitud que varía de forma continua se toman cada vez más lecturas. En el límite, la media es una integral.",
+    "crumbs": [
+      "5.2 Valor medio"
+    ]
+  },
+  {
+    "objectID": "05_integracion/valor_medio.html#valor-medio-de-una-función",
+    "href": "05_integracion/valor_medio.html#valor-medio-de-una-función",
+    "title": "5.2 Valor medio",
+    "section": "Valor medio de una función",
+    "text": "Valor medio de una función\nLa Figura 5.2 muestra la temperatura a lo largo de un día. La media depende de cuántas lecturas se tomen: \n\\begin{aligned}\n\\text{cada 4 h:}\\quad &\\bar T=\\frac{14.9+13.3+12.3+20.8+24.3+19.2+16}{7}\\approx17.3\\,^\\circ\\text{C},\\\\\n\\text{cada 2 h:}\\quad &\\bar T=\\frac{14.9+14.1+13.3+\\dots+17.1+16}{13}\\approx17.5\\,^\\circ\\text{C}.\n\\end{aligned}\n\n\n\nFigura 5.2. Temperatura a lo largo de un día, con lecturas cada 2 h y cada 4 h.\n\nCon n lecturas f(z_k), una en cada tramo de ancho h, y como b-a=nh: \n\\bar f=\\lim_{n\\to\\infty}\\frac1n\\sum_{k=0}^{n-1}f(z_k)=\\lim_{n\\to\\infty}\\frac{1}{b-a}\\sum_{k=0}^{n-1}h\\,f(z_k)=\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\n\nDefinición 5.2\nEl valor medio de una función f, continua en [a,b], es \n\\bar f=\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\n\n\nEjemplo 5.2\nHallar el valor medio de f(x)=x^2 en [-1,1].\n\nLa integral se calcula mediante la regla de Barrow, que se formalizará más adelante en este tema: \n\\bar f=\\frac{1}{1-(-1)}\\int_{-1}^1 x^2\\,dx=\\frac12\\left[\\frac{x^3}{3}\\right]_{-1}^{1}=\\frac12\\cdot\\frac23=\\frac13.\n\n\n\n\nComprobación: \\frac13 está entre el mínimo, 0, y el máximo, 1, de f en [-1,1].\n\n\nLa integral no mide solo áreas en sentido geométrico: f puede ser cualquier magnitud (temperatura, velocidad, posición…). Si un día la temperatura baja de cero, las lecturas negativas entran en la suma como cualesquiera otras, y la media puede ser positiva, negativa o nula.\n\nEjemplo 5.3\n¿Cuál es el valor medio de f(x)=\\sin x en un periodo, [0,2\\pi]?\n\nLa gráfica forma dos arcos iguales, uno por encima del eje y otro por debajo, que se compensan. Por tanto, \\int_0^{2\\pi}\\sin x\\,dx=0 y \n\\bar f=\\frac{1}{2\\pi}\\cdot0=0.\n El resultado es razonable: el seno oscila alrededor de cero.\n\n\n\nEjemplo 5.4\nEl consumo eléctrico de una vivienda cambia a lo largo del año, según una función C(t) con t en meses. La compañía propone cobrar una cuota mensual fija. ¿Se puede calcular para pagar a final de año lo mismo que con el consumo real? (2011/12 7E)\n\nEl consumo de todo el año es \\int_0^{12}C(t)\\,dt. Con una cuota fija K, en doce meses se paga 12K. Igualando, \nK=\\frac{1}{12}\\int_0^{12}C(t)\\,dt.\n Sí se puede: la cuota es el valor medio del consumo.",
+    "crumbs": [
+      "5.2 Valor medio"
+    ]
+  },
+  {
+    "objectID": "05_integracion/valor_medio.html#teorema-de-la-media",
+    "href": "05_integracion/valor_medio.html#teorema-de-la-media",
+    "title": "5.2 Valor medio",
+    "section": "Teorema de la media",
+    "text": "Teorema de la media\nUna función continua toma su valor medio en algún punto del intervalo.\n\nTeorema 5.1 (de la media)\nSea f continua en [a,b]. Existe al menos un z\\in[a,b] tal que \nf(z)=\\bar f=\\frac{1}{b-a}\\int_a^b f(x)\\,dx.\n\n\n\nDemostración\nPor el teorema de Weierstrass, f tiene un mínimo m y un máximo M en [a,b]. En cada suma, h\\,m\\le h\\,f(z_k)\\le h\\,M. Sumando los n términos, con nh=b-a, y pasando al límite (Figura 5.3): \nm(b-a)\\le\\int_a^b f(x)\\,dx\\le M(b-a)\\quad\\Longrightarrow\\quad m\\le\\bar f\\le M.\n Por el teorema de Darboux, f toma el valor \\bar f en algún z\\in[a,b].\n\n\n\nFigura 5.3. (a) Rectángulo de altura m. (b) Área bajo la gráfica, con el valor medio \\bar f y los puntos z_1 y z_2 donde se alcanza. (c) Rectángulo de altura M.\n\n\nEjemplo 5.5\nComprobar que se puede aplicar el teorema de la media a f(x)=|x-2| en [0,5] y hallar los puntos z.\n\nLa función es continua en [0,5]. Bajo la gráfica hay dos triángulos, de áreas \\frac{2\\cdot2}{2}=2 y \\frac{3\\cdot3}{2}=\\frac92. Por tanto, \n\\bar f=\\frac15\\left(2+\\frac92\\right)=\\frac{13}{10}.\n Resolviendo |z-2|=\\frac{13}{10}: \nz_1=2-\\frac{13}{10}=\\frac{7}{10},\\qquad z_2=2+\\frac{13}{10}=\\frac{33}{10}.\n Los dos están en [0,5]: el punto z no tiene por qué ser único.\n\n\nEl teorema exige que f sea continua. Si no lo es, el punto z puede existir o no.\nCon los contenidos de esta sección puedes hacer los ejercicios 5.1–5.4.",
+    "crumbs": [
+      "5.2 Valor medio"
+    ]
+  },
+  {
+    "objectID": "05_integracion/cambio_variable.html",
+    "href": "05_integracion/cambio_variable.html",
+    "title": "5.5 Primitivas y cambio de variable",
+    "section": "",
+    "text": "Para aplicar la regla de Barrow hace falta una primitiva. Algunas se reconocen directamente; otras se obtienen con un cambio de variable.",
+    "crumbs": [
+      "5.5 Primitivas y cambio de variable"
+    ]
+  },
+  {
+    "objectID": "05_integracion/cambio_variable.html#integrales-inmediatas",
+    "href": "05_integracion/cambio_variable.html#integrales-inmediatas",
+    "title": "5.5 Primitivas y cambio de variable",
+    "section": "Integrales inmediatas",
+    "text": "Integrales inmediatas\nSi F es una primitiva de f, las demás son F+C. El conjunto de todas ellas es la integral indefinida: \n\\int f(x)\\,dx=F(x)+C.\n\n\nRecuerda: integrales inmediatas\n\n\\begin{array}{ll}\n\\displaystyle\\int a\\,dx=ax+C & \\displaystyle\\int \\sin f\\;f'\\,dx=-\\cos f+C\\\\[3mm]\n\\displaystyle\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C,\\ \\ n\\ne-1 & \\displaystyle\\int \\cos x\\,dx=\\sin x+C\\\\[3mm]\n\\displaystyle\\int f^n f'\\,dx=\\frac{f^{n+1}}{n+1}+C,\\ \\ n\\ne-1 & \\displaystyle\\int \\cos f\\;f'\\,dx=\\sin f+C\\\\[3mm]\n\\displaystyle\\int \\frac{f'}{f}\\,dx=\\ln|f|+C & \\displaystyle\\int \\frac{f'}{\\cos^2 f}\\,dx=\\tan f+C\\\\[3mm]\n\\displaystyle\\int e^x\\,dx=e^x+C & \\displaystyle\\int \\frac{f'}{\\sin^2 f}\\,dx=-\\cot f+C\\\\[3mm]\n\\displaystyle\\int e^{f} f'\\,dx=e^{f}+C & \\displaystyle\\int \\frac{f'}{\\sqrt{1-f^2}}\\,dx=\\arcsin f+C\\\\[3mm]\n\\displaystyle\\int a^{f} f'\\,dx=\\frac{a^{f}}{\\ln a}+C,\\ \\ a&gt;0,\\ a\\ne1 & \\displaystyle\\int \\frac{-f'}{\\sqrt{1-f^2}}\\,dx=\\arccos f+C\\\\[3mm]\n\\displaystyle\\int \\sin x\\,dx=-\\cos x+C & \\displaystyle\\int \\frac{f'}{1+f^2}\\,dx=\\arctan f+C\\\\[3mm]\n& \\displaystyle\\int \\frac{f'}{\\sqrt{f^2\\pm1}}\\,dx=\\ln\\left|f+\\sqrt{f^2\\pm1}\\right|+C\n\\end{array}",
+    "crumbs": [
+      "5.5 Primitivas y cambio de variable"
+    ]
+  },
+  {
+    "objectID": "05_integracion/cambio_variable.html#cambio-de-variable",
+    "href": "05_integracion/cambio_variable.html#cambio-de-variable",
+    "title": "5.5 Primitivas y cambio de variable",
+    "section": "Cambio de variable",
+    "text": "Cambio de variable\n\nTeorema 5.4 (cambio de variable)\nSea f continua en [a,b] y sea x=x(t), con derivada continua en [\\alpha,\\beta], x(\\alpha)=a y x(\\beta)=b. Entonces \n\\int_a^b f(x)\\,dx=\\int_\\alpha^\\beta f\\big(x(t)\\big)\\,x'(t)\\,dt.\n\n\n\nDemostración\nSi F es una primitiva de f, por la regla de la cadena F\\big(x(t)\\big) es una primitiva de f\\big(x(t)\\big)\\,x'(t). Con Barrow, las dos integrales valen F(b)-F(a).\n\n\nEjemplo 5.12\nCalcular I=\\displaystyle\\int_8^{27}\\frac{dx}{1+\\sqrt[3]{x}} con el cambio x=t^3.\n\nEs dx=3t^2\\,dt, y si x=8, t=2; si x=27, t=3. Como t^2=(t^2-1)+1: \nI=\\int_2^3\\frac{3t^2}{1+t}\\,dt=3\\int_2^3\\left(t-1+\\frac{1}{1+t}\\right)dt=3\\left[\\frac{t^2}{2}-t+\\ln(1+t)\\right]_2^3=\\frac92+3\\ln\\frac43.\n Comprobación: vale 5.363, y el integrando está entre \\frac14 y \\frac13 en un intervalo de longitud 19: entre 4.75 y 6.33.\n\n\n\nEjemplo 5.13\nCalcular \\displaystyle\\int e^{\\sin^2x}\\sin 2x\\,dx con el cambio u=\\sin^2x. (2013/14 3E)\n\nEs du=2\\sin x\\cos x\\,dx=\\sin2x\\,dx. Por tanto, \n\\int e^{\\sin^2x}\\sin 2x\\,dx=\\int e^u\\,du=e^u+C=e^{\\sin^2x}+C,\n deshaciendo el cambio al final.\nComprobación: al derivar el resultado se recupera el integrando.\n\n\n\nEjemplo 5.14\nCalcular \\displaystyle\\int_0^2 x\\,dx con el cambio x=(t-1)(t-2), tomando distintos intervalos [\\alpha,\\beta] (Figura 5.9).\n\n\nFigura 5.9. Cambio x=(t-1)(t-2).\n\n\nEs dx=(2t-3)\\,dt, así que el integrando es (t^2-3t+2)(2t-3), con primitiva P(t)=\\frac12t^4-3t^3+\\frac{13}{2}t^2-6t. Sirve cualquier intervalo con x(\\alpha)=0 y x(\\beta)=2: \n\\begin{aligned}\n\\text{de } t=1 \\text{ a } t=3:&\\quad P(3)-P(1)=0-(-2)=2,\\\\\n\\text{de } t=2 \\text{ a } t=3:&\\quad P(3)-P(2)=0-(-2)=2,\\\\\n\\text{de } t=2 \\text{ a } t=0:&\\quad P(0)-P(2)=0-(-2)=2.\n\\end{aligned}\n El resultado es siempre 2, como da directamente \\left[\\frac{x^2}{2}\\right]_0^2: solo importan los valores de x en los extremos.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.11–5.11.",
+    "crumbs": [
+      "5.5 Primitivas y cambio de variable"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html",
+    "href": "05_integracion/ejercicios.html",
+    "title": "5.10 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 5.1\nEstudiar si puede aplicarse el teorema de la media a estas funciones en los intervalos dados. Calcular, si existen, los puntos z en los que f(z)=\\bar f.\n\nf(x)=3x^2 en [-1,4]\nf(x)=\\sin x en [0,\\pi]\nf(x)=\\begin{cases}x & x&lt;0\\\\ 4-x & x\\ge0\\end{cases} en [-2,2]\nf(x)=\\begin{cases}x & x&lt;0\\\\ 1-x & x\\ge0\\end{cases} en [-3,3]\n\n\n(a) z=\\sqrt{13/3}. (b) z_1=\\arcsin\\frac2\\pi, z_2=\\pi-\\arcsin\\frac2\\pi. (c) No aplicable; no existe z. (d) No aplicable, pero z_1=-1, z_2=2.\n\n\n\nEjercicio 5.2\nCalcular el valor de a para que pueda aplicarse el teorema de la media a la función \nf(x)=\\begin{cases}x+1 & x\\le1\\\\ 3-ax^2 & x&gt;1\\end{cases}\n en [-3,3]. Con ese valor, calcular los puntos a los que se refiere el teorema.\n\na=1; z_1=-\\frac{13}{9}, z_2=\\frac{\\sqrt{31}}{3}.\n\n\n\nEjercicio 5.3\nSea f(x)=\\begin{cases}\\ln x & 1\\le x\\le2\\\\ ax^2+b & 2&lt;x\\le3\\end{cases}, con a y b reales. (2019/20 AT)\n\nObtener la condición que deben cumplir a y b para que f sea continua en [1,3].\nEn ese caso, calcular a y b para que el valor medio de f en [1,3] sea \\frac12(3\\ln2-1).\nPara esos valores, ¿es f derivable?\n\nIndicación: \\int\\ln x\\,dx=x\\ln x-x+C.\n\n(a) 4a+b=\\ln2. (b) a=0, b=\\ln2. (c) No.\n\n\n\nEjercicio 5.4\nN(t) es la cantidad acumulada de MB descargados hasta el instante t, en segundos. La Figura 5.17 muestra su velocidad N'(t). En t=5 empieza a transferirse un archivo de 1475 MB. (2011/12 3E)\n\nHallar el instante en que termina la descarga.\nHallar el valor medio de la aceleración N''(t) durante la descarga.\n¿Se puede asegurar con el teorema de la media que en algún instante N''(t) iguala ese valor medio? ¿Ocurre?\n\n\n\nFigura 5.17. Velocidad de descarga N'(t).\n\n\n(a) t=55 s. (b) 0.4 MB/s^2. (c) El teorema no lo asegura, porque N''(t) no es continua; aun así, ocurre en todo el tramo (15,40).",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#valor-medio",
+    "href": "05_integracion/ejercicios.html#valor-medio",
+    "title": "5.10 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 5.1\nEstudiar si puede aplicarse el teorema de la media a estas funciones en los intervalos dados. Calcular, si existen, los puntos z en los que f(z)=\\bar f.\n\nf(x)=3x^2 en [-1,4]\nf(x)=\\sin x en [0,\\pi]\nf(x)=\\begin{cases}x & x&lt;0\\\\ 4-x & x\\ge0\\end{cases} en [-2,2]\nf(x)=\\begin{cases}x & x&lt;0\\\\ 1-x & x\\ge0\\end{cases} en [-3,3]\n\n\n(a) z=\\sqrt{13/3}. (b) z_1=\\arcsin\\frac2\\pi, z_2=\\pi-\\arcsin\\frac2\\pi. (c) No aplicable; no existe z. (d) No aplicable, pero z_1=-1, z_2=2.\n\n\n\nEjercicio 5.2\nCalcular el valor de a para que pueda aplicarse el teorema de la media a la función \nf(x)=\\begin{cases}x+1 & x\\le1\\\\ 3-ax^2 & x&gt;1\\end{cases}\n en [-3,3]. Con ese valor, calcular los puntos a los que se refiere el teorema.\n\na=1; z_1=-\\frac{13}{9}, z_2=\\frac{\\sqrt{31}}{3}.\n\n\n\nEjercicio 5.3\nSea f(x)=\\begin{cases}\\ln x & 1\\le x\\le2\\\\ ax^2+b & 2&lt;x\\le3\\end{cases}, con a y b reales. (2019/20 AT)\n\nObtener la condición que deben cumplir a y b para que f sea continua en [1,3].\nEn ese caso, calcular a y b para que el valor medio de f en [1,3] sea \\frac12(3\\ln2-1).\nPara esos valores, ¿es f derivable?\n\nIndicación: \\int\\ln x\\,dx=x\\ln x-x+C.\n\n(a) 4a+b=\\ln2. (b) a=0, b=\\ln2. (c) No.\n\n\n\nEjercicio 5.4\nN(t) es la cantidad acumulada de MB descargados hasta el instante t, en segundos. La Figura 5.17 muestra su velocidad N'(t). En t=5 empieza a transferirse un archivo de 1475 MB. (2011/12 3E)\n\nHallar el instante en que termina la descarga.\nHallar el valor medio de la aceleración N''(t) durante la descarga.\n¿Se puede asegurar con el teorema de la media que en algún instante N''(t) iguala ese valor medio? ¿Ocurre?\n\n\n\nFigura 5.17. Velocidad de descarga N'(t).\n\n\n(a) t=55 s. (b) 0.4 MB/s^2. (c) El teorema no lo asegura, porque N''(t) no es continua; aun así, ocurre en todo el tramo (15,40).",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#teorema-fundamental-y-regla-de-barrow",
+    "href": "05_integracion/ejercicios.html#teorema-fundamental-y-regla-de-barrow",
+    "title": "5.10 Ejercicios",
+    "section": "Teorema fundamental y regla de Barrow",
+    "text": "Teorema fundamental y regla de Barrow\n\nEjercicio 5.5\nLa Figura 5.18 muestra la velocidad v(t) de una partícula que se mueve en una dimensión, con x(0)=0, x en metros y t en segundos. (2023/24 3E)\n\n¿En qué posición está en t=50 s?\n¿Cuándo se ha recorrido un espacio de 275 m?\nCalcular la velocidad media en [0,50]. ¿Se puede aplicar el teorema de la media a v(t)? ¿En cuántos puntos se cumple?\n¿Se puede aplicar el teorema de Lagrange a v(t) en [0,50]? Encontrar, si existen, los puntos en los que se cumple.\n¿Se puede aplicar el teorema de Lagrange a x(t) en [0,50]?\n\n\n\nFigura 5.18. Velocidad de la partícula.\n\n\n(a) 175 m. (b) t=40 s. (c) \\bar v=\\frac72 m/s; sí; en tres puntos: t=\\frac72, \\frac{53}{2} y \\frac{187}{4}. (d) No, v no es derivable; no hay ningún punto. (e) Sí, y se cumple en los mismos puntos que en (c).",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#funciones-integrales",
+    "href": "05_integracion/ejercicios.html#funciones-integrales",
+    "title": "5.10 Ejercicios",
+    "section": "Funciones integrales",
+    "text": "Funciones integrales\n\nEjercicio 5.6\nCalcular las siguientes funciones integrales y comprobar que son derivables:\n\nF(x)=\\displaystyle\\int_0^x f(z)\\,dz, con f(z)=\\begin{cases}z & z\\le2\\\\ 2 & z&gt;2\\end{cases}\nF(x)=\\displaystyle\\int_0^x |\\sin z|\\,dz, con 0&lt;x&lt;2\\pi\n\n\n(a) F(x)=\\frac{x^2}{2} si 0&lt;x\\le2 y F(x)=2x-2 si x&gt;2. (b) F(x)=1-\\cos x si 0&lt;x\\le\\pi y F(x)=3+\\cos x si \\pi&lt;x&lt;2\\pi.\n\n\n\nEjercicio 5.7\nSin calcular las integrales, derivar:\n\n\nH(x)=\\displaystyle\\int_0^{x^2}\\sqrt{1+t^2}\\,dt\nH(x)=\\displaystyle\\int_0^{x^2}e^{t^2}\\,dt\nH(x)=\\displaystyle\\int_1^{x^4}\\sec t\\,dt\nH(x)=\\displaystyle\\int_1^{\\sin x}e^t\\,dt\n\n\n\n(a) 2x\\sqrt{1+x^4}. (b) 2x\\,e^{x^4}. (c) \\dfrac{4x^3}{\\cos x^4}. (d) e^{\\sin x}\\cos x.\n\n\n\nEjercicio 5.8\nSea f(x)=3+\\displaystyle\\int_0^x\\frac{1+\\sin t}{2+t^2}\\,dt. Sin calcular la integral, obtener su polinomio de Maclaurin de grado 1. (2019/20 6E)\n\np(x)=3+\\frac{x}{2}.\n\n\n\nEjercicio 5.9\nSea F(x)=\\displaystyle\\int_0^x\\frac{dt}{t^2+2t+2}. (2020/21 6E)\n\n¿Toma F el valor 0? ¿Dónde?\nEstudiar su crecimiento en \\mathbb{R}.\nEstudiar su concavidad en \\mathbb{R}.\n\n\n(a) Sí, en x=0. (b) Creciente en \\mathbb{R}. (c) Cóncava en (-\\infty,-1) y convexa en (-1,\\infty); punto de inflexión en x=-1.\n\n\n\nEjercicio 5.10\nSea f(x)=\\begin{cases}x & x\\in[0,1)\\\\ e^{1-x} & x\\in[1,2]\\end{cases}.\n\nDibujar f.\nCalcular su función media en [0,x], \\bar f(x)=\\dfrac1x\\displaystyle\\int_0^x f(t)\\,dt.\nCalcular el valor medio de f en [0,2].\n\n\n(b) \\bar f(x)=\\frac{x}{2} en (0,1) y \\bar f(x)=\\frac1x\\left(\\frac32-e^{1-x}\\right) en [1,2]. (c) \\frac34-\\frac{1}{2e}.",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#primitivas-y-cambio-de-variable",
+    "href": "05_integracion/ejercicios.html#primitivas-y-cambio-de-variable",
+    "title": "5.10 Ejercicios",
+    "section": "Primitivas y cambio de variable",
+    "text": "Primitivas y cambio de variable\n\nEjercicio 5.11\nCalcular las siguientes integrales inmediatas:\n\n\n\\displaystyle\\int x\\sin(x^2)\\,dx\n\\displaystyle\\int\\frac{e^x}{1+e^{2x}}\\,dx\n\\displaystyle\\int\\frac{17x}{\\sqrt[3]{6x^2+8}}\\,dx\n\\displaystyle\\int\\sec^2x\\sqrt{\\tan x}\\,dx\n\\displaystyle\\int\\frac{\\ln x}{x}\\,dx\n\\displaystyle\\int\\frac{dx}{x\\ln x}\n\\displaystyle\\int\\frac{\\cos\\sqrt x}{\\sqrt x}\\,dx\n\\displaystyle\\int\\frac{x}{\\sqrt{1-x^4}}\\,dx\n\\displaystyle\\int\\sin x\\cos x\\,dx\n\n\n\n(a) -\\frac12\\cos x^2+C. (b) \\arctan e^x+C. (c) \\frac{17}{8}(6x^2+8)^{2/3}+C. (d) \\frac23\\tan^{3/2}x+C. (e) \\frac12\\ln^2x+C. (f) \\ln|\\ln x|+C. (g) 2\\sin\\sqrt x+C. (h) \\frac12\\arcsin x^2+C. (i) \\frac12\\sin^2x+C.",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#métodos-de-integración",
+    "href": "05_integracion/ejercicios.html#métodos-de-integración",
+    "title": "5.10 Ejercicios",
+    "section": "Métodos de integración",
+    "text": "Métodos de integración\n\nEjercicio 5.12\nCalcular utilizando integración por partes:\n\n\n\\displaystyle\\int x\\ln x\\,dx\n\\displaystyle\\int x\\sin x\\,dx\n\\displaystyle\\int\\ln x\\,dx\n\\displaystyle\\int\\arcsin x\\,dx\n\\displaystyle\\int(x^2-2x+5)\\,e^{-x}\\,dx\n\\displaystyle\\int x\\sin x\\cos x\\,dx\n\\displaystyle\\int\\frac{\\ln\\sqrt x}{x^2}\\,dx (2011/12 3E)\n\n\n\n(a) \\frac{x^2}{2}\\ln x-\\frac{x^2}{4}+C. (b) \\sin x-x\\cos x+C. (c) x\\ln x-x+C. (d) x\\arcsin x+\\sqrt{1-x^2}+C. (e) -(x^2+5)\\,e^{-x}+C. (f) \\frac18\\sin2x-\\frac14x\\cos2x+C. (g) -\\frac{\\ln x+1}{2x}+C.\n\n\n\nEjercicio 5.13\nCalcular las siguientes integrales de funciones racionales:\n\n\n\\displaystyle\\int\\frac{4x^2}{x^2+4}\\,dx\n\\displaystyle\\int\\frac{x^2+3}{x^2-1}\\,dx\n\\displaystyle\\int\\frac{2x^2-3x+2}{x^3+x}\\,dx\n\\displaystyle\\int\\frac{x^2}{x^2+2x+5}\\,dx\n\n\n\n(a) 4x-8\\arctan\\frac x2+C. (b) x+2\\ln\\left|\\frac{x-1}{x+1}\\right|+C. (c) 2\\ln|x|-3\\arctan x+C. (d) x-\\ln(x^2+2x+5)-\\frac32\\arctan\\frac{x+1}{2}+C.\n\n\n\nEjercicio 5.14\nCalcular las siguientes integrales de funciones trigonométricas:\n\n\n\\displaystyle\\int\\cos^2x\\,dx\n\\displaystyle\\int\\sin^2x\\,dx\n\\displaystyle\\int\\cos^3x\\,dx\n\\displaystyle\\int\\frac{\\sin x}{\\cos x\\,(1+\\cos^2x)}\\,dx\n\\displaystyle\\int\\frac{dx}{\\tan^2x\\,(1+3\\cos^2x)}\n\\displaystyle\\int\\sin^2x\\cos^2x\\,dx\n\\displaystyle\\int\\sin^2x\\cos^5x\\,dx\n\\displaystyle\\int\\frac{\\sin^2x}{\\sin^2x-4\\cos^2x}\\,dx (2018/19 3E)\n\n\n\n(a) \\frac x2+\\frac14\\sin2x+C. (b) \\frac x2-\\frac14\\sin2x+C. (c) \\sin x-\\frac13\\sin^3x+C. (d) -\\ln|\\cos x|+\\frac12\\ln(1+\\cos^2x)+C. (e) -\\frac{1}{4\\tan x}-\\frac18\\arctan\\frac{\\tan x}{2}+C. (f) \\frac x8-\\frac1{32}\\sin4x+C. (g) \\frac13\\sin^3x-\\frac25\\sin^5x+\\frac17\\sin^7x+C. (h) \\frac x5+\\frac15\\ln\\left|\\frac{\\tan x-2}{\\tan x+2}\\right|+C.\n\n\n\nEjercicio 5.15\nCalcular las siguientes integrales de funciones irracionales:\n\n\n\\displaystyle\\int\\frac{\\sqrt x}{\\sqrt[4]{x^3}+1}\\,dx\n\\displaystyle\\int\\frac{\\sqrt x-2\\sqrt[3]{x^2}+1}{\\sqrt[4]{x}}\\,dx (2012/13 3E)\n\\displaystyle\\int\\frac{\\sqrt{x+4}}{x}\\,dx\n\\displaystyle\\int\\frac{dx}{\\sqrt{8-5x^2}}\n\\displaystyle\\int\\sqrt{1+x^2}\\,dx\n\n\n\n(a) \\frac43\\left(x^{3/4}-\\ln\\left(x^{3/4}+1\\right)\\right)+C. (b) \\frac45x^{5/4}-\\frac{24}{17}x^{17/12}+\\frac43x^{3/4}+C. (c) 2\\sqrt{x+4}+2\\ln\\left|\\frac{\\sqrt{x+4}-2}{\\sqrt{x+4}+2}\\right|+C. (d) \\frac{1}{\\sqrt5}\\arcsin\\left(x\\sqrt{\\frac58}\\right)+C. (e) \\frac12\\left(x\\sqrt{1+x^2}+\\ln\\left|x+\\sqrt{1+x^2}\\right|\\right)+C.",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#otras-aplicaciones-de-la-integral",
+    "href": "05_integracion/ejercicios.html#otras-aplicaciones-de-la-integral",
+    "title": "5.10 Ejercicios",
+    "section": "Otras aplicaciones de la integral",
+    "text": "Otras aplicaciones de la integral\n\nEjercicio 5.16\nSea D el recinto 0&lt;y&lt;e^x, 1\\le x\\le2. Calcular su área y el volumen generado al girar D alrededor de OX.\n\nA=e^2-e; V=\\frac\\pi2(e^4-e^2).\n\n\n\nEjercicio 5.17\nCalcular el área del recinto limitado por y=x^2+2x+2, su recta tangente en el mínimo y su recta tangente de pendiente 6.\n\nA=\\frac94.\n\n\n\nEjercicio 5.18\nSea D el recinto limitado por y\\le\\sqrt{x/2}, y\\ge|1-x| y 0\\le x\\le2. Calcular su área y el volumen generado al girar D alrededor de OX.\n\nA=\\frac{13}{24}; V=\\frac{9\\pi}{16}.\n\n\n\nEjercicio 5.19\nEl área limitada por y=ax, con a&gt;0, e y=x^2 vale \\frac92. Calcular a.\n\na=3.\n\n\n\nEjercicio 5.20\nSea D el recinto limitado por y^2=4+x y x=2. Calcular su área y el volumen generado al girar D alrededor de OX.\n\nA=8\\sqrt6; V=18\\pi.\n\n\n\nEjercicio 5.21\nSea la elipse \\dfrac{x^2}{25}+y^2=1. Calcular el volumen del elipsoide generado al girarla alrededor de OX y alrededor de OY. (2021/22 7E)\n\nAlrededor de OX: \\frac{20\\pi}{3}. Alrededor de OY: \\frac{100\\pi}{3}.\n\n\n\nEjercicio 5.22\nSea D el recinto limitado por y=2x-x^2 y sus rectas tangentes en los puntos de corte con OX. Calcular su área y el volumen generado al girar D alrededor de OX. (2018/19 3E)\n\nA=\\frac23; V=\\frac{8\\pi}{5}.\n\n\n\nEjercicio 5.23\nCalcular la longitud de los siguientes arcos:\n\n\ny=x^2+x-2, con x\\in[-2,1]\ny=\\ln(\\cos x), con 0\\le x\\le\\frac\\pi4 (2012/13 3E)\n\n\n\n(a) l=\\frac12\\left(3\\sqrt{10}+\\ln\\left(3+\\sqrt{10}\\right)\\right)\\approx5.65. (b) l=\\frac12\\ln\\left(3+2\\sqrt2\\right).",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/ejercicios.html#integrales-impropias",
+    "href": "05_integracion/ejercicios.html#integrales-impropias",
+    "title": "5.10 Ejercicios",
+    "section": "Integrales impropias",
+    "text": "Integrales impropias\n\nEjercicio 5.24\nCalcular las siguientes integrales impropias de primer tipo:\n\n\n\\displaystyle\\int_{-\\infty}^0e^x\\,dx\n\\displaystyle\\int_0^\\infty\\frac{dx}{\\sqrt{e^x}}\n\\displaystyle\\int_0^\\infty x\\,e^{-x}\\,dx\n\\displaystyle\\int_{-\\infty}^\\infty\\frac{dx}{e^x+e^{-x}}\n\\displaystyle\\int_{-\\infty}^\\infty\\frac{dx}{x^2+4}\n\\displaystyle\\int_0^\\infty\\frac{dx}{\\sqrt x\\,(1+x)} (2014/15 3E)\n\\displaystyle\\int_1^\\infty x^n\\,dx, con n\\in\\mathbb{Z}\n\\displaystyle\\int_{-\\infty}^\\infty e^{-a|x|}\\,dx, con a\\in\\mathbb{R}\n\n\n\n(a) 1. (b) 2. (c) 1. (d) \\frac\\pi2. (e) \\frac\\pi2. (f) \\pi. (g) -\\frac{1}{n+1} si n&lt;-1; divergente en otro caso. (h) \\frac2a si a&gt;0; divergente en otro caso.\n\n\n\nEjercicio 5.25\nEstudiar las siguientes integrales impropias de segundo tipo:\n\n\n\\displaystyle\\int_{-1}^1\\frac{dx}{x}\n\\displaystyle\\int_0^5\\frac{dx}{(2-x)^4} (2013/14 3E)\n\n\n\n(a) Divergente, con valor principal 0. (b) Divergente.\n\n\n\nEjercicio 5.26\nSea f(x)=0 si x&lt;0 y f(x)=\\dfrac{6x}{(1+3x^2)^2} si x\\ge0. Comprobar que \\displaystyle\\int_{-\\infty}^{\\infty}f(x)\\,dx=1. (2022/23 3E)\n\nUna primitiva en x\\ge0 es -\\dfrac{1}{1+3x^2}, y da \\displaystyle\\lim_{z\\to\\infty}\\left(1-\\frac{1}{1+3z^2}\\right)=1.",
+    "crumbs": [
+      "5.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "05_integracion/funciones_integrales.html",
+    "href": "05_integracion/funciones_integrales.html",
+    "title": "5.4 Funciones integrales",
+    "section": "",
+    "text": "La función integral F(x)=\\displaystyle\\int_a^x f(t)\\,dt es el área hasta x (Figura 5.7): a cada x le asigna lo acumulado desde a.\nUna función integral se calcula con Barrow y, muchas veces, se estudia sin calcular la integral: el teorema fundamental da directamente su derivada.",
+    "crumbs": [
+      "5.4 Funciones integrales"
+    ]
+  },
+  {
+    "objectID": "05_integracion/funciones_integrales.html#integrandos-a-trozos",
+    "href": "05_integracion/funciones_integrales.html#integrandos-a-trozos",
+    "title": "5.4 Funciones integrales",
+    "section": "Integrandos a trozos",
+    "text": "Integrandos a trozos\nSi la función cambia de expresión, se integra por tramos.\n\nEjemplo 5.7\nCalcular F(x)=\\displaystyle\\int_0^x|z-1|\\,dz para x&gt;0 y comprobar que es derivable. (2022/23 3E)\n\nHay que separar los tramos, porque |z-1|=1-z si z\\le1 y |z-1|=z-1 si z&gt;1: \nF(x)=\\begin{cases}\\displaystyle\\int_0^x(1-z)\\,dz=x-\\dfrac{x^2}{2} & 0&lt;x\\le1,\\\\[2mm]\n\\displaystyle\\frac12+\\int_1^x(z-1)\\,dz=1-x+\\dfrac{x^2}{2} & x&gt;1.\\end{cases}\n Derivando, F'(x)=1-x si x&lt;1 y F'(x)=x-1 si x&gt;1. Los dos valores coinciden en x=1, así que F es derivable y F'(x)=|x-1|, como dice el teorema. La función f no es derivable en x=1, pero F sí.",
+    "crumbs": [
+      "5.4 Funciones integrales"
+    ]
+  },
+  {
+    "objectID": "05_integracion/funciones_integrales.html#derivada-con-límites-variables",
+    "href": "05_integracion/funciones_integrales.html#derivada-con-límites-variables",
+    "title": "5.4 Funciones integrales",
+    "section": "Derivada con límites variables",
+    "text": "Derivada con límites variables\nSea H(x)=\\displaystyle\\int_1^{x^3}t^2\\,dt. Es H(x)=F(x^3) con F(u)=\\displaystyle\\int_1^u t^2\\,dt. Por el teorema fundamental, F'(u)=u^2, y por la regla de la cadena: \nH'(x)=F'(x^3)\\cdot3x^2=(x^3)^2\\cdot3x^2=3x^8.\n Si también varía el límite inferior, se divide la integral en dos: \\int_{v}^{u}f=\\int_a^{u}f-\\int_a^{v}f.\n\nRecuerda\n\\dfrac{d}{dx}\\displaystyle\\int_{v(x)}^{u(x)}f(t)\\,dt=f\\big(u(x)\\big)\\,u'(x)-f\\big(v(x)\\big)\\,v'(x)\n\n\nEjemplo 5.8\nSin calcular la integral, derivar H(x)=\\displaystyle\\int_{x^2}^{x^3}t\\,dt.\n\n\nH'(x)=x^3\\cdot3x^2-x^2\\cdot2x=3x^5-2x^3.\n Comprobación: con Barrow, H(x)=\\frac12\\left(x^6-x^4\\right), cuya derivada es 3x^5-2x^3.\n\n\n\nEjemplo 5.9\nSea 5x^3+40=\\displaystyle\\int_a^x f(u)\\,du. Calcular f(x) y a. (2014/15 4E AT)\n\nDerivando los dos miembros, por el teorema fundamental, f(x)=15x^2. Con Barrow, \n5x^3+40=\\int_a^x 15u^2\\,du=5x^3-5a^3\\quad\\Longrightarrow\\quad a^3=-8\\quad\\Longrightarrow\\quad a=-2.\n Comprobación: en x=a=-2 los dos miembros valen 0.",
+    "crumbs": [
+      "5.4 Funciones integrales"
+    ]
+  },
+  {
+    "objectID": "05_integracion/funciones_integrales.html#estudio-sin-calcular-la-integral",
+    "href": "05_integracion/funciones_integrales.html#estudio-sin-calcular-la-integral",
+    "title": "5.4 Funciones integrales",
+    "section": "Estudio sin calcular la integral",
+    "text": "Estudio sin calcular la integral\nComo F'(x)=f(x) y F''(x)=f'(x), el crecimiento, la concavidad, los extremos y el polinomio de Maclaurin de F salen de f.\n\nEjemplo 5.10\nEstudiar el crecimiento, la concavidad, los extremos relativos y los puntos de inflexión de F(x)=\\displaystyle\\int_0^x f(z)\\,dz en (0,5), donde f es la función de la Figura 5.8.\n\n\nFigura 5.8. Gráfica de f.\n\n\nNo hace falta calcular la integral. Por el teorema fundamental, F'(x)=f(x) y, por tanto, F''(x)=f'(x). Basta leer en la gráfica el signo de f y su pendiente.\n\nCrecimiento: F es creciente donde f&gt;0, en (0,\\,1.5) y (3.7,\\,5), y decreciente donde f&lt;0, en (1.5,\\,3.7).\nExtremos: máximo relativo en x=1.5 y mínimo relativo en x\\approx3.7.\nConcavidad: F es cóncava donde f crece, en (0,\\,0.5) y (2.5,\\,4.5), y convexa donde f decrece, en (0.5,\\,2.5) y (4.5,\\,5).\nInflexión: en x=0.5, x=2.5 y x=4.5, los extremos de f.\n\n\n\n\nEjemplo 5.11\nSea f(x)=\\displaystyle\\int_0^x e^{t^2}\\,dt. (2023/24 7E)\n\nCalcular su polinomio de Maclaurin de orden 3.\n¿Tiene puntos de inflexión?\n\n\n(a) Derivando: \n\\begin{aligned}\nf(x)&=\\int_0^x e^{t^2}\\,dt, & f(0)&=0,\\\\\nf'(x)&=e^{x^2}, & f'(0)&=1,\\\\\nf''(x)&=2x\\,e^{x^2}, & f''(0)&=0,\\\\\nf'''(x)&=(2+4x^2)\\,e^{x^2}, & f'''(0)&=2.\n\\end{aligned}\n Por tanto, P_3(x)=x+\\dfrac{x^3}{3}.\nComprobación: como e^{t^2}\\approx1+t^2, integrando se obtiene x+\\frac{x^3}{3}.\n(b) f''(x)=2x\\,e^{x^2} es negativa si x&lt;0 y positiva si x&gt;0. Hay un punto de inflexión en x=0.\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.6–5.10.",
+    "crumbs": [
+      "5.4 Funciones integrales"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html",
+    "href": "05_integracion/aplicaciones.html",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "",
+    "text": "La integral es, en el fondo, una suma continua de cantidades muy pequeñas, y por eso tiene muchas aplicaciones. Algunas ya las hemos visto, como las áreas y los valores medios; aquí se ven otras.",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html#áreas",
+    "href": "05_integracion/aplicaciones.html#áreas",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "Áreas",
+    "text": "Áreas\nSi f\\ge g en [a,b], cada rectángulo tiene altura f-g, y el área entre las dos curvas es la integral de esa diferencia (Figura 5.10).\n\n\nFigura 5.10. Área entre las gráficas de f y g.\n\n\nRecuerda\n\nÁrea entre curvas: A=\\displaystyle\\int_a^b\\big[f(x)-g(x)\\big]\\,dx, si f\\ge g en [a,b].\nSi la región se describe mejor con x en función de y: A=\\displaystyle\\int_c^d\\big[x_2(y)-x_1(y)\\big]\\,dy.\n\n\n\nEjemplo 5.27\nCalcular el área de un círculo de radio R.\n\nDe x^2+y^2=R^2, la mitad superior es y=\\sqrt{R^2-x^2}. Por simetría, con el cambio x=R\\sin t: \nA=4\\int_0^R\\sqrt{R^2-x^2}\\,dx=4R^2\\int_0^{\\pi/2}\\cos^2t\\,dt=4R^2\\cdot\\frac\\pi4=\\pi R^2.",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html#volúmenes-de-revolución",
+    "href": "05_integracion/aplicaciones.html#volúmenes-de-revolución",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "Volúmenes de revolución",
+    "text": "Volúmenes de revolución\nAl girar alrededor de OX la región bajo y(x), cada franja de ancho dx genera un disco de radio y(x) (Figura 5.11): \ndV=\\pi\\,y(x)^2\\,dx.\n\n\n\nFigura 5.11. (a) Franja de ancho dx. (b) Disco que genera al girar alrededor de OX.\n\n\nRecuerda\n\nGiro alrededor de OX: V=\\pi\\displaystyle\\int_a^b y(x)^2\\,dx\nGiro alrededor de OY: V=\\pi\\displaystyle\\int_c^d x(y)^2\\,dy\nRegión entre dos curvas, y_2\\ge y_1\\ge0, alrededor de OX: V=\\pi\\displaystyle\\int_a^b\\big[y_2(x)^2-y_1(x)^2\\big]\\,dx\n\n\n\nEjemplo 5.28\nCalcular el volumen de un cono de radio R y altura h. (2021/22 6E)\n\nSe obtiene al girar alrededor de OX la recta y=\\dfrac{R}{h}\\,x, con 0\\le x\\le h: \nV=\\pi\\int_0^h\\frac{R^2}{h^2}\\,x^2\\,dx=\\frac{\\pi R^2}{h^2}\\cdot\\frac{h^3}{3}=\\frac13\\pi R^2h.\n\n\n\n\nEjemplo 5.29\nCalcular el volumen de una esfera de radio R. (2012/13 3E)\n\nSe obtiene al girar alrededor de OX la semicircunferencia y=\\sqrt{R^2-x^2}: \nV=\\pi\\int_{-R}^R(R^2-x^2)\\,dx=\\pi\\left[R^2x-\\frac{x^3}{3}\\right]_{-R}^R=\\frac43\\pi R^3.\n\n\n\n\nEjemplo 5.30\nSea y=4x^2. Calcular el área de la región del primer cuadrante limitada por la curva y su tangente paralela a y=8x, y el volumen que genera al girar alrededor de OX. (2016/17 6E)\n\n\n\n\nLa tangente tiene pendiente 8: y'=8x=8 da x=1, el punto (1,4) y la recta y=8x-4, que corta a OX en x=\\frac12. Hay dos tramos, porque la frontera inferior cambia: \nA=\\int_0^{1/2}4x^2\\,dx+\\int_{1/2}^1\\big[4x^2-(8x-4)\\big]\\,dx=\\frac16+\\frac16=\\frac13,\n \nV=\\pi\\int_0^{1/2}16x^4\\,dx+\\pi\\int_{1/2}^1\\big[16x^4-(8x-4)^2\\big]\\,dx=\\frac{\\pi}{10}+\\frac{13\\pi}{30}=\\frac{8\\pi}{15}.\n\n\n\nSi el eje de giro no es OX, el radio del disco es la distancia de la curva al eje.\n\nEjemplo 5.31\nCalcular el volumen del cuerpo generado al girar D=\\{1&lt;y&lt;2\\sin x,\\ 0&lt;x&lt;\\pi\\} alrededor de la recta y=1. (2015/16 3E)\n\nLas curvas se cortan donde 2\\sin x=1, en x=\\frac\\pi6 y x=\\frac{5\\pi}6. El radio es 2\\sin x-1: \nV=\\pi\\int_{\\pi/6}^{5\\pi/6}(2\\sin x-1)^2\\,dx=\\pi\\int_{\\pi/6}^{5\\pi/6}(3-2\\cos2x-4\\sin x)\\,dx=\\pi\\left(2\\pi-3\\sqrt3\\right).",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html#longitud-de-arco",
+    "href": "05_integracion/aplicaciones.html#longitud-de-arco",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "Longitud de arco",
+    "text": "Longitud de arco\nUn trozo pequeño de la curva es la hipotenusa de un triángulo de catetos dx y dy (Figura 5.12). Como dy=y'(x)\\,dx: \ndl=\\sqrt{dx^2+dy^2}=\\sqrt{1+y'(x)^2}\\,dx.\n\n\n\nFigura 5.12. Trozo de arco dl y sus catetos dx y dy.\n\n\nRecuerda\nLongitud del arco de y(x) entre a y b: \\;l=\\displaystyle\\int_a^b\\sqrt{1+y'(x)^2}\\,dx\n\n\nEjemplo 5.32\nCalcular el perímetro de una circunferencia de radio R. (2019/20 6E)\n\nUn cuarto de circunferencia es y=\\sqrt{R^2-x^2}, con x\\in[0,R], y y'=\\dfrac{-x}{\\sqrt{R^2-x^2}}. Por tanto, 1+y'^2=\\dfrac{R^2}{R^2-x^2} y \nP=4\\int_0^R\\sqrt{1+y'(x)^2}\\,dx=4R\\int_0^R\\frac{dx}{\\sqrt{R^2-x^2}}.\n Con el cambio x=R\\sin t, dx=R\\cos t\\,dt y \\sqrt{R^2-x^2}=R\\cos t:1 \nP=4R\\int_0^{\\pi/2}dt=4R\\cdot\\frac\\pi2=2\\pi R.",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html#superficie-de-sólidos-de-revolución",
+    "href": "05_integracion/aplicaciones.html#superficie-de-sólidos-de-revolución",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "Superficie de sólidos de revolución",
+    "text": "Superficie de sólidos de revolución\nAl girar alrededor de OX un trozo de arco de longitud dl, se genera una banda de radio y(x) y ancho dl (Figura 5.13). Su área es \ndS=2\\pi\\,y(x)\\,dl=2\\pi\\,y(x)\\sqrt{1+y'(x)^2}\\,dx.\n\n\n\nFigura 5.13. Banda de ancho dl y radio y(x).\n\n\nRecuerda\nSuperficie generada al girar y(x)\\ge0 alrededor de OX: \\;S=2\\pi\\displaystyle\\int_a^b y(x)\\sqrt{1+y'(x)^2}\\,dx\n\n\nEjemplo 5.33\nCalcular el área de una esfera de radio R.\n\nSe obtiene al girar alrededor de OX la semicircunferencia y=\\sqrt{R^2-x^2}. Como en el Ejemplo 5.32, \\sqrt{1+y'^2}=\\dfrac{R}{\\sqrt{R^2-x^2}}, así que y\\sqrt{1+y'^2}=R: \nS=2\\pi\\int_{-R}^R R\\,dx=4\\pi R^2.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.16–5.23.",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
+    "objectID": "05_integracion/aplicaciones.html#footnotes",
+    "href": "05_integracion/aplicaciones.html#footnotes",
+    "title": "5.7 Otras aplicaciones de la integral",
+    "section": "Notas",
+    "text": "Notas\n\n\nEl integrando no está acotado en x=R: es una integral impropia, un tipo de integral que se estudia en la sección siguiente. Aquí el resultado es correcto.↩︎",
+    "crumbs": [
+      "5.7 Otras aplicaciones de la integral"
+    ]
+  },
+  {
     "objectID": "03_funciones/inversa.html",
     "href": "03_funciones/inversa.html",
     "title": "3.2 Función inversa",
@@ -1358,6 +1598,186 @@
     "text": "Segundas derivadas\nLas dos reglas anteriores se pueden volver a derivar para obtener la derivada segunda.\n\nRecuerda\n\nh(x)=f(g(x)):\\quad h''=f''(g)\\,(g')^2+f'(g)\\,g'',\n\\qquad\\qquad\ng=f^{-1}:\\quad g''=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\n\n\nEjemplo 3.27\nSea la función compuesta h(x)=f(g(x)). Calcular h''(x). (2018/19 3E)\n\nLa primera derivada es h'=f'(g)\\,g'. Aplicando la regla del producto y otra vez la de la cadena, \nh''=\\left[f'(g)\\right]'g'+f'(g)\\,g''=f''(g)\\,(g')^2+f'(g)\\,g''.\n\nComprobación. Con h(x)=\\sin(x^2), la fórmula da h''=-\\sin(x^2)\\,4x^2+\\cos(x^2)\\cdot2, igual que al derivar dos veces.\n\n\n\nEjemplo 3.28\nSea f^{-1} la función inversa de f. Calcular \\left[f^{-1}(x)\\right]''. (2016/17 2E)\n\nCon g=f^{-1}, la primera derivada es g'=\\left[f'(g)\\right]^{-1}. Derivando otra vez, \ng''=-\\left[f'(g)\\right]^{-2}f''(g)\\,g'=-\\frac{f''(g)}{\\left(f'(g)\\right)^3}.\n\nComprobación. Con f(x)=e^x y g(x)=\\ln x, la fórmula da g''=-\\dfrac{x}{x^3}=-\\dfrac{1}{x^2}, igual que al derivar \\ln x dos veces.\n\n\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 3.26–3.31.",
     "crumbs": [
       "3.6 Regla de la cadena e inversa"
+    ]
+  },
+  {
+    "objectID": "05_integracion/definida.html",
+    "href": "05_integracion/definida.html",
+    "title": "5.1 Integral definida y propiedades",
+    "section": "",
+    "text": "¿Cuánto vale el área limitada por la gráfica de una función y el eje OX? Se aproxima con rectángulos, y el límite de esas sumas es la integral.",
+    "crumbs": [
+      "5.1 Integral definida y propiedades"
+    ]
+  },
+  {
+    "objectID": "05_integracion/definida.html#el-área-bajo-una-curva",
+    "href": "05_integracion/definida.html#el-área-bajo-una-curva",
+    "title": "5.1 Integral definida y propiedades",
+    "section": "El área bajo una curva",
+    "text": "El área bajo una curva\n\nSe divide [a,b] en n tramos de ancho h=\\dfrac{b-a}{n}, con extremos x_k=a+kh.\nEn cada tramo se elige un punto z_k\\in[x_k,x_{k+1}] y se dibuja un rectángulo de base h y altura f(z_k).\nLa suma de las áreas de los rectángulos aproxima el área: A\\approx\\sum_{k=0}^{n-1}h\\,f(z_k).\nCuanto más estrechos son los rectángulos, mejor es la aproximación (Figura 5.1).\n\n\n\nFigura 5.1. Área bajo la gráfica de f: (a) con cuatro rectángulos; (b) con dieciséis; (c) en el límite h\\to0.\n\n\nDefinición 5.1\nSea f continua en [a,b]. La integral definida de f en [a,b] es \n\\int_a^b f(x)\\,dx=\\lim_{n\\to\\infty}\\sum_{k=0}^{n-1}h\\,f(z_k),\\qquad z_k\\in[x_k,x_{k+1}],\n con h=\\dfrac{b-a}{n} y x_k=a+kh. Cada una de las sumas se llama suma de Riemann.\n\nEl símbolo \\int, ideado por Leibniz, es una s alargada, la inicial de summa: la integral es una suma de infinitos rectángulos de anchura infinitesimal.\n\nRecuerda\nSi f\\ge0 en [a,b], el área limitada por la gráfica de f y el eje OX entre a y b es A=\\displaystyle\\int_a^b f(x)\\,dx.",
+    "crumbs": [
+      "5.1 Integral definida y propiedades"
+    ]
+  },
+  {
+    "objectID": "05_integracion/definida.html#propiedades",
+    "href": "05_integracion/definida.html#propiedades",
+    "title": "5.1 Integral definida y propiedades",
+    "section": "Propiedades",
+    "text": "Propiedades\nLas propiedades de las sumas pasan a la integral al tomar el límite.\n\nRecuerda: propiedades de la integral definida\nCon f y g continuas, k\\in\\mathbb{R} y a&lt;c&lt;b:\n\n\\displaystyle\\int_a^b [f(x)+g(x)]\\,dx=\\int_a^b f(x)\\,dx+\\int_a^b g(x)\\,dx\n\\displaystyle\\int_a^b k\\,f(x)\\,dx=k\\int_a^b f(x)\\,dx\n\\displaystyle\\int_a^b f(x)\\,dx=\\int_a^c f(x)\\,dx+\\int_c^b f(x)\\,dx\n\\displaystyle\\int_a^a f(x)\\,dx=0,\\qquad \\int_b^a f(x)\\,dx=-\\int_a^b f(x)\\,dx\n\n\n\nEjemplo 5.1\nComprobar con un contraejemplo que estas igualdades no son ciertas para toda f y g continuas en [a,b]:\n\n\\displaystyle\\int_a^b f(x)\\,g(x)\\,dx=\\int_a^b f(x)\\,dx\\cdot\\int_a^b g(x)\\,dx\n\\displaystyle\\int_a^b |f(x)|\\,dx=\\left|\\int_a^b f(x)\\,dx\\right|\n\n\n(a) Con f=g=1 en [0,2], el primer miembro es el área de un rectángulo de base 2 y altura 1, que vale 2. El segundo miembro vale 2\\cdot2=4.\n(b) Con f(x)=x en [-1,1], la gráfica forma dos triángulos iguales de base 1 y altura 1, uno por encima del eje y otro por debajo, que se compensan: \\left|\\int_{-1}^1 x\\,dx\\right|=0. Con |x|, los dos triángulos quedan por encima del eje y \\int_{-1}^1 |x|\\,dx=\\frac12+\\frac12=1.",
+    "crumbs": [
+      "5.1 Integral definida y propiedades"
+    ]
+  },
+  {
+    "objectID": "05_integracion/index.html",
+    "href": "05_integracion/index.html",
+    "title": "5 Integración",
+    "section": "",
+    "text": "La integral nace de un problema sencillo: calcular el área bajo una curva sumando rectángulos cada vez más estrechos. Esa misma suma sirve también para obtener valores medios, volúmenes, longitudes o la distancia recorrida por un móvil.\nEl resultado central del capítulo es el teorema fundamental del cálculo, que une la integral con la derivada y permite calcular integrales buscando primitivas. Por eso buena parte del capítulo se dedica a los métodos para encontrarlas. Al final, la integral se extiende a intervalos y funciones no acotados.",
+    "crumbs": [
+      "5. Integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/impropias.html",
+    "href": "05_integracion/impropias.html",
+    "title": "5.8 Integrales impropias",
+    "section": "",
+    "text": "La regla de Barrow necesita un integrando continuo en un intervalo finito. Si se aplica sin comprobarlo, \n\\int_{-1}^1\\frac{dx}{x^2}=\\left[-\\frac1x\\right]_{-1}^1=-2,\n un resultado negativo con un integrando positivo (Figura 5.14). El fallo está en que 1/x^2 no está acotada en x=0.\nLas integrales con un intervalo no acotado o con un integrando no acotado se llaman integrales impropias, y se definen mediante un límite.",
+    "crumbs": [
+      "5.8 Integrales impropias"
+    ]
+  },
+  {
+    "objectID": "05_integracion/impropias.html#primer-tipo-intervalo-no-acotado",
+    "href": "05_integracion/impropias.html#primer-tipo-intervalo-no-acotado",
+    "title": "5.8 Integrales impropias",
+    "section": "Primer tipo: intervalo no acotado",
+    "text": "Primer tipo: intervalo no acotado\n\nDefinición 5.5\nSi f es continua en el intervalo correspondiente, \n\\begin{aligned}\n\\int_a^{+\\infty}f(x)\\,dx&=\\lim_{z\\to+\\infty}\\int_a^zf(x)\\,dx,\\\\\n\\int_{-\\infty}^bf(x)\\,dx&=\\lim_{z\\to-\\infty}\\int_z^bf(x)\\,dx,\\\\\n\\int_{-\\infty}^{+\\infty}f(x)\\,dx&=\\lim_{w\\to-\\infty}\\ \\lim_{z\\to+\\infty}\\int_w^zf(x)\\,dx.\n\\end{aligned}\n Si el límite existe y es finito, la integral es convergente; si no, es divergente.\n\n\n\nFigura 5.15. Regiones no acotadas de los ejemplos siguientes.\n\n\nEjemplo 5.34\nEstudiar \\displaystyle\\int_1^{+\\infty}\\frac{dx}{x}.\n\n\n\\int_1^{+\\infty}\\frac{dx}{x}=\\lim_{z\\to+\\infty}\\int_1^z\\frac{dx}{x}=\\lim_{z\\to+\\infty}\\ln z=+\\infty.\n Es divergente.\n\n\n\nEjemplo 5.35\nEstudiar \\displaystyle\\int_0^{+\\infty}\\frac{dx}{1+x^2}.\n\n\n\\int_0^{+\\infty}\\frac{dx}{1+x^2}=\\lim_{z\\to+\\infty}\\int_0^z\\frac{dx}{1+x^2}=\\lim_{z\\to+\\infty}\\arctan z=\\frac\\pi2.\n Es convergente: aunque la región no está acotada, su área es finita.\n\n\n\nEjemplo 5.36\nEstudiar la convergencia de \\displaystyle\\int_{-\\infty}^{+\\infty}x\\,e^x\\,dx. (2021/22 3E)\n\nSe parte en x=0, y cada integral es un límite. Por partes, una primitiva es (x-1)\\,e^x, así que \n\\int_0^{+\\infty}x\\,e^x\\,dx=\\lim_{z\\to+\\infty}\\Big[(x-1)\\,e^x\\Big]_0^z=\\lim_{z\\to+\\infty}\\big[(z-1)\\,e^z+1\\big]=+\\infty.\n Como una de las dos partes diverge, la integral es divergente.",
+    "crumbs": [
+      "5.8 Integrales impropias"
+    ]
+  },
+  {
+    "objectID": "05_integracion/impropias.html#segundo-tipo-integrando-no-acotado",
+    "href": "05_integracion/impropias.html#segundo-tipo-integrando-no-acotado",
+    "title": "5.8 Integrales impropias",
+    "section": "Segundo tipo: integrando no acotado",
+    "text": "Segundo tipo: integrando no acotado\n\nDefinición 5.6\nSi f tiene una asíntota vertical en un extremo de [a,b] (Figura 5.16), \n\\begin{aligned}\n\\text{en } x=a:&\\quad \\int_a^bf(x)\\,dx=\\lim_{z\\to a^+}\\int_z^bf(x)\\,dx,\\\\\n\\text{en } x=b:&\\quad \\int_a^bf(x)\\,dx=\\lim_{z\\to b^-}\\int_a^zf(x)\\,dx.\n\\end{aligned}\n Si la asíntota está en un punto interior c, se parte en c y las dos integrales deben converger.\n\n\n\nFigura 5.16. Asíntota vertical en x=b.\n\nCon una asíntota en un punto interior c, si la integral diverge, a veces los infinitos de los dos lados se cancelan al acercarse a c a la misma distancia \\varepsilon. Ese límite es el valor principal de Cauchy: \n\\mathrm{VP}\\int_a^bf(x)\\,dx=\\lim_{\\varepsilon\\to0^+}\\left(\\int_a^{c-\\varepsilon}f(x)\\,dx+\\int_{c+\\varepsilon}^bf(x)\\,dx\\right).\n\n\nEjemplo 5.37\nEstudiar \\displaystyle\\int_{-1}^1\\frac{dx}{x^2}. (2020/21 3E)\n\nLa asíntota está en x=0, así que se parte ahí. Para la parte derecha, \n\\int_0^1\\frac{dx}{x^2}=\\lim_{z\\to0^+}\\int_z^1\\frac{dx}{x^2}=\\lim_{z\\to0^+}\\left(\\frac1z-1\\right)=+\\infty.\n Es divergente: el -2 del principio no tenía sentido.\n\n\n\nEjemplo 5.38\nComprobar que converge la integral del Ejemplo 5.32, \\displaystyle\\int_0^R\\frac{dx}{\\sqrt{R^2-x^2}}.\n\nLa asíntota está en x=R: \n\\int_0^R\\frac{dx}{\\sqrt{R^2-x^2}}=\\lim_{z\\to R^-}\\int_0^z\\frac{dx}{\\sqrt{R^2-x^2}}=\\lim_{z\\to R^-}\\arcsin\\frac zR=\\frac\\pi2,\n el valor que daba el cambio x=R\\sin t.\n\n\n\nEjemplo 5.39\nEstudiar \\displaystyle\\int_{-1}^2\\frac{dx}{x^3} y calcular su valor principal. (2012/13 3E)\n\nSe parte en x=0. Para la parte derecha, \n\\int_0^2\\frac{dx}{x^3}=\\lim_{z\\to0^+}\\left(\\frac{1}{2z^2}-\\frac18\\right)=+\\infty,\n así que es divergente. Su valor principal sí existe: \n\\mathrm{VP}\\int_{-1}^2\\frac{dx}{x^3}=\\lim_{\\varepsilon\\to0^+}\\left(\\int_{-1}^{-\\varepsilon}\\frac{dx}{x^3}+\\int_\\varepsilon^2\\frac{dx}{x^3}\\right)=\\lim_{\\varepsilon\\to0^+}\\left(\\frac12-\\frac1{2\\varepsilon^2}-\\frac18+\\frac1{2\\varepsilon^2}\\right)=\\frac38.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.24–5.26.",
+    "crumbs": [
+      "5.8 Integrales impropias"
+    ]
+  },
+  {
+    "objectID": "05_integracion/metodos.html",
+    "href": "05_integracion/metodos.html",
+    "title": "5.6 Métodos de integración",
+    "section": "",
+    "text": "Si la integral no es inmediata ni sale con un cambio sencillo, el método depende del tipo de integrando.",
+    "crumbs": [
+      "5.6 Métodos de integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/metodos.html#integración-por-partes",
+    "href": "05_integracion/metodos.html#integración-por-partes",
+    "title": "5.6 Métodos de integración",
+    "section": "Integración por partes",
+    "text": "Integración por partes\nSale de la derivada de un producto: \n\\frac{d(uv)}{dx}=\\frac{du}{dx}\\,v+u\\,\\frac{dv}{dx}\\quad\\Longrightarrow\\quad u\\,\\frac{dv}{dx}=\\frac{d(uv)}{dx}-v\\,\\frac{du}{dx},\n e integrando los dos miembros se obtiene la fórmula. Conviene tomar como u lo que se simplifica al derivar.\n\nRecuerda\n\\displaystyle\\int u\\,dv=u\\,v-\\int v\\,du\n\n\nEjemplo 5.15\nCalcular \\displaystyle\\int x^2\\sin x\\,dx.\n\nCon u=x^2 y dv=\\sin x\\,dx, es du=2x\\,dx y v=-\\cos x: \n\\int x^2\\sin x\\,dx=-x^2\\cos x+2\\int x\\cos x\\,dx.\n Otra vez por partes, con u=x y dv=\\cos x\\,dx: \n\\int x\\cos x\\,dx=x\\sin x-\\int\\sin x\\,dx=x\\sin x+\\cos x.\n Por tanto, \n\\int x^2\\sin x\\,dx=-x^2\\cos x+2x\\sin x+2\\cos x+C.\n\n\n\n\nEjemplo 5.16\nCalcular \\displaystyle\\int\\arctan x\\,dx.\n\nCon u=\\arctan x y dv=dx, es du=\\dfrac{dx}{1+x^2} y v=x: \n\\int\\arctan x\\,dx=x\\arctan x-\\int\\frac{x}{1+x^2}\\,dx=x\\arctan x-\\frac12\\ln(1+x^2)+C.\n\n\n\n\nEjemplo 5.17\nCalcular I=\\displaystyle\\int e^x\\sin x\\,dx.\n\nDos veces por partes, con u la función trigonométrica y dv=e^x\\,dx: \nI=e^x\\sin x-\\int e^x\\cos x\\,dx=e^x\\sin x-e^x\\cos x-I.\n Reaparece la integral de partida. Despejando, \nI=\\frac12\\,e^x(\\sin x-\\cos x)+C.",
+    "crumbs": [
+      "5.6 Métodos de integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/metodos.html#funciones-racionales",
+    "href": "05_integracion/metodos.html#funciones-racionales",
+    "title": "5.6 Métodos de integración",
+    "section": "Funciones racionales",
+    "text": "Funciones racionales\nPara integrar \\dfrac{P(x)}{Q(x)} hace falta que el grado de P sea menor que el de Q. Si no lo es, se dividen los polinomios: \n\\frac{P(x)}{Q(x)}=C(x)+\\frac{R(x)}{Q(x)},\\qquad \\text{con grado de } R&lt;\\text{ grado de } Q.\n Después se descompone en fracciones simples, según las raíces de Q.\n\nRecuerda: descomposición en fracciones simples\n\nRaíces reales simples: \\dfrac{P(x)}{(x+a)(x+b)}=\\dfrac{A}{x+a}+\\dfrac{B}{x+b}\nRaíces reales múltiples: \\dfrac{P(x)}{(x+a)^2(x+b)}=\\dfrac{A}{x+a}+\\dfrac{B}{(x+a)^2}+\\dfrac{C}{x+b}\nRaíces complejas: \\dfrac{P(x)}{(x^2+a^2)(x^2+b^2)}=\\dfrac{Ax+B}{x^2+a^2}+\\dfrac{Cx+D}{x^2+b^2}\n\n\n\nEjemplo 5.18\nCalcular \\displaystyle\\int\\frac{dx}{(x-1)(x+2)(x+3)}.\n\nSe busca \\dfrac{1}{(x-1)(x+2)(x+3)}=\\dfrac{A}{x-1}+\\dfrac{B}{x+2}+\\dfrac{C}{x+3}. Quitando denominadores y dando a x los valores 1, -2 y -3, sale A=\\frac1{12}, B=-\\frac13 y C=\\frac14. Por tanto, \n\\int\\frac{dx}{(x-1)(x+2)(x+3)}=\\frac1{12}\\ln|x-1|-\\frac13\\ln|x+2|+\\frac14\\ln|x+3|+C.\n\n\n\n\nEjemplo 5.19\nCalcular \\displaystyle\\int\\frac{x^2+2}{(x+1)^3(x-2)}\\,dx.\n\nLa raíz x=-1 es triple, así que aporta tres fracciones: \n\\frac{x^2+2}{(x+1)^3(x-2)}=\\frac{A}{x+1}+\\frac{B}{(x+1)^2}+\\frac{D}{(x+1)^3}+\\frac{E}{x-2}.\n Dando valores e identificando coeficientes, A=-\\frac29, B=\\frac13, D=-1 y E=\\frac29. Por tanto, \n\\int\\frac{x^2+2}{(x+1)^3(x-2)}\\,dx=-\\frac29\\ln|x+1|-\\frac{1}{3(x+1)}+\\frac{1}{2(x+1)^2}+\\frac29\\ln|x-2|+C.\n\n\n\n\nEjemplo 5.20\nCalcular \\displaystyle\\int\\frac{x+2}{x^2+2x+2}\\,dx.\n\nEl denominador no tiene raíces reales: x^2+2x+2=(x+1)^2+1. Se busca en el numerador la derivada del denominador, x+2=\\frac12(2x+2)+1: \n\\int\\frac{x+2}{x^2+2x+2}\\,dx=\\frac12\\int\\frac{2x+2}{x^2+2x+2}\\,dx+\\int\\frac{dx}{(x+1)^2+1}=\\frac12\\ln(x^2+2x+2)+\\arctan(x+1)+C.",
+    "crumbs": [
+      "5.6 Métodos de integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/metodos.html#funciones-trigonométricas",
+    "href": "05_integracion/metodos.html#funciones-trigonométricas",
+    "title": "5.6 Métodos de integración",
+    "section": "Funciones trigonométricas",
+    "text": "Funciones trigonométricas\nLas potencias y productos se simplifican con las identidades. Para el resto, un cambio de variable convierte la integral en una racional, y la paridad del integrando indica cuál.\n\nRecuerda: identidades trigonométricas\n\n\\sin^2x+\\cos^2x=1,\\qquad \\cos^2x-\\sin^2x=\\cos2x,\\qquad \\sin2x=2\\sin x\\cos x\n\\sin^2x=\\dfrac{1-\\cos2x}{2},\\qquad \\cos^2x=\\dfrac{1+\\cos2x}{2}\n\n\n\nRecuerda: cambios para integrales trigonométricas\n\n\\begin{array}{ll}\n\\text{Paridad de } R & \\text{Cambio}\\\\ \\hline\n\\text{impar en } \\sin x:\\ \\ R(-\\sin x,\\cos x)=-R(\\sin x,\\cos x) & t=\\cos x\\\\[1mm]\n\\text{impar en } \\cos x:\\ \\ R(\\sin x,-\\cos x)=-R(\\sin x,\\cos x) & t=\\sin x\\\\[1mm]\n\\text{par:}\\ \\ R(-\\sin x,-\\cos x)=R(\\sin x,\\cos x) & t=\\tan x\\\\[1mm]\n\\text{en los demás casos} & t=\\tan\\dfrac x2\n\\end{array}\n\n\n\nEjemplo 5.21\nCalcular \\displaystyle\\int\\sin4x\\cos2x\\,dx. (2011/12 7E)\n\nComo \\sin4x=2\\sin2x\\cos2x, con el cambio u=\\cos2x, du=-2\\sin2x\\,dx: \n\\int2\\sin2x\\cos^22x\\,dx=-\\int u^2\\,du=-\\frac{\\cos^32x}{3}+C.\n\n\n\n\nEjemplo 5.22\nCalcular \\displaystyle\\int\\frac{\\sin^3x}{2+\\cos x}\\,dx.\n\nEs impar en \\sin x. Con t=\\cos x, dt=-\\sin x\\,dx y \\sin^2x=1-t^2. Dividiendo los polinomios: \n\\int\\frac{\\sin^3x}{2+\\cos x}\\,dx=-\\int\\frac{1-t^2}{2+t}\\,dt=-\\int\\left(2-t-\\frac{3}{2+t}\\right)dt=-2t+\\frac{t^2}{2}+3\\ln|2+t|+C.\n Deshaciendo el cambio, el resultado es -2\\cos x+\\frac12\\cos^2x+3\\ln(2+\\cos x)+C.\n\n\n\nEjemplo 5.23\nCalcular \\displaystyle\\int\\frac{dx}{\\sin^2x-5\\sin x\\cos x}. (2019/20 3E)\n\nEs par. Dividiendo numerador y denominador por \\cos^2x, y con t=\\tan x, dt=\\dfrac{dx}{\\cos^2x}: \n\\int\\frac{dt}{t^2-5t}=\\frac15\\int\\left(\\frac{1}{t-5}-\\frac1t\\right)dt=\\frac15\\ln\\left|\\frac{t-5}{t}\\right|+C=\\frac15\\ln\\left|\\frac{\\tan x-5}{\\tan x}\\right|+C.",
+    "crumbs": [
+      "5.6 Métodos de integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/metodos.html#funciones-irracionales",
+    "href": "05_integracion/metodos.html#funciones-irracionales",
+    "title": "5.6 Métodos de integración",
+    "section": "Funciones irracionales",
+    "text": "Funciones irracionales\nEn muchos casos basta con quitar la raíz con un cambio de variable.\n\nEjemplo 5.24\nCalcular \\displaystyle\\int x\\sqrt{x+1}\\,dx.\n\nCon t=\\sqrt{x+1}, es x=t^2-1 y dx=2t\\,dt: \n\\int x\\sqrt{x+1}\\,dx=2\\int(t^2-1)\\,t^2\\,dt=\\frac25t^5-\\frac23t^3+C=\\frac25(x+1)^{5/2}-\\frac23(x+1)^{3/2}+C.\n Comprobación: al derivar sale (x+1)^{3/2}-(x+1)^{1/2}=x\\sqrt{x+1}.\n\n\nA veces un cambio sencillo no es suficiente. Con raíces de un polinomio de grado 2, hay que hacer cambios que involucran funciones trigonométricas o hiperbólicas.\n\nRecuerda: cambios para funciones irracionales\n\n\\begin{array}{ll}\n\\text{Integral} & \\text{Cambio}\\\\ \\hline\n\\displaystyle\\int R\\big(x,\\sqrt{a^2-x^2}\\big)\\,dx & x=a\\sin t \\ \\text{ o } \\ x=a\\tanh t\\\\[3mm]\n\\displaystyle\\int R\\big(x,\\sqrt{a^2+x^2}\\big)\\,dx & x=a\\tan t \\ \\text{ o } \\ x=a\\sinh t\\\\[3mm]\n\\displaystyle\\int R\\big(x,\\sqrt{x^2-a^2}\\big)\\,dx & x=a\\sec t \\ \\text{ o } \\ x=a\\cosh t\n\\end{array}\n\n\n\nEjemplo 5.25\nCalcular \\displaystyle\\int\\sqrt{1-x^2}\\,dx.\n\nCon x=\\sin t, dx=\\cos t\\,dt y \\sqrt{1-x^2}=\\cos t. Como \\cos^2t=\\frac{1+\\cos2t}{2}: \n\\int\\cos^2t\\,dt=\\frac t2+\\frac{\\sin2t}{4}+C=\\frac12\\left(\\arcsin x+x\\sqrt{1-x^2}\\right)+C,\n porque \\sin2t=2\\sin t\\cos t=2x\\sqrt{1-x^2}.\n\n\n\nEjemplo 5.26\nCalcular I=\\displaystyle\\int_{-1}^1\\frac{dx}{(x^2+1)^{3/2}} con el cambio x=\\tan t. (2015/16 3E)\n\nEs dx=\\dfrac{dt}{\\cos^2t} y (x^2+1)^{3/2}=\\dfrac{1}{\\cos^3t}. Si x=\\pm1, t=\\pm\\frac\\pi4: \nI=\\int_{-\\pi/4}^{\\pi/4}\\cos t\\,dt=\\Big[\\sin t\\Big]_{-\\pi/4}^{\\pi/4}=\\sqrt2.\n\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.12–5.15.",
+    "crumbs": [
+      "5.6 Métodos de integración"
+    ]
+  },
+  {
+    "objectID": "05_integracion/fundamental.html",
+    "href": "05_integracion/fundamental.html",
+    "title": "5.3 Teorema fundamental y regla de Barrow",
+    "section": "",
+    "text": "Derivar e integrar son operaciones inversas. De ahí sale una forma sencilla de calcular integrales, sin sumas ni límites.",
+    "crumbs": [
+      "5.3 Teorema fundamental y Barrow"
+    ]
+  },
+  {
+    "objectID": "05_integracion/fundamental.html#teorema-fundamental-del-cálculo",
+    "href": "05_integracion/fundamental.html#teorema-fundamental-del-cálculo",
+    "title": "5.3 Teorema fundamental y regla de Barrow",
+    "section": "Teorema fundamental del Cálculo",
+    "text": "Teorema fundamental del Cálculo\n¿Cuánto vale el área bajo f(x)=x entre 0 y cada valor de x? Son triángulos (Figura 5.4): \n\\begin{array}{c|cccccc}\nx & 1 & 2 & 3 & 4 & 5 & x\\\\ \\hline\nA & \\frac12 & \\frac42 & \\frac92 & \\frac{16}2 & \\frac{25}2 & \\frac{x^2}{2}\n\\end{array}\n\n\n\nFigura 5.4. Área bajo f(x)=x hasta distintos valores de x.\n\nPor tanto, A(x)=\\dfrac{x^2}{2}, y su derivada es A'(x)=x: la función de partida. ¿Es esto general?\n\nDefinición 5.3\nSea f continua en [a,b]. La función integral de f es \nF(x)=\\int_a^x f(t)\\,dt,\\qquad x\\in[a,b].\n\n\n\nTeorema 5.2 (fundamental del Cálculo)\nSi f es continua en [a,b], la función F(x)=\\displaystyle\\int_a^x f(t)\\,dt es derivable y F'(x)=f(x).\n\n\nDemostración\nPor la definición de derivada, dividiendo la primera integral en dos tramos (Figura 5.5): \n\\begin{aligned}\nF'(x)&=\\lim_{h\\to0}\\frac{F(x+h)-F(x)}{h}=\\lim_{h\\to0}\\frac1h\\left[\\int_a^{x+h}f(t)\\,dt-\\int_a^x f(t)\\,dt\\right]\\\\\n&=\\lim_{h\\to0}\\frac1h\\left[\\int_a^{x}f(t)\\,dt+\\int_x^{x+h}f(t)\\,dt-\\int_a^x f(t)\\,dt\\right]=\\lim_{h\\to0}\\frac1h\\int_x^{x+h}f(t)\\,dt.\n\\end{aligned}\n Por el teorema de la media en [x,x+h], esa integral vale h\\,f(z) con z\\in[x,x+h]. Por tanto, \nF'(x)=\\lim_{h\\to0}f(z)=f(x),\n porque z\\to x cuando h\\to0 y f es continua. Con h&lt;0 es análogo.\n\n\n\nFigura 5.5. La función integral F(x) y su incremento h\\,f(z).\n\n\nDefinición 5.4\nUna función F es una primitiva de f si F'(x)=f(x).\n\nDurante siglos, el cálculo de áreas y el de tangentes se desarrollaron por separado. En el siglo XVII, Barrow, Newton y Leibniz mostraron que integrar y derivar son operaciones inversas.",
+    "crumbs": [
+      "5.3 Teorema fundamental y Barrow"
+    ]
+  },
+  {
+    "objectID": "05_integracion/fundamental.html#regla-de-barrow",
+    "href": "05_integracion/fundamental.html#regla-de-barrow",
+    "title": "5.3 Teorema fundamental y regla de Barrow",
+    "section": "Regla de Barrow",
+    "text": "Regla de Barrow\nCon una primitiva, la integral se calcula sin sumas ni límites.\n\nTeorema 5.3 (regla de Barrow)\nSi f es continua en [a,b] y F es una primitiva de f, \n\\int_a^b f(x)\\,dx=F(b)-F(a)=\\Big[F(x)\\Big]_a^b.\n\n\n\nDemostración\nSea G(x)=\\displaystyle\\int_a^x f(t)\\,dt. Por el teorema fundamental, G'(x)=f(x): es una primitiva de f. Como F también lo es, F'(x)=G'(x), y las dos funciones se diferencian en una constante: F(x)=G(x)+C. Evaluando en los extremos, y como G(a)=0: \nF(b)=G(b)+C,\\qquad F(a)=G(a)+C=C.\n Restando, \nF(b)-F(a)=G(b)=\\int_a^b f(t)\\,dt.",
+    "crumbs": [
+      "5.3 Teorema fundamental y Barrow"
+    ]
+  },
+  {
+    "objectID": "05_integracion/fundamental.html#la-integral-de-una-derivada",
+    "href": "05_integracion/fundamental.html#la-integral-de-una-derivada",
+    "title": "5.3 Teorema fundamental y regla de Barrow",
+    "section": "La integral de una derivada",
+    "text": "La integral de una derivada\nComo f es primitiva de f', la regla de Barrow dice que la integral de una razón de cambio es el cambio total de f(x).\n\nRecuerda\n\\displaystyle\\int_a^b f'(t)\\,dt=f(b)-f(a)\n\n\nEjemplo 5.6\nLa Figura 5.6 muestra la posición x(t) de una partícula, con x en metros y t en segundos. Su velocidad es v(t)=x'(t) y su aceleración, a(t)=x''(t). (2015/16 6E)\n\nEstimar \\frac18\\int_0^8 x(t)\\,dt. ¿Qué significa?\nCalcular \\int_0^1 v(t)\\,dt. ¿Qué significa?\nCalcular \\frac14\\int_2^6 a(t)\\,dt. ¿Qué significa?\n¿Cuál es el signo de \\int_2^4 a'(t)\\,dt?\n\n\n\nFigura 5.6. Posición de la partícula.\n\n\n(a) Unos 2 m: la posición oscila entre 1 y 3 de forma simétrica alrededor de 2. Es la posición media entre t=0 y t=8.\n(b) x(1)-x(0)=2-1=1 m: el desplazamiento entre t=0 y t=1.\n(c) \\frac14[v(6)-v(2)]=0, porque la tangente es horizontal en t=2 y en t=6. Es la aceleración media entre esos instantes.\n(d) Vale a(4)-a(2)=x''(4)-x''(2). En t=4 la gráfica es cóncava, x''(4)&gt;0; en t=2 es convexa, x''(2)&lt;0. El signo es positivo.",
+    "crumbs": [
+      "5.3 Teorema fundamental y Barrow"
+    ]
+  },
+  {
+    "objectID": "05_integracion/fundamental.html#relación-con-el-teorema-de-lagrange",
+    "href": "05_integracion/fundamental.html#relación-con-el-teorema-de-lagrange",
+    "title": "5.3 Teorema fundamental y regla de Barrow",
+    "section": "Relación con el teorema de Lagrange",
+    "text": "Relación con el teorema de Lagrange\nAplicando el teorema de la media a f', si es continua, y la regla de Barrow, existe z tal que \nf'(z)=\\frac{1}{b-a}\\int_a^b f'(x)\\,dx=\\frac{f(b)-f(a)}{b-a},\n que es la fórmula de Lagrange. No hay que confundirlos, pero hablan de lo mismo: el teorema de la media se refiere al valor medio de f, y el de Lagrange, al valor medio de f', la pendiente media. La integral es lo que los une.\n\nRecuerda\n\nTeorema de la media: f(z)=\\dfrac{1}{b-a}\\displaystyle\\int_a^b f(x)\\,dx\nTeorema de Lagrange: f'(z)=\\dfrac{f(b)-f(a)}{b-a}\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 5.5–5.5.",
+    "crumbs": [
+      "5.3 Teorema fundamental y Barrow"
+    ]
+  },
+  {
+    "objectID": "05_integracion/resumen.html",
+    "href": "05_integracion/resumen.html",
+    "title": "5.9 Resumen",
+    "section": "",
+    "text": "Resumen del capítulo 5\nIntegral definida. Con h=\\frac{b-a}{n}, x_k=a+kh y z_k\\in[x_k,x_{k+1}]: \n\\int_a^bf(x)\\,dx=\\lim_{n\\to\\infty}\\sum_{k=0}^{n-1}h\\,f(z_k).\n Es lineal, \\int_a^b=\\int_a^c+\\int_c^b, \\int_a^a=0 y \\int_b^a=-\\int_a^b.\nValor medio. \\bar f=\\frac{1}{b-a}\\int_a^bf(x)\\,dx. Si f es continua en [a,b], existe z\\in[a,b] con f(z)=\\bar f.\nTeorema fundamental y regla de Barrow. Si f es continua en [a,b], F(x)=\\int_a^xf(t)\\,dt es derivable y F'(x)=f(x). Si F es una primitiva de f, \\int_a^bf(x)\\,dx=F(b)-F(a). Con límites variables: \n\\frac{d}{dx}\\int_{v(x)}^{u(x)}f(t)\\,dt=f(u)\\,u'-f(v)\\,v'.\n\nCambio de variable. Con x(\\alpha)=a, x(\\beta)=b y x' continua: \\int_a^bf(x)\\,dx=\\int_\\alpha^\\beta f\\big(x(t)\\big)\\,x'(t)\\,dt.\nPartes. \\int u\\,dv=uv-\\int v\\,du.\nRacionales. Si el grado de P no es menor que el de Q, se dividen. Después, fracciones simples: \\frac{A}{x+a} por cada raíz real simple; \\frac{A}{x+a}+\\frac{B}{(x+a)^2} si es doble; \\frac{Ax+B}{x^2+a^2} con raíces complejas.\nTrigonométricas, R(\\sin x,\\cos x). Impar en \\sin x: t=\\cos x. Impar en \\cos x: t=\\sin x. Par: t=\\tan x. En otro caso: t=\\tan\\frac x2.\nIrracionales. Si basta, un cambio que quite la raíz. Con \\sqrt{a^2-x^2}: x=a\\sin t. Con \\sqrt{a^2+x^2}: x=a\\tan t. Con \\sqrt{x^2-a^2}: x=a\\sec t. También sirven las hiperbólicas.\nAplicaciones. Área entre curvas con f\\ge g; volumen, longitud de arco y superficie, girando alrededor de OX: \nA=\\int_a^b(f-g)\\,dx,\\quad V=\\pi\\int_a^by^2\\,dx,\\quad l=\\int_a^b\\sqrt{1+y'^2}\\,dx,\\quad S=2\\pi\\int_a^by\\sqrt{1+y'^2}\\,dx.\n\nImpropias. Se definen con un límite; si existe y es finito, convergen. Con intervalo no acotado y con asíntota en x=b: \n\\int_a^{+\\infty}f\\,dx=\\lim_{z\\to+\\infty}\\int_a^zf\\,dx,\\qquad \\int_a^bf\\,dx=\\lim_{z\\to b^-}\\int_a^zf\\,dx.\n Con una asíntota en un punto interior c, se parte en c. Valor principal: \\mathrm{VP}\\int_a^bf\\,dx=\\lim\\limits_{\\varepsilon\\to0^+}\\left(\\int_a^{c-\\varepsilon}f\\,dx+\\int_{c+\\varepsilon}^bf\\,dx\\right).",
+    "crumbs": [
+      "5.9 Resumen"
     ]
   },
   {
