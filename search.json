@@ -1959,5 +1959,65 @@
     "crumbs": [
       "2.2 Convergencia"
     ]
+  },
+  {
+    "objectID": "06_varias_variables/funciones_nivel.html",
+    "href": "06_varias_variables/funciones_nivel.html",
+    "title": "6.1 Funciones de varias variables y curvas de nivel",
+    "section": "",
+    "text": "Muchas magnitudes dependen de más de una variable. Una función de dos variables se dibuja como una superficie, y sus curvas de nivel la describen sobre el plano, como un mapa.",
+    "crumbs": [
+      "6.1 Funciones y curvas de nivel"
+    ]
+  },
+  {
+    "objectID": "06_varias_variables/funciones_nivel.html#funciones-de-varias-variables",
+    "href": "06_varias_variables/funciones_nivel.html#funciones-de-varias-variables",
+    "title": "6.1 Funciones de varias variables y curvas de nivel",
+    "section": "Funciones de varias variables",
+    "text": "Funciones de varias variables\nHasta ahora, una función asignaba a cada x un único valor y=f(x). Pero muchas magnitudes dependen de varias:\n\nEl alcance de un proyectil lanzado desde el suelo con velocidad v_0 y ángulo \\theta es x_{\\max}=\\dfrac{v_0^2\\sin2\\theta}{g}: depende de v_0 y de \\theta.\nLa temperatura de una barra que se enfría, T(x,t), depende del punto x y del instante t.\n\n\nDefinición 6.1\nSea D\\subset\\mathbb{R}^2. Una función real de dos variables definida en D asigna a cada punto (x,y)\\in D un único número real z=f(x,y): \nf:D\\subset\\mathbb{R}^2\\longrightarrow\\mathbb{R},\\qquad (x,y)\\longmapsto z=f(x,y).\n El conjunto D es su dominio. Del mismo modo se definen las funciones de tres o más variables, f:D\\subset\\mathbb{R}^n\\to\\mathbb{R}.\n\nSi solo se da la fórmula, el dominio es el conjunto de puntos en los que se puede calcular. Las restricciones son las de siempre: no dividir por cero, raíces de índice par de números no negativos y logaritmos de números positivos.\n\nEjemplo 6.1\nHallar y dibujar el dominio de:\n\nf(x,y)=\\ln(x^2-xy)\ng(x,y,z)=\\sqrt{x+y+z-1}\n\n\n(a) Hace falta x^2-xy=x(x-y)&gt;0: los dos factores tienen el mismo signo. \n\\begin{aligned}\nx&gt;0 \\text{ y } x-y&gt;0&\\quad\\Longrightarrow\\quad x&gt;0,\\ y&lt;x,\\\\\nx&lt;0 \\text{ y } x-y&lt;0&\\quad\\Longrightarrow\\quad x&lt;0,\\ y&gt;x.\n\\end{aligned}\n Son dos regiones del plano, sin la recta y=x ni el eje OY, que forman su frontera.\n\n\n\n(b) Hace falta x+y+z\\ge1: es el semiespacio por encima del plano x+y+z=1, incluido el plano.\nComprobación: (1,0) está en el dominio de f, con f(1,0)=\\ln1=0, y (0,1) no lo está, porque x^2-xy=0.",
+    "crumbs": [
+      "6.1 Funciones y curvas de nivel"
+    ]
+  },
+  {
+    "objectID": "06_varias_variables/funciones_nivel.html#gráfica-y-curvas-de-nivel",
+    "href": "06_varias_variables/funciones_nivel.html#gráfica-y-curvas-de-nivel",
+    "title": "6.1 Funciones de varias variables y curvas de nivel",
+    "section": "Gráfica y curvas de nivel",
+    "text": "Gráfica y curvas de nivel\nLa gráfica de f(x,y) es la superficie formada por los puntos (x,y,z) con z=f(x,y). Dibujarla a mano es difícil. Es más cómodo cortarla con planos horizontales z=k y llevar los cortes al plano XY.\n\nDefinición 6.2\nSea z=f(x,y) definida en D\\subset\\mathbb{R}^2. Para cada constante k, la curva f(x,y)=k es una curva de nivel de f.\n\n\nEjemplo 6.2\nDibujar las curvas de nivel de f(x,y)=40-4x^2-y^2.\n\nLa curva de nivel k es 4x^2+y^2=40-k. Según el valor de k:\n\nSi k&lt;40, es la elipse \\dfrac{x^2}{(40-k)/4}+\\dfrac{y^2}{40-k}=1, de semiejes \\frac{\\sqrt{40-k}}{2} y \\sqrt{40-k}.\nSi k=40, es el punto (0,0).\nSi k&gt;40, no hay ningún punto.\n\nAl crecer k, las elipses se encogen: la superficie es una montaña con la cima en (0,0,40) (Figura 6.1).\n\n\nFigura 6.1. (a) Superficie z=40-4x^2-y^2 y sus cortes con planos horizontales. (b) Curvas de nivel.\n\nComprobación: en el borde de la montaña, z=0, la elipse 4x^2+y^2=40 corta los ejes en x=\\pm\\sqrt{10} e y=\\pm\\sqrt{40}.\n\n\nLas curvas de nivel se usan a diario:\n\nEn un mapa topográfico, cada curva une los puntos de la misma altura. Donde las curvas están juntas, la pendiente es fuerte; donde están separadas, es suave (Figura 6.2).\nEn un mapa del tiempo, las isobaras unen los puntos de igual presión. Isobaras muy juntas indican una borrasca profunda y viento fuerte; isobaras separadas, un anticiclón suave.\n\n\n\nFigura 6.2. (a) Una colina. (b) Su mapa topográfico, con curvas cada 20 m.\n\n\nDemo en GeoGebra\nRelaciona la superficie z=f(x,y) con sus curvas de nivel.\nAbrir la demo Autoría: Sarah Harrelson",
+    "crumbs": [
+      "6.1 Funciones y curvas de nivel"
+    ]
+  },
+  {
+    "objectID": "06_varias_variables/funciones_nivel.html#superficies-de-nivel",
+    "href": "06_varias_variables/funciones_nivel.html#superficies-de-nivel",
+    "title": "6.1 Funciones de varias variables y curvas de nivel",
+    "section": "Superficies de nivel",
+    "text": "Superficies de nivel\nLa gráfica de w=f(x,y,z) necesitaría cuatro dimensiones. Se describe con los cortes w=k, que ahora son superficies.\n\nDefinición 6.3\nSea w=f(x,y,z) definida en D\\subset\\mathbb{R}^3. Para cada constante k, la superficie f(x,y,z)=k es una superficie de nivel de f.\n\n\nEjemplo 6.3\nEl potencial gravitatorio que crea una masa M situada en el origen es \nV(x,y,z)=-\\frac{GM}{\\sqrt{x^2+y^2+z^2}},\n con G constante. Hallar sus superficies de nivel.\n\nComo V&lt;0, solo hay superficies de nivel con k&lt;0: \n-\\frac{GM}{\\sqrt{x^2+y^2+z^2}}=k\\quad\\Longrightarrow\\quad x^2+y^2+z^2=\\left(\\frac{GM}{k}\\right)^2.\n Son esferas centradas en la masa, de radio \\frac{GM}{|k|}: el potencial es el mismo en todos los puntos a la misma distancia de M. Cuanto más cerca de 0 está k, mayor es el radio.\n\n\n\nRecuerda\n\n\\begin{array}{llll}\n\\text{Función} & \\text{Dominio} & \\text{Gráfica} & \\text{Cortes}\\\\ \\hline\ny=f(x) & \\text{recta, 1D} & \\text{curva, 2D} & \\text{puntos}\\\\\nz=f(x,y) & \\text{plano, 2D} & \\text{superficie, 3D} & \\text{curvas de nivel}\\\\\nw=f(x,y,z) & \\text{espacio, 3D} & \\text{4D} & \\text{superficies de nivel}\n\\end{array}\n\n\nCon los contenidos de esta sección puedes hacer los ejercicios 6.1–6.2.",
+    "crumbs": [
+      "6.1 Funciones y curvas de nivel"
+    ]
+  },
+  {
+    "objectID": "06_varias_variables/ejercicios.html",
+    "href": "06_varias_variables/ejercicios.html",
+    "title": "6.10 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 6.1\nHallar y dibujar el dominio de:\n\n\nf(x,y)=\\sqrt{x+y}\nf(x,y)=\\sqrt x+\\sqrt y\nf(x,y)=\\sqrt{xy}\nf(x,y)=\\ln(9-x^2-9y^2)\nf(x,y,z)=\\dfrac{1}{\\sqrt{16-x^2-y^2-z^2}}\nf(x,y)=\\sqrt{36-9x^2-9y^2}\n\n\n\n(a) x+y\\ge0: el semiplano por encima de la recta y=-x, con la recta. (b) x\\ge0, y\\ge0: el primer cuadrante, con los ejes. (c) xy\\ge0: el primer y el tercer cuadrante, con los ejes. (d) \\frac{x^2}{9}+y^2&lt;1: el interior de una elipse. (e) x^2+y^2+z^2&lt;16: el interior de la esfera de radio 4. (f) x^2+y^2\\le4: el círculo de radio 2.\n\n\n\nEjercicio 6.2\nDibujar las curvas de nivel (o las superficies de nivel) de:\n\n\nf(x,y)=x+y\nf(x,y)=\\sqrt{x+y}\nf(x,y)=x^2+4y^2\nf(x,y)=x^2+y^2+1\nf(x,y)=x^2-y^2\nf(x,y,z)=x^2+(y-2)^2+z^2\n\n\n\n(a) Rectas paralelas x+y=k. (b) Rectas x+y=k^2, con k\\ge0. (c) Elipses x^2+4y^2=k si k&gt;0, y el origen si k=0. (d) Circunferencias de centro el origen y radio \\sqrt{k-1} si k&gt;1, y el origen si k=1. (e) Hipérbolas x^2-y^2=k si k\\ne0, y las rectas y=\\pm x si k=0. (f) Esferas de centro (0,2,0) y radio \\sqrt k, con k&gt;0.",
+    "crumbs": [
+      "6.10 Ejercicios"
+    ]
+  },
+  {
+    "objectID": "06_varias_variables/ejercicios.html#funciones-de-varias-variables-y-curvas-de-nivel",
+    "href": "06_varias_variables/ejercicios.html#funciones-de-varias-variables-y-curvas-de-nivel",
+    "title": "6.10 Ejercicios",
+    "section": "",
+    "text": "Ejercicio 6.1\nHallar y dibujar el dominio de:\n\n\nf(x,y)=\\sqrt{x+y}\nf(x,y)=\\sqrt x+\\sqrt y\nf(x,y)=\\sqrt{xy}\nf(x,y)=\\ln(9-x^2-9y^2)\nf(x,y,z)=\\dfrac{1}{\\sqrt{16-x^2-y^2-z^2}}\nf(x,y)=\\sqrt{36-9x^2-9y^2}\n\n\n\n(a) x+y\\ge0: el semiplano por encima de la recta y=-x, con la recta. (b) x\\ge0, y\\ge0: el primer cuadrante, con los ejes. (c) xy\\ge0: el primer y el tercer cuadrante, con los ejes. (d) \\frac{x^2}{9}+y^2&lt;1: el interior de una elipse. (e) x^2+y^2+z^2&lt;16: el interior de la esfera de radio 4. (f) x^2+y^2\\le4: el círculo de radio 2.\n\n\n\nEjercicio 6.2\nDibujar las curvas de nivel (o las superficies de nivel) de:\n\n\nf(x,y)=x+y\nf(x,y)=\\sqrt{x+y}\nf(x,y)=x^2+4y^2\nf(x,y)=x^2+y^2+1\nf(x,y)=x^2-y^2\nf(x,y,z)=x^2+(y-2)^2+z^2\n\n\n\n(a) Rectas paralelas x+y=k. (b) Rectas x+y=k^2, con k\\ge0. (c) Elipses x^2+4y^2=k si k&gt;0, y el origen si k=0. (d) Circunferencias de centro el origen y radio \\sqrt{k-1} si k&gt;1, y el origen si k=1. (e) Hipérbolas x^2-y^2=k si k\\ne0, y las rectas y=\\pm x si k=0. (f) Esferas de centro (0,2,0) y radio \\sqrt k, con k&gt;0.",
+    "crumbs": [
+      "6.10 Ejercicios"
+    ]
   }
 ]
