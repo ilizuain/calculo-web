@@ -320,12 +320,14 @@ window.Quarto = {
 <p>¿Cuánto vale el área limitada por la gráfica de una función y el eje <span class="math inline">OX</span>? Se aproxima con rectángulos, y el límite de esas sumas es la integral.</p>
 <section id="el-área-bajo-una-curva" class="level2">
 <h2 data-anchor-id="el-área-bajo-una-curva">El área bajo una curva</h2>
+<div class="en-diapositiva">
 <ul>
 <li>Se divide <span class="math inline">[a,b]</span> en <span class="math inline">n</span> tramos de ancho <span class="nw"><span class="math inline">h=\dfrac{b-a}{n}</span>,</span> con extremos <span class="nw"><span class="math inline">x_k=a+kh</span>.</span></li>
 <li>En cada tramo se elige un punto <span class="math inline">z_k\in[x_k,x_{k+1}]</span> y se dibuja un rectángulo de base <span class="math inline">h</span> y altura <span class="nw"><span class="math inline">f(z_k)</span>.</span></li>
 <li>La suma de las áreas de los rectángulos aproxima el área: <span class="nw"><span class="math inline">A\approx\sum_{k=0}^{n-1}h\,f(z_k)</span>.</span></li>
 <li>Cuanto más estrechos son los rectángulos, mejor es la aproximación (<a href="#figura-riemann-rectangulos">Figura&nbsp;5.1</a>).</li>
 </ul>
+</div>
 <div id="figura-riemann-rectangulos" class="figura">
 <p><img src="../figs/riemann_rectangulos.svg" class="img-fluid" alt="Tres gráficas de la misma función creciente entre a y b. En (a), cuatro rectángulos de ancho h aproximan el área bajo la curva. En (b), dieciséis rectángulos más estrechos casi la llenan. En (c), el área A exacta bajo la curva." width="600"></p>
 <p><span class="figura-num">Figura&nbsp;5.1.</span> Área bajo la gráfica de <span class="nw"><span class="math inline">f</span>:</span> (a) con cuatro rectángulos; (b) con dieciséis; (c) en el límite <span class="nw"><span class="math inline">h\to0</span>.</span></p>
@@ -778,6 +780,7 @@ window.Quarto = {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>window.PDF_CAPITULO = "integracion.pdf";</script>
 <script src="../js/apuntes.js"></script>
 
 
